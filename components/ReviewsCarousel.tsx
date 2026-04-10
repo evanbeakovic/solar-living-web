@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const reviews = [
   {
@@ -50,9 +50,6 @@ const reviews = [
   },
 ];
 
-// 5 cards total, 3 visible at a time → 3 positions (offset 0, 1, 2)
-const MAX_OFFSET = reviews.length - 3; // 2
-
 const arrowBase: React.CSSProperties = {
   width: 40,
   height: 40,
@@ -71,11 +68,26 @@ const arrowBase: React.CSSProperties = {
 export default function ReviewsCarousel() {
   const [offset, setOffset] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)');
+    const update = (e: MediaQueryList | MediaQueryListEvent) => {
+      setIsMobile(e.matches);
+      setOffset(0);
+    };
+    update(mq);
+    mq.addEventListener('change', update as (e: MediaQueryListEvent) => void);
+    return () => mq.removeEventListener('change', update as (e: MediaQueryListEvent) => void);
+  }, []);
+
+  // 1 card per step on mobile, 3 visible on desktop
+  const maxOffset = isMobile ? reviews.length - 1 : reviews.length - 3;
 
   function navigate(dir: 1 | -1) {
     if (animating) return;
     const next = offset + dir;
-    if (next < 0 || next > MAX_OFFSET) return;
+    if (next < 0 || next > maxOffset) return;
     setAnimating(true);
     setOffset(next);
     setTimeout(() => setAnimating(false), 350);
@@ -87,6 +99,14 @@ export default function ReviewsCarousel() {
     setOffset(i);
     setTimeout(() => setAnimating(false), 350);
   }
+
+  // On mobile: card fills the visible container width (100% of flex-1 div = 100% of the track container).
+  // translateX of 100% on the track div equals the track div's own width, which matches the container.
+  // On desktop: 3 cards visible with 32px gaps between them.
+  const cardWidth = isMobile ? '100%' : 'calc((100% - 64px) / 3)';
+  const trackTransform = isMobile
+    ? `translateX(calc(-${offset} * (100% + 32px)))`
+    : `translateX(calc(-${offset} * ((100% - 64px) / 3 + 32px)))`;
 
   return (
     <div>
@@ -108,24 +128,24 @@ export default function ReviewsCarousel() {
         )}
 
         {/*
-          overflow-hidden clips the track; cards are sized to fit 3 exactly:
-          card width = calc((100% - 64px) / 3)  (100% - two gap-8 gaps)
-          shift per step = card_width + gap = calc((100% - 64px) / 3 + 32px)
-          translateX 100% is relative to this container's own width (W),
-          which equals the parent's width — same reference as the card widths.
+          overflow-hidden clips the track.
+          Desktop: card width = calc((100% - 64px) / 3), shift per step = card + 32px gap.
+          Mobile:  card width = 100% of this container, shift per step = 100% + 32px gap.
+          In both cases 100% in translateX refers to the track div's own width,
+          which equals this overflow-hidden container's width.
         */}
         <div className="flex-1 overflow-hidden">
           <div
             className="flex gap-8"
             style={{
-              transform: `translateX(calc(-${offset} * ((100% - 64px) / 3 + 32px)))`,
+              transform: trackTransform,
               transition: 'transform 350ms ease-in-out',
             }}
           >
             {reviews.map((r) => (
               <div
                 key={r.name}
-                style={{ width: 'calc((100% - 64px) / 3)', flexShrink: 0 }}
+                style={{ width: cardWidth, flexShrink: 0 }}
               >
                 <div
                   className="flex flex-col p-6 h-full"
@@ -160,7 +180,7 @@ export default function ReviewsCarousel() {
         </div>
 
         {/* Right arrow — only shown when not at last position */}
-        {offset < MAX_OFFSET ? (
+        {offset < maxOffset ? (
           <button
             onClick={() => navigate(1)}
             disabled={animating}
@@ -176,9 +196,9 @@ export default function ReviewsCarousel() {
         )}
       </div>
 
-      {/* Dot indicators — 3 dots for 3 positions */}
+      {/* Dot indicators — 3 dots on desktop (3 positions), 5 dots on mobile (5 positions) */}
       <div className="flex justify-center gap-2 mt-8">
-        {Array.from({ length: MAX_OFFSET + 1 }).map((_, i) => (
+        {Array.from({ length: maxOffset + 1 }).map((_, i) => (
           <button
             key={i}
             onClick={() => navigateTo(i)}

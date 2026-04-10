@@ -183,7 +183,7 @@ export default function AboutPage() {
               <p className="font-serif text-4xl mb-3" style={{ color: '#edd98f' }}>
                 Umag, Istria
               </p>
-              <p className="font-sans text-[#c8c8c8] text-sm leading-relaxed whitespace-nowrap">
+              <p className="font-sans text-[#c8c8c8] text-sm leading-relaxed">
                 Based on the northwestern tip of Istria, steps from the Adriatic Sea.
               </p>
             </div>

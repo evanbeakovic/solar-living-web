@@ -85,7 +85,7 @@ export default function HomePage() {
           </p>
 
           {/* H1 */}
-          <h1 className="font-serif text-6xl md:text-8xl leading-tight tracking-tight mb-7 whitespace-nowrap text-white">
+          <h1 className="font-serif text-4xl md:text-[5rem] leading-tight tracking-tight mb-7 md:whitespace-nowrap text-white">
             Your <em>Perfect</em> Stay in Istria
           </h1>
 

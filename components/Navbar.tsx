@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname, Link } from '@/navigation';
 import Image from 'next/image';
@@ -29,6 +29,24 @@ export default function Navbar() {
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const prevScrollY = useRef(0);
+
+  useEffect(() => {
+    function onScroll() {
+      const y = window.scrollY;
+      if (y < 10) {
+        setVisible(true);
+      } else if (y > prevScrollY.current) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+      prevScrollY.current = y;
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   function switchLocale(next: string) {
     router.replace(pathname, { locale: next });
@@ -37,7 +55,10 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#474748' }}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}
+      style={{ backgroundColor: '#474748' }}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between py-4">
 

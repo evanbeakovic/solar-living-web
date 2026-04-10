@@ -66,7 +66,7 @@ export default function ContactPage() {
         <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-7 text-white">
           We&apos;d Love to Hear From You.
         </h1>
-        <p className="font-sans text-base text-[#c8c8c8] mx-auto text-center leading-relaxed whitespace-nowrap">
+        <p className="font-sans text-base text-[#c8c8c8] mx-auto text-center leading-relaxed">
           Whether you&apos;re planning a stay or considering partnering with us, we&apos;re here and happy to help.
         </p>
       </section>

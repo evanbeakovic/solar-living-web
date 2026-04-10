@@ -598,7 +598,7 @@ export default function ApartmentsPage() {
           <h2 className="font-serif text-2xl md:text-3xl text-white">
             Not sure which apartment is right for you?
           </h2>
-          <p className="font-sans text-base leading-relaxed text-[#c8c8c8] whitespace-nowrap">
+          <p className="font-sans text-base leading-relaxed text-[#c8c8c8] text-center">
             Get in touch and we&apos;ll help you find the perfect match for your group, dates, and budget.
           </p>
           <Link
