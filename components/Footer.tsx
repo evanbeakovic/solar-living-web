@@ -1,4 +1,5 @@
 import { Link } from '@/navigation';
+import Image from 'next/image';
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -6,6 +7,8 @@ const quickLinks = [
   { href: '/owners', label: 'Owners' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/privacy', label: 'Privacy Policy' },
 ];
 
 export default function Footer() {
@@ -19,25 +22,7 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="space-y-4">
-            <p className="font-sans font-semibold text-2xl leading-none tracking-tight">
-              <span className="text-white">Solar</span>
-              <span style={{ color: '#86cae7' }}> Living</span>
-            </p>
-            <p className="text-sm leading-relaxed" style={{ color: '#c8c8c8' }}>
-              Boutique property management in Umag, Croatia
-            </p>
-            <p className="text-sm" style={{ color: '#c8c8c8' }}>
-              Part of the{' '}
-              <a
-                href="https://solarcreative.hr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-                style={{ color: '#c8c8c8' }}
-              >
-                Solar Group
-              </a>
-            </p>
+            <Image src="/solar-logo-white.png" alt="Solar Living" width={160} height={34} style={{ height: 'auto', display: 'block' }} />
           </div>
 
           {/* Quick Links column */}

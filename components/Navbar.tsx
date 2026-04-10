@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname, Link } from '@/navigation';
+import Image from 'next/image';
 
 const locales = [
   { code: 'en', label: 'EN' },
@@ -10,6 +11,7 @@ const locales = [
   { code: 'de', label: 'DE' },
   { code: 'it', label: 'IT' },
   { code: 'ru', label: 'RU' },
+  { code: 'hu', label: 'HU' },
 ];
 
 const navLinks = [
@@ -37,12 +39,11 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#474748' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between py-4">
 
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 font-sans font-semibold text-2xl leading-none tracking-tight">
-            <span className="text-white">Solar</span>
-            <span style={{ color: '#86cae7' }}> Living</span>
+          <Link href="/" className="flex-shrink-0 flex items-center">
+            <Image src="/solar-logo-white.png" alt="Solar Living" width={180} height={40} style={{ height: 'auto' }} priority />
           </Link>
 
           {/* Desktop nav */}

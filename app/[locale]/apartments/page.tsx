@@ -1,9 +1,20 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { MapPin } from 'lucide-react';
 import { Link } from '@/navigation';
 
 // ─── Data ──────────────────────────────────────────────────────────────────
+
+type Review = {
+  name: string;
+  country: string;
+  platform: string;
+  rating: number;
+  max: number;
+  text: string;
+};
 
 type Apartment = {
   id: number;
@@ -14,36 +25,56 @@ type Apartment = {
   type: string;
   location: string;
   amenities: string[];
-  image: null;
+  image: string | null;
   available: boolean;
+  mapSrc?: string;
+  mapLink?: string;
+  badge?: string;
+  reviews?: Review[];
 };
 
 const apartments: Apartment[] = [
   {
     id: 1,
-    name: 'Solar Apartment Umag I',
+    name: "Elaine's View",
     description:
-      'Elegant 2-bedroom apartment in the heart of Umag, steps from the sea. Fully equipped with premium amenities, tasteful décor, and everything you need for a perfect Istrian holiday.',
-    guests: 4,
-    bedrooms: 2,
+      'First row to the sea. Panoramic views of the Adriatic, sunsets & Umag Old Town.',
+    guests: 6,
+    bedrooms: 3,
     type: 'Apartment',
     location: 'Umag Old Town',
     amenities: ['Air conditioning', 'Wi-Fi', 'Fully equipped kitchen', 'Smart TV', 'Washing machine', 'Sea view'],
-    image: null, // TODO: replace with real image
+    image: '/images/umag-1-main.jpg',
     available: true,
+    mapSrc: 'https://maps.google.com/maps?q=Ul.+8.+ožujka+1A,+Umag,+Croatia&output=embed',
+    mapLink: "https://www.google.com/maps/search/Apartment+Elaine%27s+View+Umag",
+    badge: '9.9 · Booking.com  |  5.0 · Airbnb',
+    reviews: [
+      { name: 'Tania', country: 'Canada', platform: 'Airbnb', rating: 5, max: 5, text: 'The apartment was clean and comfortable with balcony views of evening sunsets over the Adriatic and the old town of Umag. Umag is a perfect spot to enjoy Istria — including day trips into Italy. Weather was perfect, interesting history and gorgeous scenery.' },
+      { name: 'Stephan', country: 'Germany', platform: 'Airbnb', rating: 5, max: 5, text: 'We were received very kindly and personally. A big, well laid out apartment overlooking the sea. There is a balcony to the sea side, but also to the side — very practical. We found it very quiet.' },
+      { name: 'Jana', country: 'Czech Republic', platform: 'Booking.com', rating: 10, max: 10, text: 'Perfect accommodation. A premium apartment with a stunning sea view. Right in front of the building is a city beach with easy sea access and very few people. Very friendly and professional communication with the host. We will definitely return.' },
+    ],
   },
   {
     id: 2,
-    name: 'Solar Apartment Umag II',
+    name: "Stella's Garden",
     description:
-      'Modern studio with stunning sea views and premium amenities. Perfectly designed for couples seeking a luxurious and intimate escape on the Istrian coast.',
-    guests: 2,
-    bedrooms: 0,
-    type: 'Studio',
-    location: 'Umag Seafront',
-    amenities: ['Air conditioning', 'Wi-Fi', 'Kitchenette', 'Smart TV', 'Sea view', 'Balcony'],
-    image: null,
+      "Ground-floor living in Umag's finest new building, with a private Mediterranean garden.",
+    guests: 6,
+    bedrooms: 2,
+    type: 'Apartment',
+    location: 'Umag',
+    amenities: ['Air conditioning', 'Wi-Fi', 'Fully equipped kitchen', 'Smart TV', 'Private terrace', 'Garden'],
+    image: '/images/umag-2-main.jpg',
     available: true,
+    mapSrc: 'https://maps.google.com/maps?q=Ulica+154.+brigada+HV+7,+Umag,+Croatia&output=embed',
+    mapLink: 'https://www.google.com/maps/search/Ulica+154+brigada+HV+7+Umag',
+    badge: '9.8 · Booking.com  |  5.0 · Airbnb',
+    reviews: [
+      { name: 'Peter', country: 'Slovakia', platform: 'Airbnb', rating: 5, max: 5, text: 'Everything was sparkling clean and very modern — you almost felt like we were the first guests. Extremely friendly host, always immediately available for questions with very quick answers.' },
+      { name: 'Jehona', country: 'Slovenia', platform: 'Booking.com', rating: 10, max: 10, text: 'Everything is excellent — better than a 5-star hotel. I recommend it to everyone. I have never seen something like this. The owner was very kind and showed us everything.' },
+      { name: 'Maciej', country: 'Poland', platform: 'Booking.com', rating: 9, max: 10, text: 'Highly recommended. Spacious ground-floor apartment with comfortable beds, a well-equipped kitchen, air conditioning, and two bathrooms. Large terrace with assigned parking. 2 minutes by car to shopping centers, 4-5 minutes to the nearest beach.' },
+    ],
   },
   {
     id: 3,
@@ -154,9 +185,11 @@ function validateForm(form: FormState, maxGuests: number): string | null {
 function ApartmentCard({
   apt,
   onBook,
+  onShowReviews,
 }: {
   apt: Apartment;
   onBook: (apt: Apartment) => void;
+  onShowReviews: (apt: Apartment) => void;
 }) {
   const infoLine = apt.available
     ? [
@@ -171,22 +204,16 @@ function ApartmentCard({
 
   return (
     <div
-      className="overflow-hidden flex flex-col"
+      className="flex flex-col"
       style={{ backgroundColor: '#d8d8d8', border: '1px solid rgba(0,0,0,0.08)' }}
     >
       {/* Image area */}
       {apt.available ? (
-        // TODO: replace with next/image
-        <div className="h-72 flex items-center justify-center" style={{ background: cardGradient }}>
-          <span
-            className="font-serif text-2xl tracking-widest"
-            style={{ color: 'rgba(255,255,255,0.15)' }}
-          >
-            SOLAR LIVING
-          </span>
+        <div className="h-72 relative overflow-hidden">
+          <Image src={apt.image!} alt={apt.name} fill className="object-cover" />
         </div>
       ) : (
-        <div className="h-72 flex items-center justify-center" style={{ background: cardGradient }}>
+        <div className="h-72 flex items-center justify-center overflow-hidden" style={{ background: cardGradient }}>
           <span
             className="font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2"
             style={{ border: '1px solid #edd98f', color: '#edd98f' }}
@@ -200,16 +227,54 @@ function ApartmentCard({
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
-            <p className="font-sans text-xs uppercase tracking-widest text-[#2a2a2a] mb-1">
-              Umag, Croatia
-            </p>
+            {apt.mapSrc ? (
+              <a
+                href={apt.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center gap-1 font-sans text-xs uppercase tracking-widest mb-1 cursor-pointer"
+                style={{ color: '#888888' }}
+              >
+                <MapPin size={14} style={{ color: '#86cae7', flexShrink: 0 }} />
+                Umag, Croatia
+                <div
+                  className="absolute left-0 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50"
+                  style={{ width: '280px', backgroundColor: '#2a2a2a' }}
+                >
+                  <iframe
+                    src={apt.mapSrc}
+                    width="280"
+                    height="180"
+                    style={{ border: 0, display: 'block' }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </a>
+            ) : (
+              <p className="flex items-center gap-1 font-sans text-xs uppercase tracking-widest mb-1" style={{ color: '#888888' }}>
+                <MapPin size={14} style={{ color: '#86cae7', flexShrink: 0 }} />
+                Umag, Croatia
+              </p>
+            )}
             <h3 className="font-serif text-xl font-normal text-[#1a1a1a]">
               {apt.name}
             </h3>
           </div>
-          <span className="font-sans text-xs uppercase tracking-widest shrink-0 pt-0.5 text-[#2a2a2a]">
-            {apt.type}
-          </span>
+          {apt.badge ? (
+            <button
+              onClick={() => onShowReviews(apt)}
+              className="shrink-0 pt-0.5 font-sans text-xs leading-snug text-right transition-opacity hover:opacity-70 cursor-pointer"
+              style={{ color: '#888888' }}
+            >
+              <span style={{ color: '#edd98f' }}>★</span>{' '}
+              {apt.badge}
+            </button>
+          ) : (
+            <span className="font-sans text-xs uppercase tracking-widest shrink-0 pt-0.5 text-[#2a2a2a]">
+              {apt.type}
+            </span>
+          )}
         </div>
 
         <p className="font-serif text-sm leading-relaxed text-[#333333]">
@@ -380,14 +445,15 @@ function InquiryModal({
         <div className="flex gap-3 mt-7">
           <button
             onClick={handleWhatsApp}
-            className="flex-1 font-sans font-semibold text-xs uppercase tracking-widest py-3 bg-green-700 text-white hover:bg-green-800 transition-colors"
+            className="flex-1 font-sans font-semibold text-xs uppercase tracking-widest py-3 text-white transition-opacity hover:opacity-90"
+            style={{ backgroundColor: '#4a8c7a' }}
           >
             Send via WhatsApp
           </button>
           <button
             onClick={handleEmail}
             className="flex-1 font-sans font-semibold text-xs uppercase tracking-widest py-3 transition-opacity hover:opacity-90"
-            style={{ backgroundColor: '#86cae7', color: '#474748' }}
+            style={{ backgroundColor: '#edd98f', color: '#474748' }}
           >
             Send via Email
           </button>
@@ -401,10 +467,77 @@ function InquiryModal({
   );
 }
 
+// ─── Reviews Modal ─────────────────────────────────────────────────────────
+
+function ReviewsModal({ apt, onClose }: { apt: Apartment; onClose: () => void }) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = ''; };
+  }, []);
+
+  const scoreLabel = apt.id === 1
+    ? '★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb'
+    : '★ 9.8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb';
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div
+        className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto"
+        style={{ backgroundColor: '#474748' }}
+      >
+        {/* Header */}
+        <div className="px-8 pt-8 pb-6">
+          <button
+            onClick={onClose}
+            className="absolute top-5 right-5 text-xl leading-none font-sans text-[#c8c8c8] hover:text-white transition-colors"
+            aria-label="Close"
+          >
+            ×
+          </button>
+          <h2 className="font-serif text-2xl text-white mb-1">{apt.name}</h2>
+          <p className="font-sans text-xs" style={{ color: '#edd98f' }}>{scoreLabel}</p>
+          <div className="mt-5" style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }} />
+        </div>
+
+        {/* Reviews */}
+        <div className="px-8 pb-8 space-y-4">
+          {(apt.reviews ?? []).map((r) => (
+            <div
+              key={r.name}
+              className="p-5"
+              style={{ backgroundColor: '#525253', border: '1px solid rgba(255,255,255,0.08)' }}
+            >
+              <div className="flex items-center justify-between mb-2">
+                <div>
+                  <span className="font-sans font-semibold text-sm text-white">{r.name}</span>
+                  <span className="font-sans text-xs ml-2" style={{ color: '#888888' }}>{r.country}</span>
+                </div>
+                <span className="font-sans text-xs" style={{ color: '#888888' }}>{r.platform}</span>
+              </div>
+              <p className="font-sans text-xs mb-3" style={{ color: '#edd98f' }}>
+                {'★'.repeat(Math.min(r.rating, 5))}
+                {r.max === 10 && <span className="ml-1">{r.rating}/10</span>}
+              </p>
+              <p className="font-sans text-sm leading-relaxed" style={{ color: '#c8c8c8' }}>
+                &ldquo;{r.text}&rdquo;
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Page ──────────────────────────────────────────────────────────────────
 
 export default function ApartmentsPage() {
   const [selected, setSelected] = useState<Apartment | null>(null);
+  const [reviewsApt, setReviewsApt] = useState<Apartment | null>(null);
 
   return (
     <>
@@ -417,8 +550,7 @@ export default function ApartmentsPage() {
           Find Your Perfect Apartment
         </h1>
         <p className="font-sans text-base max-w-xl mx-auto leading-relaxed tracking-wide text-[#c8c8c8]">
-          Select a property, choose your dates, and send us an inquiry. We&apos;ll confirm
-          availability and handle the rest.
+          Select a property, choose your dates, and send us an inquiry.<br />We&apos;ll confirm availability and handle the rest.
         </p>
       </section>
 
@@ -435,14 +567,26 @@ export default function ApartmentsPage() {
                 All Apartments
               </h2>
             </div>
-            <p className="font-sans text-sm text-[#c8c8c8] md:text-right md:max-w-xs">
+            <p className="font-sans text-sm text-[#c8c8c8] md:text-right">
               Select a property below and send us your inquiry.
             </p>
           </div>
 
+          {/* Available apartments */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {apartments.map((apt) => (
-              <ApartmentCard key={apt.id} apt={apt} onBook={setSelected} />
+            {apartments.filter((a) => a.available).map((apt) => (
+              <ApartmentCard key={apt.id} apt={apt} onBook={setSelected} onShowReviews={setReviewsApt} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── COMING SOON APARTMENTS ──────────────────────────────────────── */}
+      <section className="py-24 px-6" style={{ backgroundColor: '#474748' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {apartments.filter((a) => !a.available).map((apt) => (
+              <ApartmentCard key={apt.id} apt={apt} onBook={setSelected} onShowReviews={setReviewsApt} />
             ))}
           </div>
         </div>
@@ -451,10 +595,10 @@ export default function ApartmentsPage() {
       {/* ── SECTION 3: BOTTOM CTA ───────────────────────────────────────── */}
       <section className="py-24 px-6 text-center" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-2xl mx-auto space-y-6">
-          <h2 className="font-serif text-3xl md:text-4xl text-white">
+          <h2 className="font-serif text-2xl md:text-3xl text-white">
             Not sure which apartment is right for you?
           </h2>
-          <p className="font-sans text-base leading-relaxed text-[#c8c8c8]">
+          <p className="font-sans text-base leading-relaxed text-[#c8c8c8] whitespace-nowrap">
             Get in touch and we&apos;ll help you find the perfect match for your group, dates, and budget.
           </p>
           <Link
@@ -466,6 +610,11 @@ export default function ApartmentsPage() {
           </Link>
         </div>
       </section>
+
+      {/* ── REVIEWS MODAL ───────────────────────────────────────────────── */}
+      {reviewsApt && (
+        <ReviewsModal apt={reviewsApt} onClose={() => setReviewsApt(null)} />
+      )}
 
       {/* ── INQUIRY MODAL ───────────────────────────────────────────────── */}
       {selected && (

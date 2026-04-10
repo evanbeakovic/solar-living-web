@@ -66,8 +66,8 @@ export default function ContactPage() {
         <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-7 text-white">
           We&apos;d Love to Hear From You.
         </h1>
-        <p className="font-sans text-base text-[#c8c8c8] max-w-xl mx-auto text-center leading-relaxed">
-          Whether you&apos;re planning a stay or considering partnering with us — we&apos;re here and happy to help.
+        <p className="font-sans text-base text-[#c8c8c8] mx-auto text-center leading-relaxed whitespace-nowrap">
+          Whether you&apos;re planning a stay or considering partnering with us, we&apos;re here and happy to help.
         </p>
       </section>
 
@@ -256,26 +256,12 @@ export default function ContactPage() {
           </div>
 
         </div>
+        <p className="mt-12 text-center font-sans text-sm" style={{ color: '#888888' }}>
+          Our team operates across Umag, Istria — reach us via WhatsApp or email.
+        </p>
       </section>
 
-      {/* ─── SECTION 3: MAP PLACEHOLDER ──────────────────────────────────── */}
-      <section style={{ backgroundColor: '#474748' }}>
-        <div
-          className="w-full h-80 flex items-center justify-center"
-          style={{ backgroundColor: '#3e3e3f' }}
-        >
-          <span className="font-sans text-sm" style={{ color: '#666666' }}>
-            {`/* TODO: embed Google Maps iframe for Ul. 8. ožujka 1A, Umag */`}
-          </span>
-        </div>
-        <div className="py-8 text-center">
-          <p className="font-sans text-sm text-[#c8c8c8]">
-            Ul. 8. ožujka 1A, Umag, Croatia
-          </p>
-        </div>
-      </section>
-
-      {/* ─── SECTION 4: BOTTOM CTA ───────────────────────────────────────── */}
+      {/* ─── SECTION 3: BOTTOM CTA ───────────────────────────────────────── */}
       <section className="py-24 px-6 text-center" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="font-serif text-4xl text-white">

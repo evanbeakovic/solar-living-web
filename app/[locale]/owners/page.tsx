@@ -1,54 +1,54 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-const features = [
+const features: { title: string; description: React.ReactNode }[] = [
   {
     title: 'Professional Photography',
-    description: 'We photograph your property to the highest standard to attract premium guests.',
+    description: <>We photograph your property to the<br />highest standard to attract premium guests.</>,
   },
   {
     title: 'Listing Management',
-    description: 'We manage your listings across all major platforms including Airbnb, Booking.com, and direct bookings.',
+    description: <>We manage your listings across all major platforms<br />including Airbnb, Booking.com, and direct bookings.</>,
   },
   {
     title: 'Guest Communication',
-    description: 'We handle all guest inquiries, check-ins, check-outs, and support — 24/7.',
+    description: <>We handle all guest inquiries, check-ins,<br />check-outs, and support 24/7.</>,
   },
   {
     title: 'Cleaning & Maintenance',
-    description: 'Professional cleaning after every stay, regular inspections, and prompt maintenance.',
+    description: <>Professional cleaning after every stay,<br />regular inspections and prompt maintenance.</>,
   },
   {
     title: 'Dynamic Pricing',
-    description: 'We optimize your nightly rates to maximize occupancy and revenue year-round.',
+    description: <>We optimize your nightly rates to maximize<br />occupancy and revenue year-round.</>,
   },
   {
     title: 'Monthly Reporting',
-    description: 'Transparent monthly reports so you always know how your property is performing.',
+    description: <>Transparent monthly reports so you always<br />know how your property is performing.</>,
   },
 ];
 
-const steps = [
+const steps: { number: string; title: string; description: React.ReactNode }[] = [
   {
     number: '01',
     title: 'Free Consultation',
-    description: 'We meet to understand your property, your goals, and answer any questions.',
+    description: <>We meet to understand<br />your property, goals, and<br />answer any questions.</>,
   },
   {
     number: '02',
     title: 'Property Assessment',
-    description: 'We visit and assess your property, provide recommendations, and agree on terms.',
+    description: <>We assess your property,<br />provide recommendations,<br />and agree on terms.</>,
   },
   {
     number: '03',
     title: 'We Handle Everything',
-    description: 'Photography, listings, guest management, cleaning — all taken care of.',
+    description: <>Photography, listings,<br />guest management,<br />cleaning, all taken care of.</>,
   },
   {
     number: '04',
     title: 'You Earn & Relax',
-    description: 'Receive monthly payments and transparent reports. That\'s it.',
+    description: "Receive monthly payments and transparent reports. That's it.",
   },
 ];
 
@@ -111,11 +111,11 @@ export default function OwnersPage() {
         <p className="font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
           For Property Owners
         </p>
-        <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-7 max-w-3xl text-white">
+        <h1 className="font-serif text-4xl md:text-5xl leading-tight mb-7 max-w-3xl text-white">
           Let Us Take Care of Everything.
         </h1>
         <p className="font-sans text-base md:text-lg mb-10 max-w-xl tracking-wide text-[#c8c8c8]">
-          Solar Living handles every aspect of your property — so you earn more, stress less, and never worry about a thing.
+          Solar Living handles every aspect of your property,<br />so you earn more, stress less, and never worry about a thing.
         </p>
         <a
           href="#contact"
@@ -125,7 +125,7 @@ export default function OwnersPage() {
           Get a Free Consultation
         </a>
         <p className="font-sans text-xs text-[#888888]">
-          No commitment required. We&apos;ll get back to you within 24 hours.
+          We&apos;ll get back to you within 24 hours.
         </p>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
@@ -143,11 +143,11 @@ export default function OwnersPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="py-8 px-6"
+                className="overflow-hidden"
               >
                 <h3 className="font-sans font-semibold text-sm text-white mb-2">
                   {feature.title}
@@ -168,7 +168,7 @@ export default function OwnersPage() {
             &ldquo;We treat every property as if it were our own — with the same care, attention, and pride.&rdquo;
           </blockquote>
           <p className="font-sans text-sm uppercase tracking-widest text-[#c8c8c8]">
-            — Evan Beaković, Founder
+            Ana &amp; Evan, Founders
           </p>
         </div>
       </section>
@@ -224,7 +224,7 @@ export default function OwnersPage() {
                 Ready to Partner With Us?
               </h2>
               <p className="font-sans text-[#c8c8c8] text-sm leading-relaxed">
-                Fill in the form and we&apos;ll be in touch within 24 hours. Or reach us directly:
+                Fill in the form and we&apos;ll be in touch within 24 hours.<br />Reach us directly:
               </p>
             </div>
 
