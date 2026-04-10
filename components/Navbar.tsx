@@ -156,7 +156,7 @@ export default function Navbar() {
                     : 'text-[#d0d0d0] hover:text-white active:text-white focus:text-white'
                 }`}
               >
-                {link.label}
+                {t(link.key)}
               </Link>
             );
           })}
