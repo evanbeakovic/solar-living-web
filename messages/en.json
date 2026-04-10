@@ -1,1 +1,87 @@
-{}
+{
+  "home": {
+    "hero": {
+      "locationLabel": "Umag, Croatia",
+      "headingStart": "Your",
+      "headingAccent": "Perfect",
+      "headingEnd": "Stay in Istria",
+      "subheading": "Handpicked apartments. Exceptional service. Unforgettable memories.",
+      "ctaBrowse": "Browse Apartments",
+      "ctaOwners": "For Property Owners"
+    },
+    "apartments": {
+      "label": "Our Collection",
+      "heading": "Apartments",
+      "subtext": "Every property is personally selected and meticulously maintained.",
+      "card1Location": "Umag, Croatia",
+      "card1Name": "Elaine's View",
+      "card1Details": "6 guests · 3 bedrooms · Terrace & balcony",
+      "card1Cta": "View & Book",
+      "card2Location": "Umag, Croatia",
+      "card2Name": "Stella's Garden",
+      "card2Details": "6 guests · 2 bedrooms · Private terrace & garden",
+      "card2Cta": "View & Book",
+      "viewAll": "View All Apartments →"
+    },
+    "reviews": {
+      "label": "Guest Reviews",
+      "heading": "What Our Guests Say"
+    },
+    "whyUs": {
+      "quote": "We don't just hand you the keys. We make sure every detail is taken care of, so you can simply enjoy.",
+      "attribution": "Solar Living Team",
+      "feature1Title": "Curated Properties",
+      "feature1Body": "Every apartment is handpicked and held to the highest standard.",
+      "feature2Title": "5-Star Service",
+      "feature2Body": "From check-in to check-out, we're always here for you.",
+      "feature3Title": "Fully Equipped",
+      "feature3Body": "Everything you need for a perfect stay, already there waiting.",
+      "feature4Title": "Top-Rated",
+      "feature4Body": "Our guests consistently leave 5-star reviews across all platforms."
+    },
+    "whoWeAre": {
+      "label": "Who We Are",
+      "heading": "Boutique Property Management Agency",
+      "para1": "Solar Living is a boutique holiday apartment management agency based in Umag, Istria, Croatia. We manage a curated portfolio of premium apartments for guests seeking exceptional accommodation on the Adriatic coast.",
+      "propertiesIntro": "Our current properties include:",
+      "elaineName": "Elaine's View",
+      "elaineDetails": ", a spacious, first row to the sea located apartment with panoramic view of the Adriatic Sea, sunset, and Umag Old Town.",
+      "stellaName": "Stella's Garden",
+      "stellaDetails": ", a ground-floor apartment in Umag's finest new building, featuring a private Mediterranean garden with an olive tree.",
+      "para3": "Both apartments are consistently rated 9.8 or above on Booking.com and 5.0/5 on Airbnb, reflecting our commitment to cleanliness, comfort, and exceptional guest service.",
+      "para4": "For property owners, Solar Living offers a full management service covering professional photography, listing management across all major platforms, 24/7 guest communication, cleaning coordination, dynamic pricing, and monthly reporting.",
+      "para5": "Solar Living is part of the Solar Group, alongside Solar Creative, a marketing agency based in Dubai."
+    },
+    "ownersCta": {
+      "label": "Property Owners",
+      "heading": "Own a Property in Istria?",
+      "body": "Join our portfolio and enjoy full management, guaranteed care, and outstanding results. We handle everything.",
+      "cta": "Get in Touch"
+    },
+    "location": {
+      "label": "Where We Are",
+      "heading": "Umag, Istria",
+      "body": "Nestled on the northwestern tip of Istria, Umag is a charming medieval town with crystal-clear Adriatic waters, world-class gastronomy, and a laid-back Mediterranean atmosphere. The perfect destination for a truly restorative holiday."
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "apartments": "Apartments",
+    "owners": "Owners",
+    "about": "About",
+    "contact": "Contact",
+    "toggleMenu": "Toggle menu"
+  },
+  "footer": {
+    "quickLinksHeading": "Quick Links",
+    "contactHeading": "Contact",
+    "linkHome": "Home",
+    "linkApartments": "Apartments",
+    "linkOwners": "Owners",
+    "linkAbout": "About",
+    "linkContact": "Contact",
+    "linkFaq": "FAQ",
+    "linkPrivacyPolicy": "Privacy Policy",
+    "copyright": "© 2025 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | All rights reserved"
+  }
+}

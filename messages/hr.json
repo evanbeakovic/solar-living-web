@@ -1,1 +1,87 @@
-{}
+{
+  "home": {
+    "hero": {
+      "locationLabel": "Umag, Hrvatska",
+      "headingStart": "Vaš",
+      "headingAccent": "Savršen",
+      "headingEnd": "Odmor u Istri",
+      "subheading": "Pažljivo odabrani apartmani. Iznimna usluga. Trenuci koji ostaju.",
+      "ctaBrowse": "Istražite apartmane",
+      "ctaOwners": "Za vlasnike nekretnina"
+    },
+    "apartments": {
+      "label": "Naša kolekcija",
+      "heading": "Apartmani",
+      "subtext": "Svaki apartman osobno je odabran i brižno održavan.",
+      "card1Location": "Umag, Hrvatska",
+      "card1Name": "Elaine's View",
+      "card1Details": "6 gostiju · 3 spavaće sobe · Terasa & balkon",
+      "card1Cta": "Pogledaj i rezerviraj",
+      "card2Location": "Umag, Hrvatska",
+      "card2Name": "Stella's Garden",
+      "card2Details": "6 gostiju · 2 spavaće sobe · Privatna terasa & vrt",
+      "card2Cta": "Pogledaj i rezerviraj",
+      "viewAll": "Svi apartmani →"
+    },
+    "reviews": {
+      "label": "Recenzije gostiju",
+      "heading": "Što govore naši gosti"
+    },
+    "whyUs": {
+      "quote": "Ne predajemo vam samo ključeve. Brinemo o svakom detalju — da biste se mogli jednostavno prepustiti.",
+      "attribution": "Tim Solar Living",
+      "feature1Title": "Odabrane nekretnine",
+      "feature1Body": "Svaki apartman pažljivo je odabran i održava se prema najvišim standardima.",
+      "feature2Title": "5-zvjezdična usluga",
+      "feature2Body": "Od dolaska do odlaska, uvijek smo tu za vas.",
+      "feature3Title": "Potpuno opremljeno",
+      "feature3Body": "Sve što trebate za savršen boravak već je na svom mjestu.",
+      "feature4Title": "Visoko ocijenjeno",
+      "feature4Body": "Naši gosti redovito ostavljaju ocjene s 5 zvjezdica na svim platformama."
+    },
+    "whoWeAre": {
+      "label": "Tko smo",
+      "heading": "Boutique agencija za upravljanje nekretninama",
+      "para1": "Solar Living je boutique agencija za upravljanje smještajem sa sjedištem u Umagu, Istra, Hrvatska. Upravljamo odabranim portfeljem premium apartmana za goste koji traže izniman smještaj na jadranskoj obali.",
+      "propertiesIntro": "Naše trenutne nekretnine uključuju:",
+      "elaineName": "Elaine's View",
+      "elaineDetails": ", prostrani apartman u prvom redu do mora s panoramskim pogledom na Jadransko more, zalazak sunca nad Umagom i stari grad.",
+      "stellaName": "Stella's Garden",
+      "stellaDetails": ", prizemni apartman u jednoj od najljepših novih zgrada u Umagu, s privatnim mediteranskim vrtom i stablom masline.",
+      "para3": "Oba apartmana dosljedno ostvaruju ocjenu 9,8 ili više na Booking.com i 5,0/5 na Airbnb — što odražava našu predanost čistoći, udobnosti i iznimnoj brizi za goste.",
+      "para4": "Za vlasnike nekretnina, Solar Living nudi cjelokupnu uslugu upravljanja koja uključuje profesionalnu fotografiju, upravljanje oglasima na svim većim platformama, komunikaciju s gostima 24/7, koordinaciju čišćenja, dinamično određivanje cijena i mjesečne izvještaje.",
+      "para5": "Solar Living dio je Solar Grupe, zajedno sa Solar Creative, marketinškom agencijom sa sjedištem u Dubaiju."
+    },
+    "ownersCta": {
+      "label": "Vlasnici nekretnina",
+      "heading": "Imate nekretninu u Istri?",
+      "body": "Pridružite se našem portfelju i prepustite nam brigu — o svemu.",
+      "cta": "Kontaktirajte nas"
+    },
+    "location": {
+      "label": "Gdje se nalazimo",
+      "heading": "Umag, Istra",
+      "body": "Smješten na sjeverozapadnom vrhu Istre, Umag je šarmantni srednjovjekovni grad s kristalno čistim morem, gastronomijom svjetske razine i opuštenom mediteranskom atmosferom. Savršeno odredište za pravi odmor od svega."
+    }
+  },
+  "navbar": {
+    "home": "Početna",
+    "apartments": "Apartmani",
+    "owners": "Vlasnici",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "toggleMenu": "Otvori/zatvori izbornik"
+  },
+  "footer": {
+    "quickLinksHeading": "Brze veze",
+    "contactHeading": "Kontakt",
+    "linkHome": "Početna",
+    "linkApartments": "Apartmani",
+    "linkOwners": "Vlasnici",
+    "linkAbout": "O nama",
+    "linkContact": "Kontakt",
+    "linkFaq": "FAQ",
+    "linkPrivacyPolicy": "Politika privatnosti",
+    "copyright": "© 2025 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | Sva prava pridržana"
+  }
+}

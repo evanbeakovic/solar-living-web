@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname, Link } from '@/navigation';
 import Image from 'next/image';
 
@@ -15,14 +15,15 @@ const locales = [
 ];
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/apartments', label: 'Apartments' },
-  { href: '/owners', label: 'Owners' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', key: 'home' },
+  { href: '/apartments', key: 'apartments' },
+  { href: '/owners', key: 'owners' },
+  { href: '/about', key: 'about' },
+  { href: '/contact', key: 'contact' },
 ];
 
 export default function Navbar() {
+  const t = useTranslations('navbar');
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -84,7 +85,7 @@ export default function Navbar() {
                       : 'text-[#d0d0d0] hover:text-white active:text-white focus:text-white'
                   }`}
                 >
-                  {link.label}
+                  {t(link.key)}
                 </Link>
               );
             })}
@@ -126,7 +127,7 @@ export default function Navbar() {
           <button
             className="md:hidden text-[#d0d0d0] hover:text-white transition-colors focus:outline-none text-xl leading-none font-sans"
             onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Toggle menu"
+            aria-label={t('toggleMenu')}
           >
             {mobileOpen ? '✕' : '☰'}
           </button>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { Link } from '@/navigation';
@@ -59,6 +60,8 @@ const homeJsonLd = {
 
 
 export default function HomePage() {
+  const t = useTranslations('home');
+
   return (
     <>
       <script
@@ -81,17 +84,17 @@ export default function HomePage() {
         >
           {/* Label */}
           <p className="font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
-            Umag, Croatia
+            {t('hero.locationLabel')}
           </p>
 
           {/* H1 */}
           <h1 className="font-serif text-4xl md:text-[5rem] leading-tight tracking-tight mb-7 md:whitespace-nowrap text-white">
-            Your <em>Perfect</em> Stay in Istria
+            {t('hero.headingStart')} <em>{t('hero.headingAccent')}</em> {t('hero.headingEnd')}
           </h1>
 
           {/* Subheading */}
           <p className="font-sans text-base md:text-lg mb-12 max-w-3xl tracking-wide text-[#c8c8c8]">
-            Handpicked apartments. Exceptional service. Unforgettable memories.
+            {t('hero.subheading')}
           </p>
 
           {/* CTA buttons */}
@@ -101,14 +104,14 @@ export default function HomePage() {
               className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#edd98f', color: '#474748' }}
             >
-              Browse Apartments
+              {t('hero.ctaBrowse')}
             </Link>
             <Link
               href="/owners"
               className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-colors hover:border-white text-white"
               style={{ border: '1px solid rgba(255,255,255,0.3)' }}
             >
-              For Property Owners
+              {t('hero.ctaOwners')}
             </Link>
           </div>
         </div>
@@ -124,14 +127,14 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-                Our Collection
+                {t('apartments.label')}
               </p>
               <h2 className="font-serif text-4xl md:text-5xl text-white">
-                Apartments
+                {t('apartments.heading')}
               </h2>
             </div>
             <p className="font-sans text-sm text-[#c8c8c8] md:text-right md:max-w-xs">
-              Every property is personally selected<br />and meticulously maintained.
+              {t('apartments.subtext')}
             </p>
           </div>
 
@@ -153,7 +156,7 @@ export default function HomePage() {
                   style={{ color: '#888888' }}
                 >
                   <MapPin size={14} style={{ color: '#86cae7', flexShrink: 0 }} />
-                  Umag, Croatia
+                  {t('apartments.card1Location')}
                   <div
                     className="absolute left-0 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50"
                     style={{ width: '280px', backgroundColor: '#2a2a2a' }}
@@ -169,10 +172,10 @@ export default function HomePage() {
                   </div>
                 </a>
                 <h3 className="font-serif text-xl font-normal text-[#1a1a1a]">
-                  Elaine&apos;s View
+                  {t('apartments.card1Name')}
                 </h3>
                 <p className="font-sans text-xs text-[#444444] tracking-wide">
-                  6 guests · 3 bedrooms · Terrace &amp; balcony
+                  {t('apartments.card1Details')}
                 </p>
                 <div className="mt-auto pt-2">
                   <Link
@@ -180,7 +183,7 @@ export default function HomePage() {
                     className="inline-block font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2 text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
                     style={{ border: '1px solid #1a1a1a' }}
                   >
-                    View &amp; Book
+                    {t('apartments.card1Cta')}
                   </Link>
                 </div>
               </div>
@@ -203,7 +206,7 @@ export default function HomePage() {
                   style={{ color: '#888888' }}
                 >
                   <MapPin size={14} style={{ color: '#86cae7', flexShrink: 0 }} />
-                  Umag, Croatia
+                  {t('apartments.card2Location')}
                   <div
                     className="absolute left-0 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50"
                     style={{ width: '280px', backgroundColor: '#2a2a2a' }}
@@ -219,10 +222,10 @@ export default function HomePage() {
                   </div>
                 </a>
                 <h3 className="font-serif text-xl font-normal text-[#1a1a1a]">
-                  Stella&apos;s Garden
+                  {t('apartments.card2Name')}
                 </h3>
                 <p className="font-sans text-xs text-[#444444] tracking-wide">
-                  6 guests · 2 bedrooms · Private terrace &amp; garden
+                  {t('apartments.card2Details')}
                 </p>
                 <div className="mt-auto pt-2">
                   <Link
@@ -230,7 +233,7 @@ export default function HomePage() {
                     className="inline-block font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2 text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
                     style={{ border: '1px solid #1a1a1a' }}
                   >
-                    View &amp; Book
+                    {t('apartments.card2Cta')}
                   </Link>
                 </div>
               </div>
@@ -243,7 +246,7 @@ export default function HomePage() {
               href="/apartments"
               className="font-sans text-xs uppercase tracking-widest transition-opacity hover:opacity-70 text-[#86cae7]"
             >
-              View All Apartments →
+              {t('apartments.viewAll')}
             </Link>
           </div>
         </div>
@@ -254,10 +257,10 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-16">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-              Guest Reviews
+              {t('reviews.label')}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-white">
-              What Our Guests Say
+              {t('reviews.heading')}
             </h2>
           </div>
 
@@ -271,22 +274,20 @@ export default function HomePage() {
           {/* Left — quote */}
           <div className="md:w-1/2">
             <blockquote className="font-serif text-xl md:text-[1.6rem] italic leading-relaxed text-white">
-              &ldquo;We don&apos;t just hand you the keys.<br />
-              We make sure every detail is taken<br />
-              care of, so you can simply enjoy.&rdquo;
+              &ldquo;{t('whyUs.quote')}&rdquo;
             </blockquote>
             <p className="mt-6 font-sans text-xs uppercase tracking-widest text-[#b0b0b0]">
-              Solar Living Team
+              {t('whyUs.attribution')}
             </p>
           </div>
 
           {/* Right — features */}
           <div className="md:w-1/2 space-y-8">
             {[
-              { title: 'Curated Properties',  body: 'Every apartment is handpicked and held to the highest standard.' },
-              { title: '5-Star Service',      body: "From check-in to check-out, we're always here for you." },
-              { title: 'Fully Equipped',      body: 'Everything you need for a perfect stay, already there waiting.' },
-              { title: 'Top-Rated',           body: 'Our guests consistently leave 5-star reviews across all platforms.' },
+              { title: t('whyUs.feature1Title'), body: t('whyUs.feature1Body') },
+              { title: t('whyUs.feature2Title'), body: t('whyUs.feature2Body') },
+              { title: t('whyUs.feature3Title'), body: t('whyUs.feature3Body') },
+              { title: t('whyUs.feature4Title'), body: t('whyUs.feature4Body') },
             ].map(({ title, body }) => (
               <div
                 key={title}
@@ -305,32 +306,32 @@ export default function HomePage() {
       <section className="py-24 md:py-32 px-6" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-3xl mx-auto">
           <p className="font-sans text-xs uppercase tracking-widest mb-6" style={{ color: '#86cae7' }}>
-            Who We Are
+            {t('whoWeAre.label')}
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-white mb-8">
-            Boutique Property Management Agency
+            {t('whoWeAre.heading')}
           </h2>
           <div className="space-y-5 font-sans text-base leading-relaxed text-justify" style={{ color: '#c8c8c8' }}>
             <p>
-              Solar Living is a boutique holiday apartment management agency based in Umag, Istria, Croatia. We manage a curated portfolio of premium apartments for guests seeking exceptional accommodation on the Adriatic coast.
+              {t('whoWeAre.para1')}
             </p>
-            <p>Our current properties include:</p>
+            <p>{t('whoWeAre.propertiesIntro')}</p>
             <ul className="space-y-2">
               <li style={{ listStyleType: 'none' }}>
-                <strong>Elaine&apos;s View</strong>, a spacious, first row to the sea located apartment with panoramic view of the Adriatic Sea, sunset, and Umag Old Town.
+                <strong>{t('whoWeAre.elaineName')}</strong>{t('whoWeAre.elaineDetails')}
               </li>
               <li style={{ listStyleType: 'none' }}>
-                <strong>Stella&apos;s Garden</strong>, a ground-floor apartment in Umag&apos;s finest new building, featuring a private Mediterranean garden with an olive tree.
+                <strong>{t('whoWeAre.stellaName')}</strong>{t('whoWeAre.stellaDetails')}
               </li>
             </ul>
             <p>
-              Both apartments are consistently rated 9.8 or above on Booking.com and 5.0/5 on Airbnb, reflecting our commitment to cleanliness, comfort, and exceptional guest service.
+              {t('whoWeAre.para3')}
             </p>
             <p>
-              For property owners, Solar Living offers a full management service covering professional photography, listing management across all major platforms, 24/7 guest communication, cleaning coordination, dynamic pricing, and monthly reporting.
+              {t('whoWeAre.para4')}
             </p>
             <p>
-              Solar Living is part of the Solar Group, alongside Solar Creative, a marketing agency based in Dubai.
+              {t('whoWeAre.para5')}
             </p>
           </div>
         </div>
@@ -340,20 +341,20 @@ export default function HomePage() {
       <section className="py-24 md:py-32 px-6" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <p className="font-sans text-xs uppercase tracking-widest text-[#edd98f]">
-            Property Owners
+            {t('ownersCta.label')}
           </p>
           <h2 className="font-serif text-5xl md:text-6xl leading-tight text-white">
-            Own a Property in Istria?
+            {t('ownersCta.heading')}
           </h2>
           <p className="font-sans text-base leading-relaxed max-w-xl mx-auto text-[#c8c8c8]">
-            Join our portfolio and enjoy full management, guaranteed care,<br />and outstanding results. We handle everything.
+            {t('ownersCta.body')}
           </p>
           <Link
             href="/owners"
             className="inline-block font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
             style={{ backgroundColor: '#edd98f', color: '#474748' }}
           >
-            Get in Touch
+            {t('ownersCta.cta')}
           </Link>
         </div>
       </section>
@@ -369,13 +370,13 @@ export default function HomePage() {
       >
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7]">
-            Where We Are
+            {t('location.label')}
           </p>
           <h2 className="font-serif text-4xl md:text-5xl text-white">
-            Umag, Istria
+            {t('location.heading')}
           </h2>
           <p className="font-sans text-base leading-relaxed text-[#c8c8c8]">
-            Nestled on the northwestern tip of Istria, Umag is a charming medieval town<br />with crystal-clear Adriatic waters, world-class gastronomy, and a laid-back<br />Mediterranean atmosphere. The perfect destination for a truly restorative holiday.
+            {t('location.body')}
           </p>
         </div>
       </section>

@@ -1,17 +1,19 @@
+import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Image from 'next/image';
 
 const quickLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/apartments', label: 'Apartments' },
-  { href: '/owners', label: 'Owners' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/faq', label: 'FAQ' },
-  { href: '/privacy', label: 'Privacy Policy' },
+  { href: '/', key: 'linkHome' },
+  { href: '/apartments', key: 'linkApartments' },
+  { href: '/owners', key: 'linkOwners' },
+  { href: '/about', key: 'linkAbout' },
+  { href: '/contact', key: 'linkContact' },
+  { href: '/faq', key: 'linkFaq' },
+  { href: '/privacy', key: 'linkPrivacyPolicy' },
 ];
 
 export default function Footer() {
+  const t = useTranslations('footer');
   return (
     <footer
       className="text-white"
@@ -28,7 +30,7 @@ export default function Footer() {
           {/* Quick Links column */}
           <div className="space-y-4">
             <h3 className="font-sans text-xs uppercase tracking-widest" style={{ color: '#b0b0b0' }}>
-              Quick Links
+              {t('quickLinksHeading')}
             </h3>
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
@@ -38,7 +40,7 @@ export default function Footer() {
                     className="text-sm hover:text-white transition-colors"
                     style={{ color: '#c8c8c8' }}
                   >
-                    {link.label}
+                    {t(link.key)}
                   </Link>
                 </li>
               ))}
@@ -48,7 +50,7 @@ export default function Footer() {
           {/* Contact column */}
           <div className="space-y-4">
             <h3 className="font-sans text-xs uppercase tracking-widest" style={{ color: '#b0b0b0' }}>
-              Contact
+              {t('contactHeading')}
             </h3>
             <ul className="space-y-2.5 text-sm" style={{ color: '#c8c8c8' }}>
               <li>Ul. 8. ožujka 1A, Umag, Croatia</li>
@@ -79,7 +81,7 @@ export default function Footer() {
           className="mt-12 pt-6 text-xs text-center leading-relaxed"
           style={{ borderTop: '1px solid rgba(255,255,255,0.08)', color: '#999999' }}
         >
-          © 2025 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | All rights reserved
+          {t('copyright')}
         </div>
       </div>
     </footer>

@@ -189,10 +189,9 @@ export default function OwnersPage() {
             {steps.map((step, i) => (
               <div
                 key={step.number}
-                className="py-8 pr-8"
+                className={`py-8 pr-8${i > 0 ? ' md:pl-8' : ''}`}
                 style={{
                   borderRight: i < steps.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none',
-                  paddingLeft: i > 0 ? '2rem' : '0',
                 }}
               >
                 <p className="font-serif text-2xl mb-4" style={{ color: '#edd98f' }}>
