@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'FAQ | Solar Living Umag',
@@ -96,56 +97,6 @@ const faqJsonLd = {
   ],
 };
 
-const guestFaqs = [
-  {
-    q: 'Where are the Solar Living apartments located?',
-    a: "Both apartments are located in Umag, a charming coastal town on the northwestern tip of Istria, Croatia. Elaine's View is in Umag Old Town, first row to the sea. Stella's Garden is in a brand new building in a quiet residential area of Umag, 4–5 minutes from the beach.",
-  },
-  {
-    q: 'What is included in the apartments?',
-    a: "All apartments are fully equipped with air conditioning, Wi-Fi, a fully equipped kitchen, Smart TV, and fresh linen. Elaine's View also includes a washing machine and sea view terrace. Stella's Garden features a private Mediterranean garden and terrace.",
-  },
-  {
-    q: 'How do I book an apartment?',
-    a: 'You can send a booking inquiry directly through our website. Click "Check Availability & Book" on any apartment, fill in your details, and send via WhatsApp or email. We confirm availability and handle everything from there — no third-party platform needed.',
-  },
-  {
-    q: 'Is there parking available?',
-    a: "Yes. Both Elaine's View and Stella's Garden include dedicated parking.",
-  },
-  {
-    q: 'What are the guest ratings for Solar Living apartments?',
-    a: "Elaine's View holds a 9.9/10 rating on Booking.com and 5.0/5 on Airbnb. Stella's Garden holds a 9.8/10 on Booking.com and 5.0/5 on Airbnb.",
-  },
-  {
-    q: 'How far are the apartments from the beach?',
-    a: "Elaine's View is first row to the sea — there is a city beach directly in front of the building. Stella's Garden is approximately 4–5 minutes by car from the nearest beach.",
-  },
-  {
-    q: 'Can I take day trips from Umag?',
-    a: "Absolutely. Umag is ideally located for day trips to Venice (approx. 2 hours), Pula, Rovinj, and the Brijuni Islands. Italy's Aquileia and Trieste are also within easy reach.",
-  },
-];
-
-const ownerFaqs = [
-  {
-    q: "What does Solar Living's property management service include?",
-    a: 'We offer full-service property management including professional photography, multi-platform listing management (Airbnb, Booking.com, direct), 24/7 guest communication, cleaning and maintenance coordination, dynamic pricing optimization, and monthly performance reporting.',
-  },
-  {
-    q: 'Which areas does Solar Living operate in?',
-    a: 'We currently operate in Umag, Istria, Croatia, and are expanding across the Istrian peninsula.',
-  },
-  {
-    q: 'How do I get started with Solar Living as a property owner?',
-    a: 'Contact us via WhatsApp or email for a free consultation. We\'ll visit your property, provide recommendations, and agree on terms — with no commitment required.',
-  },
-  {
-    q: 'Is Solar Living a licensed property management company?',
-    a: 'Yes. Solar Living operates under BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković, OIB: 30760238873, registered in Croatia.',
-  },
-];
-
 function FaqItem({ q, a }: { q: string; a: string }) {
   return (
     <div className="pl-5 border-l-2" style={{ borderColor: '#edd98f' }}>
@@ -156,6 +107,25 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function FaqPage() {
+  const t = useTranslations('faq');
+
+  const guestFaqs = [
+    { q: t('guests.q1'), a: t('guests.a1') },
+    { q: t('guests.q2'), a: t('guests.a2') },
+    { q: t('guests.q3'), a: t('guests.a3') },
+    { q: t('guests.q4'), a: t('guests.a4') },
+    { q: t('guests.q5'), a: t('guests.a5') },
+    { q: t('guests.q6'), a: t('guests.a6') },
+    { q: t('guests.q7'), a: t('guests.a7') },
+  ];
+
+  const ownerFaqs = [
+    { q: t('owners.q1'), a: t('owners.a1') },
+    { q: t('owners.q2'), a: t('owners.a2') },
+    { q: t('owners.q3'), a: t('owners.a3') },
+    { q: t('owners.q4'), a: t('owners.a4') },
+  ];
+
   return (
     <>
       <script
@@ -166,10 +136,10 @@ export default function FaqPage() {
       {/* ─── HERO ─────────────────────────────────────────────────────────── */}
       <section className="py-32 px-6 text-center" style={{ backgroundColor: '#474748' }}>
         <p className="font-sans text-xs uppercase tracking-widest mb-6" style={{ color: '#86cae7' }}>
-          Questions &amp; Answers
+          {t('hero.label')}
         </p>
         <h1 className="font-serif text-5xl md:text-6xl leading-tight text-white">
-          Everything You Need to Know
+          {t('hero.heading')}
         </h1>
       </section>
 
@@ -177,7 +147,7 @@ export default function FaqPage() {
       <section className="py-24 px-6" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-3xl mx-auto">
           <p className="font-sans text-xs uppercase tracking-widest mb-10" style={{ color: '#86cae7' }}>
-            For Guests
+            {t('guests.label')}
           </p>
           <div className="space-y-10">
             {guestFaqs.map((item) => (
@@ -191,7 +161,7 @@ export default function FaqPage() {
       <section className="py-24 px-6" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-3xl mx-auto">
           <p className="font-sans text-xs uppercase tracking-widest mb-10" style={{ color: '#86cae7' }}>
-            For Property Owners
+            {t('owners.label')}
           </p>
           <div className="space-y-10">
             {ownerFaqs.map((item) => (

@@ -1,58 +1,61 @@
 'use client';
 
 import React, { useState } from 'react';
-
-const features: { title: string; description: React.ReactNode }[] = [
-  {
-    title: 'Professional Photography',
-    description: <>We photograph your property to the<br />highest standard to attract premium guests.</>,
-  },
-  {
-    title: 'Listing Management',
-    description: <>We manage your listings across all major platforms<br />including Airbnb, Booking.com, and direct bookings.</>,
-  },
-  {
-    title: 'Guest Communication',
-    description: <>We handle all guest inquiries, check-ins,<br />check-outs, and support 24/7.</>,
-  },
-  {
-    title: 'Cleaning & Maintenance',
-    description: <>Professional cleaning after every stay,<br />regular inspections and prompt maintenance.</>,
-  },
-  {
-    title: 'Dynamic Pricing',
-    description: <>We optimize your nightly rates to maximize<br />occupancy and revenue year-round.</>,
-  },
-  {
-    title: 'Monthly Reporting',
-    description: <>Transparent monthly reports so you always<br />know how your property is performing.</>,
-  },
-];
-
-const steps: { number: string; title: string; description: React.ReactNode }[] = [
-  {
-    number: '01',
-    title: 'Free Consultation',
-    description: <>We meet to understand<br />your property, goals, and<br />answer any questions.</>,
-  },
-  {
-    number: '02',
-    title: 'Property Assessment',
-    description: <>We assess your property,<br />provide recommendations,<br />and agree on terms.</>,
-  },
-  {
-    number: '03',
-    title: 'We Handle Everything',
-    description: <>Photography, listings,<br />guest management,<br />cleaning, all taken care of.</>,
-  },
-  {
-    number: '04',
-    title: 'You Earn & Relax',
-    description: "Receive monthly payments and transparent reports. That's it.",
-  },
-];
+import { useTranslations } from 'next-intl';
 
 export default function OwnersPage() {
+  const t = useTranslations('owners');
+
+  const features: { title: string; description: React.ReactNode }[] = [
+    {
+      title: t('features.photography.title'),
+      description: <>{t('features.photography.descLine1')}<br />{t('features.photography.descLine2')}</>,
+    },
+    {
+      title: t('features.listing.title'),
+      description: <>{t('features.listing.descLine1')}<br />{t('features.listing.descLine2')}</>,
+    },
+    {
+      title: t('features.communication.title'),
+      description: <>{t('features.communication.descLine1')}<br />{t('features.communication.descLine2')}</>,
+    },
+    {
+      title: t('features.cleaning.title'),
+      description: <>{t('features.cleaning.descLine1')}<br />{t('features.cleaning.descLine2')}</>,
+    },
+    {
+      title: t('features.pricing.title'),
+      description: <>{t('features.pricing.descLine1')}<br />{t('features.pricing.descLine2')}</>,
+    },
+    {
+      title: t('features.reporting.title'),
+      description: <>{t('features.reporting.descLine1')}<br />{t('features.reporting.descLine2')}</>,
+    },
+  ];
+
+  const steps: { number: string; title: string; description: React.ReactNode }[] = [
+    {
+      number: t('steps.step1.number'),
+      title: t('steps.step1.title'),
+      description: <>{t('steps.step1.descLine1')}<br />{t('steps.step1.descLine2')}<br />{t('steps.step1.descLine3')}</>,
+    },
+    {
+      number: t('steps.step2.number'),
+      title: t('steps.step2.title'),
+      description: <>{t('steps.step2.descLine1')}<br />{t('steps.step2.descLine2')}<br />{t('steps.step2.descLine3')}</>,
+    },
+    {
+      number: t('steps.step3.number'),
+      title: t('steps.step3.title'),
+      description: <>{t('steps.step3.descLine1')}<br />{t('steps.step3.descLine2')}<br />{t('steps.step3.descLine3')}</>,
+    },
+    {
+      number: t('steps.step4.number'),
+      title: t('steps.step4.title'),
+      description: t('steps.step4.desc'),
+    },
+  ];
+
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -68,13 +71,13 @@ export default function OwnersPage() {
 
   function buildWhatsAppUrl() {
     const text = [
-      `Hi! I'd like to discuss property management.`,
-      `Name: ${form.name}`,
-      `Property: ${form.address}`,
-      `Type: ${form.type}`,
-      `Email: ${form.email}`,
-      `Phone: ${form.phone}`,
-      form.message ? `Message: ${form.message}` : '',
+      t('whatsapp.greeting'),
+      t('whatsapp.name', { name: form.name }),
+      t('whatsapp.property', { address: form.address }),
+      t('whatsapp.type', { type: form.type }),
+      t('whatsapp.email', { email: form.email }),
+      t('whatsapp.phone', { phone: form.phone }),
+      form.message ? t('whatsapp.message', { message: form.message }) : '',
     ]
       .filter(Boolean)
       .join('\n');
@@ -83,18 +86,18 @@ export default function OwnersPage() {
 
   function buildMailtoUrl() {
     const body = [
-      `Hi Solar Living,`,
+      t('email.greeting'),
       ``,
-      `Name: ${form.name}`,
-      `Property: ${form.address}`,
-      `Type: ${form.type}`,
-      `Email: ${form.email}`,
-      `Phone: ${form.phone}`,
-      form.message ? `\nMessage: ${form.message}` : '',
+      t('email.name', { name: form.name }),
+      t('email.property', { address: form.address }),
+      t('email.type', { type: form.type }),
+      t('email.email', { email: form.email }),
+      t('email.phone', { phone: form.phone }),
+      form.message ? `\n${t('email.message', { message: form.message })}` : '',
     ]
       .filter((line) => line !== undefined)
       .join('\n');
-    return `mailto:solarliving.info@gmail.com?subject=${encodeURIComponent('Property Management Inquiry')}&body=${encodeURIComponent(body)}`;
+    return `mailto:solarliving.info@gmail.com?subject=${encodeURIComponent(t('email.subject'))}&body=${encodeURIComponent(body)}`;
   }
 
   const inputClass =
@@ -109,23 +112,23 @@ export default function OwnersPage() {
         style={{ backgroundColor: '#474748' }}
       >
         <p className="font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
-          For Property Owners
+          {t('hero.label')}
         </p>
         <h1 className="font-serif text-4xl md:text-5xl leading-tight mb-7 max-w-3xl text-white">
-          Let Us Take Care of Everything.
+          {t('hero.heading')}
         </h1>
         <p className="font-sans text-base md:text-lg mb-10 max-w-xl tracking-wide text-[#c8c8c8]">
-          Solar Living handles every aspect of your property,<br />so you earn more, stress less, and never worry about a thing.
+          {t('hero.subtextLine1')}<br />{t('hero.subtextLine2')}
         </p>
         <a
           href="#contact"
           className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90 mb-4"
           style={{ backgroundColor: '#edd98f', color: '#474748' }}
         >
-          Get a Free Consultation
+          {t('hero.cta')}
         </a>
         <p className="font-sans text-xs text-[#888888]">
-          We&apos;ll get back to you within 24 hours.
+          {t('hero.note')}
         </p>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
@@ -136,10 +139,10 @@ export default function OwnersPage() {
         <div className="max-w-5xl mx-auto">
           <div className="mb-16">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-              What We Offer
+              {t('offer.label')}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-white">
-              Full Management. Zero Headaches.
+              {t('offer.heading')}
             </h2>
           </div>
 
@@ -165,10 +168,10 @@ export default function OwnersPage() {
       <section className="py-32 px-6" style={{ backgroundColor: '#3e3e3f' }}>
         <div className="max-w-4xl mx-auto text-center">
           <blockquote className="font-serif text-3xl md:text-4xl lg:text-5xl italic leading-relaxed text-white mb-8">
-            &ldquo;We treat every property as if it were our own — with the same care, attention, and pride.&rdquo;
+            &ldquo;{t('promise.quote')}&rdquo;
           </blockquote>
           <p className="font-sans text-sm uppercase tracking-widest text-[#c8c8c8]">
-            Ana &amp; Evan, Founders
+            {t('promise.attribution')}
           </p>
         </div>
       </section>
@@ -178,10 +181,10 @@ export default function OwnersPage() {
         <div className="max-w-5xl mx-auto">
           <div className="mb-16">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-              The Process
+              {t('process.label')}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-white">
-              Getting Started is Simple.
+              {t('process.heading')}
             </h2>
           </div>
 
@@ -217,13 +220,13 @@ export default function OwnersPage() {
           <div className="space-y-6">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-                Get in Touch
+                {t('contact.label')}
               </p>
               <h2 className="font-serif text-4xl text-white mb-4">
-                Ready to Partner With Us?
+                {t('contact.heading')}
               </h2>
               <p className="font-sans text-[#c8c8c8] text-sm leading-relaxed">
-                Fill in the form and we&apos;ll be in touch within 24 hours.<br />Reach us directly:
+                {t('contact.bodyLine1')}<br />{t('contact.bodyLine2')}
               </p>
             </div>
 
@@ -235,14 +238,14 @@ export default function OwnersPage() {
                 className="flex items-center gap-3 font-sans text-sm text-white hover:text-[#86cae7] transition-colors"
               >
                 <span className="text-[#86cae7] text-base">↗</span>
-                WhatsApp: +385 91 548 3354
+                {t('contact.whatsappLink')}
               </a>
               <a
                 href="mailto:solarliving.info@gmail.com"
                 className="flex items-center gap-3 font-sans text-sm text-white hover:text-[#86cae7] transition-colors"
               >
                 <span className="text-[#86cae7] text-base">↗</span>
-                solarliving.info@gmail.com
+                {t('contact.emailLink')}
               </a>
             </div>
           </div>
@@ -251,14 +254,14 @@ export default function OwnersPage() {
           <div className="space-y-5">
             <div>
               <label className={labelClass} style={{ color: '#c8c8c8' }}>
-                Full Name <span style={{ color: '#86cae7' }}>*</span>
+                {t('contact.labelName')} <span style={{ color: '#86cae7' }}>*</span>
               </label>
               <input
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="Your full name"
+                placeholder={t('contact.placeholderName')}
                 required
                 className={inputClass}
               />
@@ -266,14 +269,14 @@ export default function OwnersPage() {
 
             <div>
               <label className={labelClass} style={{ color: '#c8c8c8' }}>
-                Email <span style={{ color: '#86cae7' }}>*</span>
+                {t('contact.labelEmail')} <span style={{ color: '#86cae7' }}>*</span>
               </label>
               <input
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="your@email.com"
+                placeholder={t('contact.placeholderEmail')}
                 required
                 className={inputClass}
               />
@@ -281,14 +284,14 @@ export default function OwnersPage() {
 
             <div>
               <label className={labelClass} style={{ color: '#c8c8c8' }}>
-                Phone <span style={{ color: '#86cae7' }}>*</span>
+                {t('contact.labelPhone')} <span style={{ color: '#86cae7' }}>*</span>
               </label>
               <input
                 type="text"
                 name="phone"
                 value={form.phone}
                 onChange={handleChange}
-                placeholder="+385 ..."
+                placeholder={t('contact.placeholderPhone')}
                 required
                 className={inputClass}
               />
@@ -296,14 +299,14 @@ export default function OwnersPage() {
 
             <div>
               <label className={labelClass} style={{ color: '#c8c8c8' }}>
-                Property Address / Location <span style={{ color: '#86cae7' }}>*</span>
+                {t('contact.labelAddress')} <span style={{ color: '#86cae7' }}>*</span>
               </label>
               <input
                 type="text"
                 name="address"
                 value={form.address}
                 onChange={handleChange}
-                placeholder="Street, city, or area"
+                placeholder={t('contact.placeholderAddress')}
                 required
                 className={inputClass}
               />
@@ -311,7 +314,7 @@ export default function OwnersPage() {
 
             <div>
               <label className={labelClass} style={{ color: '#c8c8c8' }}>
-                Property Type <span style={{ color: '#86cae7' }}>*</span>
+                {t('contact.labelType')} <span style={{ color: '#86cae7' }}>*</span>
               </label>
               <select
                 name="type"
@@ -321,24 +324,24 @@ export default function OwnersPage() {
                 className={inputClass}
                 style={{ appearance: 'none', cursor: 'pointer' }}
               >
-                <option value="" disabled>Select type…</option>
-                <option value="Apartment">Apartment</option>
-                <option value="Studio">Studio</option>
-                <option value="Villa">Villa</option>
-                <option value="House">House</option>
-                <option value="Other">Other</option>
+                <option value="" disabled>{t('contact.selectDefault')}</option>
+                <option value="Apartment">{t('contact.optionApartment')}</option>
+                <option value="Studio">{t('contact.optionStudio')}</option>
+                <option value="Villa">{t('contact.optionVilla')}</option>
+                <option value="House">{t('contact.optionHouse')}</option>
+                <option value="Other">{t('contact.optionOther')}</option>
               </select>
             </div>
 
             <div>
               <label className={labelClass} style={{ color: '#c8c8c8' }}>
-                Message <span style={{ color: '#888888' }}>(optional)</span>
+                {t('contact.labelMessage')} <span style={{ color: '#888888' }}>{t('contact.messageOptional')}</span>
               </label>
               <textarea
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Tell us about your property and what you're looking for."
+                placeholder={t('contact.placeholderMessage')}
                 rows={4}
                 className={inputClass}
                 style={{ resize: 'vertical' }}
@@ -353,14 +356,14 @@ export default function OwnersPage() {
                 className="font-sans text-xs uppercase tracking-widest px-6 py-3 text-white text-center flex-1 transition-opacity hover:opacity-90"
                 style={{ backgroundColor: '#4a8c7a' }}
               >
-                Send via WhatsApp
+                {t('contact.sendWhatsApp')}
               </a>
               <a
                 href={buildMailtoUrl()}
                 className="font-sans font-semibold text-xs uppercase tracking-widest px-6 py-3 text-center flex-1 transition-opacity hover:opacity-90"
                 style={{ backgroundColor: '#edd98f', color: '#474748' }}
               >
-                Send via Email
+                {t('contact.sendEmail')}
               </a>
             </div>
           </div>

@@ -28,7 +28,7 @@
       "heading": "Što govore naši gosti"
     },
     "whyUs": {
-      "quote": "Ne predajemo vam samo ključeve. Brinemo o svakom detalju — da biste se mogli jednostavno prepustiti.",
+      "quote": "Ne predajemo vam samo ključeve. Brinemo o svakom detalju i pobrinemo se da se jednostavno možete prepustiti.",
       "attribution": "Tim Solar Living",
       "feature1Title": "Odabrane nekretnine",
       "feature1Body": "Svaki apartman pažljivo je odabran i održava se prema najvišim standardima.",
@@ -48,7 +48,7 @@
       "elaineDetails": ", prostrani apartman u prvom redu do mora s panoramskim pogledom na Jadransko more, zalazak sunca nad Umagom i stari grad.",
       "stellaName": "Stella's Garden",
       "stellaDetails": ", prizemni apartman u jednoj od najljepših novih zgrada u Umagu, s privatnim mediteranskim vrtom i stablom masline.",
-      "para3": "Oba apartmana dosljedno ostvaruju ocjenu 9,8 ili više na Booking.com i 5,0/5 na Airbnb — što odražava našu predanost čistoći, udobnosti i iznimnoj brizi za goste.",
+      "para3": "Oba apartmana dosljedno ostvaruju ocjenu 9,8 ili više na Booking.com i 5,0/5 na Airbnb, što odražava našu predanost čistoći, udobnosti i iznimnoj brizi za goste.",
       "para4": "Za vlasnike nekretnina, Solar Living nudi cjelokupnu uslugu upravljanja koja uključuje profesionalnu fotografiju, upravljanje oglasima na svim većim platformama, komunikaciju s gostima 24/7, koordinaciju čišćenja, dinamično određivanje cijena i mjesečne izvještaje.",
       "para5": "Solar Living dio je Solar Grupe, zajedno sa Solar Creative, marketinškom agencijom sa sjedištem u Dubaiju."
     },
@@ -62,6 +62,422 @@
       "label": "Gdje se nalazimo",
       "heading": "Umag, Istra",
       "body": "Smješten na sjeverozapadnom vrhu Istre, Umag je šarmantni srednjovjekovni grad s kristalno čistim morem, gastronomijom svjetske razine i opuštenom mediteranskom atmosferom. Savršeno odredište za pravi odmor od svega."
+    }
+  },
+  "apartments": {
+    "hero": {
+      "label": "Naši apartmani",
+      "heading": "Pronađite savršeni apartman",
+      "subtext": "Odaberite apartman, odaberite datume i pošaljite nam upit.",
+      "subtextLine2": "Potvrdimo dostupnost i pobrinemo se za sve ostalo."
+    },
+    "listings": {
+      "label": "Naša kolekcija",
+      "heading": "Svi apartmani",
+      "subtext": "Odaberite apartman i pošaljite nam upit."
+    },
+    "card": {
+      "location": "Umag, Hrvatska",
+      "comingSoon": "Uskoro dostupno",
+      "bookButton": "Provjerite dostupnost"
+    },
+    "cta": {
+      "heading": "Niste sigurni koji apartman je pravi za vas?",
+      "body": "Javite nam se, pomoći ćemo vam pronaći savršen apartman za vaše društvo, termine i budžet.",
+      "button": "Kontaktirajte nas"
+    },
+    "modal": {
+      "bookHeading": "Rezervirajte apartman {name}",
+      "subheading": "Ispunite podatke i javimo vam se za potvrdu dostupnosti.",
+      "labelName": "Puno ime i prezime *",
+      "placeholderName": "Iva Horvat",
+      "labelEmail": "E-mail *",
+      "placeholderEmail": "iva@primjer.hr",
+      "labelPhone": "Broj telefona *",
+      "placeholderPhone": "+385 91 123 4567",
+      "labelCheckin": "Dolazak *",
+      "labelCheckout": "Odlazak *",
+      "labelGuests": "Gosti *",
+      "guestsMax": "(maks. {max})",
+      "labelMessage": "Poruka",
+      "messageOptional": "(neobavezno)",
+      "placeholderMessage": "Posebni zahtjevi ili pitanja?",
+      "sendWhatsApp": "Pošaljite putem WhatsAppa",
+      "sendEmail": "Pošaljite e-mailom",
+      "responseNote": "Obično odgovaramo u roku od nekoliko sati.",
+      "ariaClose": "Zatvori"
+    },
+    "validation": {
+      "nameRequired": "Molimo unesite vaše puno ime i prezime.",
+      "emailRequired": "Molimo unesite vašu e-mail adresu.",
+      "phoneRequired": "Molimo unesite vaš broj telefona.",
+      "checkinRequired": "Molimo odaberite datum dolaska.",
+      "checkoutRequired": "Molimo odaberite datum odlaska.",
+      "checkoutAfterCheckin": "Datum odlaska mora biti nakon datuma dolaska.",
+      "guestsInvalid": "Molimo unesite ispravan broj gostiju.",
+      "guestsExceeded": "Ovaj apartman prima najviše {max} gostiju."
+    },
+    "whatsapp": {
+      "greeting": "Pozdrav! Htio/Htjela bih rezervirati apartman {name}",
+      "checkin": "Dolazak: {date}",
+      "checkout": "Odlazak: {date}",
+      "guests": "Gosti: {count}",
+      "name": "Ime: {name}",
+      "phone": "Telefon: {phone}",
+      "email": "E-mail: {email}",
+      "message": "Poruka: {text}"
+    },
+    "email": {
+      "subject": "Upit za rezervaciju – {name}",
+      "body": "Pozdrav, tim Solar Living,\n\nZanima me rezervacija apartmana {name}.\n\nDolazak: {checkin}\nOdlazak: {checkout}\nGosti: {guests}\nIme: {guestName}\nTelefon: {phone}\nE-mail: {email}\n\nPoruka: {message}"
+    },
+    "reviewsModal": {
+      "scoreApt1": "★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "scoreApt2": "★ 9.8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "ariaClose": "Zatvori"
+    },
+    "data": {
+      "apt1": {
+        "name": "Elaine's View",
+        "description": "Prva crta do mora. Panoramski pogled na Jadran, zalasci sunca i Stari grad Umag.",
+        "location": "Stari grad Umag",
+        "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Klima uređaj",
+          "Wi-Fi",
+          "Potpuno opremljena kuhinja",
+          "Smart TV",
+          "Perilica rublja",
+          "Pogled na more"
+        ],
+        "reviews": [
+          {
+            "name": "Tania",
+            "country": "Canada",
+            "platform": "Airbnb",
+            "text": "Apartman je bio čist i ugodan, s pogledom s balkona na večernje zalaske sunca nad Jadranom i starim gradom Umaga. Umag je savršena baza za istraživanje Istre — pa čak i za izlete u Italiju. Idealno vrijeme, bogata povijest i predivan krajobraz."
+          },
+          {
+            "name": "Stephan",
+            "country": "Germany",
+            "platform": "Airbnb",
+            "text": "Dočekani smo iznimno ljubazno i osobno. Velik, dobro raspoređen apartman s pogledom na more. Balkon gleda prema moru, ali ima i balkon sa strane — jako praktično. Vladala je potpuna tišina."
+          },
+          {
+            "name": "Jana",
+            "country": "Czech Republic",
+            "platform": "Booking.com",
+            "text": "Savršen smještaj. Premium apartman s dojmljivim pogledom na more. Tik ispred zgrade nalazi se gradska plaža s lakim pristupom moru i gotovo bez gužve. Komunikacija s domaćinom bila je iznimno ljubazna i profesionalna. Definitivno se vraćamo."
+          }
+        ]
+      },
+      "apt2": {
+        "name": "Stella's Garden",
+        "description": "Prizemni apartman u jednoj od najljepših novih zgrada u Umagu — s privatnim mediteranskim vrtom.",
+        "location": "Umag",
+        "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Klima uređaj",
+          "Wi-Fi",
+          "Potpuno opremljena kuhinja",
+          "Smart TV",
+          "Privatna terasa",
+          "Vrt"
+        ],
+        "reviews": [
+          {
+            "name": "Peter",
+            "country": "Slovakia",
+            "platform": "Airbnb",
+            "text": "Sve je bilo besprijekorno čisto i moderno — gotovo kao da smo bili prvi gosti. Iznimno ljubazan domaćin, uvijek odmah dostupan za pitanja i s brzim odgovorima."
+          },
+          {
+            "name": "Jehona",
+            "country": "Slovenia",
+            "platform": "Booking.com",
+            "text": "Sve je izvrsno — bolje od 5-zvjezdičnog hotela. Preporučujem svima. Nikad nisam vidjela nešto ovako. Vlasnik je bio iznimno ljubazan i pokazao nam je sve."
+          },
+          {
+            "name": "Maciej",
+            "country": "Poland",
+            "platform": "Booking.com",
+            "text": "Toplo preporučujem. Prostran prizemni apartman s udobnim krevetima, dobro opremljenom kuhinjom, klimom i dvije kupaonice. Velika terasa i označeno parkirno mjesto. 2 minute autom do trgovačkih centara, 4–5 minuta do najbliže plaže."
+          }
+        ]
+      },
+      "apt3": {
+        "name": "Solar Apartment Umag III",
+        "description": "Novi dragulj u našem portfelju. Detalji uskoro. Javite nam se i budite prvi koji saznaju kada ovaj apartman postane dostupan.",
+        "location": "Umag"
+      },
+      "apt4": {
+        "name": "Solar Apartment Umag IV",
+        "description": "Izniman apartman koji se upravo priprema za naš portfelj. Javite nam se za više informacija.",
+        "location": "Okolica Umaga"
+      }
+    }
+  },
+  "owners": {
+    "hero": {
+      "label": "Za vlasnike nekretnina",
+      "heading": "Prepustite nam sve.",
+      "subtextLine1": "Solar Living brine o svakom detalju vaše nekretnine,",
+      "subtextLine2": "vi zarađujete više — bez stresa i bez brige.",
+      "cta": "Zakažite besplatni razgovor",
+      "note": "Javit ćemo vam se u roku od 24 sata."
+    },
+    "offer": {
+      "label": "Što nudimo",
+      "heading": "Potpuno upravljanje. Nula briga."
+    },
+    "features": {
+      "photography": {
+        "title": "Profesionalna fotografija",
+        "descLine1": "Fotografiramo vašu nekretninu na najvišoj",
+        "descLine2": "razini kako bismo privukli premium goste."
+      },
+      "listing": {
+        "title": "Upravljanje oglasima",
+        "descLine1": "Upravljamo vašim oglasima na svim važnim platformama,",
+        "descLine2": "uključujući Airbnb, Booking.com i izravne rezervacije."
+      },
+      "communication": {
+        "title": "Komunikacija s gostima",
+        "descLine1": "Preuzimamo sve upite gostiju,",
+        "descLine2": "prijave, odjave i podršku, 24/7."
+      },
+      "cleaning": {
+        "title": "Čišćenje i održavanje",
+        "descLine1": "Profesionalno čišćenje nakon svakog boravka,",
+        "descLine2": "redovite inspekcije i brzo otklanjanje kvarova."
+      },
+      "pricing": {
+        "title": "Dinamičke cijene",
+        "descLine1": "Prilagođavamo cijene kako bismo postigli",
+        "descLine2": "maksimalnu popunjenost i prihode kroz godinu."
+      },
+      "reporting": {
+        "title": "Mjesečno izvještavanje",
+        "descLine1": "Jasna mjesečna izvješća. Uvijek",
+        "descLine2": "znate kako vaša nekretnina posluje."
+      }
+    },
+    "promise": {
+      "quote": "Svaku nekretninu čuvamo kao svoju vlastitu, s istom pažnjom, brigom i ponosom.",
+      "attribution": "Ana & Evan, osnivači"
+    },
+    "process": {
+      "label": "Kako funkcionira",
+      "heading": "Početak suradnje je jednostavan."
+    },
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Besplatne konzultacije",
+        "descLine1": "Upoznajemo se, razgovaramo o",
+        "descLine2": "vašoj nekretnini i ciljevima,",
+        "descLine3": "te odgovaramo na sva pitanja."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Procjena nekretnine",
+        "descLine1": "Procjenjujemo vašu nekretninu,",
+        "descLine2": "dajemo vam preporuke",
+        "descLine3": "i dogovaramo uvjete suradnje."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Mi se brinemo o svemu",
+        "descLine1": "Fotografija, oglasi,",
+        "descLine2": "upravljanje gostima,",
+        "descLine3": "čišćenje — sve je u našim rukama."
+      },
+      "step4": {
+        "number": "04",
+        "title": "Vi zarađujete i uživate",
+        "desc": "Primate mjesečne uplate i transparentna izvješća. To je sve."
+      }
+    },
+    "contact": {
+      "label": "Javite nam se",
+      "heading": "Krenimo zajedno?",
+      "bodyLine1": "Ispunite obrazac i javit ćemo vam se u roku od 24 sata.",
+      "bodyLine2": "Ili nas kontaktirajte izravno:",
+      "whatsappLink": "WhatsApp: +385 91 548 3354",
+      "emailLink": "solarliving.info@gmail.com",
+      "labelName": "Puno ime i prezime",
+      "labelEmail": "E-mail",
+      "labelPhone": "Telefon",
+      "labelAddress": "Adresa / lokacija nekretnine",
+      "labelType": "Vrsta nekretnine",
+      "labelMessage": "Poruka",
+      "messageOptional": "(neobavezno)",
+      "placeholderName": "Vaše puno ime i prezime",
+      "placeholderEmail": "vase@email.com",
+      "placeholderPhone": "+385 ...",
+      "placeholderAddress": "Ulica, grad ili područje",
+      "selectDefault": "Odaberite vrstu…",
+      "optionApartment": "Apartman",
+      "optionStudio": "Studio",
+      "optionVilla": "Vila",
+      "optionHouse": "Kuća",
+      "optionOther": "Ostalo",
+      "placeholderMessage": "Opišite nam svoju nekretninu i što tražite od suradnje.",
+      "sendWhatsApp": "Pošaljite putem WhatsAppa",
+      "sendEmail": "Pošaljite e-mailom"
+    },
+    "whatsapp": {
+      "greeting": "Pozdrav! Htio/Htjela bih razgovarati o upravljanju svojom nekretninom.",
+      "name": "Ime: {name}",
+      "property": "Nekretnina: {address}",
+      "type": "Vrsta: {type}",
+      "email": "E-mail: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Poruka: {message}"
+    },
+    "email": {
+      "subject": "Upit o upravljanju nekretninom",
+      "greeting": "Pozdrav, Solar Living,",
+      "name": "Ime: {name}",
+      "property": "Nekretnina: {address}",
+      "type": "Vrsta: {type}",
+      "email": "E-mail: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Poruka: {message}"
+    }
+  },
+  "about": {
+    "hero": {
+      "label": "Naša priča",
+      "heading": "Više od upravljanja nekretninama.",
+      "subtextLine1": "Solar Living smo pokrenuli s uvjerenjem da Istra zaslužuje više.",
+      "subtextLine2": "Pristup gostoprimstvu koji stavlja ljude ispred svega."
+    },
+    "story": {
+      "label": "Tko smo",
+      "headingLine1": "Boutique agencija",
+      "headingLine2": "koja ne pravi kompromise.",
+      "para1": "Solar Living je boutique agencija za upravljanje nekretninama sa sjedištem u Umagu, na prekrasnoj sjeverozapadnoj obali Istre. Upravljamo pažljivo odabranim portfeljem premium apartmana i vila, nekretnina koje osobno pregledavamo, pripremamo i održavamo prema najvišim standardima.",
+      "para2": "Dio smo Solar Grupe, zajedno sa Solar Creative, našom marketinškom agencijom. To znači da svaka nekretnina u našem portfelju dobiva ne samo stručnost u upravljanju, već i profesionalnu fotografiju, izgradnju brenda i digitalni marketing. To je ono što većina upravitelja jednostavno ne nudi.",
+      "para3": "Naša misija je jasna: iznimni doživljaji za goste, apsolutni spokoj za vlasnike i nekretnine koje dosljedno osvajaju vrhunske ocjene."
+    },
+    "values": {
+      "label": "Što nas pokreće",
+      "heading": "Naše vrijednosti",
+      "quality": {
+        "title": "Kvaliteta bez kompromisa",
+        "description": "Svaka nekretnina u našem portfelju ručno je odabrana. Odbijamo one koje ne zadovoljavaju naše standarde — jer naši gosti zaslužuju najbolje, svaki put."
+      },
+      "hospitality": {
+        "title": "Iskreno gostoprimstvo",
+        "descLine1": "Ne predajemo samo ključeve. Pobrinemo se",
+        "descLine2": "da svaki gost ima sve što mu treba",
+        "descLine3": "još prije nego što pita. Upravo ti mali detalji",
+        "descLine4": "čine boravak nezaboravnim."
+      },
+      "partnership": {
+        "title": "Partnerstvo s vlasnicima",
+        "descLine1": "Svaku nekretninu čuvamo kao",
+        "descLine2": "da je naša vlastita. Vlasnici nam povjeravaju",
+        "descLine3": "nešto vrijedno, i tu odgovornost",
+        "descLine4": "shvaćamo ozbiljno."
+      }
+    },
+    "solarGroup": {
+      "label": "Dio nečeg većeg",
+      "heading": "Solar Grupa",
+      "para": "Solar Living s ponosom je dio Solar Grupe, obitelji tvrtki ujedinjenih predanošću kvaliteti, kreativnosti i usluzi. Naša sestrinska tvrtka Solar Creative cjelovita je marketinška agencija koja podržava naše nekretnine profesionalnom fotografijom, upravljanjem društvenim mrežama i brendskom strategijom.",
+      "link": "Posjetite Solar Creative →",
+      "stat1Value": "Est. 2024",
+      "stat1Desc": "Solar Living nastao je iz želje da Istra dobije upravljanje nekretninama kakvo zaslužuje — na razini pravog boutique iskustva.",
+      "stat2Value": "Umag, Istra",
+      "stat2Desc": "Na sjeverozapadnom vrhu Istre, tik uz obalu Jadranskog mora."
+    },
+    "cta": {
+      "heading": "Spremi za Solar Living?",
+      "browseApartments": "Istražite apartmane",
+      "partnerWithUs": "Postanite naš partner"
+    }
+  },
+  "contact": {
+    "hero": {
+      "label": "Javite nam se",
+      "heading": "Drago nam je čuti od vas.",
+      "subtext": "Bilo da planirate odmor ili razmatrate suradnju s nama — tu smo i rado pomažemo."
+    },
+    "details": {
+      "label": "Kontakt",
+      "officeTitle": "Ured",
+      "addressLine1": "Ul. 8. ožujka 1A",
+      "addressLine2": "Umag, Hrvatska",
+      "whatsappTitle": "WhatsApp",
+      "whatsappNumber": "+385 91 548 3354",
+      "emailTitle": "E-mail",
+      "emailAddress": "solarliving.info@gmail.com",
+      "responseTitle": "Odgovaramo brzo",
+      "responseText": "Odgovaramo unutar nekoliko sati, svaki dan u tjednu.",
+      "instagram": "Instagram: @solarliving_",
+      "solarCreative": "Solar Creative →"
+    },
+    "form": {
+      "label": "Napišite nam",
+      "labelName": "Ime i prezime",
+      "placeholderName": "Ime i prezime",
+      "labelEmail": "E-mail",
+      "placeholderEmail": "vase@email.com",
+      "labelPhone": "Telefon",
+      "phoneOptional": "(neobavezno)",
+      "placeholderPhone": "+385 ...",
+      "labelType": "Kontaktiram kao\u2026",
+      "selectDefault": "Odaberite\u2026",
+      "optionGuest": "Gost — zanimaju me apartmani",
+      "optionOwner": "Vlasnik nekretnine — zanimaju me usluge",
+      "optionOther": "Ostalo",
+      "labelMessage": "Poruka",
+      "placeholderMessage": "Kako vam možemo pomoći?",
+      "sendWhatsApp": "Pošaljite putem WhatsAppa",
+      "sendEmail": "Pošaljite e-mailom",
+      "responseNote": "Javit ćemo vam se u roku od nekoliko sati."
+    },
+    "locationNote": "Naš tim je u Umagu, Istra — dostupni smo putem WhatsAppa ili e-maila.",
+    "cta": {
+      "heading": "Tražite apartman za rezervaciju?",
+      "body": "Istražite naše apartmane i pošaljite nam upit za rezervaciju.",
+      "button": "Istražite apartmane"
+    }
+  },
+  "faq": {
+    "hero": {
+      "label": "Pitanja i odgovori",
+      "heading": "Odgovori na vaša pitanja"
+    },
+    "guests": {
+      "label": "Za goste",
+      "q1": "Gdje se nalaze Solar Living apartmani?",
+      "a1": "Oba apartmana nalaze se u Umagu, šarmantnom primorskom gradu na sjeverozapadnom vrhu Istre. Elaine's View smješten je u Starom gradu Umaga, u prvom redu do mora. Stella's Garden nalazi se u novoizgrađenoj zgradi u mirnom stambenom dijelu Umaga, 4–5 minuta od plaže.",
+      "q2": "Što je uključeno u apartmane?",
+      "a2": "Svi apartmani potpuno su opremljeni — klima uređaj, Wi-Fi, potpuno opremljena kuhinja, Smart TV i svježi posteljinski set. Elaine's View ima i pericu rublja te terasu s pogledom na more. Stella's Garden raspolaže privatnim mediteranskim vrtom i terasom.",
+      "q3": "Kako napraviti rezervaciju?",
+      "a3": "Upit za rezervaciju možete poslati izravno putem naše web stranice. Odaberite željeni apartman, kliknite „Provjerite dostupnost\", ispunite podatke i pošaljite upit putem WhatsAppa ili e-maila. Mi potvrđujemo dostupnost i brinemo se za sve ostalo, bez posrednika.",
+      "q4": "Je li dostupno parkiranje?",
+      "a4": "Da. I Elaine's View i Stella's Garden imaju rezervirano parkirno mjesto.",
+      "q5": "Koje su ocjene Solar Living apartmana?",
+      "a5": "Elaine's View nosi ocjenu 9,9/10 na Booking.com i 5,0/5 na Airbnb. Stella's Garden nosi ocjenu 9,8/10 na Booking.com i 5,0/5 na Airbnb.",
+      "q6": "Koliko su apartmani udaljeni od plaže?",
+      "a6": "Elaine's View nalazi se u prvom redu do mora — gradska plaža tik je ispred zgrade. Stella's Garden udaljen je otprilike 4–5 minuta vožnje autom od najbliže plaže.",
+      "q7": "Mogu li organizirati izlete iz Umaga?",
+      "a7": "Naravno. Umag je idealna polazišna točka za jednodnevne izlete — Venecija je udaljena oko 2 sata, a Pula, Rovinj i Brijuni na dohvat ruke. U lakom su dosegu i talijanski gradovi Aquileia i Trst."
+    },
+    "owners": {
+      "label": "Za vlasnike nekretnina",
+      "q1": "Što uključuje Solar Living usluga upravljanja?",
+      "a1": "Nudimo cjelokupnu uslugu upravljanja: profesionalnu fotografiju, upravljanje oglasima na svim platformama (Airbnb, Booking.com, izravne rezervacije), komunikaciju s gostima 24/7, koordinaciju čišćenja i održavanja, dinamičko upravljanje cijenama i mjesečna izvješća o poslovanju.",
+      "q2": "U kojim područjima Solar Living posluje?",
+      "a2": "Trenutno poslujemo u Umagu, Istra, Hrvatska, i postupno se širimo po cijelom Istarskom poluotoku.",
+      "q3": "Kako krenuti s upravljanjem svoje nekretnine?",
+      "a3": "Kontaktirajte nas putem WhatsAppa ili e-maila radi besplatnih konzultacija. Posjetit ćemo vašu nekretninu, iznijeti preporuke i dogovoriti uvjete, bez ikakve obveze.",
+      "q4": "Je li Solar Living licencirana agencija za upravljanje nekretninama?",
+      "a4": "Da. Solar Living posluje u sklopu BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković, OIB: 30760238873, registriran u Hrvatskoj."
     }
   },
   "navbar": {

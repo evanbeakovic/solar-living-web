@@ -2,8 +2,11 @@
 
 import { useState } from 'react';
 import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
+  const t = useTranslations('contact');
+
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -61,13 +64,13 @@ export default function ContactPage() {
         style={{ backgroundColor: '#474748' }}
       >
         <p className="font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
-          Get in Touch
+          {t('hero.label')}
         </p>
         <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-7 text-white">
-          We&apos;d Love to Hear From You.
+          {t('hero.heading')}
         </h1>
         <p className="font-sans text-base text-[#c8c8c8] mx-auto text-center leading-relaxed">
-          Whether you&apos;re planning a stay or considering partnering with us, we&apos;re here and happy to help.
+          {t('hero.subtext')}
         </p>
       </section>
 
@@ -78,20 +81,20 @@ export default function ContactPage() {
           {/* Left column — contact details */}
           <div className="md:w-2/5">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-8">
-              Contact Details
+              {t('details.label')}
             </p>
 
             <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }} className="py-6">
               <p className="font-sans font-semibold text-white text-sm uppercase tracking-widest mb-2">
-                Office
+                {t('details.officeTitle')}
               </p>
-              <p className="font-sans text-[#c8c8c8] text-sm">Ul. 8. ožujka 1A</p>
-              <p className="font-sans text-[#c8c8c8] text-sm">Umag, Croatia</p>
+              <p className="font-sans text-[#c8c8c8] text-sm">{t('details.addressLine1')}</p>
+              <p className="font-sans text-[#c8c8c8] text-sm">{t('details.addressLine2')}</p>
             </div>
 
             <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }} className="py-6">
               <p className="font-sans font-semibold text-white text-sm uppercase tracking-widest mb-2">
-                WhatsApp
+                {t('details.whatsappTitle')}
               </p>
               <a
                 href="https://wa.me/385915483354"
@@ -99,28 +102,28 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="font-sans text-sm text-[#86cae7] hover:text-white transition-colors"
               >
-                +385 91 548 3354
+                {t('details.whatsappNumber')}
               </a>
             </div>
 
             <div style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }} className="py-6">
               <p className="font-sans font-semibold text-white text-sm uppercase tracking-widest mb-2">
-                Email
+                {t('details.emailTitle')}
               </p>
               <a
                 href="mailto:solarliving.info@gmail.com"
                 className="font-sans text-sm text-[#86cae7] hover:text-white transition-colors"
               >
-                solarliving.info@gmail.com
+                {t('details.emailAddress')}
               </a>
             </div>
 
             <div className="py-6">
               <p className="font-sans font-semibold text-white text-sm uppercase tracking-widest mb-2">
-                Response Time
+                {t('details.responseTitle')}
               </p>
               <p className="font-sans text-[#c8c8c8] text-sm leading-relaxed">
-                We typically respond within a few hours. Available 7 days a week.
+                {t('details.responseText')}
               </p>
             </div>
 
@@ -131,7 +134,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="block font-sans text-sm text-[#c8c8c8] hover:text-white transition-colors"
               >
-                Instagram: @solarliving_
+                {t('details.instagram')}
               </a>
               <a
                 href="https://solarcreative.hr"
@@ -139,7 +142,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="block font-sans text-sm text-[#c8c8c8] hover:text-white transition-colors"
               >
-                Solar Creative →
+                {t('details.solarCreative')}
               </a>
             </div>
           </div>
@@ -147,20 +150,20 @@ export default function ContactPage() {
           {/* Right column — form */}
           <div className="md:w-3/5">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-8">
-              Send a Message
+              {t('form.label')}
             </p>
 
             <div className="space-y-5">
               <div>
                 <label className={labelClass}>
-                  Full Name <span style={{ color: '#86cae7' }}>*</span>
+                  {t('form.labelName')} <span style={{ color: '#86cae7' }}>*</span>
                 </label>
                 <input
                   type="text"
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="Your full name"
+                  placeholder={t('form.placeholderName')}
                   required
                   className={inputClass}
                 />
@@ -168,14 +171,14 @@ export default function ContactPage() {
 
               <div>
                 <label className={labelClass}>
-                  Email <span style={{ color: '#86cae7' }}>*</span>
+                  {t('form.labelEmail')} <span style={{ color: '#86cae7' }}>*</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="your@email.com"
+                  placeholder={t('form.placeholderEmail')}
                   required
                   className={inputClass}
                 />
@@ -183,21 +186,21 @@ export default function ContactPage() {
 
               <div>
                 <label className={labelClass}>
-                  Phone <span style={{ color: '#888888' }}>(optional)</span>
+                  {t('form.labelPhone')} <span style={{ color: '#888888' }}>{t('form.phoneOptional')}</span>
                 </label>
                 <input
                   type="text"
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
-                  placeholder="+385 ..."
+                  placeholder={t('form.placeholderPhone')}
                   className={inputClass}
                 />
               </div>
 
               <div>
                 <label className={labelClass}>
-                  I am a… <span style={{ color: '#86cae7' }}>*</span>
+                  {t('form.labelType')} <span style={{ color: '#86cae7' }}>*</span>
                 </label>
                 <select
                   name="type"
@@ -207,22 +210,22 @@ export default function ContactPage() {
                   className={inputClass}
                   style={{ appearance: 'none', cursor: 'pointer' }}
                 >
-                  <option value="" disabled>Select…</option>
-                  <option value="Guest looking to book">Guest looking to book</option>
-                  <option value="Property owner">Property owner</option>
-                  <option value="Other">Other</option>
+                  <option value="" disabled>{t('form.selectDefault')}</option>
+                  <option value="Guest looking to book">{t('form.optionGuest')}</option>
+                  <option value="Property owner">{t('form.optionOwner')}</option>
+                  <option value="Other">{t('form.optionOther')}</option>
                 </select>
               </div>
 
               <div>
                 <label className={labelClass}>
-                  Message <span style={{ color: '#86cae7' }}>*</span>
+                  {t('form.labelMessage')} <span style={{ color: '#86cae7' }}>*</span>
                 </label>
                 <textarea
                   name="message"
                   value={form.message}
                   onChange={handleChange}
-                  placeholder="How can we help you?"
+                  placeholder={t('form.placeholderMessage')}
                   rows={5}
                   required
                   className={inputClass}
@@ -238,26 +241,26 @@ export default function ContactPage() {
                   className="font-sans text-xs uppercase tracking-widest flex-1 py-4 text-white text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: '#4a8c7a' }}
                 >
-                  Send via WhatsApp
+                  {t('form.sendWhatsApp')}
                 </a>
                 <a
                   href={buildMailtoUrl()}
                   className="font-sans font-semibold text-xs uppercase tracking-widest flex-1 py-4 text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: '#edd98f', color: '#474748' }}
                 >
-                  Send via Email
+                  {t('form.sendEmail')}
                 </a>
               </div>
 
               <p className="font-sans text-xs text-[#888888] text-center mt-3">
-                We&apos;ll get back to you within a few hours.
+                {t('form.responseNote')}
               </p>
             </div>
           </div>
 
         </div>
         <p className="mt-12 text-center font-sans text-sm" style={{ color: '#888888' }}>
-          Our team operates across Umag, Istria — reach us via WhatsApp or email.
+          {t('locationNote')}
         </p>
       </section>
 
@@ -265,17 +268,17 @@ export default function ContactPage() {
       <section className="py-24 px-6 text-center" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="font-serif text-4xl text-white">
-            Looking to book an apartment?
+            {t('cta.heading')}
           </h2>
           <p className="font-sans text-[#c8c8c8] text-base leading-relaxed">
-            Browse our available properties and send us a booking inquiry directly.
+            {t('cta.body')}
           </p>
           <Link
             href="/apartments"
             className="inline-block font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
             style={{ backgroundColor: '#86cae7', color: '#474748' }}
           >
-            View Apartments
+            {t('cta.button')}
           </Link>
         </div>
       </section>

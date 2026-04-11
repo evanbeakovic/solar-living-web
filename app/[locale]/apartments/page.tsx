@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 // ─── Data ──────────────────────────────────────────────────────────────────
 
@@ -33,77 +34,6 @@ type Apartment = {
   reviews?: Review[];
 };
 
-const apartments: Apartment[] = [
-  {
-    id: 1,
-    name: "Elaine's View",
-    description:
-      'First row to the sea. Panoramic views of the Adriatic, sunsets & Umag Old Town.',
-    guests: 6,
-    bedrooms: 3,
-    type: 'Apartment',
-    location: 'Umag Old Town',
-    amenities: ['Air conditioning', 'Wi-Fi', 'Fully equipped kitchen', 'Smart TV', 'Washing machine', 'Sea view'],
-    image: '/images/umag-1-main.jpg',
-    available: true,
-    mapSrc: 'https://maps.google.com/maps?q=Ul.+8.+ožujka+1A,+Umag,+Croatia&output=embed',
-    mapLink: "https://www.google.com/maps/search/Apartment+Elaine%27s+View+Umag",
-    badge: '9.9 · Booking.com  |  5.0 · Airbnb',
-    reviews: [
-      { name: 'Tania', country: 'Canada', platform: 'Airbnb', rating: 5, max: 5, text: 'The apartment was clean and comfortable with balcony views of evening sunsets over the Adriatic and the old town of Umag. Umag is a perfect spot to enjoy Istria — including day trips into Italy. Weather was perfect, interesting history and gorgeous scenery.' },
-      { name: 'Stephan', country: 'Germany', platform: 'Airbnb', rating: 5, max: 5, text: 'We were received very kindly and personally. A big, well laid out apartment overlooking the sea. There is a balcony to the sea side, but also to the side — very practical. We found it very quiet.' },
-      { name: 'Jana', country: 'Czech Republic', platform: 'Booking.com', rating: 10, max: 10, text: 'Perfect accommodation. A premium apartment with a stunning sea view. Right in front of the building is a city beach with easy sea access and very few people. Very friendly and professional communication with the host. We will definitely return.' },
-    ],
-  },
-  {
-    id: 2,
-    name: "Stella's Garden",
-    description:
-      "Ground-floor living in Umag's finest new building, with a private Mediterranean garden.",
-    guests: 6,
-    bedrooms: 2,
-    type: 'Apartment',
-    location: 'Umag',
-    amenities: ['Air conditioning', 'Wi-Fi', 'Fully equipped kitchen', 'Smart TV', 'Private terrace', 'Garden'],
-    image: '/images/umag-2-main.jpg',
-    available: true,
-    mapSrc: 'https://maps.google.com/maps?q=Ulica+154.+brigada+HV+7,+Umag,+Croatia&output=embed',
-    mapLink: 'https://www.google.com/maps/search/Ulica+154+brigada+HV+7+Umag',
-    badge: '9.8 · Booking.com  |  5.0 · Airbnb',
-    reviews: [
-      { name: 'Peter', country: 'Slovakia', platform: 'Airbnb', rating: 5, max: 5, text: 'Everything was sparkling clean and very modern — you almost felt like we were the first guests. Extremely friendly host, always immediately available for questions with very quick answers.' },
-      { name: 'Jehona', country: 'Slovenia', platform: 'Booking.com', rating: 10, max: 10, text: 'Everything is excellent — better than a 5-star hotel. I recommend it to everyone. I have never seen something like this. The owner was very kind and showed us everything.' },
-      { name: 'Maciej', country: 'Poland', platform: 'Booking.com', rating: 9, max: 10, text: 'Highly recommended. Spacious ground-floor apartment with comfortable beds, a well-equipped kitchen, air conditioning, and two bathrooms. Large terrace with assigned parking. 2 minutes by car to shopping centers, 4-5 minutes to the nearest beach.' },
-    ],
-  },
-  {
-    id: 3,
-    name: 'Solar Apartment Umag III',
-    description:
-      'A stunning new addition to our portfolio — details coming soon. Contact us to be the first to know when this property becomes available.',
-    guests: 4,
-    bedrooms: 2,
-    type: 'Apartment',
-    location: 'Umag',
-    amenities: [],
-    image: null,
-    available: false,
-  },
-  {
-    id: 4,
-    name: 'Solar Apartment Umag IV',
-    description:
-      'An exceptional property currently being prepared for our portfolio. Reach out to learn more.',
-    guests: 6,
-    bedrooms: 3,
-    type: 'Villa',
-    location: 'Umag area',
-    amenities: [],
-    image: null,
-    available: false,
-  },
-];
-
 // ─── Constants ─────────────────────────────────────────────────────────────
 
 const cardGradient = 'linear-gradient(135deg, #1a3a4a 0%, #86cae7 50%, #edd98f 100%)';
@@ -132,6 +62,9 @@ const emptyForm: FormState = {
 
 // ─── Helpers ───────────────────────────────────────────────────────────────
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type TFunc = (key: string, values?: Record<string, any>) => string;
+
 function today() {
   return new Date().toISOString().split('T')[0];
 }
@@ -143,40 +76,49 @@ function minCheckout(checkin: string) {
   return d.toISOString().split('T')[0];
 }
 
-function buildWhatsApp(apt: Apartment, form: FormState) {
+function buildWhatsApp(apt: Apartment, form: FormState, t: TFunc) {
   const lines = [
-    `Hi! I'd like to book ${apt.name}`,
-    `Check-in: ${form.checkin}`,
-    `Check-out: ${form.checkout}`,
-    `Guests: ${form.guests}`,
-    `Name: ${form.name}`,
-    `Phone: ${form.phone}`,
-    `Email: ${form.email}`,
-    form.message ? `Message: ${form.message}` : '',
+    t('whatsapp.greeting', { name: apt.name }),
+    t('whatsapp.checkin', { date: form.checkin }),
+    t('whatsapp.checkout', { date: form.checkout }),
+    t('whatsapp.guests', { count: form.guests }),
+    t('whatsapp.name', { name: form.name }),
+    t('whatsapp.phone', { phone: form.phone }),
+    t('whatsapp.email', { email: form.email }),
+    form.message ? t('whatsapp.message', { text: form.message }) : '',
   ]
     .filter(Boolean)
     .join('\n');
   return `https://wa.me/385915483354?text=${encodeURIComponent(lines)}`;
 }
 
-function buildMailto(apt: Apartment, form: FormState) {
-  const subject = encodeURIComponent(`Booking Inquiry – ${apt.name}`);
+function buildMailto(apt: Apartment, form: FormState, t: TFunc) {
+  const subject = encodeURIComponent(t('email.subject', { name: apt.name }));
   const body = encodeURIComponent(
-    `Hi Solar Living team,\n\nI'd like to inquire about booking ${apt.name}.\n\nCheck-in: ${form.checkin}\nCheck-out: ${form.checkout}\nGuests: ${form.guests}\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\n\nMessage: ${form.message}`
+    t('email.body', {
+      name: apt.name,
+      checkin: form.checkin,
+      checkout: form.checkout,
+      guests: form.guests,
+      guestName: form.name,
+      phone: form.phone,
+      email: form.email,
+      message: form.message,
+    })
   );
   return `mailto:solarliving.info@gmail.com?subject=${subject}&body=${body}`;
 }
 
-function validateForm(form: FormState, maxGuests: number): string | null {
-  if (!form.name.trim()) return 'Please enter your full name.';
-  if (!form.email.trim()) return 'Please enter your email address.';
-  if (!form.phone.trim()) return 'Please enter your phone number.';
-  if (!form.checkin) return 'Please select a check-in date.';
-  if (!form.checkout) return 'Please select a check-out date.';
-  if (form.checkout <= form.checkin) return 'Check-out must be after check-in.';
+function validateForm(form: FormState, maxGuests: number, t: TFunc): string | null {
+  if (!form.name.trim()) return t('validation.nameRequired');
+  if (!form.email.trim()) return t('validation.emailRequired');
+  if (!form.phone.trim()) return t('validation.phoneRequired');
+  if (!form.checkin) return t('validation.checkinRequired');
+  if (!form.checkout) return t('validation.checkoutRequired');
+  if (form.checkout <= form.checkin) return t('validation.checkoutAfterCheckin');
   const g = parseInt(form.guests, 10);
-  if (isNaN(g) || g < 1) return 'Please enter a valid number of guests.';
-  if (g > maxGuests) return `This apartment fits a maximum of ${maxGuests} guests.`;
+  if (isNaN(g) || g < 1) return t('validation.guestsInvalid');
+  if (g > maxGuests) return t('validation.guestsExceeded', { max: maxGuests });
   return null;
 }
 
@@ -191,6 +133,8 @@ function ApartmentCard({
   onBook: (apt: Apartment) => void;
   onShowReviews: (apt: Apartment) => void;
 }) {
+  const t = useTranslations('apartments');
+
   const infoLine = apt.available
     ? [
         `${apt.guests} guests`,
@@ -218,7 +162,7 @@ function ApartmentCard({
             className="font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2"
             style={{ border: '1px solid #edd98f', color: '#edd98f' }}
           >
-            Coming Soon
+            {t('card.comingSoon')}
           </span>
         </div>
       )}
@@ -236,7 +180,7 @@ function ApartmentCard({
                 style={{ color: '#888888' }}
               >
                 <MapPin size={14} style={{ color: '#86cae7', flexShrink: 0 }} />
-                Umag, Croatia
+                {t('card.location')}
                 <div
                   className="absolute left-0 bottom-full mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50"
                   style={{ width: '280px', backgroundColor: '#2a2a2a' }}
@@ -254,7 +198,7 @@ function ApartmentCard({
             ) : (
               <p className="flex items-center gap-1 font-sans text-xs uppercase tracking-widest mb-1" style={{ color: '#888888' }}>
                 <MapPin size={14} style={{ color: '#86cae7', flexShrink: 0 }} />
-                Umag, Croatia
+                {t('card.location')}
               </p>
             )}
             <h3 className="font-serif text-xl font-normal text-[#1a1a1a]">
@@ -300,7 +244,7 @@ function ApartmentCard({
               className="w-full font-sans font-semibold text-xs uppercase tracking-widest py-3 text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
               style={{ border: '1px solid #1a1a1a' }}
             >
-              Check Availability &amp; Book
+              {t('card.bookButton')}
             </button>
           ) : (
             <button
@@ -308,7 +252,7 @@ function ApartmentCard({
               className="w-full font-sans font-semibold text-xs uppercase tracking-widest py-3 cursor-not-allowed text-[#999999]"
               style={{ border: '1px solid #999999' }}
             >
-              Coming Soon
+              {t('card.comingSoon')}
             </button>
           )}
         </div>
@@ -326,6 +270,7 @@ function InquiryModal({
   apt: Apartment;
   onClose: () => void;
 }) {
+  const t = useTranslations('apartments');
   const [form, setForm] = useState<FormState>({ ...emptyForm, guests: '1' });
   const [error, setError] = useState<string | null>(null);
 
@@ -342,15 +287,15 @@ function InquiryModal({
   }
 
   function handleWhatsApp() {
-    const err = validateForm(form, apt.guests);
+    const err = validateForm(form, apt.guests, t);
     if (err) { setError(err); return; }
-    window.open(buildWhatsApp(apt, form), '_blank');
+    window.open(buildWhatsApp(apt, form, t), '_blank');
   }
 
   function handleEmail() {
-    const err = validateForm(form, apt.guests);
+    const err = validateForm(form, apt.guests, t);
     if (err) { setError(err); return; }
-    window.open(buildMailto(apt, form), '_blank');
+    window.open(buildMailto(apt, form, t), '_blank');
   }
 
   const inputClass =
@@ -374,63 +319,63 @@ function InquiryModal({
         <button
           onClick={onClose}
           className="absolute top-5 right-5 text-xl leading-none font-sans text-[#c8c8c8] hover:text-white transition-colors"
-          aria-label="Close"
+          aria-label={t('modal.ariaClose')}
         >
           ×
         </button>
 
         {/* Header */}
         <h2 className="font-serif text-2xl mb-1 text-white">
-          Book {apt.name}
+          {t('modal.bookHeading', { name: apt.name })}
         </h2>
         <p className="font-sans text-sm mb-7 text-[#c8c8c8]">
-          Fill in your details and we&apos;ll get back to you to confirm availability.
+          {t('modal.subheading')}
         </p>
 
         {/* Form */}
         <div className="space-y-4">
           <div>
-            <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">Full Name *</label>
-            <input type="text" className={inputClass} style={inputStyle} placeholder="Jane Smith" value={form.name} onChange={set('name')} required />
+            <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">{t('modal.labelName')}</label>
+            <input type="text" className={inputClass} style={inputStyle} placeholder={t('modal.placeholderName')} value={form.name} onChange={set('name')} required />
           </div>
 
           <div>
-            <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">Email *</label>
-            <input type="email" className={inputClass} style={inputStyle} placeholder="jane@example.com" value={form.email} onChange={set('email')} required />
+            <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">{t('modal.labelEmail')}</label>
+            <input type="email" className={inputClass} style={inputStyle} placeholder={t('modal.placeholderEmail')} value={form.email} onChange={set('email')} required />
           </div>
 
           <div>
-            <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">Phone Number *</label>
-            <input type="text" className={inputClass} style={inputStyle} placeholder="+44 7700 900000" value={form.phone} onChange={set('phone')} required />
+            <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">{t('modal.labelPhone')}</label>
+            <input type="text" className={inputClass} style={inputStyle} placeholder={t('modal.placeholderPhone')} value={form.phone} onChange={set('phone')} required />
           </div>
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">Check-in *</label>
+              <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">{t('modal.labelCheckin')}</label>
               <input type="date" className={inputClass} style={inputStyle} min={today()} value={form.checkin} onChange={set('checkin')} required />
             </div>
             <div>
-              <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">Check-out *</label>
+              <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">{t('modal.labelCheckout')}</label>
               <input type="date" className={inputClass} style={inputStyle} min={minCheckout(form.checkin)} value={form.checkout} onChange={set('checkout')} required />
             </div>
           </div>
 
           <div>
             <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">
-              Guests * <span className="normal-case tracking-normal text-[#999999]">(max {apt.guests})</span>
+              {t('modal.labelGuests')} <span className="normal-case tracking-normal text-[#999999]">{t('modal.guestsMax', { max: apt.guests })}</span>
             </label>
             <input type="number" className={inputClass} style={inputStyle} min={1} max={apt.guests} value={form.guests} onChange={set('guests')} required />
           </div>
 
           <div>
             <label className="block font-sans text-xs uppercase tracking-widest mb-1.5 text-[#c8c8c8]">
-              Message <span className="normal-case tracking-normal text-[#999999]">(optional)</span>
+              {t('modal.labelMessage')} <span className="normal-case tracking-normal text-[#999999]">{t('modal.messageOptional')}</span>
             </label>
             <textarea
               className={`${inputClass} resize-none`}
               style={inputStyle}
               rows={3}
-              placeholder="Any special requests or questions?"
+              placeholder={t('modal.placeholderMessage')}
               value={form.message}
               onChange={set('message')}
             />
@@ -448,19 +393,19 @@ function InquiryModal({
             className="flex-1 font-sans font-semibold text-xs uppercase tracking-widest py-3 text-white transition-opacity hover:opacity-90"
             style={{ backgroundColor: '#4a8c7a' }}
           >
-            Send via WhatsApp
+            {t('modal.sendWhatsApp')}
           </button>
           <button
             onClick={handleEmail}
             className="flex-1 font-sans font-semibold text-xs uppercase tracking-widest py-3 transition-opacity hover:opacity-90"
             style={{ backgroundColor: '#edd98f', color: '#474748' }}
           >
-            Send via Email
+            {t('modal.sendEmail')}
           </button>
         </div>
 
         <p className="mt-4 font-sans text-xs text-center text-[#c8c8c8]">
-          We typically respond within a few hours.
+          {t('modal.responseNote')}
         </p>
       </div>
     </div>
@@ -470,14 +415,16 @@ function InquiryModal({
 // ─── Reviews Modal ─────────────────────────────────────────────────────────
 
 function ReviewsModal({ apt, onClose }: { apt: Apartment; onClose: () => void }) {
+  const t = useTranslations('apartments');
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = ''; };
   }, []);
 
   const scoreLabel = apt.id === 1
-    ? '★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb'
-    : '★ 9.8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb';
+    ? t('reviewsModal.scoreApt1')
+    : t('reviewsModal.scoreApt2');
 
   return (
     <div
@@ -494,7 +441,7 @@ function ReviewsModal({ apt, onClose }: { apt: Apartment; onClose: () => void })
           <button
             onClick={onClose}
             className="absolute top-5 right-5 text-xl leading-none font-sans text-[#c8c8c8] hover:text-white transition-colors"
-            aria-label="Close"
+            aria-label={t('reviewsModal.ariaClose')}
           >
             ×
           </button>
@@ -536,21 +483,81 @@ function ReviewsModal({ apt, onClose }: { apt: Apartment; onClose: () => void })
 // ─── Page ──────────────────────────────────────────────────────────────────
 
 export default function ApartmentsPage() {
+  const t = useTranslations('apartments');
   const [selected, setSelected] = useState<Apartment | null>(null);
   const [reviewsApt, setReviewsApt] = useState<Apartment | null>(null);
+
+  const apartments: Apartment[] = [
+    {
+      id: 1,
+      name: t('data.apt1.name'),
+      description: t('data.apt1.description'),
+      guests: 6,
+      bedrooms: 3,
+      type: 'Apartment',
+      location: t('data.apt1.location'),
+      amenities: t.raw('data.apt1.amenities') as string[],
+      image: '/images/umag-1-main.jpg',
+      available: true,
+      mapSrc: 'https://maps.google.com/maps?q=Ul.+8.+ožujka+1A,+Umag,+Croatia&output=embed',
+      mapLink: "https://www.google.com/maps/search/Apartment+Elaine%27s+View+Umag",
+      badge: t('data.apt1.badge'),
+      reviews: t.raw('data.apt1.reviews') as Review[],
+    },
+    {
+      id: 2,
+      name: t('data.apt2.name'),
+      description: t('data.apt2.description'),
+      guests: 6,
+      bedrooms: 2,
+      type: 'Apartment',
+      location: t('data.apt2.location'),
+      amenities: t.raw('data.apt2.amenities') as string[],
+      image: '/images/umag-2-main.jpg',
+      available: true,
+      mapSrc: 'https://maps.google.com/maps?q=Ulica+154.+brigada+HV+7,+Umag,+Croatia&output=embed',
+      mapLink: 'https://www.google.com/maps/search/Ulica+154+brigada+HV+7+Umag',
+      badge: t('data.apt2.badge'),
+      reviews: t.raw('data.apt2.reviews') as Review[],
+    },
+    {
+      id: 3,
+      name: t('data.apt3.name'),
+      description: t('data.apt3.description'),
+      guests: 4,
+      bedrooms: 2,
+      type: 'Apartment',
+      location: t('data.apt3.location'),
+      amenities: [],
+      image: null,
+      available: false,
+    },
+    {
+      id: 4,
+      name: t('data.apt4.name'),
+      description: t('data.apt4.description'),
+      guests: 6,
+      bedrooms: 3,
+      type: 'Villa',
+      location: t('data.apt4.location'),
+      amenities: [],
+      image: null,
+      available: false,
+    },
+  ];
 
   return (
     <>
       {/* ── SECTION 1: PAGE HERO ────────────────────────────────────────── */}
       <section className="py-32 px-6 text-center" style={{ backgroundColor: '#474748' }}>
         <p className="font-sans text-xs uppercase tracking-widest mb-5 text-[#86cae7]">
-          Our Properties
+          {t('hero.label')}
         </p>
         <h1 className="font-serif text-5xl md:text-6xl mb-6 leading-tight text-white">
-          Find Your Perfect Apartment
+          {t('hero.heading')}
         </h1>
         <p className="font-sans text-base max-w-xl mx-auto leading-relaxed tracking-wide text-[#c8c8c8]">
-          Select a property, choose your dates, and send us an inquiry.<br />We&apos;ll confirm availability and handle the rest.
+          {t('hero.subtext')}<br />{t('hero.subtextLine2')}
         </p>
       </section>
 
@@ -561,14 +568,14 @@ export default function ApartmentsPage() {
           <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-                Our Collection
+                {t('listings.label')}
               </p>
               <h2 className="font-serif text-4xl md:text-5xl text-white">
-                All Apartments
+                {t('listings.heading')}
               </h2>
             </div>
             <p className="font-sans text-sm text-[#c8c8c8] md:text-right">
-              Select a property below and send us your inquiry.
+              {t('listings.subtext')}
             </p>
           </div>
 
@@ -596,17 +603,17 @@ export default function ApartmentsPage() {
       <section className="py-24 px-6 text-center" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-2xl mx-auto space-y-6">
           <h2 className="font-serif text-2xl md:text-3xl text-white">
-            Not sure which apartment is right for you?
+            {t('cta.heading')}
           </h2>
           <p className="font-sans text-base leading-relaxed text-[#c8c8c8] text-center">
-            Get in touch and we&apos;ll help you find the perfect match for your group, dates, and budget.
+            {t('cta.body')}
           </p>
           <Link
             href="/contact"
             className="inline-block font-sans font-semibold text-xs uppercase tracking-widest px-8 py-4 text-white transition-colors hover:bg-white hover:text-[#2a2a2a]"
             style={{ border: '1px solid rgba(255,255,255,0.2)' }}
           >
-            Contact Us
+            {t('cta.button')}
           </Link>
         </div>
       </section>

@@ -19,7 +19,7 @@ const en = {
         'Your travel dates and preferences',
         'Any message you choose to send us',
       ],
-      note: 'We do not collect this data automatically — it is only submitted when you choose to contact us via our inquiry form.',
+      note: 'We do not collect this data automatically. It is only submitted when you choose to contact us via our inquiry form.',
     },
     {
       title: '3. How We Use Your Data',
@@ -79,7 +79,7 @@ const hr = {
         'Vaše datume putovanja i preferencije',
         'Poruku koju nam odlučite poslati',
       ],
-      note: 'Ne prikupljamo ove podatke automatski — dostavljaju se samo kada nas odlučite kontaktirati putem obrasca za upite.',
+      note: 'Ne prikupljamo ove podatke automatski. Dostavljaju se samo kada nas odlučite kontaktirati putem obrasca za upite.',
     },
     {
       title: '3. Kako koristimo vaše podatke',

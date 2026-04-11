@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import React from 'react';
 import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'About Solar Living | Boutique Property Management, Umag',
@@ -35,23 +36,38 @@ const personJsonLd = {
   },
 };
 
-const values: { title: string; description: React.ReactNode }[] = [
-  {
-    title: 'Uncompromising Quality',
-    description:
-      'Every property in our portfolio is handpicked. We say no to properties that don\'t meet our standards, because our guests deserve the best, every time.',
-  },
-  {
-    title: 'Genuine Hospitality',
-    description: <>We don&apos;t just hand over keys. We make<br />sure every guest has everything they need<br />before they even ask. The little details<br />are what make a stay unforgettable.</>,
-  },
-  {
-    title: 'Owner Partnership',
-    description: <>We treat every property as if it<br />were our own. Owners trust us<br />with something valuable, and we<br />take that responsibility seriously.</>,
-  },
-];
-
 export default function AboutPage() {
+  const t = useTranslations('about');
+
+  const values: { title: string; description: React.ReactNode }[] = [
+    {
+      title: t('values.quality.title'),
+      description: t('values.quality.description'),
+    },
+    {
+      title: t('values.hospitality.title'),
+      description: (
+        <>
+          {t('values.hospitality.descLine1')}<br />
+          {t('values.hospitality.descLine2')}<br />
+          {t('values.hospitality.descLine3')}<br />
+          {t('values.hospitality.descLine4')}
+        </>
+      ),
+    },
+    {
+      title: t('values.partnership.title'),
+      description: (
+        <>
+          {t('values.partnership.descLine1')}<br />
+          {t('values.partnership.descLine2')}<br />
+          {t('values.partnership.descLine3')}<br />
+          {t('values.partnership.descLine4')}
+        </>
+      ),
+    },
+  ];
+
   return (
     <>
       <script
@@ -64,13 +80,13 @@ export default function AboutPage() {
         style={{ backgroundColor: '#474748' }}
       >
         <p className="font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
-          Our Story
+          {t('hero.label')}
         </p>
         <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-7 text-white">
-          More Than Property Management.
+          {t('hero.heading')}
         </h1>
         <p className="font-sans text-lg text-[#c8c8c8] max-w-2xl mx-auto text-center leading-relaxed">
-          We started Solar Living because we believed Istria deserved better.<br />A boutique approach to hospitality that puts guests and owners first.
+          {t('hero.subtextLine1')}<br />{t('hero.subtextLine2')}
         </p>
       </section>
 
@@ -82,20 +98,20 @@ export default function AboutPage() {
           <div className="md:w-1/2 space-y-6">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-                Who We Are
+                {t('story.label')}
               </p>
               <h2 className="font-serif text-3xl text-white mb-6">
-                A Boutique Company<br />with High Standards.
+                {t('story.headingLine1')}<br />{t('story.headingLine2')}
               </h2>
             </div>
             <p className="font-sans text-[#c8c8c8] text-base leading-relaxed">
-              Solar Living is a boutique property management company based in Umag, on the beautiful northwestern coast of Istria, Croatia. We manage a carefully selected portfolio of premium apartments and villas, properties we personally vet, prepare, and maintain to the highest standard.
+              {t('story.para1')}
             </p>
             <p className="font-sans text-[#c8c8c8] text-base leading-relaxed">
-              We are part of the Solar Group, alongside Solar Creative, our marketing agency. This means every property in our portfolio benefits not just from management expertise, but from professional photography, branding, and digital marketing that most property managers simply don&apos;t offer.
+              {t('story.para2')}
             </p>
             <p className="font-sans text-[#c8c8c8] text-base leading-relaxed">
-              Our mission is simple: exceptional experiences for guests, absolute peace of mind for owners, and properties that consistently earn top-rated reviews.
+              {t('story.para3')}
             </p>
           </div>
 
@@ -116,10 +132,10 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-              What Drives Us
+              {t('values.label')}
             </p>
             <h2 className="font-serif text-4xl text-white">
-              Our Values
+              {t('values.heading')}
             </h2>
           </div>
 
@@ -147,14 +163,14 @@ export default function AboutPage() {
           <div className="md:w-1/2 space-y-6">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-                Part of Something Bigger
+                {t('solarGroup.label')}
               </p>
               <h2 className="font-serif text-4xl text-white mb-4">
-                The Solar Group
+                {t('solarGroup.heading')}
               </h2>
             </div>
             <p className="font-sans text-[#c8c8c8] text-base leading-relaxed">
-              Solar Living is proud to be part of the Solar Group, a family of companies united by a commitment to quality, creativity, and service. Our sister company, Solar Creative, is a full-service marketing agency that supports our properties with professional photography, social media, and brand strategy.
+              {t('solarGroup.para')}
             </p>
             <a
               href="https://solarcreative.hr"
@@ -162,7 +178,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="inline-block font-sans text-sm uppercase tracking-widest text-[#86cae7] hover:text-white transition-colors"
             >
-              Visit Solar Creative →
+              {t('solarGroup.link')}
             </a>
           </div>
 
@@ -170,10 +186,10 @@ export default function AboutPage() {
           <div className="md:w-1/2">
             <div>
               <p className="font-serif text-4xl mb-3" style={{ color: '#edd98f' }}>
-                Est. 2024
+                {t('solarGroup.stat1Value')}
               </p>
               <p className="font-sans text-[#c8c8c8] text-sm leading-relaxed">
-                Solar Living was founded with a vision to bring boutique-level service to Istrian property management.
+                {t('solarGroup.stat1Desc')}
               </p>
             </div>
             <div
@@ -181,10 +197,10 @@ export default function AboutPage() {
               style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
             >
               <p className="font-serif text-4xl mb-3" style={{ color: '#edd98f' }}>
-                Umag, Istria
+                {t('solarGroup.stat2Value')}
               </p>
               <p className="font-sans text-[#c8c8c8] text-sm leading-relaxed">
-                Based on the northwestern tip of Istria, steps from the Adriatic Sea.
+                {t('solarGroup.stat2Desc')}
               </p>
             </div>
           </div>
@@ -196,7 +212,7 @@ export default function AboutPage() {
       <section className="py-24 px-6 text-center" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="font-serif text-4xl text-white">
-            Ready to experience Solar Living?
+            {t('cta.heading')}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link
@@ -204,14 +220,14 @@ export default function AboutPage() {
               className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#86cae7', color: '#474748' }}
             >
-              Browse Apartments
+              {t('cta.browseApartments')}
             </Link>
             <Link
               href="/owners"
               className="font-sans text-sm uppercase tracking-widest px-8 py-4 text-white transition-colors hover:border-white"
               style={{ border: '1px solid rgba(255,255,255,0.3)' }}
             >
-              Partner With Us
+              {t('cta.partnerWithUs')}
             </Link>
           </div>
         </div>
