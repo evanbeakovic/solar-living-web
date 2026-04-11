@@ -1,1 +1,503 @@
-{}
+{
+  "home": {
+    "hero": {
+      "locationLabel": "Umago, Croazia",
+      "headingStart": "Il tuo",
+      "headingAccent": "Perfetto",
+      "headingEnd": "Soggiorno Perfetto in Istria",
+      "subheading": "Appartamenti selezionati con cura. Servizio eccellente. Ricordi indimenticabili.",
+      "ctaBrowse": "Scopri gli Appartamenti",
+      "ctaOwners": "Per i Proprietari"
+    },
+    "apartments": {
+      "label": "La Nostra Selezione",
+      "heading": "Appartamenti",
+      "subtext": "Ogni proprietà è scelta personalmente e curata nei minimi dettagli.",
+      "card1Location": "Umago, Croazia",
+      "card1Name": "Elaine's View",
+      "card1Details": "6 ospiti · 3 camere · Terrazza e balcone",
+      "card1Cta": "Scopri e Prenota",
+      "card2Location": "Umago, Croazia",
+      "card2Name": "Stella's Garden",
+      "card2Details": "6 ospiti · 2 camere · Terrazza privata e giardino",
+      "card2Cta": "Scopri e Prenota",
+      "viewAll": "Vedi Tutti gli Appartamenti →"
+    },
+    "reviews": {
+      "label": "Recensioni degli Ospiti",
+      "heading": "Cosa Dicono i Nostri Ospiti"
+    },
+    "whyUs": {
+      "quote": "Non ci limitiamo a consegnarti le chiavi. Ci assicuriamo che ogni dettaglio sia curato, così puoi semplicemente goderti il soggiorno.",
+      "attribution": "Il Team Solar Living",
+      "feature1Title": "Proprietà Selezionate",
+      "feature1Body": "Ogni appartamento è scelto con cura e rispetta i più alti standard.",
+      "feature2Title": "Servizio 5 Stelle",
+      "feature2Body": "Dal check-in al check-out, siamo sempre a tua disposizione.",
+      "feature3Title": "Completamente Attrezzato",
+      "feature3Body": "Tutto ciò di cui hai bisogno per un soggiorno perfetto ti aspetta già lì.",
+      "feature4Title": "Sempre 5 Stelle",
+      "feature4Body": "I nostri ospiti lasciano costantemente recensioni a 5 stelle su tutte le piattaforme."
+    },
+    "whoWeAre": {
+      "label": "Chi Siamo",
+      "heading": "Agenzia Boutique di Gestione Immobiliare",
+      "para1": "Solar Living è un'agenzia boutique di gestione di appartamenti vacanza con sede a Umago, in Istria, Croazia. Gestiamo un portfolio selezionato di appartamenti premium per ospiti che cercano una sistemazione eccezionale sulla costa adriatica.",
+      "propertiesIntro": "Le nostre proprietà attuali includono:",
+      "elaineName": "Elaine's View",
+      "elaineDetails": ", un appartamento spazioso in prima fila sul mare, con vista panoramica sull'Adriatico, sui tramonti e sulla Città Vecchia di Umago.",
+      "stellaName": "Stella's Garden",
+      "stellaDetails": ", un appartamento al piano terra nel più pregiato edificio nuovo di Umago, con un incantevole giardino mediterraneo privato e un ulivo.",
+      "para3": "Entrambi gli appartamenti ottengono costantemente un punteggio di 9.8 o superiore su Booking.com e 5.0/5 su Airbnb, a testimonianza del nostro impegno per la pulizia, il comfort e un servizio ospiti eccellente.",
+      "para4": "Per i proprietari, Solar Living offre un servizio di gestione completa che include fotografia professionale, gestione degli annunci su tutte le principali piattaforme, comunicazione con gli ospiti 24/7, coordinamento delle pulizie, tariffazione dinamica e reportistica mensile.",
+      "para5": "Solar Living fa parte del Solar Group, insieme a Solar Creative, un'agenzia di marketing con sede a Dubai."
+    },
+    "ownersCta": {
+      "label": "Proprietari",
+      "heading": "Hai una Proprietà in Istria?",
+      "body": "Unisciti al nostro portfolio e goditi una gestione completa, cura garantita e risultati eccellenti. Ci pensiamo noi a tutto.",
+      "cta": "Contattaci"
+    },
+    "location": {
+      "label": "Dove Siamo",
+      "heading": "Umago, Istria",
+      "body": "Incastonata all'estrema punta nord-occidentale dell'Istria, Umago è un affascinante borgo medievale con acque adriatiche cristalline, una gastronomia di alto livello e un'atmosfera mediterranea rilassata. La destinazione perfetta per una vacanza davvero rigenerante."
+    }
+  },
+  "apartments": {
+    "hero": {
+      "label": "Le Nostre Proprietà",
+      "heading": "Trova il Tuo Appartamento Ideale",
+      "subtext": "Scegli una proprietà, seleziona le date e inviaci una richiesta.",
+      "subtextLine2": "Confermeremo la disponibilità e ci occuperemo del resto."
+    },
+    "listings": {
+      "label": "La Nostra Selezione",
+      "heading": "Tutti gli Appartamenti",
+      "subtext": "Scegli una proprietà qui sotto e inviaci la tua richiesta."
+    },
+    "card": {
+      "location": "Umago, Croazia",
+      "comingSoon": "Prossimamente",
+      "bookButton": "Verifica Disponibilità e Prenota"
+    },
+    "cta": {
+      "heading": "Non sei sicuro di quale appartamento fa per te?",
+      "body": "Contattaci e ti aiuteremo a trovare la soluzione perfetta per il tuo gruppo, le tue date e il tuo budget.",
+      "button": "Contattaci"
+    },
+    "modal": {
+      "bookHeading": "Prenota {name}",
+      "subheading": "Compila i tuoi dati e ti ricontatteremo per confermare la disponibilità.",
+      "labelName": "Nome e Cognome *",
+      "placeholderName": "Mario Rossi",
+      "labelEmail": "Email *",
+      "placeholderEmail": "mario@esempio.com",
+      "labelPhone": "Numero di Telefono *",
+      "placeholderPhone": "+39 340 000 0000",
+      "labelCheckin": "Check-in *",
+      "labelCheckout": "Check-out *",
+      "labelGuests": "Ospiti *",
+      "guestsMax": "(max {max})",
+      "labelMessage": "Messaggio",
+      "messageOptional": "(facoltativo)",
+      "placeholderMessage": "Richieste speciali o domande?",
+      "sendWhatsApp": "Invia via WhatsApp",
+      "sendEmail": "Invia via Email",
+      "responseNote": "Di solito rispondiamo entro poche ore.",
+      "ariaClose": "Chiudi"
+    },
+    "validation": {
+      "nameRequired": "Inserisci il tuo nome e cognome.",
+      "emailRequired": "Inserisci il tuo indirizzo email.",
+      "phoneRequired": "Inserisci il tuo numero di telefono.",
+      "checkinRequired": "Seleziona una data di check-in.",
+      "checkoutRequired": "Seleziona una data di check-out.",
+      "checkoutAfterCheckin": "Il check-out deve essere successivo al check-in.",
+      "guestsInvalid": "Inserisci un numero di ospiti valido.",
+      "guestsExceeded": "Questo appartamento può ospitare al massimo {max} persone."
+    },
+    "whatsapp": {
+      "greeting": "Ciao! Vorrei prenotare {name}",
+      "checkin": "Check-in: {date}",
+      "checkout": "Check-out: {date}",
+      "guests": "Ospiti: {count}",
+      "name": "Nome: {name}",
+      "phone": "Telefono: {phone}",
+      "email": "Email: {email}",
+      "message": "Messaggio: {text}"
+    },
+    "email": {
+      "subject": "Richiesta di Prenotazione – {name}",
+      "body": "Ciao team Solar Living,\n\nVorrei chiedere informazioni sulla prenotazione di {name}.\n\nCheck-in: {checkin}\nCheck-out: {checkout}\nOspiti: {guests}\nNome: {guestName}\nTelefono: {phone}\nEmail: {email}\n\nMessaggio: {message}"
+    },
+    "reviewsModal": {
+      "scoreApt1": "★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "scoreApt2": "★ 9.8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "ariaClose": "Chiudi"
+    },
+    "data": {
+      "apt1": {
+        "name": "Elaine's View",
+        "description": "In prima fila sul mare. Vista panoramica sull'Adriatico, tramonti e Città Vecchia di Umago.",
+        "location": "Città Vecchia di Umago",
+        "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Aria condizionata",
+          "Wi-Fi",
+          "Cucina completamente attrezzata",
+          "Smart TV",
+          "Lavatrice",
+          "Vista mare"
+        ],
+        "reviews": [
+          {
+            "name": "Tania",
+            "country": "Canada",
+            "platform": "Airbnb",
+            "text": "L'appartamento era pulito e confortevole, con vista dal balcone sui tramonti sull'Adriatico e sulla città vecchia di Umago. Umago è un punto di partenza perfetto per esplorare l'Istria, con la possibilità di fare gite in Italia. Il tempo era splendido, la storia affascinante e il paesaggio meraviglioso."
+          },
+          {
+            "name": "Stephan",
+            "country": "Germany",
+            "platform": "Airbnb",
+            "text": "Siamo stati accolti con grande cordialità e calore. Un appartamento grande e ben distribuito, con vista sul mare. C'è un balcone lato mare e anche uno laterale, molto pratico. L'abbiamo trovato molto tranquillo."
+          },
+          {
+            "name": "Jana",
+            "country": "Czech Republic",
+            "platform": "Booking.com",
+            "text": "Sistemazione perfetta. Un appartamento di lusso con una vista mare mozzafiato. Proprio davanti all'edificio si trova una spiaggia cittadina con accesso diretto al mare e pochissima gente. Comunicazione cordialissima e professionale con l'host. Torneremo sicuramente."
+          }
+        ]
+      },
+      "apt2": {
+        "name": "Stella's Garden",
+        "description": "Appartamento al piano terra nel più pregiato edificio di nuova costruzione a Umago, con giardino mediterraneo privato.",
+        "location": "Umago",
+        "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Aria condizionata",
+          "Wi-Fi",
+          "Cucina completamente attrezzata",
+          "Smart TV",
+          "Terrazza privata",
+          "Giardino"
+        ],
+        "reviews": [
+          {
+            "name": "Peter",
+            "country": "Slovakia",
+            "platform": "Airbnb",
+            "text": "Tutto era impeccabilmente pulito e modernissimo, quasi come se fossimo i primi ospiti. Host estremamente gentile, sempre disponibile e pronto a rispondere con rapidità a qualsiasi domanda."
+          },
+          {
+            "name": "Jehona",
+            "country": "Slovenia",
+            "platform": "Booking.com",
+            "text": "È tutto eccellente, meglio di un hotel a 5 stelle. Lo consiglio a tutti. Non ho mai visto niente di simile. Il proprietario è stato molto gentile e ci ha mostrato tutto."
+          },
+          {
+            "name": "Maciej",
+            "country": "Poland",
+            "platform": "Booking.com",
+            "text": "Consigliatissimo. Appartamento al piano terra e molto spazioso, con letti comodi, cucina ben attrezzata, aria condizionata e due bagni. Ampia terrazza con parcheggio riservato. A 2 minuti in auto dai centri commerciali, a 4-5 minuti dalla spiaggia più vicina."
+          }
+        ]
+      },
+      "apt3": {
+        "name": "Solar Apartment Umago III",
+        "description": "Una straordinaria nuova aggiunta al nostro portfolio. Dettagli in arrivo. Contattaci per essere tra i primi a sapere quando questa proprietà sarà disponibile.",
+        "location": "Umago"
+      },
+      "apt4": {
+        "name": "Solar Apartment Umago IV",
+        "description": "Una proprietà eccezionale attualmente in preparazione per il nostro portfolio. Contattaci per saperne di più.",
+        "location": "Area di Umago"
+      }
+    }
+  },
+  "owners": {
+    "hero": {
+      "label": "Per i Proprietari",
+      "heading": "Lascia Fare Tutto a Noi.",
+      "subtextLine1": "Solar Living gestisce ogni aspetto della tua proprietà,",
+      "subtextLine2": "così guadagni di più, hai meno preoccupazioni e non ti devi pensare a nulla.",
+      "cta": "Richiedi una Consulenza Gratuita",
+      "note": "Ti risponderemo entro 24 ore."
+    },
+    "offer": {
+      "label": "Cosa Offriamo",
+      "heading": "Gestione Completa. Zero Preoccupazioni."
+    },
+    "features": {
+      "photography": {
+        "title": "Fotografia Professionale",
+        "descLine1": "Fotografiamo la tua proprietà con i più alti standard",
+        "descLine2": "per attrarre ospiti di qualità."
+      },
+      "listing": {
+        "title": "Gestione degli Annunci",
+        "descLine1": "Gestiamo i tuoi annunci su tutte le principali piattaforme,",
+        "descLine2": "tra cui Airbnb, Booking.com e prenotazioni dirette."
+      },
+      "communication": {
+        "title": "Comunicazione con gli Ospiti",
+        "descLine1": "Gestiamo tutte le richieste degli ospiti, i check-in,",
+        "descLine2": "i check-out e il supporto 24/7."
+      },
+      "cleaning": {
+        "title": "Pulizie e Manutenzione",
+        "descLine1": "Pulizia professionale dopo ogni soggiorno,",
+        "descLine2": "ispezioni regolari e manutenzione tempestiva."
+      },
+      "pricing": {
+        "title": "Tariffazione Dinamica",
+        "descLine1": "Ottimizziamo le tariffe notturne per massimizzare",
+        "descLine2": "l'occupazione e i ricavi durante tutto l'anno."
+      },
+      "reporting": {
+        "title": "Report Mensili",
+        "descLine1": "Report mensili trasparenti, così sai sempre",
+        "descLine2": "i risultati della tua proprietà."
+      }
+    },
+    "promise": {
+      "quote": "Trattiamo ogni proprietà come se fosse la nostra, con la stessa cura, attenzione e orgoglio.",
+      "attribution": "Ana & Evan, Fondatori"
+    },
+    "process": {
+      "label": "Come Funziona",
+      "heading": "Iniziare è Semplice."
+    },
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Consulenza Gratuita",
+        "descLine1": "Ci incontriamo per capire",
+        "descLine2": "la tua proprietà, i tuoi obiettivi",
+        "descLine3": "e rispondere a ogni domanda."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Valutazione della Proprietà",
+        "descLine1": "Valutiamo la tua proprietà,",
+        "descLine2": "forniamo raccomandazioni",
+        "descLine3": "e concordiamo i termini."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Pensiamo a Tutto Noi",
+        "descLine1": "Fotografia, annunci,",
+        "descLine2": "gestione degli ospiti,",
+        "descLine3": "pulizie: tutto incluso."
+      },
+      "step4": {
+        "number": "04",
+        "title": "Tu Guadagni e Ti Rilassi",
+        "desc": "Ricevi pagamenti mensili e report trasparenti. Tutto qui."
+      }
+    },
+    "contact": {
+      "label": "Contattaci",
+      "heading": "Pronto a Collaborare con Noi?",
+      "bodyLine1": "Compila il modulo e ti contatteremo entro 24 ore.",
+      "bodyLine2": "Oppure scrivici direttamente:",
+      "whatsappLink": "WhatsApp: +385 91 548 3354",
+      "emailLink": "solarliving.info@gmail.com",
+      "labelName": "Nome e Cognome",
+      "labelEmail": "Email",
+      "labelPhone": "Telefono",
+      "labelAddress": "Indirizzo / Ubicazione della Proprietà",
+      "labelType": "Tipo di Proprietà",
+      "labelMessage": "Messaggio",
+      "messageOptional": "(facoltativo)",
+      "placeholderName": "Il tuo nome e cognome",
+      "placeholderEmail": "tua@email.com",
+      "placeholderPhone": "+385 ...",
+      "placeholderAddress": "Via, città o zona",
+      "selectDefault": "Seleziona tipo…",
+      "optionApartment": "Appartamento",
+      "optionStudio": "Monolocale",
+      "optionVilla": "Villa",
+      "optionHouse": "Casa",
+      "optionOther": "Altro",
+      "placeholderMessage": "Raccontaci della tua proprietà e di cosa stai cercando.",
+      "sendWhatsApp": "Invia via WhatsApp",
+      "sendEmail": "Invia via Email"
+    },
+    "whatsapp": {
+      "greeting": "Ciao! Vorrei parlare della gestione immobiliare.",
+      "name": "Nome: {name}",
+      "property": "Proprietà: {address}",
+      "type": "Tipo: {type}",
+      "email": "Email: {email}",
+      "phone": "Telefono: {phone}",
+      "message": "Messaggio: {message}"
+    },
+    "email": {
+      "subject": "Richiesta di Gestione Immobiliare",
+      "greeting": "Ciao Solar Living,",
+      "name": "Nome: {name}",
+      "property": "Proprietà: {address}",
+      "type": "Tipo: {type}",
+      "email": "Email: {email}",
+      "phone": "Telefono: {phone}",
+      "message": "Messaggio: {message}"
+    }
+  },
+  "about": {
+    "hero": {
+      "label": "La Nostra Storia",
+      "heading": "Molto Più della Gestione Immobiliare.",
+      "subtextLine1": "Abbiamo fondato Solar Living perché credevamo che l'Istria meritasse di più.",
+      "subtextLine2": "Un approccio boutique all'ospitalità che mette al centro ospiti e proprietari."
+    },
+    "story": {
+      "label": "Chi Siamo",
+      "headingLine1": "Un'Azienda Boutique",
+      "headingLine2": "con Standard Elevati.",
+      "para1": "Solar Living è una società boutique di gestione immobiliare con sede a Umago, sulla splendida costa nord-occidentale dell'Istria, in Croazia. Gestiamo un portfolio selezionato di appartamenti e ville premium: proprietà che valutiamo, prepariamo e manteniamo personalmente ai più alti standard.",
+      "para2": "Facciamo parte del Solar Group, insieme a Solar Creative, la nostra agenzia di marketing. Questo significa che ogni proprietà del nostro portfolio beneficia non solo della nostra esperienza gestionale, ma anche di fotografia professionale, branding e marketing digitale che la maggior parte dei gestori immobiliari semplicemente non offre.",
+      "para3": "La nostra missione è semplice: esperienze eccezionali per gli ospiti, totale tranquillità per i proprietari, e proprietà che ottengono costantemente le migliori recensioni."
+    },
+    "values": {
+      "label": "Cosa Ci Muove",
+      "heading": "I Nostri Valori",
+      "quality": {
+        "title": "Qualità senza Compromessi",
+        "description": "Ogni proprietà nel nostro portfolio è scelta con cura. Diciamo no alle proprietà che non soddisfano i nostri standard, perché i nostri ospiti meritano il meglio, sempre."
+      },
+      "hospitality": {
+        "title": "Ospitalità Autentica",
+        "descLine1": "Non ci limitiamo a consegnare le chiavi. Ci assicuriamo",
+        "descLine2": "che ogni ospite abbia tutto ciò di cui ha bisogno",
+        "descLine3": "ancora prima di chiederlo. Sono i piccoli dettagli",
+        "descLine4": "a rendere un soggiorno indimenticabile."
+      },
+      "partnership": {
+        "title": "Collaborazione con i Proprietari",
+        "descLine1": "Trattiamo ogni proprietà come se fosse",
+        "descLine2": "la nostra. I proprietari ci affidano",
+        "descLine3": "qualcosa di prezioso e noi prendiamo",
+        "descLine4": "questa responsabilità molto sul serio."
+      }
+    },
+    "solarGroup": {
+      "label": "Parte di Qualcosa di Più Grande",
+      "heading": "Il Solar Group",
+      "para": "Solar Living è orgogliosa di far parte del Solar Group, una famiglia di aziende unite dall'impegno per la qualità, la creatività e il servizio. La nostra azienda sorella, Solar Creative, è un'agenzia di marketing a servizio completo che supporta le nostre proprietà con fotografia professionale, social media e strategia di brand.",
+      "link": "Visita Solar Creative →",
+      "stat1Value": "Dal 2024",
+      "stat1Desc": "Solar Living è nata con la visione di portare un servizio di livello boutique nella gestione immobiliare istriana.",
+      "stat2Value": "Umago, Istria",
+      "stat2Desc": "Situata all'estrema punta nord-occidentale dell'Istria, a pochi passi dal Mare Adriatico."
+    },
+    "cta": {
+      "heading": "Pronto a vivere l'esperienza Solar Living?",
+      "browseApartments": "Scopri gli Appartamenti",
+      "partnerWithUs": "Collabora con Noi"
+    }
+  },
+  "contact": {
+    "hero": {
+      "label": "Contattaci",
+      "heading": "Siamo Qui per Te.",
+      "subtext": "Che tu stia pianificando un soggiorno o pensando di collaborare con noi, siamo qui e siamo felici di aiutarti."
+    },
+    "details": {
+      "label": "Recapiti",
+      "officeTitle": "Ufficio",
+      "addressLine1": "Ul. 8. ožujka 1A",
+      "addressLine2": "Umago, Croazia",
+      "whatsappTitle": "WhatsApp",
+      "whatsappNumber": "+385 91 548 3354",
+      "emailTitle": "Email",
+      "emailAddress": "solarliving.info@gmail.com",
+      "responseTitle": "Tempi di Risposta",
+      "responseText": "Di solito rispondiamo entro poche ore. Disponibili 7 giorni su 7.",
+      "instagram": "Instagram: @solarliving_",
+      "solarCreative": "Solar Creative →"
+    },
+    "form": {
+      "label": "Invia un Messaggio",
+      "labelName": "Nome e Cognome",
+      "placeholderName": "Il tuo nome e cognome",
+      "labelEmail": "Email",
+      "placeholderEmail": "tua@email.com",
+      "labelPhone": "Telefono",
+      "phoneOptional": "(facoltativo)",
+      "placeholderPhone": "+385 ...",
+      "labelType": "Sono\u2026",
+      "selectDefault": "Seleziona\u2026",
+      "optionGuest": "Un ospite che vuole prenotare",
+      "optionOwner": "Un proprietario immobiliare",
+      "optionOther": "Altro",
+      "labelMessage": "Messaggio",
+      "placeholderMessage": "Come possiamo aiutarti?",
+      "sendWhatsApp": "Invia via WhatsApp",
+      "sendEmail": "Invia via Email",
+      "responseNote": "Ti risponderemo entro poche ore."
+    },
+    "locationNote": "Il nostro team è presente ad Umago e dintorni, in Istria. Scrivici via WhatsApp o email.",
+    "cta": {
+      "heading": "Vuoi prenotare un appartamento?",
+      "body": "Sfoglia le nostre proprietà disponibili e inviaci direttamente una richiesta di prenotazione.",
+      "button": "Vedi gli Appartamenti"
+    }
+  },
+  "faq": {
+    "hero": {
+      "label": "Domande e Risposte",
+      "heading": "Tutto Quello che Devi Sapere"
+    },
+    "guests": {
+      "label": "Per gli Ospiti",
+      "q1": "Dove si trovano gli appartamenti Solar Living?",
+      "a1": "Entrambi gli appartamenti si trovano a Umago, un incantevole borgo costiero all'estrema punta nord-occidentale dell'Istria, in Croazia. Elaine's View è nella Città Vecchia di Umago, in prima fila sul mare. Stella's Garden si trova in un edificio di nuova costruzione in una zona residenziale tranquilla di Umago, a 4-5 minuti dalla spiaggia.",
+      "q2": "Cosa è compreso negli appartamenti?",
+      "a2": "Tutti gli appartamenti sono completamente attrezzati con aria condizionata, Wi-Fi, cucina attrezzata, Smart TV e biancheria fresca. Elaine's View include anche una lavatrice e una terrazza con vista mare. Stella's Garden dispone di un giardino mediterraneo privato e di una terrazza.",
+      "q3": "Come si prenota un appartamento?",
+      "a3": "Puoi inviare una richiesta di prenotazione direttamente dal nostro sito. Clicca su \"Verifica Disponibilità e Prenota\" su qualsiasi appartamento, compila i tuoi dati e invia via WhatsApp o email. Confermiamo la disponibilità e gestiamo tutto il resto, senza bisogno di piattaforme di terze parti.",
+      "q4": "È disponibile il parcheggio?",
+      "a4": "Sì. Sia Elaine's View che Stella's Garden includono un parcheggio riservato.",
+      "q5": "Quali sono le valutazioni degli appartamenti Solar Living?",
+      "a5": "Elaine's View ha un punteggio di 9.9/10 su Booking.com e 5.0/5 su Airbnb. Stella's Garden ha 9.8/10 su Booking.com e 5.0/5 su Airbnb.",
+      "q6": "A che distanza si trovano gli appartamenti dalla spiaggia?",
+      "a6": "Elaine's View è in prima fila sul mare: proprio davanti all'edificio c'è una spiaggia cittadina. Stella's Garden dista circa 4-5 minuti in auto dalla spiaggia più vicina.",
+      "q7": "Si possono fare gite giornaliere da Umago?",
+      "a7": "Assolutamente. Umago è in posizione ideale per gite a Venezia (circa 2 ore), Pola, Rovigno e le Isole Brioni. Anche Aquileia e Trieste sono facilmente raggiungibili."
+    },
+    "owners": {
+      "label": "Per i Proprietari",
+      "q1": "Cosa include il servizio di gestione immobiliare di Solar Living?",
+      "a1": "Offriamo un servizio di gestione completa che include fotografia professionale, gestione degli annunci su più piattaforme (Airbnb, Booking.com, prenotazioni dirette), comunicazione con gli ospiti 24/7, coordinamento di pulizie e manutenzione, ottimizzazione delle tariffe dinamiche e reportistica mensile sulle performance.",
+      "q2": "In quali zone opera Solar Living?",
+      "a2": "Operiamo attualmente a Umago, in Istria, Croazia, e stiamo espandendo la nostra presenza su tutta la penisola istriana.",
+      "q3": "Come posso iniziare con Solar Living come proprietario?",
+      "a3": "Contattaci via WhatsApp o email per una consulenza gratuita. Visiteremo la tua proprietà, forniremo raccomandazioni e concorderemo i termini, senza alcun impegno iniziale.",
+      "q4": "Solar Living è un'azienda di gestione immobiliare regolarmente registrata?",
+      "a4": "Sì. Solar Living opera sotto BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković, OIB: 30760238873, registrata in Croazia."
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "apartments": "Appartamenti",
+    "owners": "Proprietari",
+    "about": "Chi Siamo",
+    "contact": "Contatti",
+    "toggleMenu": "Apri menu"
+  },
+  "footer": {
+    "quickLinksHeading": "Link Utili",
+    "contactHeading": "Contatti",
+    "linkHome": "Home",
+    "linkApartments": "Appartamenti",
+    "linkOwners": "Proprietari",
+    "linkAbout": "Chi Siamo",
+    "linkContact": "Contatti",
+    "linkFaq": "FAQ",
+    "linkPrivacyPolicy": "Privacy Policy",
+    "copyright": "© 2025 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | Tutti i diritti riservati"
+  }
+}
