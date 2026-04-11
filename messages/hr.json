@@ -55,7 +55,7 @@
     "ownersCta": {
       "label": "Vlasnici nekretnina",
       "heading": "Imate nekretninu u Istri?",
-      "body": "Pridružite se našem portfelju i prepustite nam brigu — o svemu.",
+      "body": "Pridružite se našem portfelju i prepustite nam brigu. O svemu.",
       "cta": "Kontaktirajte nas"
     },
     "location": {
@@ -222,7 +222,7 @@
       "label": "Za vlasnike nekretnina",
       "heading": "Prepustite nam sve.",
       "subtextLine1": "Solar Living brine o svakom detalju vaše nekretnine,",
-      "subtextLine2": "vi zarađujete više — bez stresa i bez brige.",
+      "subtextLine2": "vi zarađujete više, bez stresa i bez brige.",
       "cta": "Zakažite besplatni razgovor",
       "note": "Javit ćemo vam se u roku od 24 sata."
     },
@@ -290,7 +290,7 @@
         "title": "Mi se brinemo o svemu",
         "descLine1": "Fotografija, oglasi,",
         "descLine2": "upravljanje gostima,",
-        "descLine3": "čišćenje — sve je u našim rukama."
+        "descLine3": "čišćenje, sve je u našim rukama."
       },
       "step4": {
         "number": "04",
@@ -366,7 +366,7 @@
       "heading": "Naše vrijednosti",
       "quality": {
         "title": "Kvaliteta bez kompromisa",
-        "description": "Svaka nekretnina u našem portfelju ručno je odabrana. Odbijamo one koje ne zadovoljavaju naše standarde — jer naši gosti zaslužuju najbolje, svaki put."
+        "description": "Svaka nekretnina u našem portfelju ručno je odabrana. Odbijamo one koje ne zadovoljavaju naše standarde. Naši gosti zaslužuju najbolje, svaki put."
       },
       "hospitality": {
         "title": "Iskreno gostoprimstvo",
@@ -389,7 +389,7 @@
       "para": "Solar Living s ponosom je dio Solar Grupe, obitelji tvrtki ujedinjenih predanošću kvaliteti, kreativnosti i usluzi. Naša sestrinska tvrtka Solar Creative cjelovita je marketinška agencija koja podržava naše nekretnine profesionalnom fotografijom, upravljanjem društvenim mrežama i brendskom strategijom.",
       "link": "Posjetite Solar Creative →",
       "stat1Value": "Est. 2024",
-      "stat1Desc": "Solar Living nastao je iz želje da Istra dobije upravljanje nekretninama kakvo zaslužuje — na razini pravog boutique iskustva.",
+      "stat1Desc": "Solar Living nastao je iz želje da Istra dobije upravljanje nekretninama kakvo zaslužuje, na razini pravog boutique iskustva.",
       "stat2Value": "Umag, Istra",
       "stat2Desc": "Na sjeverozapadnom vrhu Istre, tik uz obalu Jadranskog mora."
     },
@@ -403,7 +403,7 @@
     "hero": {
       "label": "Javite nam se",
       "heading": "Drago nam je čuti od vas.",
-      "subtext": "Bilo da planirate odmor ili razmatrate suradnju s nama — tu smo i rado pomažemo."
+      "subtext": "Bilo da planirate odmor ili razmatrate suradnju s nama, tu smo i rado pomažemo."
     },
     "details": {
       "label": "Kontakt",
@@ -439,7 +439,7 @@
       "sendEmail": "Pošaljite e-mailom",
       "responseNote": "Javit ćemo vam se u roku od nekoliko sati."
     },
-    "locationNote": "Naš tim je u Umagu, Istra — dostupni smo putem WhatsAppa ili e-maila.",
+    "locationNote": "Naš tim je u Umagu, Istra. Dostupni smo putem WhatsAppa ili e-maila.",
     "cta": {
       "heading": "Tražite apartman za rezervaciju?",
       "body": "Istražite naše apartmane i pošaljite nam upit za rezervaciju.",
