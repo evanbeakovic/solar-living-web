@@ -1,1 +1,503 @@
-{}
+{
+  "home": {
+    "hero": {
+      "locationLabel": "Umag, Horvátország",
+      "headingStart": "Az Ön",
+      "headingAccent": "Tökéletes",
+      "headingEnd": "Nyaralása Isztriában",
+      "subheading": "Gondosan válogatott apartmanok. Kivételes szolgáltatás. Felejthetetlen emlékek.",
+      "ctaBrowse": "Apartmanok böngészése",
+      "ctaOwners": "Ingatlantulajdonosoknak"
+    },
+    "apartments": {
+      "label": "Kínálatunk",
+      "heading": "Apartmanok",
+      "subtext": "Minden ingatlant személyesen választunk ki, és gondosan gondozunk.",
+      "card1Location": "Umag, Horvátország",
+      "card1Name": "Elaine's View",
+      "card1Details": "6 fő · 3 hálószoba · Terasz és erkély",
+      "card1Cta": "Megtekintés és foglalás",
+      "card2Location": "Umag, Horvátország",
+      "card2Name": "Stella's Garden",
+      "card2Details": "6 fő · 2 hálószoba · Saját terasz és kert",
+      "card2Cta": "Megtekintés és foglalás",
+      "viewAll": "Összes apartman megtekintése →"
+    },
+    "reviews": {
+      "label": "Vendégvélemények",
+      "heading": "Mit mondanak vendégeink"
+    },
+    "whyUs": {
+      "quote": "Mi nem csupán átadjuk a kulcsokat. Gondoskodunk arról, hogy minden részlet rendben legyen, Ön pedig egyszerűen élvezhesse a nyaralást.",
+      "attribution": "A Solar Living csapata",
+      "feature1Title": "Válogatott ingatlanok",
+      "feature1Body": "Minden apartmant személyesen választunk ki, és a legmagasabb minőségi elvárások szerint tartunk fenn.",
+      "feature2Title": "5 csillagos szolgáltatás",
+      "feature2Body": "A beérkezéstől a kijelentkezésig mindig az Ön rendelkezésére állunk.",
+      "feature3Title": "Teljesen felszerelt",
+      "feature3Body": "Minden, ami a tökéletes tartózkodáshoz szükséges, már várja Önt.",
+      "feature4Title": "Kiemelkedő értékelések",
+      "feature4Body": "Vendégeink minden platformon rendre 5 csillagos értékeléseket adnak."
+    },
+    "whoWeAre": {
+      "label": "Kik vagyunk",
+      "heading": "Butik Ingatlankezelő Ügynökség",
+      "para1": "A Solar Living egy Umag-ban, Isztriában, Horvátországban alapított butik ingatlankezelő ügynökség, amely prémium nyaralóapartmanok kezelésére specializálódott. Gondosan válogatott prémium apartmanok portfólióját kezeljük azoknak a vendégeknek, akik kivételes szállást keresnek az Adria partján.",
+      "propertiesIntro": "Jelenlegi ingatlanjaink:",
+      "elaineName": "Elaine's View",
+      "elaineDetails": ", egy tágas, tengerparti első soros apartman panorámás kilátással az Adriára, a napnyugtára és Umag óvárosára.",
+      "stellaName": "Stella's Garden",
+      "stellaDetails": ", egy földszinti apartman Umag legjobb új épületében, saját mediterrán kerttel és olajfával.",
+      "para3": "Mindkét apartman következetesen legalább 9,8-as értékelést ér el a Booking.com-on és 5,0/5-öst az Airbnb-n, ami a tisztaság, a kényelem és a kivételes vendégszolgálat iránti elkötelezettségünket tükrözi.",
+      "para4": "Ingatlantulajdonosok számára a Solar Living teljes körű kezelési szolgáltatást kínál, amely magában foglalja a professzionális fotózást, a hirdetések kezelését az összes jelentős platformon, a 24/7-es vendégkommunikációt, a takarítás koordinálását, a dinamikus árazást és a havi riportokat.",
+      "para5": "A Solar Living a Solar Group tagja, a dubaji székhelyű Solar Creative marketingügynökség mellett."
+    },
+    "ownersCta": {
+      "label": "Ingatlantulajdonosoknak",
+      "heading": "Van ingatlana Isztriában?",
+      "body": "Csatlakozzon portfóliónkhoz, és élvezze a teljes körű kezelést, a garantált gondoskodást és a kiváló eredményeket. Mindent mi intézünk.",
+      "cta": "Lépjen kapcsolatba velünk"
+    },
+    "location": {
+      "label": "Hol vagyunk",
+      "heading": "Umag, Isztria",
+      "body": "Isztria északnyugati csücskén fekvő Umag egy varázslatos középkori kisváros, kristálytiszta adriai vizekkel, világhírű gasztronómiával és fesztelen mediterrán légkörrel. Tökéletes úti cél egy igazán feltöltő nyaraláshoz."
+    }
+  },
+  "apartments": {
+    "hero": {
+      "label": "Ingatlanjaink",
+      "heading": "Találja meg a tökéletes apartmanját",
+      "subtext": "Válasszon ingatlant, adja meg utazása időpontjait, és küldjön érdeklődő üzenetet.",
+      "subtextLine2": "Visszaigazoljuk a szabad időpontot, és mindent mi intézünk."
+    },
+    "listings": {
+      "label": "Kínálatunk",
+      "heading": "Összes apartman",
+      "subtext": "Válasszon az alábbi ingatlanok közül, és küldje el érdeklődését."
+    },
+    "card": {
+      "location": "Umag, Horvátország",
+      "comingSoon": "Hamarosan",
+      "bookButton": "Szabad időpontok és foglalás"
+    },
+    "cta": {
+      "heading": "Nem tudja, melyik apartman a legjobb Önnek?",
+      "body": "Vegye fel velünk a kapcsolatot, és segítünk megtalálni a csoportjához, dátumaihoz és költségvetéséhez leginkább illő lehetőséget.",
+      "button": "Kapcsolatfelvétel"
+    },
+    "modal": {
+      "bookHeading": "{name} foglalása",
+      "subheading": "Adja meg adatait, és hamarosan visszajelzünk a szabad időpont visszaigazolásával.",
+      "labelName": "Teljes név *",
+      "placeholderName": "Kovács Anna",
+      "labelEmail": "E-mail *",
+      "placeholderEmail": "nev@pelda.hu",
+      "labelPhone": "Telefonszám *",
+      "placeholderPhone": "+36 70 123 4567",
+      "labelCheckin": "Érkezés *",
+      "labelCheckout": "Távozás *",
+      "labelGuests": "Vendégek száma *",
+      "guestsMax": "(max. {max} fő)",
+      "labelMessage": "Üzenet",
+      "messageOptional": "(nem kötelező)",
+      "placeholderMessage": "Különleges kérések vagy kérdések?",
+      "sendWhatsApp": "Küldés WhatsApp-on",
+      "sendEmail": "Küldés e-mailben",
+      "responseNote": "Általában néhány órán belül válaszolunk.",
+      "ariaClose": "Bezárás"
+    },
+    "validation": {
+      "nameRequired": "Kérjük, adja meg teljes nevét.",
+      "emailRequired": "Kérjük, adja meg e-mail-címét.",
+      "phoneRequired": "Kérjük, adja meg telefonszámát.",
+      "checkinRequired": "Kérjük, válasszon érkezési dátumot.",
+      "checkoutRequired": "Kérjük, válasszon távozási dátumot.",
+      "checkoutAfterCheckin": "A távozás dátuma az érkezés után kell, hogy legyen.",
+      "guestsInvalid": "Kérjük, adjon meg érvényes vendégszámot.",
+      "guestsExceeded": "Az apartman legfeljebb {max} vendéget fogad."
+    },
+    "whatsapp": {
+      "greeting": "Üdvözlöm! A(z) {name} apartmant szeretném foglalni",
+      "checkin": "Érkezés: {date}",
+      "checkout": "Távozás: {date}",
+      "guests": "Vendégek: {count} fő",
+      "name": "Név: {name}",
+      "phone": "Telefon: {phone}",
+      "email": "E-mail: {email}",
+      "message": "Üzenet: {text}"
+    },
+    "email": {
+      "subject": "Foglalási érdeklődés – {name}",
+      "body": "Üdvözletem, Solar Living csapat!\n\nSzeretném érdeklődni a(z) {name} apartman foglalásával kapcsolatban.\n\nÉrkezés: {checkin}\nTávozás: {checkout}\nVendégek: {guests}\nNév: {guestName}\nTelefon: {phone}\nE-mail: {email}\n\nÜzenet: {message}"
+    },
+    "reviewsModal": {
+      "scoreApt1": "★ 9,9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "scoreApt2": "★ 9,8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "ariaClose": "Bezárás"
+    },
+    "data": {
+      "apt1": {
+        "name": "Elaine's View",
+        "description": "Első sor a tengerparton. Panorámás kilátás az Adriára, a napnyugtára és Umag óvárosára.",
+        "location": "Umag óvárosa",
+        "badge": "9,9 · Booking.com  |  5,0 · Airbnb",
+        "amenities": [
+          "Légkondicionáló",
+          "Wi-Fi",
+          "Teljesen felszerelt konyha",
+          "Smart TV",
+          "Mosógép",
+          "Tengeri kilátás"
+        ],
+        "reviews": [
+          {
+            "name": "Tania",
+            "country": "Canada",
+            "platform": "Airbnb",
+            "text": "Az apartman tiszta és kényelmes volt, erkélyéről gyönyörű kilátás nyílt az adriai naplementékre és Umag óvárosára. Umag tökéletes kiindulópontként szolgál Isztria felfedezéséhez, akár egész napos olaszországi kirándulásokhoz is. Az időjárás pompás volt, a történelem lenyűgöző, a táj pedig csodálatos."
+          },
+          {
+            "name": "Stephan",
+            "country": "Germany",
+            "platform": "Airbnb",
+            "text": "Rendkívül kedvesen és személyesen fogadtak minket. Nagy, jól kialakított, tengerre néző apartman. Van erkély a tenger felőli oldalon, de az oldalsó részen is, ami nagyon praktikus. Nagyon csendesnek találtuk."
+          },
+          {
+            "name": "Jana",
+            "country": "Czech Republic",
+            "platform": "Booking.com",
+            "text": "Tökéletes szállás. Prémium apartman lenyűgöző tengeri kilátással. Közvetlenül az épület előtt városi strand található, könnyen megközelíthető tengerparttal és alig néhány emberrel. Nagyon barátságos és szakszerű kommunikáció a gazdával. Biztosan visszatérünk."
+          }
+        ]
+      },
+      "apt2": {
+        "name": "Stella's Garden",
+        "description": "Földszinti lakás Umag legjobb új épületében, saját mediterrán kerttel.",
+        "location": "Umag",
+        "badge": "9,8 · Booking.com  |  5,0 · Airbnb",
+        "amenities": [
+          "Légkondicionáló",
+          "Wi-Fi",
+          "Teljesen felszerelt konyha",
+          "Smart TV",
+          "Saját terasz",
+          "Kert"
+        ],
+        "reviews": [
+          {
+            "name": "Peter",
+            "country": "Slovakia",
+            "platform": "Airbnb",
+            "text": "Minden ragyogóan tiszta és nagyon modern volt, szinte úgy éreztük, mintha mi lettünk volna az első vendégek. A házigazda rendkívül barátságos, kérdéseinkre mindig azonnal és gyorsan válaszolt."
+          },
+          {
+            "name": "Jehona",
+            "country": "Slovenia",
+            "platform": "Booking.com",
+            "text": "Minden kiváló, egy 5 csillagos szállodánál is jobb. Mindenkinek ajánlom. Még soha nem láttam ehhez foghatót. A házigazda rendkívül kedves volt, és mindent megmutatott nekünk."
+          },
+          {
+            "name": "Maciej",
+            "country": "Poland",
+            "platform": "Booking.com",
+            "text": "Melegen ajánlom. Tágas földszinti apartman kényelmes ágyakkal, jól felszerelt konyhával, légkondicionálóval és két fürdőszobával. Nagy teraszon saját parkolóhely. 2 percre autóval a bevásárlóközpontoktól, 4-5 percre a legközelebbi strandtól."
+          }
+        ]
+      },
+      "apt3": {
+        "name": "Solar Apartment Umag III",
+        "description": "Lenyűgöző új kiegészítő portfóliónkhoz. A részletek hamarosan elérhetők. Lépjen velünk kapcsolatba, hogy elsők között értesüljön, amikor ez az ingatlan elérhetővé válik.",
+        "location": "Umag"
+      },
+      "apt4": {
+        "name": "Solar Apartment Umag IV",
+        "description": "Kivételes ingatlan, amelyet jelenleg készítünk elő portfóliónkba. Keressen minket, ha többet szeretne megtudni.",
+        "location": "Umag környéke"
+      }
+    }
+  },
+  "owners": {
+    "hero": {
+      "label": "Ingatlantulajdonosoknak",
+      "heading": "Bízza ránk az egészet.",
+      "subtextLine1": "A Solar Living az Ön ingatlanának minden részével foglalkozik,",
+      "subtextLine2": "hogy Ön többet kereshessen, kevesebbet aggódjon, és semmi se okozzon gondot.",
+      "cta": "Ingyenes konzultáció kérése",
+      "note": "24 órán belül visszajelzünk."
+    },
+    "offer": {
+      "label": "Mit kínálunk",
+      "heading": "Teljes körű kezelés. Nulla fejfájás."
+    },
+    "features": {
+      "photography": {
+        "title": "Professzionális fotózás",
+        "descLine1": "Ingatlanát a legmagasabb szinten fotózzuk le,",
+        "descLine2": "hogy prémium vendégeket vonzzon."
+      },
+      "listing": {
+        "title": "Hirdetéskezelés",
+        "descLine1": "Hirdetéseit az összes jelentős platformon kezeljük,",
+        "descLine2": "köztük az Airbnb-n, a Booking.com-on és közvetlen foglalásoknál."
+      },
+      "communication": {
+        "title": "Vendégkommunikáció",
+        "descLine1": "Minden vendégmegkereséssel, bejelentkezéssel,",
+        "descLine2": "kijelentkezéssel és minden vendégigénnyel mi foglalkozunk, éjjel-nappali."
+      },
+      "cleaning": {
+        "title": "Takarítás és karbantartás",
+        "descLine1": "Professzionális takarítás minden tartózkodás után,",
+        "descLine2": "rendszeres ellenőrzések és azonnali karbantartás."
+      },
+      "pricing": {
+        "title": "Dinamikus árazás",
+        "descLine1": "Optimalizáljuk az éjszakai tarifákat a maximális",
+        "descLine2": "foglaltság és bevétel érdekében, egész évben."
+      },
+      "reporting": {
+        "title": "Havi riport",
+        "descLine1": "Átlátható havi jelentések, hogy mindig pontosan tudja,",
+        "descLine2": "hogyan teljesít az ingatlana."
+      }
+    },
+    "promise": {
+      "quote": "Minden ingatlant úgy kezelünk, mintha a sajátunk lenne: ugyanolyan gondossággal, figyelemmel és büszkeséggel.",
+      "attribution": "Ana & Evan, alapítók"
+    },
+    "process": {
+      "label": "A folyamat",
+      "heading": "Az indulás egyszerű."
+    },
+    "steps": {
+      "step1": {
+        "number": "01",
+        "title": "Ingyenes konzultáció",
+        "descLine1": "Megismerkedünk az",
+        "descLine2": "ingatlanával, céljaival és",
+        "descLine3": "megválaszolunk minden kérdést."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Ingatlanfelmérés",
+        "descLine1": "Felmérjük az ingatlant,",
+        "descLine2": "javaslatokat teszünk",
+        "descLine3": "és megállapodunk a feltételekben."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Mindent mi intézünk",
+        "descLine1": "Fotózás, hirdetések,",
+        "descLine2": "vendégkezelés,",
+        "descLine3": "takarítás: mind a mi feladatunk."
+      },
+      "step4": {
+        "number": "04",
+        "title": "Ön keres és pihen",
+        "desc": "Havonta kapja a kifizetéseket és az átlátható riportokat. Ennyi az egész."
+      }
+    },
+    "contact": {
+      "label": "Kapcsolatfelvétel",
+      "heading": "Együttműködjünk?",
+      "bodyLine1": "Töltse ki az űrlapot, és 24 órán belül felvesszük Önnel a kapcsolatot.",
+      "bodyLine2": "Közvetlenül is elérhet minket:",
+      "whatsappLink": "WhatsApp: +385 91 548 3354",
+      "emailLink": "solarliving.info@gmail.com",
+      "labelName": "Teljes név",
+      "labelEmail": "E-mail",
+      "labelPhone": "Telefon",
+      "labelAddress": "Ingatlan címe / helyszíne",
+      "labelType": "Ingatlan típusa",
+      "labelMessage": "Üzenet",
+      "messageOptional": "(nem kötelező)",
+      "placeholderName": "Teljes neve",
+      "placeholderEmail": "email@pelda.hu",
+      "placeholderPhone": "+385 ...",
+      "placeholderAddress": "Utca, város vagy körzet",
+      "selectDefault": "Válasszon típust…",
+      "optionApartment": "Apartman",
+      "optionStudio": "Stúdió",
+      "optionVilla": "Villa",
+      "optionHouse": "Ház",
+      "optionOther": "Egyéb",
+      "placeholderMessage": "Kérjük, meséljen ingatlanáról és elképzeléseiről.",
+      "sendWhatsApp": "Küldés WhatsApp-on",
+      "sendEmail": "Küldés e-mailben"
+    },
+    "whatsapp": {
+      "greeting": "Üdvözlöm! Ingatlankezeléssel kapcsolatban szeretnék érdeklődni.",
+      "name": "Név: {name}",
+      "property": "Ingatlan: {address}",
+      "type": "Típus: {type}",
+      "email": "E-mail: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Üzenet: {message}"
+    },
+    "email": {
+      "subject": "Ingatlankezelési érdeklődés",
+      "greeting": "Üdvözletem, Solar Living,",
+      "name": "Név: {name}",
+      "property": "Ingatlan: {address}",
+      "type": "Típus: {type}",
+      "email": "E-mail: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Üzenet: {message}"
+    }
+  },
+  "about": {
+    "hero": {
+      "label": "Történetünk",
+      "heading": "Több mint ingatlankezelés.",
+      "subtextLine1": "A Solar Livinget azért hoztuk létre, mert meggyőződésünk volt, hogy Isztria jobbat érdemel.",
+      "subtextLine2": "Egy butik megközelítés a vendéglátásban, amely a vendégeket és a tulajdonosokat helyezi előtérbe."
+    },
+    "story": {
+      "label": "Kik vagyunk",
+      "headingLine1": "Egy butik cég,",
+      "headingLine2": "magas mércével.",
+      "para1": "A Solar Living egy butik ingatlankezelő cég, amely Umag-ban, Isztria gyönyörű északnyugati partvidékén található. Gondosan válogatott prémium apartmanok és villák portfólióját kezeljük: olyan ingatlanokat, amelyeket személyesen vettünk szemügyre, készítettünk fel és tartunk fenn a legmagasabb szinten.",
+      "para2": "A Solar Group tagjaként a Solar Creative marketingügynökséggel közösen tevékenykedünk. Ez azt jelenti, hogy portfóliónk minden ingatlanja nemcsak kezelési szakértelemből részesül, hanem professzionális fotózásból, márkaépítésből és digitális marketingből is, amelyet a legtöbb ingatlankezelő egyszerűen nem tud nyújtani.",
+      "para3": "Küldetésünk egyszerű: kivételes élmények vendégeinknek, teljes nyugalom ingatlantulajdonosoknak, és olyan ingatlanok, amelyek következetesen kiváló értékeléseket érdemelnek ki."
+    },
+    "values": {
+      "label": "Ami hajt minket",
+      "heading": "Értékeink",
+      "quality": {
+        "title": "Megalkuvás nélküli minőség",
+        "description": "Portfóliónk minden ingatlanját személyesen válogatjuk ki. Nemet mondunk azokra, amelyek nem ütik meg a mércénket, mert vendégeink mindig a legjobbat érdemlik."
+      },
+      "hospitality": {
+        "title": "Őszinte vendégszeretet",
+        "descLine1": "Nem csupán átadjuk a kulcsokat. Gondoskodunk",
+        "descLine2": "arról, hogy minden vendégnek meglegyen mindene,",
+        "descLine3": "mielőtt még kérnie kellene. A kis részletek",
+        "descLine4": "azok, amelyek egy nyaralást feledhetetlenné tesznek."
+      },
+      "partnership": {
+        "title": "Tulajdonosi partnerség",
+        "descLine1": "Minden ingatlant úgy kezelünk, mintha",
+        "descLine2": "a sajátunk lenne. A tulajdonosok valami",
+        "descLine3": "értékeset bíznak ránk, és ezt a",
+        "descLine4": "felelősséget komolyan vesszük."
+      }
+    },
+    "solarGroup": {
+      "label": "Egy nagyobb közösség tagjai",
+      "heading": "A Solar Group",
+      "para": "A Solar Living büszkén tekint a Solar Group tagságára, amely a minőség, a kreativitás és a szolgáltatás iránti elkötelezettség által összekovácsolt vállalatcsoport. Testvércégünk, a Solar Creative, egy teljes körű marketingügynökség, amely professzionális fotózással, közösségi médiával és márkastratégiával támogatja ingatlanainkat.",
+      "link": "Solar Creative meglátogatása →",
+      "stat1Value": "Alapítva: 2024",
+      "stat1Desc": "A Solar Livinget azzal a vízióval alapítottuk, hogy butik szintű szolgáltatást hozzunk az isztriai ingatlankezelés világába.",
+      "stat2Value": "Umag, Isztria",
+      "stat2Desc": "Isztria északnyugati csücskén, az Adriai-tenger közelében."
+    },
+    "cta": {
+      "heading": "Készen áll a Solar Living élményre?",
+      "browseApartments": "Apartmanok böngészése",
+      "partnerWithUs": "Legyen partnerünk"
+    }
+  },
+  "contact": {
+    "hero": {
+      "label": "Kapcsolatfelvétel",
+      "heading": "Szívesen halljuk Öntől.",
+      "subtext": "Akár nyaralást tervez, akár együttműködést fontolgat, szívesen állunk rendelkezésére."
+    },
+    "details": {
+      "label": "Elérhetőségeink",
+      "officeTitle": "Iroda",
+      "addressLine1": "Ul. 8. ožujka 1A",
+      "addressLine2": "Umag, Horvátország",
+      "whatsappTitle": "WhatsApp",
+      "whatsappNumber": "+385 91 548 3354",
+      "emailTitle": "E-mail",
+      "emailAddress": "solarliving.info@gmail.com",
+      "responseTitle": "Válaszidő",
+      "responseText": "Általában néhány órán belül válaszolunk. A hét minden napján rendelkezésére állunk.",
+      "instagram": "Instagram: @solarliving_",
+      "solarCreative": "Solar Creative →"
+    },
+    "form": {
+      "label": "Üzenet küldése",
+      "labelName": "Teljes név",
+      "placeholderName": "Teljes neve",
+      "labelEmail": "E-mail",
+      "placeholderEmail": "email@pelda.hu",
+      "labelPhone": "Telefon",
+      "phoneOptional": "(nem kötelező)",
+      "placeholderPhone": "+385 ...",
+      "labelType": "Érdeklődöm mint\u2026",
+      "selectDefault": "Válasszon\u2026",
+      "optionGuest": "Vendég, aki foglalni szeretne",
+      "optionOwner": "Ingatlantulajdonos",
+      "optionOther": "Egyéb",
+      "labelMessage": "Üzenet",
+      "placeholderMessage": "Miben segíthetünk Önnek?",
+      "sendWhatsApp": "Küldés WhatsApp-on",
+      "sendEmail": "Küldés e-mailben",
+      "responseNote": "Néhány órán belül visszajelzünk."
+    },
+    "locationNote": "Csapatunk Umag, Isztria területén működik. Érjen el minket WhatsApp-on vagy e-mailben.",
+    "cta": {
+      "heading": "Apartmant szeretne foglalni?",
+      "body": "Böngésszen elérhető ingatlanjaink között, és küldjön foglalási érdeklődést közvetlenül.",
+      "button": "Apartmanok megtekintése"
+    }
+  },
+  "faq": {
+    "hero": {
+      "label": "Kérdések és válaszok",
+      "heading": "Minden, amit tudni érdemes"
+    },
+    "guests": {
+      "label": "Vendégeknek",
+      "q1": "Hol találhatók a Solar Living apartmanok?",
+      "a1": "Mindkét apartman Umag-ban található, Isztria északnyugati csücskének bájos tengerparti kisvárosában, Horvátországban. Az Elaine's View Umag óvárosában van, közvetlenül a tenger első sorában. A Stella's Garden egy teljesen új épületben található Umag csendes lakónegyedében, 4-5 percre a strandtól.",
+      "q2": "Mi található az apartmanokban?",
+      "a2": "Minden apartman teljesen felszerelt: légkondicionálóval, Wi-Fi-vel, teljesen felszerelt konyhával, Smart TV-vel és friss ágyneművel. Az Elaine's View emellett mosógépet és tengerre néző teraszt is kínál. A Stella's Garden saját mediterrán kerttel és terasszal büszkélkedik.",
+      "q3": "Hogyan tudom lefoglalni az apartmant?",
+      "a3": "Foglalási érdeklődést közvetlenül weboldalunkon keresztül küldhet. Kattintson az \"Elérhetőség ellenőrzése és foglalás\" gombra bármelyik apartmannál, töltse ki adatait, majd küldje el WhatsApp-on vagy e-mailben. Megerősítjük az elérhetőséget, és mindent mi intézünk. Közvetítő platform nélkül.",
+      "q4": "Van parkolási lehetőség?",
+      "a4": "Igen. Mind az Elaine's View, mind a Stella's Garden saját parkolóhellyel rendelkezik.",
+      "q5": "Milyen értékeléseket kaptak a Solar Living apartmanok?",
+      "a5": "Az Elaine's View 9,9/10-es értékeléssel rendelkezik a Booking.com-on és 5,0/5-össel az Airbnb-n. A Stella's Garden 9,8/10-es értékelést ért el a Booking.com-on és 5,0/5-öst az Airbnb-n.",
+      "q6": "Milyen messze vannak az apartmanok a strandtól?",
+      "a6": "Az Elaine's View első sorban van a tengerparton: közvetlenül az épület előtt városi strand található. A Stella's Garden körülbelül 4-5 percre van autóval a legközelebbi strandtól.",
+      "q7": "Lehet egész napos kirándulásokat tenni Umag-ból?",
+      "a7": "Természetesen. Umag ideális kiindulópontot kínál Velencébe (kb. 2 óra), Pulába, Rovinjba és a Brijuni-szigetekre. Olaszország Aquileia és Trieszt városai szintén könnyen elérhetők."
+    },
+    "owners": {
+      "label": "Ingatlantulajdonosoknak",
+      "q1": "Mit tartalmaz a Solar Living ingatlankezelési szolgáltatása?",
+      "a1": "Teljes körű ingatlankezelési szolgáltatást kínálunk, amely magában foglalja a professzionális fotózást, a többplatformos hirdetéskezelést (Airbnb, Booking.com, közvetlen foglalások), a 24/7-es vendégkommunikációt, a takarítás és karbantartás koordinálását, a dinamikus árazás optimalizálását és a havi teljesítményjelentéseket.",
+      "q2": "Melyik területeken tevékenykedik a Solar Living?",
+      "a2": "Jelenleg Umag-ban, Isztriában, Horvátországban működünk, és az isztriai félsziget egész területén terjeszkedünk.",
+      "q3": "Hogyan kezdhetem el az együttműködést a Solar Livinggel ingatlantulajdonosként?",
+      "a3": "Vegye fel velünk a kapcsolatot WhatsApp-on vagy e-mailben egy ingyenes konzultáció egyeztetéséhez. Felkeressük ingatlanát, javaslatokat teszünk és megállapodunk a feltételekben. Kötelezettségvállalás nem szükséges.",
+      "q4": "Rendelkezik-e a Solar Living ingatlankezelési engedéllyel?",
+      "a4": "Igen. A Solar Living BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković, OIB: 30760238873 keretében működik, Horvátországban bejegyezve."
+    }
+  },
+  "navbar": {
+    "home": "Főoldal",
+    "apartments": "Apartmanok",
+    "owners": "Tulajdonosoknak",
+    "about": "Rólunk",
+    "contact": "Kapcsolat",
+    "toggleMenu": "Menü megnyitása/bezárása"
+  },
+  "footer": {
+    "quickLinksHeading": "Gyors hivatkozások",
+    "contactHeading": "Kapcsolat",
+    "linkHome": "Főoldal",
+    "linkApartments": "Apartmanok",
+    "linkOwners": "Tulajdonosoknak",
+    "linkAbout": "Rólunk",
+    "linkContact": "Kapcsolat",
+    "linkFaq": "GYIK",
+    "linkPrivacyPolicy": "Adatvédelmi irányelvek",
+    "copyright": "© 2025 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | Minden jog fenntartva"
+  }
+}
