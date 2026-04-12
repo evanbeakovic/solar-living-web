@@ -48,7 +48,7 @@
       "elaineDetails": ", egy tágas, tengerparti első soros apartman panorámás kilátással az Adriára, a napnyugtára és Umag óvárosára.",
       "stellaName": "Stella's Garden",
       "stellaDetails": ", egy földszinti apartman Umag legjobb új épületében, saját mediterrán kerttel és olajfával.",
-      "para3": "Mindkét apartman következetesen legalább 9,8-as értékelést ér el a Booking.com-on és 5,0/5-öst az Airbnb-n, ami a tisztaság, a kényelem és a kivételes vendégszolgálat iránti elkötelezettségünket tükrözi.",
+      "para3": "Mindkét apartman következetesen legalább 9.8-as értékelést ér el a Booking.com-on és 5.0/5-öst az Airbnb-n, ami a tisztaság, a kényelem és a kivételes vendégszolgálat iránti elkötelezettségünket tükrözi.",
       "para4": "Ingatlantulajdonosok számára a Solar Living teljes körű kezelési szolgáltatást kínál, amely magában foglalja a professzionális fotózást, a hirdetések kezelését az összes jelentős platformon, a 24/7-es vendégkommunikációt, a takarítás koordinálását, a dinamikus árazást és a havi riportokat.",
       "para5": "A Solar Living a Solar Group tagja, a dubaji székhelyű Solar Creative marketingügynökség mellett."
     },
@@ -132,8 +132,8 @@
       "body": "Üdvözletem, Solar Living csapat!\n\nSzeretném érdeklődni a(z) {name} apartman foglalásával kapcsolatban.\n\nÉrkezés: {checkin}\nTávozás: {checkout}\nVendégek: {guests}\nNév: {guestName}\nTelefon: {phone}\nE-mail: {email}\n\nÜzenet: {message}"
     },
     "reviewsModal": {
-      "scoreApt1": "★ 9,9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
-      "scoreApt2": "★ 9,8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "scoreApt1": "★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "scoreApt2": "★ 9.8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
       "ariaClose": "Bezárás"
     },
     "data": {
@@ -141,7 +141,7 @@
         "name": "Elaine's View",
         "description": "Első sor a tengerparton. Panorámás kilátás az Adriára, a napnyugtára és Umag óvárosára.",
         "location": "Umag óvárosa",
-        "badge": "9,9 · Booking.com  |  5,0 · Airbnb",
+        "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Légkondicionáló",
           "Wi-Fi",
@@ -175,7 +175,7 @@
         "name": "Stella's Garden",
         "description": "Földszinti lakás Umag legjobb új épületében, saját mediterrán kerttel.",
         "location": "Umag",
-        "badge": "9,8 · Booking.com  |  5,0 · Airbnb",
+        "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Légkondicionáló",
           "Wi-Fi",
@@ -462,7 +462,7 @@
       "q4": "Van parkolási lehetőség?",
       "a4": "Igen. Mind az Elaine's View, mind a Stella's Garden saját parkolóhellyel rendelkezik.",
       "q5": "Milyen értékeléseket kaptak a Solar Living apartmanok?",
-      "a5": "Az Elaine's View 9,9/10-es értékeléssel rendelkezik a Booking.com-on és 5,0/5-össel az Airbnb-n. A Stella's Garden 9,8/10-es értékelést ért el a Booking.com-on és 5,0/5-öst az Airbnb-n.",
+      "a5": "Az Elaine's View 9.9/10-es értékeléssel rendelkezik a Booking.com-on és 5.0/5-össel az Airbnb-n. A Stella's Garden 9.8/10-es értékelést ért el a Booking.com-on és 5.0/5-öst az Airbnb-n.",
       "q6": "Milyen messze vannak az apartmanok a strandtól?",
       "a6": "Az Elaine's View első sorban van a tengerparton: közvetlenül az épület előtt városi strand található. A Stella's Garden körülbelül 4-5 percre van autóval a legközelebbi strandtól.",
       "q7": "Lehet egész napos kirándulásokat tenni Umag-ból?",

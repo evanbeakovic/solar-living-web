@@ -48,7 +48,7 @@
       "elaineDetails": ", ein geräumiges Apartment in der ersten Meeresreihe mit Panoramablick auf die Adria und die Altstadt von Umag sowie unvergesslichen Sonnenuntergängen.",
       "stellaName": "Stella's Garden",
       "stellaDetails": ", ein Erdgeschoss-Apartment im feinsten Neubau Umags, mit privatem Mittelmeer-Garten und einem Olivenbaum.",
-      "para3": "Beide Apartments werden auf Booking.com durchgehend mit 9,8 oder höher bewertet und erhalten auf Airbnb 5,0 von 5 Sternen. Dies spiegelt unseren Anspruch an Sauberkeit, Komfort und erstklassigen Gästeservice wider.",
+      "para3": "Beide Apartments werden auf Booking.com durchgehend mit 9.8 oder höher bewertet und erhalten auf Airbnb 5.0 von 5 Sternen. Dies spiegelt unseren Anspruch an Sauberkeit, Komfort und erstklassigen Gästeservice wider.",
       "para4": "Für Eigentümer bietet Solar Living einen umfassenden Verwaltungsservice, der professionelle Fotografie, Inseratsverwaltung auf allen wichtigen Plattformen, 24/7-Gästekommunikation, Reinigungskoordination, dynamische Preisgestaltung und monatliche Berichte umfasst.",
       "para5": "Solar Living ist Teil der Solar Group, zu der auch Solar Creative, eine Marketingagentur mit Sitz in Dubai, gehört."
     },
@@ -132,8 +132,8 @@
       "body": "Liebes Solar Living Team,\n\nIch möchte eine Buchungsanfrage für {name} stellen.\n\nAnreise: {checkin}\nAbreise: {checkout}\nGäste: {guests}\nName: {guestName}\nTelefon: {phone}\nE-Mail: {email}\n\nNachricht: {message}"
     },
     "reviewsModal": {
-      "scoreApt1": "★ 9,9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
-      "scoreApt2": "★ 9,8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "scoreApt1": "★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
+      "scoreApt2": "★ 9.8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
       "ariaClose": "Schließen"
     },
     "data": {
@@ -141,7 +141,7 @@
         "name": "Elaine's View",
         "description": "Erste Reihe ans Meer. Panoramablick auf die Adria und die Altstadt von Umag, mit unvergesslichen Sonnenuntergängen.",
         "location": "Altstadt von Umag",
-        "badge": "9,9 · Booking.com  |  5,0 · Airbnb",
+        "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Klimaanlage",
           "WLAN",
@@ -175,7 +175,7 @@
         "name": "Stella's Garden",
         "description": "Erdgeschoss-Apartment im feinsten Neubau Umags, mit privatem Mittelmeer-Garten.",
         "location": "Umag",
-        "badge": "9,8 · Booking.com  |  5,0 · Airbnb",
+        "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Klimaanlage",
           "WLAN",
@@ -462,7 +462,7 @@
       "q4": "Gibt es Parkmöglichkeiten?",
       "a4": "Ja. Sowohl Elaine's View als auch Stella's Garden verfügen über zugewiesene Stellplätze.",
       "q5": "Wie werden die Solar Living Apartments bewertet?",
-      "a5": "Elaine's View hat eine Bewertung von 9,9/10 auf Booking.com und 5,0/5 auf Airbnb. Stella's Garden hat eine Bewertung von 9,8/10 auf Booking.com und 5,0/5 auf Airbnb.",
+      "a5": "Elaine's View hat eine Bewertung von 9.9/10 auf Booking.com und 5.0/5 auf Airbnb. Stella's Garden hat eine Bewertung von 9.8/10 auf Booking.com und 5.0/5 auf Airbnb.",
       "q6": "Wie weit sind die Apartments vom Strand entfernt?",
       "a6": "Elaine's View liegt in der ersten Reihe am Meer. Direkt vor dem Gebäude befindet sich ein Stadtstrand. Stella's Garden liegt etwa 4 bis 5 Autominuten vom nächsten Strand entfernt.",
       "q7": "Kann man von Umag aus Tagesausflüge unternehmen?",
