@@ -173,7 +173,7 @@
       },
       "apt2": {
         "name": "Stella's Garden",
-        "description": "Erdgeschosswohnen im schönsten Neubau Umags, mit privatem Mittelmeer-Garten.",
+        "description": "Erdgeschoss-Apartment im feinsten Neubau Umags, mit privatem Mittelmeer-Garten.",
         "location": "Umag",
         "badge": "9,8 · Booking.com  |  5,0 · Airbnb",
         "amenities": [
@@ -267,7 +267,7 @@
       "attribution": "Ana & Evan, Gründer"
     },
     "process": {
-      "label": "Der Prozess",
+      "label": "Wie es funktioniert",
       "heading": "Der Einstieg ist ganz einfach."
     },
     "steps": {
@@ -290,7 +290,7 @@
         "title": "Wir übernehmen alles",
         "descLine1": "Fotografie, Inserate,",
         "descLine2": "Gästemanagement,",
-        "descLine3": "Reinigung, alles inklusive."
+        "descLine3": "Reinigung. Alles inklusive."
       },
       "step4": {
         "number": "04",
@@ -498,6 +498,6 @@
     "linkContact": "Kontakt",
     "linkFaq": "FAQ",
     "linkPrivacyPolicy": "Datenschutzrichtlinie",
-    "copyright": "© 2025 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | Alle Rechte vorbehalten"
+    "copyright": "© 2026 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | Alle Rechte vorbehalten"
   }
 }
