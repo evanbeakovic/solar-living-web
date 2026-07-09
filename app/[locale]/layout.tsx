@@ -19,9 +19,9 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: 'Solar Living | Premium Apartments in Umag, Istria',
+  title: 'Solar Living | Premium Accommodation in Umag, Istria',
   description:
-    'Discover handpicked holiday apartments in Umag, Istria. Sea views, sunset terraces, and exceptional service. Book directly with Solar Living.',
+    'Discover handpicked holiday accommodation in Umag, Istria. Sea views, sunset terraces, and exceptional service. Book directly with Solar Living.',
   icons: { icon: '/solar-icon.png' },
   openGraph: { siteName: 'Solar Living', type: 'website' },
   twitter: { card: 'summary_large_image' },

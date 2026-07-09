@@ -5,14 +5,14 @@
       "headingStart": "Vaš",
       "headingAccent": "Savršen",
       "headingEnd": "Odmor u Istri",
-      "subheading": "Pažljivo odabrani apartmani. Iznimna usluga. Trenuci koji ostaju.",
-      "ctaBrowse": "Istražite apartmane",
+      "subheading": "Pažljivo odabran smještaj. Iznimna usluga. Trenuci koji ostaju.",
+      "ctaBrowse": "Istražite smještaj",
       "ctaOwners": "Za vlasnike nekretnina"
     },
     "apartments": {
       "label": "Naša kolekcija",
-      "heading": "Apartmani",
-      "subtext": "Svaki apartman osobno je odabran i brižno održavan.",
+      "heading": "Smještaj",
+      "subtext": "Svaki smještaj osobno je odabran i brižno održavan.",
       "card1Location": "Umag, Hrvatska",
       "card1Name": "Elaine's View",
       "card1Details": "6 gostiju · 3 spavaće sobe · Terasa & balkon",
@@ -21,7 +21,7 @@
       "card2Name": "Stella's Garden",
       "card2Details": "6 gostiju · 2 spavaće sobe · Privatna terasa & vrt",
       "card2Cta": "Pogledaj i rezerviraj",
-      "viewAll": "Svi apartmani →"
+      "viewAll": "Pogledajte cijelu ponudu →"
     },
     "reviews": {
       "label": "Recenzije gostiju",
@@ -66,15 +66,15 @@
   },
   "apartments": {
     "hero": {
-      "label": "Naši apartmani",
-      "heading": "Pronađite savršeni apartman",
-      "subtext": "Odaberite apartman, odaberite datume i pošaljite nam upit.",
+      "label": "Naš smještaj",
+      "heading": "Pronađite savršeni smještaj",
+      "subtext": "Odaberite smještaj i datume te nam pošaljite upit.",
       "subtextLine2": "Potvrdimo dostupnost i pobrinemo se za sve ostalo."
     },
     "listings": {
       "label": "Naša kolekcija",
-      "heading": "Svi apartmani",
-      "subtext": "Odaberite apartman i pošaljite nam upit."
+      "heading": "Ponuda smještaja",
+      "subtext": "Odaberite smještaj i pošaljite nam upit."
     },
     "card": {
       "location": "Umag, Hrvatska",
@@ -82,12 +82,12 @@
       "bookButton": "Provjerite dostupnost"
     },
     "cta": {
-      "heading": "Niste sigurni koji apartman je pravi za vas?",
-      "body": "Javite nam se, pomoći ćemo vam pronaći savršen apartman za vaše društvo, termine i budžet.",
+      "heading": "Niste sigurni koji smještaj odabrati?",
+      "body": "Javite nam se, pomoći ćemo vam pronaći savršen smještaj za vaše društvo, termine i budžet.",
       "button": "Kontaktirajte nas"
     },
     "modal": {
-      "bookHeading": "Rezervirajte apartman {name}",
+      "bookHeading": "Rezervirajte {name}",
       "subheading": "Ispunite podatke i javimo vam se za potvrdu dostupnosti.",
       "labelName": "Puno ime i prezime *",
       "placeholderName": "Iva Horvat",
@@ -115,10 +115,10 @@
       "checkoutRequired": "Molimo odaberite datum odlaska.",
       "checkoutAfterCheckin": "Datum odlaska mora biti nakon datuma dolaska.",
       "guestsInvalid": "Molimo unesite ispravan broj gostiju.",
-      "guestsExceeded": "Ovaj apartman prima najviše {max} gostiju."
+      "guestsExceeded": "Ovaj smještaj prima najviše {max} gostiju."
     },
     "whatsapp": {
-      "greeting": "Pozdrav! Htio/Htjela bih rezervirati apartman {name}",
+      "greeting": "Pozdrav! Htio/Htjela bih rezervirati {name}",
       "checkin": "Dolazak: {date}",
       "checkout": "Odlazak: {date}",
       "guests": "Gosti: {count}",
@@ -129,7 +129,7 @@
     },
     "email": {
       "subject": "Upit za rezervaciju – {name}",
-      "body": "Pozdrav, tim Solar Living,\n\nZanima me rezervacija apartmana {name}.\n\nDolazak: {checkin}\nOdlazak: {checkout}\nGosti: {guests}\nIme: {guestName}\nTelefon: {phone}\nE-mail: {email}\n\nPoruka: {message}"
+      "body": "Pozdrav, tim Solar Living,\n\nZanima me rezervacija smještaja {name}.\n\nDolazak: {checkin}\nOdlazak: {checkout}\nGosti: {guests}\nIme: {guestName}\nTelefon: {phone}\nE-mail: {email}\n\nPoruka: {message}"
     },
     "reviewsModal": {
       "scoreApt1": "★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
@@ -203,6 +203,39 @@
             "platform": "Booking.com",
             "text": "Toplo preporučujem. Prostran prizemni apartman s udobnim krevetima, dobro opremljenom kuhinjom, klimom i dvije kupaonice. Velika terasa i označeno parkirno mjesto. 2 minute autom do trgovačkih centara, 4–5 minuta do najbliže plaže."
           }
+        ]
+      },
+      "apt3": {
+        "name": "Sabbia",
+        "description": "Elegantno utočište u srcu Umaga, na samo nekoliko koraka od Starog grada, s privatnim balkonom i parkirnim mjestom u garaži.",
+        "location": "Umag",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Privatni balkon",
+          "Parkirno mjesto u garaži",
+          "Klima uređaj",
+          "Potpuno opremljena kuhinja",
+          "Smart TV"
+        ]
+      },
+      "apt4": {
+        "name": "Villa De La Maria",
+        "description": "Privatna vila u Umagu s bazenom, vrtom i vanjskom kuhinjom, osmišljena za bezbrižan život između unutarnjeg i vanjskog prostora.",
+        "location": "Umag",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Privatni bazen",
+          "Balkon",
+          "Terasa",
+          "Vrt",
+          "Vanjska kuhinja s roštiljem",
+          "Lounge kutak",
+          "Vanjska blagovaonica",
+          "Parking",
+          "Klima uređaj",
+          "Potpuno opremljena kuhinja",
+          "Smart TV",
+          "Sustav pametnog doma"
         ]
       },
       "apt5": {
@@ -395,7 +428,7 @@
     },
     "cta": {
       "heading": "Spremi za Solar Living?",
-      "browseApartments": "Istražite apartmane",
+      "browseApartments": "Istražite smještaj",
       "partnerWithUs": "Postanite naš partner"
     }
   },
@@ -430,7 +463,7 @@
       "placeholderPhone": "+385 ...",
       "labelType": "Kontaktiram kao\u2026",
       "selectDefault": "Odaberite\u2026",
-      "optionGuest": "Gost — zanimaju me apartmani",
+      "optionGuest": "Gost, zanima me rezervacija smještaja",
       "optionOwner": "Vlasnik nekretnine — zanimaju me usluge",
       "optionOther": "Ostalo",
       "labelMessage": "Poruka",
@@ -441,9 +474,9 @@
     },
     "locationNote": "Naš tim je u Umagu, Istra. Dostupni smo putem WhatsAppa ili e-maila.",
     "cta": {
-      "heading": "Tražite apartman za rezervaciju?",
-      "body": "Istražite naše apartmane i pošaljite nam upit za rezervaciju.",
-      "button": "Istražite apartmane"
+      "heading": "Želite rezervirati smještaj?",
+      "body": "Istražite našu ponudu smještaja i pošaljite nam upit za rezervaciju.",
+      "button": "Pogledajte smještaj"
     }
   },
   "faq": {
@@ -482,7 +515,7 @@
   },
   "navbar": {
     "home": "Početna",
-    "apartments": "Apartmani",
+    "apartments": "Smještaj",
     "owners": "Vlasnici",
     "about": "O nama",
     "contact": "Kontakt",
@@ -492,7 +525,7 @@
     "quickLinksHeading": "Brze veze",
     "contactHeading": "Kontakt",
     "linkHome": "Početna",
-    "linkApartments": "Apartmani",
+    "linkApartments": "Smještaj",
     "linkOwners": "Vlasnici",
     "linkAbout": "O nama",
     "linkContact": "Kontakt",

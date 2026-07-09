@@ -16,7 +16,7 @@ const locales = [
 
 const navLinks = [
   { href: '/', key: 'home' },
-  { href: '/apartments', key: 'apartments' },
+  { href: '/accommodation', key: 'apartments' },
   { href: '/owners', key: 'owners' },
   { href: '/about', key: 'about' },
   { href: '/contact', key: 'contact' },

@@ -274,7 +274,7 @@ export default function ContactPage() {
             {t('cta.body')}
           </p>
           <Link
-            href="/apartments"
+            href="/accommodation"
             className="inline-block font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
             style={{ backgroundColor: '#86cae7', color: '#474748' }}
           >

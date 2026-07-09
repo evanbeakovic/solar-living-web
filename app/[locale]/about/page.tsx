@@ -6,13 +6,13 @@ import { useTranslations } from 'next-intl';
 export const metadata: Metadata = {
   title: 'About Solar Living | Boutique Property Management, Umag',
   description:
-    'Solar Living is a boutique property management company based in Umag, Istria, part of the Solar Group. We manage premium holiday apartments with care.',
+    'Solar Living is a boutique property management company based in Umag, Istria, part of the Solar Group. We manage premium holiday accommodation with care.',
   robots: 'index, follow',
   alternates: { canonical: 'https://solarliving.hr/about' },
   openGraph: {
     title: 'About Solar Living | Boutique Property Management, Umag',
     description:
-      'Solar Living is a boutique property management company based in Umag, Istria, part of the Solar Group. We manage premium holiday apartments with care.',
+      'Solar Living is a boutique property management company based in Umag, Istria, part of the Solar Group. We manage premium holiday accommodation with care.',
     url: 'https://solarliving.hr/about',
     siteName: 'Solar Living',
     type: 'website',
@@ -216,7 +216,7 @@ export default function AboutPage() {
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link
-              href="/apartments"
+              href="/accommodation"
               className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#86cae7', color: '#474748' }}
             >

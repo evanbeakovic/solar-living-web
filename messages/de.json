@@ -5,13 +5,13 @@
       "headingStart": "Ihr",
       "headingAccent": "Perfekter",
       "headingEnd": "Aufenthalt in Istrien",
-      "subheading": "Handverlesene Apartments. Erstklassiger Service. Unvergessliche Erinnerungen.",
-      "ctaBrowse": "Apartments entdecken",
+      "subheading": "Handverlesene Unterkünfte. Erstklassiger Service. Unvergessliche Erinnerungen.",
+      "ctaBrowse": "Unterkünfte entdecken",
       "ctaOwners": "Für Eigentümer"
     },
     "apartments": {
       "label": "Unsere Kollektion",
-      "heading": "Apartments",
+      "heading": "Unterkünfte",
       "subtext": "Jede Unterkunft wird persönlich ausgewählt und sorgfältig gepflegt.",
       "card1Location": "Umag, Kroatien",
       "card1Name": "Elaine's View",
@@ -21,7 +21,7 @@
       "card2Name": "Stella's Garden",
       "card2Details": "6 Gäste · 2 Schlafzimmer · Private Terrasse & Garten",
       "card2Cta": "Ansehen & Buchen",
-      "viewAll": "Alle Apartments ansehen →"
+      "viewAll": "Alle Unterkünfte ansehen →"
     },
     "reviews": {
       "label": "Gästebewertungen",
@@ -67,13 +67,13 @@
   "apartments": {
     "hero": {
       "label": "Unsere Unterkünfte",
-      "heading": "Finden Sie Ihr perfektes Apartment",
+      "heading": "Finden Sie Ihre perfekte Unterkunft",
       "subtext": "Wählen Sie eine Unterkunft, wählen Sie Ihren Wunschzeitraum und senden Sie uns eine Anfrage.",
       "subtextLine2": "Wir bestätigen die Verfügbarkeit und kümmern uns um den Rest."
     },
     "listings": {
       "label": "Unsere Kollektion",
-      "heading": "Alle Apartments",
+      "heading": "Alle Unterkünfte",
       "subtext": "Wählen Sie unten eine Unterkunft aus und senden Sie uns Ihre Anfrage."
     },
     "card": {
@@ -82,8 +82,8 @@
       "bookButton": "Verfügbarkeit prüfen & buchen"
     },
     "cta": {
-      "heading": "Nicht sicher, welches Apartment das Richtige für Sie ist?",
-      "body": "Kontaktieren Sie uns, und wir helfen Ihnen, das perfekte Apartment für Ihre Gruppe, Ihren Reisezeitraum und Ihr Budget zu finden.",
+      "heading": "Nicht sicher, welche Unterkunft die richtige für Sie ist?",
+      "body": "Kontaktieren Sie uns, und wir helfen Ihnen, die perfekte Unterkunft für Ihre Gruppe, Ihren Reisezeitraum und Ihr Budget zu finden.",
       "button": "Kontakt aufnehmen"
     },
     "modal": {
@@ -115,7 +115,7 @@
       "checkoutRequired": "Bitte wählen Sie ein Abreisedatum.",
       "checkoutAfterCheckin": "Das Abreisedatum muss nach dem Anreisedatum liegen.",
       "guestsInvalid": "Bitte geben Sie eine gültige Gästezahl an.",
-      "guestsExceeded": "Dieses Apartment bietet Platz für maximal {max} Gäste."
+      "guestsExceeded": "Diese Unterkunft bietet Platz für maximal {max} Gäste."
     },
     "whatsapp": {
       "greeting": "Hallo! Ich möchte {name} buchen",
@@ -203,6 +203,39 @@
             "platform": "Booking.com",
             "text": "Absolut empfehlenswert. Geräumige Erdgeschosswohnung mit bequemen Betten, gut ausgestatteter Küche, Klimaanlage und zwei Bädern. Große Terrasse mit eigenem Parkplatz. 2 Minuten mit dem Auto zu Einkaufszentren, 4 bis 5 Minuten zum nächsten Strand."
           }
+        ]
+      },
+      "apt3": {
+        "name": "Sabbia",
+        "description": "Ein stilvolles Refugium im Herzen von Umag, nur wenige Schritte von der Altstadt entfernt, mit privatem Balkon und Garagenstellplatz.",
+        "location": "Umag",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Privater Balkon",
+          "Garagenstellplatz",
+          "Klimaanlage",
+          "Voll ausgestattete Küche",
+          "Smart TV"
+        ]
+      },
+      "apt4": {
+        "name": "Villa De La Maria",
+        "description": "Eine private Villa in Umag mit Pool, Garten und Außenküche, gestaltet für müheloses Wohnen zwischen drinnen und draußen.",
+        "location": "Umag",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Privater Pool",
+          "Balkon",
+          "Terrasse",
+          "Garten",
+          "Außenküche mit Grill",
+          "Lounge-Bereich",
+          "Essbereich im Freien",
+          "Parkplatz",
+          "Klimaanlage",
+          "Voll ausgestattete Küche",
+          "Smart TV",
+          "Smart-Home-System"
         ]
       },
       "apt5": {
@@ -395,7 +428,7 @@
     },
     "cta": {
       "heading": "Bereit, Solar Living zu erleben?",
-      "browseApartments": "Apartments entdecken",
+      "browseApartments": "Unterkünfte entdecken",
       "partnerWithUs": "Partner werden"
     }
   },
@@ -430,7 +463,7 @@
       "placeholderPhone": "+385 ...",
       "labelType": "Ich bin\u2026",
       "selectDefault": "Auswählen\u2026",
-      "optionGuest": "Ich möchte ein Apartment buchen",
+      "optionGuest": "Ich möchte eine Unterkunft buchen",
       "optionOwner": "Immobilieneigentümer",
       "optionOther": "Sonstiges",
       "labelMessage": "Nachricht",
@@ -441,9 +474,9 @@
     },
     "locationNote": "Unser Team ist vor Ort in Umag, Istrien tätig. Erreichen Sie uns per WhatsApp oder E-Mail.",
     "cta": {
-      "heading": "Möchten Sie ein Apartment buchen?",
+      "heading": "Möchten Sie eine Unterkunft buchen?",
       "body": "Stöbern Sie in unseren verfügbaren Unterkünften und senden Sie uns direkt eine Buchungsanfrage.",
-      "button": "Apartments ansehen"
+      "button": "Unterkünfte ansehen"
     }
   },
   "faq": {
@@ -482,7 +515,7 @@
   },
   "navbar": {
     "home": "Startseite",
-    "apartments": "Apartments",
+    "apartments": "Unterkünfte",
     "owners": "Eigentümer",
     "about": "Über uns",
     "contact": "Kontakt",
@@ -492,7 +525,7 @@
     "quickLinksHeading": "Schnelllinks",
     "contactHeading": "Kontakt",
     "linkHome": "Startseite",
-    "linkApartments": "Apartments",
+    "linkApartments": "Unterkünfte",
     "linkOwners": "Eigentümer",
     "linkAbout": "Über uns",
     "linkContact": "Kontakt",

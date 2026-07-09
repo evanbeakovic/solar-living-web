@@ -5,13 +5,13 @@
       "headingStart": "Il tuo Soggiorno",
       "headingAccent": "Perfetto",
       "headingEnd": "in Istria",
-      "subheading": "Appartamenti selezionati con cura. Servizio eccellente. Ricordi indimenticabili.",
-      "ctaBrowse": "Scopri gli Appartamenti",
+      "subheading": "Alloggi selezionati con cura. Servizio eccellente. Ricordi indimenticabili.",
+      "ctaBrowse": "Scopri gli Alloggi",
       "ctaOwners": "Per i Proprietari"
     },
     "apartments": {
       "label": "La Nostra Selezione",
-      "heading": "Appartamenti",
+      "heading": "Alloggi",
       "subtext": "Ogni proprietà è scelta personalmente e curata nei minimi dettagli.",
       "card1Location": "Umago, Croazia",
       "card1Name": "Elaine's View",
@@ -21,7 +21,7 @@
       "card2Name": "Stella's Garden",
       "card2Details": "6 ospiti · 2 camere · Terrazza privata e giardino",
       "card2Cta": "Scopri e Prenota",
-      "viewAll": "Vedi Tutti gli Appartamenti →"
+      "viewAll": "Tutti gli Alloggi →"
     },
     "reviews": {
       "label": "Recensioni degli Ospiti",
@@ -67,13 +67,13 @@
   "apartments": {
     "hero": {
       "label": "Le Nostre Proprietà",
-      "heading": "Trova il Tuo Appartamento Ideale",
+      "heading": "Trova il Tuo Alloggio Ideale",
       "subtext": "Scegli una proprietà, seleziona le date e inviaci una richiesta.",
       "subtextLine2": "Confermeremo la disponibilità e ci occuperemo del resto."
     },
     "listings": {
       "label": "La Nostra Selezione",
-      "heading": "Tutti gli Appartamenti",
+      "heading": "Tutti gli Alloggi",
       "subtext": "Scegli una proprietà qui sotto e inviaci la tua richiesta."
     },
     "card": {
@@ -82,7 +82,7 @@
       "bookButton": "Verifica Disponibilità e Prenota"
     },
     "cta": {
-      "heading": "Non sei sicuro di quale appartamento fa per te?",
+      "heading": "Non sai quale alloggio scegliere?",
       "body": "Contattaci e ti aiuteremo a trovare la soluzione perfetta per il tuo gruppo, le tue date e il tuo budget.",
       "button": "Contattaci"
     },
@@ -115,7 +115,7 @@
       "checkoutRequired": "Seleziona una data di check-out.",
       "checkoutAfterCheckin": "Il check-out deve essere successivo al check-in.",
       "guestsInvalid": "Inserisci un numero di ospiti valido.",
-      "guestsExceeded": "Questo appartamento può ospitare al massimo {max} persone."
+      "guestsExceeded": "Questo alloggio può ospitare al massimo {max} persone."
     },
     "whatsapp": {
       "greeting": "Ciao! Vorrei prenotare {name}",
@@ -203,6 +203,39 @@
             "platform": "Booking.com",
             "text": "Consigliatissimo. Appartamento al piano terra e molto spazioso, con letti comodi, cucina ben attrezzata, aria condizionata e due bagni. Ampia terrazza con parcheggio riservato. A 2 minuti in auto dai centri commerciali, a 4-5 minuti dalla spiaggia più vicina."
           }
+        ]
+      },
+      "apt3": {
+        "name": "Sabbia",
+        "description": "Un rifugio elegante nel cuore di Umago, a due passi dalla Città Vecchia, con balcone privato e parcheggio in garage.",
+        "location": "Umago",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Balcone privato",
+          "Parcheggio in garage",
+          "Aria condizionata",
+          "Cucina completamente attrezzata",
+          "Smart TV"
+        ]
+      },
+      "apt4": {
+        "name": "Villa De La Maria",
+        "description": "Una villa privata a Umago con piscina, giardino e cucina all'aperto, dove interni ed esterni si fondono con naturalezza.",
+        "location": "Umago",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Piscina privata",
+          "Balcone",
+          "Terrazza",
+          "Giardino",
+          "Cucina all'aperto con barbecue",
+          "Zona lounge",
+          "Zona pranzo all'aperto",
+          "Parcheggio",
+          "Aria condizionata",
+          "Cucina completamente attrezzata",
+          "Smart TV",
+          "Sistema smart home"
         ]
       },
       "apt5": {
@@ -395,7 +428,7 @@
     },
     "cta": {
       "heading": "Pronto a vivere l'esperienza Solar Living?",
-      "browseApartments": "Scopri gli Appartamenti",
+      "browseApartments": "Scopri gli Alloggi",
       "partnerWithUs": "Collabora con Noi"
     }
   },
@@ -441,9 +474,9 @@
     },
     "locationNote": "Il nostro team è presente ad Umago e dintorni, in Istria. Scrivici via WhatsApp o email.",
     "cta": {
-      "heading": "Vuoi prenotare un appartamento?",
+      "heading": "Vuoi prenotare un soggiorno?",
       "body": "Sfoglia le nostre proprietà disponibili e inviaci direttamente una richiesta di prenotazione.",
-      "button": "Vedi gli Appartamenti"
+      "button": "Vedi gli Alloggi"
     }
   },
   "faq": {
@@ -482,7 +515,7 @@
   },
   "navbar": {
     "home": "Home",
-    "apartments": "Appartamenti",
+    "apartments": "Alloggi",
     "owners": "Proprietari",
     "about": "Chi Siamo",
     "contact": "Contatti",
@@ -492,7 +525,7 @@
     "quickLinksHeading": "Link Utili",
     "contactHeading": "Contatti",
     "linkHome": "Home",
-    "linkApartments": "Appartamenti",
+    "linkApartments": "Alloggi",
     "linkOwners": "Proprietari",
     "linkAbout": "Chi Siamo",
     "linkContact": "Contatti",

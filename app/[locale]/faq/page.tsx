@@ -4,13 +4,13 @@ import { useTranslations } from 'next-intl';
 export const metadata: Metadata = {
   title: 'FAQ | Solar Living Umag',
   description:
-    'Frequently asked questions about Solar Living apartments in Umag, Istria — booking, amenities, location, and property management services.',
+    'Frequently asked questions about Solar Living accommodation in Umag, Istria — booking, amenities, location, and property management services.',
   robots: 'index, follow',
   alternates: { canonical: 'https://solarliving.hr/faq' },
   openGraph: {
     title: 'FAQ | Solar Living Umag',
     description:
-      'Frequently asked questions about Solar Living apartments in Umag, Istria — booking, amenities, location, and property management services.',
+      'Frequently asked questions about Solar Living accommodation in Umag, Istria — booking, amenities, location, and property management services.',
     url: 'https://solarliving.hr/faq',
     siteName: 'Solar Living',
     type: 'website',

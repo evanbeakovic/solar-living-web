@@ -5,13 +5,13 @@
       "headingStart": "Your",
       "headingAccent": "Perfect",
       "headingEnd": "Stay in Istria",
-      "subheading": "Handpicked apartments. Exceptional service. Unforgettable memories.",
-      "ctaBrowse": "Browse Apartments",
+      "subheading": "Handpicked stays. Exceptional service. Unforgettable memories.",
+      "ctaBrowse": "Browse Accommodation",
       "ctaOwners": "For Property Owners"
     },
     "apartments": {
       "label": "Our Collection",
-      "heading": "Apartments",
+      "heading": "Accommodation",
       "subtext": "Every property is personally selected and meticulously maintained.",
       "card1Location": "Umag, Croatia",
       "card1Name": "Elaine's View",
@@ -21,7 +21,7 @@
       "card2Name": "Stella's Garden",
       "card2Details": "6 guests · 2 bedrooms · Private terrace & garden",
       "card2Cta": "View & Book",
-      "viewAll": "View All Apartments →"
+      "viewAll": "View All Accommodation →"
     },
     "reviews": {
       "label": "Guest Reviews",
@@ -67,13 +67,13 @@
   "apartments": {
     "hero": {
       "label": "Our Properties",
-      "heading": "Find Your Perfect Apartment",
+      "heading": "Find Your Perfect Stay",
       "subtext": "Select a property, choose your dates, and send us an inquiry.",
       "subtextLine2": "We'll confirm availability and handle the rest."
     },
     "listings": {
       "label": "Our Collection",
-      "heading": "All Apartments",
+      "heading": "All Accommodation",
       "subtext": "Select a property below and send us your inquiry."
     },
     "card": {
@@ -82,7 +82,7 @@
       "bookButton": "Check Availability & Book"
     },
     "cta": {
-      "heading": "Not sure which apartment is right for you?",
+      "heading": "Not sure which property is right for you?",
       "body": "Get in touch and we'll help you find the perfect match for your group, dates, and budget.",
       "button": "Contact Us"
     },
@@ -115,7 +115,7 @@
       "checkoutRequired": "Please select a check-out date.",
       "checkoutAfterCheckin": "Check-out must be after check-in.",
       "guestsInvalid": "Please enter a valid number of guests.",
-      "guestsExceeded": "This apartment fits a maximum of {max} guests."
+      "guestsExceeded": "This property fits a maximum of {max} guests."
     },
     "whatsapp": {
       "greeting": "Hi! I'd like to book {name}",
@@ -428,7 +428,7 @@
     },
     "cta": {
       "heading": "Ready to experience Solar Living?",
-      "browseApartments": "Browse Apartments",
+      "browseApartments": "Browse Accommodation",
       "partnerWithUs": "Partner With Us"
     }
   },
@@ -474,9 +474,9 @@
     },
     "locationNote": "Our team operates across Umag, Istria — reach us via WhatsApp or email.",
     "cta": {
-      "heading": "Looking to book an apartment?",
+      "heading": "Looking to book your stay?",
       "body": "Browse our available properties and send us a booking inquiry directly.",
-      "button": "View Apartments"
+      "button": "View Accommodation"
     }
   },
   "faq": {
@@ -515,7 +515,7 @@
   },
   "navbar": {
     "home": "Home",
-    "apartments": "Apartments",
+    "apartments": "Accommodation",
     "owners": "Owners",
     "about": "About",
     "contact": "Contact",
@@ -525,7 +525,7 @@
     "quickLinksHeading": "Quick Links",
     "contactHeading": "Contact",
     "linkHome": "Home",
-    "linkApartments": "Apartments",
+    "linkApartments": "Accommodation",
     "linkOwners": "Owners",
     "linkAbout": "About",
     "linkContact": "Contact",

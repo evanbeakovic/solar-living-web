@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Apartments | Solar Living Umag',
+  title: 'Our Accommodation | Solar Living Umag',
   description:
-    "Browse Solar Living's curated apartments in Umag, Croatia. Elaine's View — first row to the sea. Stella's Garden — Mediterranean garden in Umag's finest new building.",
+    "Browse Solar Living's curated accommodation in Umag, Croatia. Elaine's View — first row to the sea. Stella's Garden — Mediterranean garden in Umag's finest new building.",
   robots: 'index, follow',
-  alternates: { canonical: 'https://solarliving.hr/apartments' },
+  alternates: { canonical: 'https://solarliving.hr/accommodation' },
   openGraph: {
-    title: 'Our Apartments | Solar Living Umag',
+    title: 'Our Accommodation | Solar Living Umag',
     description:
-      "Browse Solar Living's curated apartments in Umag, Croatia. Elaine's View — first row to the sea. Stella's Garden — Mediterranean garden in Umag's finest new building.",
-    url: 'https://solarliving.hr/apartments',
+      "Browse Solar Living's curated accommodation in Umag, Croatia. Elaine's View — first row to the sea. Stella's Garden — Mediterranean garden in Umag's finest new building.",
+    url: 'https://solarliving.hr/accommodation',
     siteName: 'Solar Living',
     type: 'website',
     images: [{ url: 'https://solarliving.hr/images/umag-1-main.jpg' }],
@@ -25,7 +25,7 @@ const apartmentsJsonLd = [
     name: "Elaine's View",
     description:
       'First row to the sea. Panoramic views of the Adriatic, sunsets and Umag Old Town. 3 bedrooms, 6 guests, terrace and balcony.',
-    url: 'https://solarliving.hr/apartments',
+    url: 'https://solarliving.hr/accommodation',
     image: 'https://solarliving.hr/images/umag-1-main.jpg',
     numberOfRooms: 3,
     occupancy: { '@type': 'QuantitativeValue', maxValue: 6 },
@@ -60,7 +60,7 @@ const apartmentsJsonLd = [
     name: "Stella's Garden",
     description:
       "Ground-floor apartment in Umag's finest new building with private Mediterranean garden and terrace. 2 bedrooms, 6 guests.",
-    url: 'https://solarliving.hr/apartments',
+    url: 'https://solarliving.hr/accommodation',
     image: 'https://solarliving.hr/images/umag-2-main.jpg',
     numberOfRooms: 2,
     occupancy: { '@type': 'QuantitativeValue', maxValue: 6 },
@@ -96,7 +96,7 @@ const apartmentsJsonLd = [
     name: 'Sabbia',
     description:
       'A stylish retreat in the heart of Umag, just steps from the Old Town, with a private balcony and garage parking. 1 bedroom, 4 guests.',
-    url: 'https://solarliving.hr/apartments',
+    url: 'https://solarliving.hr/accommodation',
     image: 'https://solarliving.hr/images/sabbia-main.jpg',
     numberOfRooms: 1,
     occupancy: { '@type': 'QuantitativeValue', maxValue: 4 },
@@ -125,7 +125,7 @@ const apartmentsJsonLd = [
     name: 'Villa De La Maria',
     description:
       'A private villa in Umag with pool, garden, and outdoor kitchen, designed for effortless indoor-outdoor living. 2 bedrooms, 6 guests.',
-    url: 'https://solarliving.hr/apartments',
+    url: 'https://solarliving.hr/accommodation',
     image: 'https://solarliving.hr/images/villa-de-la-maria-main.jpg',
     numberOfRooms: 2,
     occupancy: { '@type': 'QuantitativeValue', maxValue: 6 },

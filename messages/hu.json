@@ -5,13 +5,13 @@
       "headingStart": "Az Ön",
       "headingAccent": "Tökéletes",
       "headingEnd": "Nyaralása Isztriában",
-      "subheading": "Gondosan válogatott apartmanok. Kivételes szolgáltatás. Felejthetetlen emlékek.",
-      "ctaBrowse": "Apartmanok böngészése",
+      "subheading": "Gondosan válogatott szállások. Kivételes szolgáltatás. Felejthetetlen emlékek.",
+      "ctaBrowse": "Szállások böngészése",
       "ctaOwners": "Ingatlantulajdonosoknak"
     },
     "apartments": {
       "label": "Kínálatunk",
-      "heading": "Apartmanok",
+      "heading": "Szállások",
       "subtext": "Minden ingatlant személyesen választunk ki, és gondosan gondozunk.",
       "card1Location": "Umag, Horvátország",
       "card1Name": "Elaine's View",
@@ -21,7 +21,7 @@
       "card2Name": "Stella's Garden",
       "card2Details": "6 fő · 2 hálószoba · Saját terasz és kert",
       "card2Cta": "Megtekintés és foglalás",
-      "viewAll": "Összes apartman megtekintése →"
+      "viewAll": "Összes szállás megtekintése →"
     },
     "reviews": {
       "label": "Vendégvélemények",
@@ -67,13 +67,13 @@
   "apartments": {
     "hero": {
       "label": "Ingatlanjaink",
-      "heading": "Találja meg a tökéletes apartmanját",
+      "heading": "Találja meg a tökéletes szállást",
       "subtext": "Válasszon ingatlant, adja meg utazása időpontjait, és küldjön érdeklődő üzenetet.",
       "subtextLine2": "Visszaigazoljuk a szabad időpontot, és mindent mi intézünk."
     },
     "listings": {
       "label": "Kínálatunk",
-      "heading": "Összes apartman",
+      "heading": "Összes szállás",
       "subtext": "Válasszon az alábbi ingatlanok közül, és küldje el érdeklődését."
     },
     "card": {
@@ -82,7 +82,7 @@
       "bookButton": "Szabad időpontok és foglalás"
     },
     "cta": {
-      "heading": "Nem tudja, melyik apartman a legjobb Önnek?",
+      "heading": "Nem tudja, melyik szállás a legjobb Önnek?",
       "body": "Vegye fel velünk a kapcsolatot, és segítünk megtalálni a csoportjához, dátumaihoz és költségvetéséhez leginkább illő lehetőséget.",
       "button": "Kapcsolatfelvétel"
     },
@@ -115,10 +115,10 @@
       "checkoutRequired": "Kérjük, válasszon távozási dátumot.",
       "checkoutAfterCheckin": "A távozás dátuma az érkezés után kell, hogy legyen.",
       "guestsInvalid": "Kérjük, adjon meg érvényes vendégszámot.",
-      "guestsExceeded": "Az apartman legfeljebb {max} vendéget fogad."
+      "guestsExceeded": "A szállás legfeljebb {max} vendéget fogad."
     },
     "whatsapp": {
-      "greeting": "Üdvözlöm! A(z) {name} apartmant szeretném foglalni",
+      "greeting": "Üdvözlöm! A(z) {name} szállást szeretném foglalni",
       "checkin": "Érkezés: {date}",
       "checkout": "Távozás: {date}",
       "guests": "Vendégek: {count} fő",
@@ -129,7 +129,7 @@
     },
     "email": {
       "subject": "Foglalási érdeklődés – {name}",
-      "body": "Üdvözletem, Solar Living csapat!\n\nSzeretném érdeklődni a(z) {name} apartman foglalásával kapcsolatban.\n\nÉrkezés: {checkin}\nTávozás: {checkout}\nVendégek: {guests}\nNév: {guestName}\nTelefon: {phone}\nE-mail: {email}\n\nÜzenet: {message}"
+      "body": "Üdvözletem, Solar Living csapat!\n\nSzeretném érdeklődni a(z) {name} szállás foglalásával kapcsolatban.\n\nÉrkezés: {checkin}\nTávozás: {checkout}\nVendégek: {guests}\nNév: {guestName}\nTelefon: {phone}\nE-mail: {email}\n\nÜzenet: {message}"
     },
     "reviewsModal": {
       "scoreApt1": "★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
@@ -203,6 +203,39 @@
             "platform": "Booking.com",
             "text": "Melegen ajánlom. Tágas földszinti apartman kényelmes ágyakkal, jól felszerelt konyhával, légkondicionálóval és két fürdőszobával. Nagy teraszon saját parkolóhely. 2 percre autóval a bevásárlóközpontoktól, 4-5 percre a legközelebbi strandtól."
           }
+        ]
+      },
+      "apt3": {
+        "name": "Sabbia",
+        "description": "Stílusos menedék Umag szívében, néhány lépésre az óvárostól, saját erkéllyel és garázsparkolóval.",
+        "location": "Umag",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Saját erkély",
+          "Garázsparkoló",
+          "Légkondicionáló",
+          "Teljesen felszerelt konyha",
+          "Smart TV"
+        ]
+      },
+      "apt4": {
+        "name": "Villa De La Maria",
+        "description": "Privát villa Umagban medencével, kerttel és kültéri konyhával, ahol a benti és a kinti terek harmonikus egészet alkotnak.",
+        "location": "Umag",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Saját medence",
+          "Erkély",
+          "Terasz",
+          "Kert",
+          "Kültéri konyha grillel",
+          "Pihenősarok",
+          "Kültéri étkező",
+          "Parkoló",
+          "Légkondicionáló",
+          "Teljesen felszerelt konyha",
+          "Smart TV",
+          "Okosotthon-rendszer"
         ]
       },
       "apt5": {
@@ -395,7 +428,7 @@
     },
     "cta": {
       "heading": "Készen áll a Solar Living élményre?",
-      "browseApartments": "Apartmanok böngészése",
+      "browseApartments": "Szállások böngészése",
       "partnerWithUs": "Legyen partnerünk"
     }
   },
@@ -441,9 +474,9 @@
     },
     "locationNote": "Csapatunk Umag, Isztria területén működik. Érjen el minket WhatsApp-on vagy e-mailben.",
     "cta": {
-      "heading": "Apartmant szeretne foglalni?",
+      "heading": "Szállást szeretne foglalni?",
       "body": "Böngésszen elérhető ingatlanjaink között, és küldjön foglalási érdeklődést közvetlenül.",
-      "button": "Apartmanok megtekintése"
+      "button": "Szállások megtekintése"
     }
   },
   "faq": {
@@ -482,7 +515,7 @@
   },
   "navbar": {
     "home": "Főoldal",
-    "apartments": "Apartmanok",
+    "apartments": "Szállások",
     "owners": "Tulajdonosoknak",
     "about": "Rólunk",
     "contact": "Kapcsolat",
@@ -492,7 +525,7 @@
     "quickLinksHeading": "Gyors hivatkozások",
     "contactHeading": "Kapcsolat",
     "linkHome": "Főoldal",
-    "linkApartments": "Apartmanok",
+    "linkApartments": "Szállások",
     "linkOwners": "Tulajdonosoknak",
     "linkAbout": "Rólunk",
     "linkContact": "Kapcsolat",

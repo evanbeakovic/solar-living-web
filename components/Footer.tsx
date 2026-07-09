@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const quickLinks = [
   { href: '/', key: 'linkHome' },
-  { href: '/apartments', key: 'linkApartments' },
+  { href: '/accommodation', key: 'linkApartments' },
   { href: '/owners', key: 'linkOwners' },
   { href: '/about', key: 'linkAbout' },
   { href: '/contact', key: 'linkContact' },

@@ -7,15 +7,15 @@ import ReviewsCarousel from '@/components/ReviewsCarousel';
 import ParallaxHero from '@/components/ParallaxHero';
 
 export const metadata: Metadata = {
-  title: 'Solar Living | Premium Apartments in Umag, Istria',
+  title: 'Solar Living | Premium Accommodation in Umag, Istria',
   description:
-    'Discover handpicked holiday apartments in Umag, Istria. Sea views, sunset terraces, and exceptional service. Book directly with Solar Living.',
+    'Discover handpicked holiday accommodation in Umag, Istria. Sea views, sunset terraces, and exceptional service. Book directly with Solar Living.',
   robots: 'index, follow',
   alternates: { canonical: 'https://solarliving.hr' },
   openGraph: {
-    title: 'Solar Living | Premium Apartments in Umag, Istria',
+    title: 'Solar Living | Premium Accommodation in Umag, Istria',
     description:
-      'Discover handpicked holiday apartments in Umag, Istria. Sea views, sunset terraces, and exceptional service. Book directly with Solar Living.',
+      'Discover handpicked holiday accommodation in Umag, Istria. Sea views, sunset terraces, and exceptional service. Book directly with Solar Living.',
     url: 'https://solarliving.hr',
     siteName: 'Solar Living',
     type: 'website',
@@ -29,7 +29,7 @@ const homeJsonLd = {
   '@type': 'LodgingBusiness',
   name: 'Solar Living',
   description:
-    'Boutique property management and holiday apartment rentals in Umag, Istria, Croatia. Premium sea-view apartments with exceptional guest service.',
+    'Boutique property management and holiday rentals in Umag, Istria, Croatia. Premium sea-view accommodation with exceptional guest service.',
   url: 'https://solarliving.hr',
   logo: 'https://solarliving.hr/solar-logo-white.png',
   image: 'https://solarliving.hr/images/umag-1-main.jpg',
@@ -100,7 +100,7 @@ export default function HomePage() {
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <Link
-              href="/apartments"
+              href="/accommodation"
               className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#edd98f', color: '#474748' }}
             >
@@ -179,7 +179,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-auto pt-2">
                   <Link
-                    href="/apartments"
+                    href="/accommodation"
                     className="inline-block font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2 text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
                     style={{ border: '1px solid #1a1a1a' }}
                   >
@@ -229,7 +229,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-auto pt-2">
                   <Link
-                    href="/apartments"
+                    href="/accommodation"
                     className="inline-block font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2 text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
                     style={{ border: '1px solid #1a1a1a' }}
                   >
@@ -243,7 +243,7 @@ export default function HomePage() {
           {/* View all link */}
           <div className="text-center mt-12">
             <Link
-              href="/apartments"
+              href="/accommodation"
               className="font-sans text-xs uppercase tracking-widest transition-opacity hover:opacity-70 text-[#86cae7]"
             >
               {t('apartments.viewAll')}
