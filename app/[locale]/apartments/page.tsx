@@ -205,7 +205,7 @@ function ApartmentCard({
               {apt.name}
             </h3>
           </div>
-          {apt.badge ? (
+          {apt.badge && apt.reviews && apt.reviews.length > 0 ? (
             <button
               onClick={() => onShowReviews(apt)}
               className="shrink-0 pt-0.5 font-sans text-xs leading-snug text-right transition-opacity hover:opacity-70 cursor-pointer"
@@ -214,6 +214,15 @@ function ApartmentCard({
               <span style={{ color: '#edd98f' }}>★</span>{' '}
               {apt.badge}
             </button>
+          ) : apt.badge ? (
+            // TODO: add real guest reviews once available, then make this badge clickable like the other properties.
+            <span
+              className="shrink-0 pt-0.5 font-sans text-xs leading-snug text-right"
+              style={{ color: '#888888' }}
+            >
+              <span style={{ color: '#edd98f' }}>★</span>{' '}
+              {apt.badge}
+            </span>
           ) : (
             <span className="font-sans text-xs uppercase tracking-widest shrink-0 pt-0.5 text-[#2a2a2a]">
               {apt.type}
@@ -525,21 +534,51 @@ export default function ApartmentsPage() {
       name: t('data.apt3.name'),
       description: t('data.apt3.description'),
       guests: 4,
-      bedrooms: 2,
+      bedrooms: 1,
       type: 'Apartment',
       location: t('data.apt3.location'),
-      amenities: [],
-      image: null,
-      available: false,
+      amenities: t.raw('data.apt3.amenities') as string[],
+      image: '/images/sabbia-main.jpg',
+      available: true,
+      mapSrc: 'https://maps.google.com/maps?q=Ul.+Poduzetnika+16C,+Umag,+Croatia&output=embed',
+      mapLink: 'https://maps.app.goo.gl/Tydfcodr7cKkzJGX6',
+      badge: t('data.apt3.badge'),
     },
     {
       id: 4,
       name: t('data.apt4.name'),
       description: t('data.apt4.description'),
       guests: 6,
-      bedrooms: 3,
+      bedrooms: 2,
       type: 'Villa',
       location: t('data.apt4.location'),
+      amenities: t.raw('data.apt4.amenities') as string[],
+      image: '/images/villa-de-la-maria-main.jpg',
+      available: true,
+      mapSrc: 'https://maps.google.com/maps?q=Špinel+22A,+Umag,+Croatia&output=embed',
+      mapLink: 'https://maps.app.goo.gl/t8XzspaZtFBRMpuh8',
+      badge: t('data.apt4.badge'),
+    },
+    {
+      id: 5,
+      name: t('data.apt5.name'),
+      description: t('data.apt5.description'),
+      guests: 4,
+      bedrooms: 2,
+      type: 'Apartment',
+      location: t('data.apt5.location'),
+      amenities: [],
+      image: null,
+      available: false,
+    },
+    {
+      id: 6,
+      name: t('data.apt6.name'),
+      description: t('data.apt6.description'),
+      guests: 6,
+      bedrooms: 3,
+      type: 'Villa',
+      location: t('data.apt6.location'),
       amenities: [],
       image: null,
       available: false,

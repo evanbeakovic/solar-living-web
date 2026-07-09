@@ -206,12 +206,45 @@
         ]
       },
       "apt3": {
-        "name": "Solar Apartment Umag III",
+        "name": "Sabbia",
+        "description": "A stylish retreat in the heart of Umag, just steps from the Old Town, with a private balcony and garage parking.",
+        "location": "Umag",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Private balcony",
+          "Garage parking",
+          "Air conditioning",
+          "Fully equipped kitchen",
+          "Smart TV"
+        ]
+      },
+      "apt4": {
+        "name": "Villa De La Maria",
+        "description": "A private villa in Umag with pool, garden, and outdoor kitchen, designed for effortless indoor-outdoor living.",
+        "location": "Umag",
+        "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
+        "amenities": [
+          "Private pool",
+          "Balcony",
+          "Terrace",
+          "Garden",
+          "Outdoor kitchen with grill",
+          "Lounge area",
+          "Outdoor dining area",
+          "Parking",
+          "Air conditioning",
+          "Fully equipped kitchen",
+          "Smart TV",
+          "Smart home system"
+        ]
+      },
+      "apt5": {
+        "name": "Solar Apartment Umag V",
         "description": "A stunning new addition to our portfolio — details coming soon. Contact us to be the first to know when this property becomes available.",
         "location": "Umag"
       },
-      "apt4": {
-        "name": "Solar Apartment Umag IV",
+      "apt6": {
+        "name": "Solar Apartment Umag VI",
         "description": "An exceptional property currently being prepared for our portfolio. Reach out to learn more.",
         "location": "Umag area"
       }

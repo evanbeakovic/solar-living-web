@@ -205,13 +205,13 @@
           }
         ]
       },
-      "apt3": {
-        "name": "Solar Apartment Umago III",
+      "apt5": {
+        "name": "Solar Apartment Umago V",
         "description": "Una straordinaria nuova aggiunta al nostro portfolio. Dettagli in arrivo. Contattaci per essere tra i primi a sapere quando questa proprietà sarà disponibile.",
         "location": "Umago"
       },
-      "apt4": {
-        "name": "Solar Apartment Umago IV",
+      "apt6": {
+        "name": "Solar Apartment Umago VI",
         "description": "Una proprietà eccezionale attualmente in preparazione per il nostro portfolio. Contattaci per saperne di più.",
         "location": "Area di Umago"
       }

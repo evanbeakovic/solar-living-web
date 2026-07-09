@@ -205,13 +205,13 @@
           }
         ]
       },
-      "apt3": {
-        "name": "Solar Apartment Umag III",
+      "apt5": {
+        "name": "Solar Apartment Umag V",
         "description": "Новое впечатляющее дополнение к нашему портфолио. Подробности скоро. Свяжитесь с нами, чтобы узнать первыми о доступности этого объекта.",
         "location": "Умаг"
       },
-      "apt4": {
-        "name": "Solar Apartment Umag IV",
+      "apt6": {
+        "name": "Solar Apartment Umag VI",
         "description": "Исключительный объект, который сейчас готовится к включению в наше портфолио. Свяжитесь с нами, чтобы узнать подробности.",
         "location": "Район Умага"
       }

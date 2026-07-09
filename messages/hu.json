@@ -205,13 +205,13 @@
           }
         ]
       },
-      "apt3": {
-        "name": "Solar Apartment Umag III",
+      "apt5": {
+        "name": "Solar Apartment Umag V",
         "description": "Lenyűgöző új kiegészítő portfóliónkhoz. A részletek hamarosan elérhetők. Lépjen velünk kapcsolatba, hogy elsők között értesüljön, amikor ez az ingatlan elérhetővé válik.",
         "location": "Umag"
       },
-      "apt4": {
-        "name": "Solar Apartment Umag IV",
+      "apt6": {
+        "name": "Solar Apartment Umag VI",
         "description": "Kivételes ingatlan, amelyet jelenleg készítünk elő portfóliónkba. Keressen minket, ha többet szeretne megtudni.",
         "location": "Umag környéke"
       }

@@ -205,13 +205,13 @@
           }
         ]
       },
-      "apt3": {
-        "name": "Solar Apartment Umag III",
+      "apt5": {
+        "name": "Solar Apartment Umag V",
         "description": "Novi dragulj u našem portfelju. Detalji uskoro. Javite nam se i budite prvi koji saznaju kada ovaj apartman postane dostupan.",
         "location": "Umag"
       },
-      "apt4": {
-        "name": "Solar Apartment Umag IV",
+      "apt6": {
+        "name": "Solar Apartment Umag VI",
         "description": "Izniman apartman koji se upravo priprema za naš portfelj. Javite nam se za više informacija.",
         "location": "Okolica Umaga"
       }

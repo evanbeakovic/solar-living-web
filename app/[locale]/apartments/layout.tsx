@@ -89,6 +89,66 @@ const apartmentsJsonLd = [
       { '@type': 'Review', author: { '@type': 'Person', name: 'Maciej' }, reviewRating: { '@type': 'Rating', ratingValue: '9', bestRating: '10' }, reviewBody: 'Highly recommended. Spacious ground-floor apartment with comfortable beds, a well-equipped kitchen, air conditioning, and two bathrooms. Large terrace with assigned parking. 2 minutes by car to shopping centers, 4-5 minutes to the nearest beach.' },
     ],
   },
+  // TODO: add real guest reviews once available, then add review and aggregateRating like the other properties.
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Apartment',
+    name: 'Sabbia',
+    description:
+      'A stylish retreat in the heart of Umag, just steps from the Old Town, with a private balcony and garage parking. 1 bedroom, 4 guests.',
+    url: 'https://solarliving.hr/apartments',
+    image: 'https://solarliving.hr/images/sabbia-main.jpg',
+    numberOfRooms: 1,
+    occupancy: { '@type': 'QuantitativeValue', maxValue: 4 },
+    amenityFeature: [
+      { '@type': 'LocationFeatureSpecification', name: 'Private balcony', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Garage parking', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Air conditioning', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Fully equipped kitchen', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Smart TV', value: true },
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Ul. Poduzetnika 16C',
+      addressLocality: 'Umag',
+      addressCountry: 'HR',
+    },
+    sameAs: [
+      'https://www.booking.com/hotel/hr/sabbia-apartment-umag.hr.html',
+      'https://airbnb.com/rooms/1693304618689473347',
+    ],
+  },
+  // TODO: add real guest reviews once available, then add review and aggregateRating like the other properties.
+  {
+    '@context': 'https://schema.org',
+    '@type': 'House',
+    name: 'Villa De La Maria',
+    description:
+      'A private villa in Umag with pool, garden, and outdoor kitchen, designed for effortless indoor-outdoor living. 2 bedrooms, 6 guests.',
+    url: 'https://solarliving.hr/apartments',
+    image: 'https://solarliving.hr/images/villa-de-la-maria-main.jpg',
+    numberOfRooms: 2,
+    occupancy: { '@type': 'QuantitativeValue', maxValue: 6 },
+    amenityFeature: [
+      { '@type': 'LocationFeatureSpecification', name: 'Private pool', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Garden', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Outdoor kitchen with grill', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Terrace', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Air conditioning', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Parking', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Smart home system', value: true },
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Špinel 22A',
+      addressLocality: 'Umag',
+      addressCountry: 'HR',
+    },
+    sameAs: [
+      'https://www.booking.com/hotel/hr/villa-de-la-maria-umag.hr.html',
+      'https://airbnb.com/rooms/1720172763329206803',
+    ],
+  },
 ];
 
 export default function ApartmentsLayout({ children }: { children: React.ReactNode }) {

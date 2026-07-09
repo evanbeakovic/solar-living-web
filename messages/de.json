@@ -205,13 +205,13 @@
           }
         ]
       },
-      "apt3": {
-        "name": "Solar Apartment Umag III",
+      "apt5": {
+        "name": "Solar Apartment Umag V",
         "description": "Ein wunderbarer Neuzugang in unserem Portfolio. Details folgen in Kürze. Kontaktieren Sie uns, um frühzeitig zu erfahren, wann diese Unterkunft verfügbar wird.",
         "location": "Umag"
       },
-      "apt4": {
-        "name": "Solar Apartment Umag IV",
+      "apt6": {
+        "name": "Solar Apartment Umag VI",
         "description": "Eine außergewöhnliche Unterkunft, die derzeit für unser Portfolio vorbereitet wird. Kontaktieren Sie uns für weitere Informationen.",
         "location": "Raum Umag"
       }
