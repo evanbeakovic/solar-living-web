@@ -18,6 +18,14 @@ const config: Config = {
         sans: ["var(--font-montserrat)", "sans-serif"],
         serif: ["var(--font-lora)", "serif"],
       },
+      transitionTimingFunction: {
+        reveal: "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
+      transitionDuration: {
+        micro: "200ms",
+        hover: "400ms",
+        reveal: "700ms",
+      },
     },
   },
   plugins: [],

@@ -1,10 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
+import Reveal from '@/components/Reveal';
 
 // ─── Data ──────────────────────────────────────────────────────────────────
 
@@ -148,13 +150,13 @@ function ApartmentCard({
 
   return (
     <div
-      className="flex flex-col"
+      className={`flex flex-col${apt.available ? ' card-interactive' : ''}`}
       style={{ backgroundColor: '#d8d8d8', border: '1px solid rgba(0,0,0,0.08)' }}
     >
       {/* Image area */}
       {apt.available ? (
         <div className="h-72 relative overflow-hidden">
-          <Image src={apt.image!} alt={apt.name} fill className="object-cover" />
+          <Image src={apt.image!} alt={apt.name} fill className="object-cover card-zoom" />
         </div>
       ) : (
         <div className="h-72 flex items-center justify-center overflow-hidden" style={{ background: cardGradient }}>
@@ -176,7 +178,7 @@ function ApartmentCard({
                 href={apt.mapLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center gap-1 font-sans text-xs uppercase tracking-widest mb-1 cursor-pointer"
+                className="group relative z-[1] flex items-center gap-1 font-sans text-xs uppercase tracking-widest mb-1 cursor-pointer"
                 style={{ color: '#888888' }}
               >
                 <MapPin size={14} style={{ color: '#86cae7', flexShrink: 0 }} />
@@ -208,7 +210,7 @@ function ApartmentCard({
           {apt.badge && apt.reviews && apt.reviews.length > 0 ? (
             <button
               onClick={() => onShowReviews(apt)}
-              className="shrink-0 pt-0.5 font-sans text-xs leading-snug text-right transition-opacity hover:opacity-70 cursor-pointer"
+              className="relative z-[1] shrink-0 -m-2 p-2 font-sans text-xs leading-snug text-right cursor-pointer hover:underline underline-offset-2"
               style={{ color: '#888888' }}
             >
               <span style={{ color: '#edd98f' }}>★</span>{' '}
@@ -250,7 +252,7 @@ function ApartmentCard({
           {apt.available ? (
             <button
               onClick={() => onBook(apt)}
-              className="w-full font-sans font-semibold text-xs uppercase tracking-widest py-3 text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
+              className="stretched-link btn-sweep w-full font-sans font-semibold text-xs uppercase tracking-widest py-3 text-[#1a1a1a] hover:text-white"
               style={{ border: '1px solid #1a1a1a' }}
             >
               {t('card.bookButton')}
@@ -308,14 +310,18 @@ function InquiryModal({
   }
 
   const inputClass =
-    'w-full font-sans text-sm text-white placeholder-[#555555] px-4 py-3 focus:outline-none focus:border-[#86cae7] transition-colors';
+    'w-full font-sans text-sm text-white placeholder-[#555555] px-4 py-3 focus:outline-none focus:border-[#86cae7] transition-colors duration-micro';
 
   const inputStyle = {
     backgroundColor: '#474748',
     border: '1px solid rgba(255,255,255,0.15)',
   };
 
-  return (
+  // Portaled to <body>: rendered in place, position: fixed would resolve
+  // against any transformed ancestor (e.g. the .page-enter route wrapper)
+  // instead of the viewport. Safe without a mount check — the modal only
+  // renders after a click, never during SSR.
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
@@ -399,14 +405,14 @@ function InquiryModal({
         <div className="flex gap-3 mt-7">
           <button
             onClick={handleWhatsApp}
-            className="flex-1 font-sans font-semibold text-xs uppercase tracking-widest py-3 text-white transition-opacity hover:opacity-90"
+            className="btn-solid flex-1 font-sans font-semibold text-xs uppercase tracking-widest py-3 text-white"
             style={{ backgroundColor: '#4a8c7a' }}
           >
             {t('modal.sendWhatsApp')}
           </button>
           <button
             onClick={handleEmail}
-            className="flex-1 font-sans font-semibold text-xs uppercase tracking-widest py-3 transition-opacity hover:opacity-90"
+            className="btn-solid flex-1 font-sans font-semibold text-xs uppercase tracking-widest py-3"
             style={{ backgroundColor: '#edd98f', color: '#474748' }}
           >
             {t('modal.sendEmail')}
@@ -417,7 +423,8 @@ function InquiryModal({
           {t('modal.responseNote')}
         </p>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
@@ -435,7 +442,8 @@ function ReviewsModal({ apt, onClose }: { apt: Apartment; onClose: () => void })
     ? t('reviewsModal.scoreApt1')
     : t('reviewsModal.scoreApt2');
 
-  return (
+  // Portaled to <body> for the same reason as InquiryModal.
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}
@@ -485,7 +493,8 @@ function ReviewsModal({ apt, onClose }: { apt: Apartment; onClose: () => void })
           ))}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
@@ -588,7 +597,7 @@ export default function ApartmentsPage() {
   return (
     <>
       {/* ── SECTION 1: PAGE HERO ────────────────────────────────────────── */}
-      <section className="py-32 px-6 text-center" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit hero-stagger py-32 px-6 text-center" style={{ backgroundColor: '#474748' }}>
         <p className="font-sans text-xs uppercase tracking-widest mb-5 text-[#86cae7]">
           {t('hero.label')}
         </p>
@@ -601,10 +610,10 @@ export default function ApartmentsPage() {
       </section>
 
       {/* ── SECTION 2: APARTMENT LISTINGS ───────────────────────────────── */}
-      <section className="py-24 px-6" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-5xl mx-auto">
           {/* Left-aligned header row */}
-          <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
+          <Reveal group className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
                 {t('listings.label')}
@@ -616,31 +625,31 @@ export default function ApartmentsPage() {
             <p className="font-sans text-sm text-[#c8c8c8] md:text-right">
               {t('listings.subtext')}
             </p>
-          </div>
+          </Reveal>
 
           {/* Available apartments */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Reveal group className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {apartments.filter((a) => a.available).map((apt) => (
               <ApartmentCard key={apt.id} apt={apt} onBook={setSelected} onShowReviews={setReviewsApt} />
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── COMING SOON APARTMENTS ──────────────────────────────────────── */}
-      <section className="py-24 px-6" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Reveal group className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {apartments.filter((a) => !a.available).map((apt) => (
               <ApartmentCard key={apt.id} apt={apt} onBook={setSelected} onShowReviews={setReviewsApt} />
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ── SECTION 3: BOTTOM CTA ───────────────────────────────────────── */}
-      <section className="py-24 px-6 text-center" style={{ backgroundColor: '#525253' }}>
-        <div className="max-w-2xl mx-auto space-y-6">
+      <section className="section-fade-exit py-24 px-6 text-center" style={{ backgroundColor: '#525253' }}>
+        <Reveal group className="max-w-2xl mx-auto space-y-6">
           <h2 className="font-serif text-2xl md:text-3xl text-white">
             {t('cta.heading')}
           </h2>
@@ -649,12 +658,12 @@ export default function ApartmentsPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block font-sans font-semibold text-xs uppercase tracking-widest px-8 py-4 text-white transition-colors hover:bg-white hover:text-[#2a2a2a]"
-            style={{ border: '1px solid rgba(255,255,255,0.2)' }}
+            className="btn-sweep inline-block font-sans font-semibold text-xs uppercase tracking-widest px-8 py-4 text-white hover:text-[#2a2a2a]"
+            style={{ border: '1px solid rgba(255,255,255,0.2)', '--sweep-color': '#ffffff' } as React.CSSProperties}
           >
             {t('cta.button')}
           </Link>
-        </div>
+        </Reveal>
       </section>
 
       {/* ── REVIEWS MODAL ───────────────────────────────────────────────── */}

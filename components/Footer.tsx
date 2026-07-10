@@ -37,7 +37,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-white transition-colors"
+                    className="link-underline text-sm hover:text-white transition-colors"
                     style={{ color: '#c8c8c8' }}
                   >
                     {t(link.key)}
@@ -57,7 +57,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:solarliving.info@gmail.com"
-                  className="hover:text-white transition-colors"
+                  className="link-underline hover:text-white transition-colors"
                 >
                   solarliving.info@gmail.com
                 </a>
@@ -67,7 +67,7 @@ export default function Footer() {
                   href="https://wa.me/385915483354"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="link-underline hover:text-white transition-colors"
                 >
                   WhatsApp: +385 91 548 3354
                 </a>

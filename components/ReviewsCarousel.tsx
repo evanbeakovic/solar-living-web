@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const reviews = [
   {
@@ -62,13 +62,13 @@ const arrowBase: React.CSSProperties = {
   color: '#ffffff',
   fontSize: '1.1rem',
   flexShrink: 0,
-  transition: 'background 0.15s',
 };
 
 export default function ReviewsCarousel() {
   const [offset, setOffset] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 767px)');
@@ -117,9 +117,8 @@ export default function ReviewsCarousel() {
             onClick={() => navigate(-1)}
             disabled={animating}
             aria-label="Previous"
-            style={{ ...arrowBase, backgroundColor: 'rgba(255,255,255,0.1)' }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.2)'; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.1)'; }}
+            className="carousel-arrow"
+            style={arrowBase}
           >
             ←
           </button>
@@ -134,7 +133,18 @@ export default function ReviewsCarousel() {
           In both cases 100% in translateX refers to the track div's own width,
           which equals this overflow-hidden container's width.
         */}
-        <div className="flex-1 overflow-hidden">
+        <div
+          className="flex-1 overflow-hidden"
+          onTouchStart={(e) => {
+            touchStartX.current = e.touches[0].clientX;
+          }}
+          onTouchEnd={(e) => {
+            if (touchStartX.current === null) return;
+            const dx = e.changedTouches[0].clientX - touchStartX.current;
+            touchStartX.current = null;
+            if (Math.abs(dx) > 48) navigate(dx < 0 ? 1 : -1);
+          }}
+        >
           <div
             className="flex gap-8"
             style={{
@@ -185,9 +195,8 @@ export default function ReviewsCarousel() {
             onClick={() => navigate(1)}
             disabled={animating}
             aria-label="Next"
-            style={{ ...arrowBase, backgroundColor: 'rgba(255,255,255,0.1)' }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.2)'; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.1)'; }}
+            className="carousel-arrow"
+            style={arrowBase}
           >
             →
           </button>
@@ -196,24 +205,33 @@ export default function ReviewsCarousel() {
         )}
       </div>
 
-      {/* Dot indicators — 3 dots on desktop (3 positions), 5 dots on mobile (5 positions) */}
-      <div className="flex justify-center gap-2 mt-8">
+      {/* Dot indicators — 3 dots on desktop (3 positions), 5 dots on mobile (5 positions).
+          The button provides a 24px hit area; the visual dot stays 8px. */}
+      <div className="flex justify-center mt-8">
         {Array.from({ length: maxOffset + 1 }).map((_, i) => (
           <button
             key={i}
             onClick={() => navigateTo(i)}
             aria-label={`Go to position ${i + 1}`}
             style={{
-              width: 8,
-              height: 8,
-              borderRadius: '50%',
+              padding: 8,
+              background: 'transparent',
               border: 'none',
               cursor: 'pointer',
-              padding: 0,
-              backgroundColor: i === offset ? '#edd98f' : 'rgba(255,255,255,0.3)',
-              transition: 'background 0.2s',
+              display: 'flex',
             }}
-          />
+          >
+            <span
+              style={{
+                display: 'block',
+                width: 8,
+                height: 8,
+                borderRadius: '50%',
+                backgroundColor: i === offset ? '#edd98f' : 'rgba(255,255,255,0.3)',
+                transition: 'background 0.2s',
+              }}
+            />
+          </button>
         ))}
       </div>
     </div>

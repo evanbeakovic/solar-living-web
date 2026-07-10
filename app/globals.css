@@ -2,14 +2,407 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Motion tokens ──────────────────────────────────────────────────────── */
+
+:root {
+  --ease-reveal: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-micro: 200ms;
+  --duration-hover: 400ms;
+  --duration-reveal: 700ms;
+}
+
 html,
 body {
-  scroll-behavior: smooth;
   background-color: #474748;
 }
+
+/* No global scroll-behavior: smooth — it makes mouse-wheel scrolling feel
+   stepped/janky (the smoothing curve fights the wheel's large discrete
+   deltas) and it smooths Next.js's scroll-to-top on route changes. The one
+   in-page anchor (Owners → #contact) smooth-scrolls via scrollIntoView
+   instead, gated on prefers-reduced-motion. */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* ─── Scroll reveals ─────────────────────────────────────────────────────────
+   The hidden state lives on .reveal-init, which is only ever added by the
+   <Reveal> client component after hydration — server HTML carries just
+   .reveal/.reveal-group (no styles), so content stays fully visible for
+   crawlers and no-JS visitors. */
+
+.reveal.reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--duration-reveal) var(--ease-reveal),
+    transform var(--duration-reveal) var(--ease-reveal);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.reveal-init.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-group.reveal-init > * {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--duration-reveal) var(--ease-reveal),
+    transform var(--duration-reveal) var(--ease-reveal);
+}
+
+/* 100ms sibling stagger, capped at the 5th child */
+.reveal-group.reveal-init > :nth-child(2) {
+  transition-delay: 100ms;
+}
+.reveal-group.reveal-init > :nth-child(3) {
+  transition-delay: 200ms;
+}
+.reveal-group.reveal-init > :nth-child(4) {
+  transition-delay: 300ms;
+}
+.reveal-group.reveal-init > :nth-child(n + 5) {
+  transition-delay: 400ms;
+}
+
+.reveal-group.reveal-init.reveal-in > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* Settle variant for large standalone photos: starts slightly zoomed and
+   settles to rest as it enters the viewport. One-shot, not scroll-linked.
+   The image's frame needs overflow: hidden. */
+.reveal-settle.reveal-init {
+  transform: scale(1.08);
+  transition: transform 1100ms var(--ease-reveal);
+}
+
+.reveal-settle.reveal-init.reveal-in {
+  transform: none;
+}
+
+/* ─── Section exit fade (scroll-linked, CSS-only) ────────────────────────────
+   Fades a <section> out as its top scrolls past the top of the viewport — the
+   same hand-off the home hero gets from ParallaxHero, but driven by a view()
+   timeline on the compositor: no scroll listener, no JS.
+
+   - Keyframe timing is constrained by section geometry: with 96-128px section
+     paddings, the 68px fixed navbar, and near-identical dark backgrounds, the
+     last ~40% of the exit range contains no visible content — a fade confined
+     there is imperceptible (a hold-until-55% version shipped and read as "not
+     working at all"). So: hold opacity 1 only through 25% of exit, reach 0 by
+     85%, linear like the hero's fade. The cost is mild dimming of tall
+     sections' lower halves mid-read — accepted trade-off for a visible effect.
+   - Gated to md+ (mobile sections run several viewports tall, so the fade
+     would mostly dim content mid-read) and behind @supports — browsers
+     without scroll-driven animations (Firefox stable, older iOS) degrade to
+     no effect, never to hidden content.
+   - The 1ms duration is inert (scroll timelines ignore duration) but Firefox
+     needs a non-zero duration to activate the animation once it ships.
+   - animation-timeline must be declared after the animation shorthand — the
+     shorthand resets it to the default document timeline.
+   - Reduced motion is gated here explicitly (and again in the neutralizer
+     block below): the global duration-shortening kill rule has no effect on
+     scroll-driven timelines, which ignore duration. */
+
+@keyframes section-fade-exit {
+  0%,
+  25% {
+    opacity: 1;
+  }
+  85%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .section-fade-exit {
+      animation: section-fade-exit 1ms linear both;
+      animation-timeline: view();
+      animation-range: exit;
+    }
+  }
+}
+
+/* ─── Interactive cards ──────────────────────────────────────────────────────
+   .card-interactive — whole-card hover/focus affordance: 6px lift, shadow,
+   photo zoom. The shadow is pre-rendered on a pseudo-element and only its
+   opacity animates (animating box-shadow itself forces repaints).
+   .stretched-link — expands the card's existing primary button/link hit area
+   to the full card via ::after, positioned against the card's own
+   position: relative. Secondary actions inside the card must carry
+   position: relative + z-index: 1 to stay clickable above the overlay. */
+
+.card-interactive {
+  position: relative;
+  cursor: pointer;
+  transition: transform var(--duration-hover) var(--ease-reveal);
+}
+
+.card-interactive::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-hover) var(--ease-reveal);
+}
+
+/* Lift on hover or keyboard focus. :focus-visible (not :focus-within): a mouse
+   click on an in-card link — e.g. the map link, which opens a new tab and so
+   keeps focus after returning — would otherwise pin the lifted state and make
+   the card stop responding to hover. */
+.card-interactive:hover,
+.card-interactive:has(:focus-visible) {
+  transform: translateY(-6px);
+}
+
+.card-interactive:hover::before,
+.card-interactive:has(:focus-visible)::before {
+  opacity: 1;
+}
+
+/* Keyboard affordance: ring only when focus is actually visible */
+.card-interactive:has(:focus-visible) {
+  outline: 2px solid #86cae7;
+  outline-offset: 3px;
+}
+
+.card-zoom {
+  transition: transform var(--duration-hover) var(--ease-reveal);
+}
+
+.card-interactive:hover .card-zoom,
+.card-interactive:has(:focus-visible) .card-zoom {
+  transform: scale(1.05);
+}
+
+.stretched-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+/* ─── Hero entrance (page load, once — not scroll-triggered) ─────────────────
+   Pure CSS so it needs no JS and can't hide content from crawlers. */
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-stagger > * {
+  animation: hero-rise var(--duration-reveal) var(--ease-reveal) both;
+}
+
+.hero-stagger > :nth-child(2) {
+  animation-delay: 100ms;
+}
+.hero-stagger > :nth-child(3) {
+  animation-delay: 200ms;
+}
+.hero-stagger > :nth-child(4) {
+  animation-delay: 300ms;
+}
+.hero-stagger > :nth-child(n + 5) {
+  animation-delay: 400ms;
+}
+
+/* Opt-out for decorative absolutely-positioned children (e.g. scroll line) */
+.hero-stagger > .hero-no-enter {
+  animation: none;
+}
+
+/* Home hero scroll indicator: draws in from 0 width after the content lands,
+   then pulses gently. translateX(-50%) is repeated in the keyframes because
+   the animation's transform replaces the Tailwind centering transform. */
+@keyframes hero-line-draw {
+  from {
+    transform: translateX(-50%) scaleX(0);
+  }
+  to {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+@keyframes hero-line-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.hero-line {
+  animation:
+    hero-line-draw var(--duration-reveal) var(--ease-reveal) 500ms both,
+    hero-line-pulse 2.5s ease-in-out 1400ms infinite;
+}
+
+/* ─── Page load-in (route change, enter-only) ───────────────────────────────
+   fill-mode must be backwards, not both/forwards: a filling transform
+   animation keeps a computed transform of matrix(1,0,0,1,0,0) — not none —
+   after it finishes, leaving the wrapper a permanent containing block that
+   breaks position: fixed descendants. With backwards the effect stops
+   applying at animation end (end state matches natural styles, so no jump).
+   Modals are additionally portaled to <body> so they survive even the 350ms
+   window while this transform is live. */
+
+@keyframes page-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-enter {
+  animation: page-rise 350ms var(--ease-reveal) backwards;
+}
+
+@keyframes nav-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-enter {
+  animation: nav-fade var(--duration-reveal) var(--ease-reveal) both;
+}
+
+/* ─── Micro-interactions ───────────────────────────────────────────────── */
+
+/* Solid CTAs: slight brighten + 2px shift on hover, press-down on click */
+.btn-solid {
+  transition:
+    filter var(--duration-micro) var(--ease-reveal),
+    transform var(--duration-micro) var(--ease-reveal);
+}
+
+.btn-solid:hover,
+.btn-solid:focus-visible {
+  filter: brightness(1.05);
+  transform: translateX(2px);
+}
+
+.btn-solid:active {
+  transform: translateX(2px) scale(0.98);
+}
+
+/* Outlined buttons: left-to-right background sweep instead of a flat swap.
+   Set --sweep-color per button (defaults to the dark card ink). */
+.btn-sweep {
+  background-image: linear-gradient(
+    var(--sweep-color, #1a1a1a),
+    var(--sweep-color, #1a1a1a)
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: 0 0;
+  transition:
+    background-size 250ms var(--ease-reveal),
+    color 250ms var(--ease-reveal),
+    border-color 250ms var(--ease-reveal);
+}
+
+.btn-sweep:hover,
+.btn-sweep:focus-visible {
+  background-size: 100% 100%;
+}
+
+/* Text links: .link-underline draws an underline from the left on hover/focus
+   (Footer, inline text links). */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  transition: background-size var(--duration-micro) var(--ease-reveal);
+}
+
+.link-underline:hover,
+.link-underline:focus-visible {
+  background-size: 100% 1px;
+}
+
+/* ─── Carousel ─────────────────────────────────────────────────────────── */
+
+.carousel-arrow {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--duration-micro) ease;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────────
+   Neutralizes every animated pattern on the site (current and upcoming
+   phases): near-zero durations rather than `none` so transitionend events
+   still fire for any logic that waits on them. */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .reveal.reveal-init,
+  .reveal-group.reveal-init > *,
+  .reveal-settle.reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Hover feedback stays (shadow/ring/brightness), but nothing moves */
+  .card-interactive:hover,
+  .card-interactive:has(:focus-visible) {
+    transform: none;
+  }
+
+  .card-interactive:hover .card-zoom,
+  .card-interactive:has(:focus-visible) .card-zoom {
+    transform: none;
+  }
+
+  .btn-solid:hover,
+  .btn-solid:focus-visible,
+  .btn-solid:active {
+    transform: none;
+  }
+
+  /* Scroll-driven timelines ignore the duration overrides above — the
+     animation itself has to go. (Belt and braces: the rule is also gated on
+     prefers-reduced-motion: no-preference at its definition.) */
+  .section-fade-exit {
+    animation: none !important;
   }
 }

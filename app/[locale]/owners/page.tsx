@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Reveal from '@/components/Reveal';
 
 export default function OwnersPage() {
   const t = useTranslations('owners');
@@ -101,14 +102,14 @@ export default function OwnersPage() {
   }
 
   const inputClass =
-    'bg-[#474748] border border-[rgba(255,255,255,0.15)] text-white placeholder-[#888888] rounded-none px-4 py-3 w-full focus:border-[#86cae7] outline-none font-sans text-sm';
+    'bg-[#474748] border border-[rgba(255,255,255,0.15)] text-white placeholder-[#888888] rounded-none px-4 py-3 w-full focus:border-[#86cae7] outline-none font-sans text-sm transition-colors duration-micro';
   const labelClass = 'block font-sans text-xs uppercase tracking-widest mb-1' ;
 
   return (
     <>
       {/* ─── SECTION 1: HERO ─────────────────────────────────────────────── */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-center text-center px-6"
+        className="section-fade-exit hero-stagger relative min-h-screen flex flex-col items-center justify-center text-center px-6"
         style={{ backgroundColor: '#474748' }}
       >
         <p className="font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
@@ -122,7 +123,17 @@ export default function OwnersPage() {
         </p>
         <a
           href="#contact"
-          className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90 mb-4"
+          onClick={(e) => {
+            const target = document.getElementById('contact');
+            if (!target) return; // fall through to default hash navigation
+            e.preventDefault();
+            target.scrollIntoView({
+              behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                ? 'auto'
+                : 'smooth',
+            });
+          }}
+          className="btn-solid font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 mb-4"
           style={{ backgroundColor: '#edd98f', color: '#474748' }}
         >
           {t('hero.cta')}
@@ -131,22 +142,22 @@ export default function OwnersPage() {
           {t('hero.note')}
         </p>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
+        <div className="hero-no-enter absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
       </section>
 
       {/* ─── SECTION 2: WHAT WE OFFER ────────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6" style={{ backgroundColor: '#525253' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="mb-16">
+          <Reveal group className="mb-16">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
               {t('offer.label')}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-white">
               {t('offer.heading')}
             </h2>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+          <Reveal group className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
             {features.map((feature) => (
               <div
                 key={feature.title}
@@ -160,35 +171,35 @@ export default function OwnersPage() {
                 </p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ─── SECTION 3: THE SOLAR LIVING PROMISE ─────────────────────────── */}
-      <section className="py-32 px-6" style={{ backgroundColor: '#3e3e3f' }}>
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="section-fade-exit py-32 px-6" style={{ backgroundColor: '#3e3e3f' }}>
+        <Reveal group className="max-w-4xl mx-auto text-center">
           <blockquote className="font-serif text-3xl md:text-4xl lg:text-5xl italic leading-relaxed text-white mb-8">
             &ldquo;{t('promise.quote')}&rdquo;
           </blockquote>
           <p className="font-sans text-sm uppercase tracking-widest text-[#c8c8c8]">
             {t('promise.attribution')}
           </p>
-        </div>
+        </Reveal>
       </section>
 
       {/* ─── SECTION 4: HOW IT WORKS ─────────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="mb-16">
+          <Reveal group className="mb-16">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
               {t('process.label')}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-white">
               {t('process.heading')}
             </h2>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-4">
+          <Reveal group className="grid grid-cols-1 md:grid-cols-4">
             {steps.map((step, i) => (
               <div
                 key={step.number}
@@ -208,7 +219,7 @@ export default function OwnersPage() {
                 </p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -217,7 +228,7 @@ export default function OwnersPage() {
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
 
           {/* Left column */}
-          <div className="space-y-6">
+          <Reveal group className="space-y-6">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
                 {t('contact.label')}
@@ -248,10 +259,10 @@ export default function OwnersPage() {
                 {t('contact.emailLink')}
               </a>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right column — form */}
-          <div className="space-y-5">
+          <Reveal className="space-y-5">
             <div>
               <label className={labelClass} style={{ color: '#c8c8c8' }}>
                 {t('contact.labelName')} <span style={{ color: '#86cae7' }}>*</span>
@@ -353,20 +364,20 @@ export default function OwnersPage() {
                 href={buildWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans text-xs uppercase tracking-widest px-6 py-3 text-white text-center flex-1 transition-opacity hover:opacity-90"
+                className="btn-solid font-sans text-xs uppercase tracking-widest px-6 py-3 text-white text-center flex-1"
                 style={{ backgroundColor: '#4a8c7a' }}
               >
                 {t('contact.sendWhatsApp')}
               </a>
               <a
                 href={buildMailtoUrl()}
-                className="font-sans font-semibold text-xs uppercase tracking-widest px-6 py-3 text-center flex-1 transition-opacity hover:opacity-90"
+                className="btn-solid font-sans font-semibold text-xs uppercase tracking-widest px-6 py-3 text-center flex-1"
                 style={{ backgroundColor: '#edd98f', color: '#474748' }}
               >
                 {t('contact.sendEmail')}
               </a>
             </div>
-          </div>
+          </Reveal>
 
         </div>
       </section>

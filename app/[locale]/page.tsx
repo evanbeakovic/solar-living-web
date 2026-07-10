@@ -5,6 +5,7 @@ import { MapPin } from 'lucide-react';
 import { Link } from '@/navigation';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
 import ParallaxHero from '@/components/ParallaxHero';
+import Reveal from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: 'Solar Living | Premium Accommodation in Umag, Istria',
@@ -79,7 +80,7 @@ export default function HomePage() {
         {/* Content wrapper — targeted by ParallaxHero for translateY effect */}
         <div
           id="hero-parallax-content"
-          className="flex flex-col items-center"
+          className="hero-stagger flex flex-col items-center"
           style={{ willChange: 'transform' }}
         >
           {/* Label */}
@@ -101,15 +102,15 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <Link
               href="/accommodation"
-              className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
+              className="btn-solid font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4"
               style={{ backgroundColor: '#edd98f', color: '#474748' }}
             >
               {t('hero.ctaBrowse')}
             </Link>
             <Link
               href="/owners"
-              className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-colors hover:border-white text-white"
-              style={{ border: '1px solid rgba(255,255,255,0.3)' }}
+              className="btn-sweep font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-white text-white hover:text-[#474748]"
+              style={{ border: '1px solid rgba(255,255,255,0.3)', '--sweep-color': '#ffffff' } as React.CSSProperties}
             >
               {t('hero.ctaOwners')}
             </Link>
@@ -117,14 +118,14 @@ export default function HomePage() {
         </div>
 
         {/* Thin line scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
+        <div className="hero-line absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
       </section>
 
       {/* ─── SECTION 2: FEATURED APARTMENTS ─────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-5xl mx-auto">
           {/* Left-aligned header row */}
-          <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
+          <Reveal group className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
                 {t('apartments.label')}
@@ -136,23 +137,23 @@ export default function HomePage() {
             <p className="font-sans text-sm text-[#c8c8c8] md:text-right md:max-w-xs">
               {t('apartments.subtext')}
             </p>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Reveal group className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Card 1 */}
             <div
-              className="flex flex-col"
+              className="flex flex-col card-interactive"
               style={{ backgroundColor: '#d8d8d8', border: '1px solid rgba(0,0,0,0.08)' }}
             >
               <div className="h-64 relative overflow-hidden">
-                <Image src="/images/umag-1-main.jpg" alt="Elaine's View" fill className="object-cover" />
+                <Image src="/images/umag-1-main.jpg" alt="Elaine's View" fill className="object-cover card-zoom" />
               </div>
               <div className="p-6 space-y-4 flex flex-col flex-1">
                 <a
                   href="https://www.google.com/maps/search/Apartment+Elaine%27s+View+Umag"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex items-center gap-1 font-sans text-xs uppercase tracking-widest cursor-pointer"
+                  className="group relative z-[1] flex items-center gap-1 font-sans text-xs uppercase tracking-widest cursor-pointer"
                   style={{ color: '#888888' }}
                 >
                   <MapPin size={14} style={{ color: '#86cae7', flexShrink: 0 }} />
@@ -180,7 +181,7 @@ export default function HomePage() {
                 <div className="mt-auto pt-2">
                   <Link
                     href="/accommodation"
-                    className="inline-block font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2 text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
+                    className="stretched-link btn-sweep inline-block font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2 text-[#1a1a1a] hover:text-white"
                     style={{ border: '1px solid #1a1a1a' }}
                   >
                     {t('apartments.card1Cta')}
@@ -191,18 +192,18 @@ export default function HomePage() {
 
             {/* Card 2 */}
             <div
-              className="flex flex-col"
+              className="flex flex-col card-interactive"
               style={{ backgroundColor: '#d8d8d8', border: '1px solid rgba(0,0,0,0.08)' }}
             >
               <div className="h-64 relative overflow-hidden">
-                <Image src="/images/umag-2-main.jpg" alt="Stella's Garden" fill className="object-cover" />
+                <Image src="/images/umag-2-main.jpg" alt="Stella's Garden" fill className="object-cover card-zoom" />
               </div>
               <div className="p-6 space-y-4 flex flex-col flex-1">
                 <a
                   href="https://www.google.com/maps/search/Ulica+154+brigada+HV+7+Umag"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex items-center gap-1 font-sans text-xs uppercase tracking-widest cursor-pointer"
+                  className="group relative z-[1] flex items-center gap-1 font-sans text-xs uppercase tracking-widest cursor-pointer"
                   style={{ color: '#888888' }}
                 >
                   <MapPin size={14} style={{ color: '#86cae7', flexShrink: 0 }} />
@@ -230,7 +231,7 @@ export default function HomePage() {
                 <div className="mt-auto pt-2">
                   <Link
                     href="/accommodation"
-                    className="inline-block font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2 text-[#1a1a1a] transition-colors hover:bg-[#1a1a1a] hover:text-white"
+                    className="stretched-link btn-sweep inline-block font-sans font-semibold text-xs uppercase tracking-widest px-4 py-2 text-[#1a1a1a] hover:text-white"
                     style={{ border: '1px solid #1a1a1a' }}
                   >
                     {t('apartments.card2Cta')}
@@ -238,51 +239,53 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* View all link */}
-          <div className="text-center mt-12">
+          <Reveal className="text-center mt-12">
             <Link
               href="/accommodation"
-              className="font-sans text-xs uppercase tracking-widest transition-opacity hover:opacity-70 text-[#86cae7]"
+              className="link-underline font-sans text-xs uppercase tracking-widest text-[#86cae7]"
             >
               {t('apartments.viewAll')}
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ─── SECTION 2B: GUEST REVIEWS ───────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6 overflow-hidden" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6 overflow-hidden" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-4xl mx-auto">
-          <div className="mb-16">
+          <Reveal group className="mb-16">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
               {t('reviews.label')}
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-white">
               {t('reviews.heading')}
             </h2>
-          </div>
+          </Reveal>
 
-          <ReviewsCarousel />
+          <Reveal>
+            <ReviewsCarousel />
+          </Reveal>
         </div>
       </section>
 
       {/* ─── SECTION 3: WHY SOLAR LIVING ─────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6" style={{ backgroundColor: '#525253' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 md:gap-14 items-start">
           {/* Left — quote */}
-          <div className="md:w-1/2">
+          <Reveal className="md:w-1/2">
             <blockquote className="font-serif text-xl md:text-[1.6rem] italic leading-relaxed text-white">
               &ldquo;{t('whyUs.quote')}&rdquo;
             </blockquote>
             <p className="mt-6 font-sans text-xs uppercase tracking-widest text-[#b0b0b0]">
               {t('whyUs.attribution')}
             </p>
-          </div>
+          </Reveal>
 
           {/* Right — features */}
-          <div className="md:w-1/2 space-y-8">
+          <Reveal group className="md:w-1/2 space-y-8">
             {[
               { title: t('whyUs.feature1Title'), body: t('whyUs.feature1Body') },
               { title: t('whyUs.feature2Title'), body: t('whyUs.feature2Body') },
@@ -298,13 +301,13 @@ export default function HomePage() {
                 <p className="font-sans text-sm leading-relaxed text-[#c8c8c8]">{body}</p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ─── SECTION 3B: AEO — WHO WE ARE ───────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6" style={{ backgroundColor: '#474748' }}>
-        <div className="max-w-3xl mx-auto">
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#474748' }}>
+        <Reveal group className="max-w-3xl mx-auto">
           <p className="font-sans text-xs uppercase tracking-widest mb-6" style={{ color: '#86cae7' }}>
             {t('whoWeAre.label')}
           </p>
@@ -334,12 +337,12 @@ export default function HomePage() {
               {t('whoWeAre.para5')}
             </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ─── SECTION 4: OWNERS CTA BANNER ────────────────────────────────── */}
-      <section className="py-24 md:py-32 px-6" style={{ backgroundColor: '#525253' }}>
-        <div className="max-w-3xl mx-auto text-center space-y-8">
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#525253' }}>
+        <Reveal group className="max-w-3xl mx-auto text-center space-y-8">
           <p className="font-sans text-xs uppercase tracking-widest text-[#edd98f]">
             {t('ownersCta.label')}
           </p>
@@ -351,24 +354,24 @@ export default function HomePage() {
           </p>
           <Link
             href="/owners"
-            className="inline-block font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
+            className="btn-solid inline-block font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4"
             style={{ backgroundColor: '#edd98f', color: '#474748' }}
           >
             {t('ownersCta.cta')}
           </Link>
-        </div>
+        </Reveal>
       </section>
 
       {/* ─── SECTION 5: LOCATION TEASER ──────────────────────────────────── */}
       <section
-        className="py-24 md:py-32 px-6"
+        className="section-fade-exit py-24 md:py-32 px-6"
         style={{
           backgroundColor: '#474748',
           borderTop: '1px solid rgba(255,255,255,0.08)',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
         }}
       >
-        <div className="max-w-3xl mx-auto text-center space-y-6">
+        <Reveal group className="max-w-3xl mx-auto text-center space-y-6">
           <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7]">
             {t('location.label')}
           </p>
@@ -378,7 +381,7 @@ export default function HomePage() {
           <p className="font-sans text-base leading-relaxed text-[#c8c8c8]">
             {t('location.body')}
           </p>
-        </div>
+        </Reveal>
       </section>
     </>
   );

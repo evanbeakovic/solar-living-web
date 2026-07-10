@@ -34,19 +34,26 @@ export default function Navbar() {
   const prevScrollY = useRef(0);
 
   useEffect(() => {
+    let rafId = 0;
     function onScroll() {
-      const y = window.scrollY;
-      if (y < 10) {
-        setVisible(true);
-      } else if (y > prevScrollY.current) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
-      prevScrollY.current = y;
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const y = window.scrollY;
+        if (y < 10) {
+          setVisible(true);
+        } else if (y > prevScrollY.current) {
+          setVisible(false);
+        } else {
+          setVisible(true);
+        }
+        prevScrollY.current = y;
+      });
     }
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   function switchLocale(next: string) {
@@ -57,7 +64,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`nav-enter fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}
       style={{ backgroundColor: '#474748' }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -79,7 +86,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-sans font-medium text-xs uppercase tracking-widest transition-colors outline-none ${
+                  className={`font-sans font-medium text-xs uppercase tracking-widest transition-colors outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#86cae7] ${
                     isActive
                       ? 'text-[#86cae7] hover:text-[#a8ddf0] active:text-[#86cae7] focus:text-[#86cae7]'
                       : 'text-[#d0d0d0] hover:text-white active:text-white focus:text-white'
@@ -150,7 +157,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`block font-sans font-medium text-xs uppercase tracking-widest transition-colors outline-none py-1.5 ${
+                className={`block font-sans font-medium text-xs uppercase tracking-widest transition-colors outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#86cae7] py-1.5 ${
                   isActive
                     ? 'text-[#86cae7] hover:text-[#a8ddf0] active:text-[#86cae7] focus:text-[#86cae7]'
                     : 'text-[#d0d0d0] hover:text-white active:text-white focus:text-white'

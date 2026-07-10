@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
+import Reveal from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: 'FAQ | Solar Living Umag',
@@ -134,7 +135,7 @@ export default function FaqPage() {
       />
 
       {/* ─── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="py-32 px-6 text-center" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit hero-stagger py-32 px-6 text-center" style={{ backgroundColor: '#474748' }}>
         <p className="font-sans text-xs uppercase tracking-widest mb-6" style={{ color: '#86cae7' }}>
           {t('hero.label')}
         </p>
@@ -144,30 +145,34 @@ export default function FaqPage() {
       </section>
 
       {/* ─── GUEST FAQs ───────────────────────────────────────────────────── */}
-      <section className="py-24 px-6" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-3xl mx-auto">
-          <p className="font-sans text-xs uppercase tracking-widest mb-10" style={{ color: '#86cae7' }}>
-            {t('guests.label')}
-          </p>
-          <div className="space-y-10">
+          <Reveal>
+            <p className="font-sans text-xs uppercase tracking-widest mb-10" style={{ color: '#86cae7' }}>
+              {t('guests.label')}
+            </p>
+          </Reveal>
+          <Reveal group className="space-y-10">
             {guestFaqs.map((item) => (
               <FaqItem key={item.q} q={item.q} a={item.a} />
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ─── OWNER FAQs ───────────────────────────────────────────────────── */}
       <section className="py-24 px-6" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-3xl mx-auto">
-          <p className="font-sans text-xs uppercase tracking-widest mb-10" style={{ color: '#86cae7' }}>
-            {t('owners.label')}
-          </p>
-          <div className="space-y-10">
+          <Reveal>
+            <p className="font-sans text-xs uppercase tracking-widest mb-10" style={{ color: '#86cae7' }}>
+              {t('owners.label')}
+            </p>
+          </Reveal>
+          <Reveal group className="space-y-10">
             {ownerFaqs.map((item) => (
               <FaqItem key={item.q} q={item.q} a={item.a} />
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
+import Reveal from '@/components/Reveal';
 
 export default function ContactPage() {
   const t = useTranslations('contact');
@@ -53,14 +54,14 @@ export default function ContactPage() {
   }
 
   const inputClass =
-    'bg-[#474748] border border-[rgba(255,255,255,0.15)] text-white placeholder-[#666666] rounded-none px-4 py-3 w-full focus:border-[#86cae7] outline-none font-sans text-sm';
+    'bg-[#474748] border border-[rgba(255,255,255,0.15)] text-white placeholder-[#666666] rounded-none px-4 py-3 w-full focus:border-[#86cae7] outline-none font-sans text-sm transition-colors duration-micro';
   const labelClass = 'block font-sans text-xs uppercase tracking-widest mb-2 text-[#c8c8c8]';
 
   return (
     <>
       {/* ─── SECTION 1: HERO ─────────────────────────────────────────────── */}
       <section
-        className="py-32 px-6 flex flex-col items-center justify-center text-center"
+        className="section-fade-exit hero-stagger py-32 px-6 flex flex-col items-center justify-center text-center"
         style={{ backgroundColor: '#474748' }}
       >
         <p className="font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
@@ -79,7 +80,7 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24">
 
           {/* Left column — contact details */}
-          <div className="md:w-2/5">
+          <Reveal group className="md:w-2/5">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-8">
               {t('details.label')}
             </p>
@@ -145,10 +146,10 @@ export default function ContactPage() {
                 {t('details.solarCreative')}
               </a>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right column — form */}
-          <div className="md:w-3/5">
+          <Reveal className="md:w-3/5">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-8">
               {t('form.label')}
             </p>
@@ -238,14 +239,14 @@ export default function ContactPage() {
                   href={buildWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-sans text-xs uppercase tracking-widest flex-1 py-4 text-white text-center transition-opacity hover:opacity-90"
+                  className="btn-solid font-sans text-xs uppercase tracking-widest flex-1 py-4 text-white text-center"
                   style={{ backgroundColor: '#4a8c7a' }}
                 >
                   {t('form.sendWhatsApp')}
                 </a>
                 <a
                   href={buildMailtoUrl()}
-                  className="font-sans font-semibold text-xs uppercase tracking-widest flex-1 py-4 text-center transition-opacity hover:opacity-90"
+                  className="btn-solid font-sans font-semibold text-xs uppercase tracking-widest flex-1 py-4 text-center"
                   style={{ backgroundColor: '#edd98f', color: '#474748' }}
                 >
                   {t('form.sendEmail')}
@@ -256,7 +257,7 @@ export default function ContactPage() {
                 {t('form.responseNote')}
               </p>
             </div>
-          </div>
+          </Reveal>
 
         </div>
         <p className="mt-12 text-center font-sans text-sm" style={{ color: '#888888' }}>
@@ -265,8 +266,8 @@ export default function ContactPage() {
       </section>
 
       {/* ─── SECTION 3: BOTTOM CTA ───────────────────────────────────────── */}
-      <section className="py-24 px-6 text-center" style={{ backgroundColor: '#525253' }}>
-        <div className="max-w-3xl mx-auto space-y-6">
+      <section className="section-fade-exit py-24 px-6 text-center" style={{ backgroundColor: '#525253' }}>
+        <Reveal group className="max-w-3xl mx-auto space-y-6">
           <h2 className="font-serif text-4xl text-white">
             {t('cta.heading')}
           </h2>
@@ -275,12 +276,12 @@ export default function ContactPage() {
           </p>
           <Link
             href="/accommodation"
-            className="inline-block font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
+            className="btn-solid inline-block font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4"
             style={{ backgroundColor: '#86cae7', color: '#474748' }}
           >
             {t('cta.button')}
           </Link>
-        </div>
+        </Reveal>
       </section>
     </>
   );

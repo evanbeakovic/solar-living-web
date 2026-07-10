@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import React from 'react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
+import Reveal from '@/components/Reveal';
 
 export const metadata: Metadata = {
   title: 'About Solar Living | Boutique Property Management, Umag',
@@ -76,7 +77,7 @@ export default function AboutPage() {
       />
       {/* ─── SECTION 1: HERO ─────────────────────────────────────────────── */}
       <section
-        className="py-32 px-6 flex flex-col items-center justify-center text-center"
+        className="section-fade-exit hero-stagger py-32 px-6 flex flex-col items-center justify-center text-center"
         style={{ backgroundColor: '#474748' }}
       >
         <p className="font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
@@ -91,11 +92,11 @@ export default function AboutPage() {
       </section>
 
       {/* ─── SECTION 2: OUR STORY ────────────────────────────────────────── */}
-      <section className="py-24 px-6" style={{ backgroundColor: '#525253' }}>
+      <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: '#525253' }}>
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-16">
 
           {/* Left column */}
-          <div className="md:w-1/2 space-y-6">
+          <Reveal group className="md:w-1/2 space-y-6">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
                 {t('story.label')}
@@ -113,33 +114,33 @@ export default function AboutPage() {
             <p className="font-sans text-[#c8c8c8] text-base leading-relaxed">
               {t('story.para3')}
             </p>
-          </div>
+          </Reveal>
 
           {/* Right column — placeholder */}
-          <div className="md:w-1/2">
+          <Reveal className="md:w-1/2">
             <div className="h-full min-h-[300px] flex items-center justify-center" style={{ backgroundColor: '#3e3e3f' }}>
               <span className="font-sans text-sm" style={{ color: '#666666' }}>
                 {`/* TODO: add team photo or property photo */`}
               </span>
             </div>
-          </div>
+          </Reveal>
 
         </div>
       </section>
 
       {/* ─── SECTION 3: OUR VALUES ───────────────────────────────────────── */}
-      <section className="py-24 px-6" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: '#474748' }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+          <Reveal group className="text-center mb-16">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
               {t('values.label')}
             </p>
             <h2 className="font-serif text-4xl text-white">
               {t('values.heading')}
             </h2>
-          </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <Reveal group className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {values.map((value) => (
               <div key={value.title}>
                 <div className="w-12 h-px mb-6" style={{ backgroundColor: '#edd98f' }} />
@@ -151,16 +152,16 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ─── SECTION 4: THE SOLAR GROUP ──────────────────────────────────── */}
-      <section className="py-24 px-6" style={{ backgroundColor: '#3e3e3f' }}>
+      <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: '#3e3e3f' }}>
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-start">
 
           {/* Left column */}
-          <div className="md:w-1/2 space-y-6">
+          <Reveal group className="md:w-1/2 space-y-6">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
                 {t('solarGroup.label')}
@@ -180,10 +181,10 @@ export default function AboutPage() {
             >
               {t('solarGroup.link')}
             </a>
-          </div>
+          </Reveal>
 
           {/* Right column — stats */}
-          <div className="md:w-1/2">
+          <Reveal group className="md:w-1/2">
             <div>
               <p className="font-serif text-4xl mb-3" style={{ color: '#edd98f' }}>
                 {t('solarGroup.stat1Value')}
@@ -203,34 +204,34 @@ export default function AboutPage() {
                 {t('solarGroup.stat2Desc')}
               </p>
             </div>
-          </div>
+          </Reveal>
 
         </div>
       </section>
 
       {/* ─── SECTION 5: CTA ──────────────────────────────────────────────── */}
-      <section className="py-24 px-6 text-center" style={{ backgroundColor: '#474748' }}>
-        <div className="max-w-3xl mx-auto space-y-8">
+      <section className="section-fade-exit py-24 px-6 text-center" style={{ backgroundColor: '#474748' }}>
+        <Reveal group className="max-w-3xl mx-auto space-y-8">
           <h2 className="font-serif text-4xl text-white">
             {t('cta.heading')}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link
               href="/accommodation"
-              className="font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 transition-opacity hover:opacity-90"
+              className="btn-solid font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4"
               style={{ backgroundColor: '#86cae7', color: '#474748' }}
             >
               {t('cta.browseApartments')}
             </Link>
             <Link
               href="/owners"
-              className="font-sans text-sm uppercase tracking-widest px-8 py-4 text-white transition-colors hover:border-white"
-              style={{ border: '1px solid rgba(255,255,255,0.3)' }}
+              className="btn-sweep font-sans text-sm uppercase tracking-widest px-8 py-4 text-white hover:border-white hover:text-[#474748]"
+              style={{ border: '1px solid rgba(255,255,255,0.3)', '--sweep-color': '#ffffff' } as React.CSSProperties}
             >
               {t('cta.partnerWithUs')}
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );
