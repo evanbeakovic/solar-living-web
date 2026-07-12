@@ -12,6 +12,8 @@ const locales = [
   { code: 'it', label: 'IT' },
   { code: 'ru', label: 'RU' },
   { code: 'hu', label: 'HU' },
+  { code: 'cs', label: 'CS' },
+  { code: 'sk', label: 'SK' },
 ];
 
 const navLinks = [
