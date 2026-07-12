@@ -4,8 +4,9 @@ import { useState, useEffect, useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname, Link } from '@/navigation';
 import Image from 'next/image';
+import FlagIcon, { type FlagCode } from '@/components/FlagIcon';
 
-const locales = [
+const locales: { code: FlagCode; label: string }[] = [
   { code: 'en', label: 'EN' },
   { code: 'hr', label: 'HR' },
   { code: 'de', label: 'DE' },
@@ -34,6 +35,20 @@ export default function Navbar() {
   const [langOpen, setLangOpen] = useState(false);
   const [visible, setVisible] = useState(true);
   const prevScrollY = useRef(0);
+  const langRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!langOpen) return;
+    function onClickOutside(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', onClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', onClickOutside);
+    };
+  }, [langOpen]);
 
   useEffect(() => {
     let rafId = 0;
@@ -100,34 +115,30 @@ export default function Navbar() {
             })}
 
             {/* Language switcher */}
-            <div className="relative">
+            <div className="relative" ref={langRef}>
               <button
                 onClick={() => setLangOpen((v) => !v)}
-                className="flex items-center gap-1 font-sans font-medium text-xs uppercase tracking-widest text-[#d0d0d0] hover:text-white transition-colors outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#86cae7]"
+                className="group flex items-center gap-2 font-sans font-medium text-xs uppercase tracking-widest text-[#d0d0d0] hover:text-white transition-colors outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#86cae7]"
               >
+                <FlagIcon code={locale as FlagCode} />
                 {locale.toUpperCase()}
                 <ChevronDown className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
               </button>
               {langOpen && (
-                <>
-                  <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
-                  <div
-                    className="absolute right-0 mt-2 z-50 py-1 min-w-[64px]"
-                    style={{ backgroundColor: '#525253', border: '1px solid rgba(255,255,255,0.1)' }}
-                  >
-                    {locales.map((l) => (
+                <div className="absolute top-full left-0 mt-2 z-50 flex flex-col items-start gap-2">
+                  {locales
+                    .filter((l) => l.code !== locale)
+                    .map((l) => (
                       <button
                         key={l.code}
                         onClick={() => switchLocale(l.code)}
-                        className={`block w-full text-left px-3 py-1.5 font-sans text-xs uppercase tracking-widest transition-colors hover:text-white ${
-                          l.code === locale ? 'font-semibold text-white' : 'text-[#d0d0d0]'
-                        }`}
+                        className="group flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-[#d0d0d0] transition-colors hover:text-white outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#86cae7]"
                       >
+                        <FlagIcon code={l.code} />
                         {l.label}
                       </button>
                     ))}
-                  </div>
-                </>
+                </div>
               )}
             </div>
           </div>
