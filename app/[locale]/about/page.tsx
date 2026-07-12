@@ -174,7 +174,7 @@ export default function AboutPage() {
               {t('solarGroup.para')}
             </p>
             <a
-              href="https://solarcreative.hr"
+              href="https://solar-creative.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block font-sans text-sm uppercase tracking-widest text-[#86cae7] hover:text-white transition-colors"

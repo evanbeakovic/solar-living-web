@@ -138,7 +138,7 @@ export default function ContactPage() {
                 {t('details.instagram')}
               </a>
               <a
-                href="https://solarcreative.hr"
+                href="https://solar-creative.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block font-sans text-sm text-[#c8c8c8] hover:text-white transition-colors"

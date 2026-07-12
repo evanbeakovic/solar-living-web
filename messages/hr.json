@@ -42,15 +42,10 @@
     "whoWeAre": {
       "label": "Tko smo",
       "heading": "Boutique agencija za upravljanje nekretninama",
-      "para1": "Solar Living je boutique agencija za upravljanje smještajem sa sjedištem u Umagu, Istra, Hrvatska. Upravljamo odabranim portfeljem premium apartmana za goste koji traže izniman smještaj na jadranskoj obali.",
-      "propertiesIntro": "Naše trenutne nekretnine uključuju:",
-      "elaineName": "Elaine's View",
-      "elaineDetails": ", prostrani apartman u prvom redu do mora s panoramskim pogledom na Jadransko more, zalazak sunca nad Umagom i stari grad.",
-      "stellaName": "Stella's Garden",
-      "stellaDetails": ", prizemni apartman u jednoj od najljepših novih zgrada u Umagu, s privatnim mediteranskim vrtom i stablom masline.",
-      "para3": "Oba apartmana dosljedno ostvaruju ocjenu 9.8 ili više na Booking.com i 5.0/5 na Airbnb, što odražava našu predanost čistoći, udobnosti i iznimnoj brizi za goste.",
-      "para4": "Za vlasnike nekretnina, Solar Living nudi cjelokupnu uslugu upravljanja koja uključuje profesionalnu fotografiju, upravljanje oglasima na svim većim platformama, komunikaciju s gostima 24/7, koordinaciju čišćenja, dinamično određivanje cijena i mjesečne izvještaje.",
-      "para5": "Solar Living dio je Solar Grupe, zajedno sa Solar Creative, marketinškom agencijom sa sjedištem u Dubaiju."
+      "para1": "Solar Living je boutique agencija za upravljanje nekretninama sa sjedištem u Umagu, u Istri, na jadranskoj obali Hrvatske. Upravljamo pažljivo odabranim portfeljem vrhunskih apartmana i vila, namijenjenih i gostima i vlasnicima nekretnina.",
+      "para2": "Gostima nudimo pomno odabrane apartmane i vile diljem Umaga, a svaki od njih održavamo prema istom standardu udobnosti, čistoće i pažljive usluge. Zadovoljstvo naših gostiju dosljedno se odražava u recenzijama na Booking.com i Airbnbu.",
+      "para3": "Vlasnicima nekretnina u Umagu i diljem Istre Solar Living pruža cjelovitu uslugu upravljanja: profesionalno fotografiranje, upravljanje oglasima na svim vodećim platformama, komunikaciju s gostima 24/7, koordinaciju čišćenja, dinamično određivanje cijena i mjesečna izvješća o poslovanju, sve s ciljem što veće zarade i potpunog mira vlasnika.",
+      "para4": "Solar Living dio je Solar Groupa, zajedno sa <link>Solar Creative</link>, marketinškom agencijom sa sjedištem u Dubaiju."
     },
     "ownersCta": {
       "label": "Vlasnici nekretnina",

@@ -42,15 +42,10 @@
     "whoWeAre": {
       "label": "Kik vagyunk",
       "heading": "Butik Ingatlankezelő Ügynökség",
-      "para1": "A Solar Living egy Umag-ban, Isztriában, Horvátországban alapított butik ingatlankezelő ügynökség, amely prémium nyaralóapartmanok kezelésére specializálódott. Gondosan válogatott prémium apartmanok portfólióját kezeljük azoknak a vendégeknek, akik kivételes szállást keresnek az Adria partján.",
-      "propertiesIntro": "Jelenlegi ingatlanjaink:",
-      "elaineName": "Elaine's View",
-      "elaineDetails": ", egy tágas, tengerparti első soros apartman panorámás kilátással az Adriára, a napnyugtára és Umag óvárosára.",
-      "stellaName": "Stella's Garden",
-      "stellaDetails": ", egy földszinti apartman Umag legjobb új épületében, saját mediterrán kerttel és olajfával.",
-      "para3": "Mindkét apartman következetesen legalább 9.8-as értékelést ér el a Booking.com-on és 5.0/5-öst az Airbnb-n, ami a tisztaság, a kényelem és a kivételes vendégszolgálat iránti elkötelezettségünket tükrözi.",
-      "para4": "Ingatlantulajdonosok számára a Solar Living teljes körű kezelési szolgáltatást kínál, amely magában foglalja a professzionális fotózást, a hirdetések kezelését az összes jelentős platformon, a 24/7-es vendégkommunikációt, a takarítás koordinálását, a dinamikus árazást és a havi riportokat.",
-      "para5": "A Solar Living a Solar Group tagja, a dubaji székhelyű Solar Creative marketingügynökség mellett."
+      "para1": "A Solar Living egy butik ingatlankezelő ügynökség Umagban, Isztriában, Horvátország Adria-parti régiójában, amely gondosan válogatott prémium apartmanok és villák portfólióját kezeli vendégek és tulajdonosok számára egyaránt.",
+      "para2": "Vendégeink számára gondosan kiválasztott apartmanokat és villákat kínálunk Umag egész területén, mindegyiket ugyanazon a magas színvonalon tartva kényelem, tisztaság és figyelmes szolgáltatás tekintetében. Vendégeink elégedettsége következetesen tükröződik a Booking.com és az Airbnb értékeléseiben.",
+      "para3": "Az Umagban és egész Isztriában található ingatlanok tulajdonosai számára a Solar Living teljes körű kezelési szolgáltatást nyújt: professzionális fotózást, hirdetéskezelést valamennyi jelentős platformon, éjjel-nappali vendégkommunikációt, takarítás-koordinálást, dinamikus árazást és havi teljesítményjelentéseket, mindezt a bevétel maximalizálása és a tulajdonosok teljes nyugalma érdekében.",
+      "para4": "A Solar Living a Solar Group tagja, a dubaji székhelyű <link>Solar Creative</link> marketingügynökség mellett."
     },
     "ownersCta": {
       "label": "Ingatlantulajdonosoknak",

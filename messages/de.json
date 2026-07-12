@@ -42,15 +42,10 @@
     "whoWeAre": {
       "label": "Über uns",
       "heading": "Boutique-Agentur für Ferienwohnungen",
-      "para1": "Solar Living ist eine Boutique-Agentur für die Verwaltung von Ferienwohnungen mit Sitz in Umag, Istrien, Kroatien. Wir betreuen ein sorgfältig kuratiertes Portfolio erstklassiger Apartments für Gäste, die außergewöhnliche Unterkünfte an der Adria suchen.",
-      "propertiesIntro": "Zu unseren aktuellen Unterkünften zählen:",
-      "elaineName": "Elaine's View",
-      "elaineDetails": ", ein geräumiges Apartment in der ersten Meeresreihe mit Panoramablick auf die Adria und die Altstadt von Umag sowie unvergesslichen Sonnenuntergängen.",
-      "stellaName": "Stella's Garden",
-      "stellaDetails": ", ein Erdgeschoss-Apartment im feinsten Neubau Umags, mit privatem Mittelmeer-Garten und einem Olivenbaum.",
-      "para3": "Beide Apartments werden auf Booking.com durchgehend mit 9.8 oder höher bewertet und erhalten auf Airbnb 5.0 von 5 Sternen. Dies spiegelt unseren Anspruch an Sauberkeit, Komfort und erstklassigen Gästeservice wider.",
-      "para4": "Für Eigentümer bietet Solar Living einen umfassenden Verwaltungsservice, der professionelle Fotografie, Inseratsverwaltung auf allen wichtigen Plattformen, 24/7-Gästekommunikation, Reinigungskoordination, dynamische Preisgestaltung und monatliche Berichte umfasst.",
-      "para5": "Solar Living ist Teil der Solar Group, zu der auch Solar Creative, eine Marketingagentur mit Sitz in Dubai, gehört."
+      "para1": "Solar Living ist eine Boutique-Agentur für Immobilienverwaltung in Umag, Istrien, an der kroatischen Adriaküste. Wir betreuen ein sorgfältig zusammengestelltes Portfolio erstklassiger Apartments und Villen, sowohl für Gäste als auch für Eigentümer.",
+      "para2": "Für Gäste bieten wir eine handverlesene Auswahl an Apartments und Villen in ganz Umag, die alle demselben Standard an Komfort, Sauberkeit und aufmerksamem Service entsprechen. Die Zufriedenheit unserer Gäste zeigt sich durchgehend in unseren Bewertungen auf Booking.com und Airbnb.",
+      "para3": "Für Eigentümer in Umag und ganz Istrien bietet Solar Living eine umfassende Verwaltung: professionelle Fotografie, Inseratsverwaltung auf allen wichtigen Plattformen, Gästekommunikation rund um die Uhr, Reinigungskoordination, dynamische Preisgestaltung und monatliche Leistungsberichte, alles darauf ausgerichtet, die Rendite zu maximieren und Eigentümern größtmögliche Sorgenfreiheit zu bieten.",
+      "para4": "Solar Living gehört zur Solar Group, ebenso wie <link>Solar Creative</link>, eine Marketingagentur mit Sitz in Dubai."
     },
     "ownersCta": {
       "label": "Eigentümer",

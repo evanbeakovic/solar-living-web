@@ -56,7 +56,7 @@ const homeJsonLd = {
     worstRating: '1',
     reviewCount: '12',
   },
-  sameAs: ['https://www.instagram.com/solarliving_', 'https://solarcreative.hr'],
+  sameAs: ['https://www.instagram.com/solarliving_', 'https://solar-creative.com'],
 };
 
 
@@ -318,23 +318,25 @@ export default function HomePage() {
             <p>
               {t('whoWeAre.para1')}
             </p>
-            <p>{t('whoWeAre.propertiesIntro')}</p>
-            <ul className="space-y-2">
-              <li style={{ listStyleType: 'none' }}>
-                <strong>{t('whoWeAre.elaineName')}</strong>{t('whoWeAre.elaineDetails')}
-              </li>
-              <li style={{ listStyleType: 'none' }}>
-                <strong>{t('whoWeAre.stellaName')}</strong>{t('whoWeAre.stellaDetails')}
-              </li>
-            </ul>
+            <p>
+              {t('whoWeAre.para2')}
+            </p>
             <p>
               {t('whoWeAre.para3')}
             </p>
             <p>
-              {t('whoWeAre.para4')}
-            </p>
-            <p>
-              {t('whoWeAre.para5')}
+              {t.rich('whoWeAre.para4', {
+                link: (chunks) => (
+                  <a
+                    href="https://solar-creative.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
             </p>
           </div>
         </Reveal>
