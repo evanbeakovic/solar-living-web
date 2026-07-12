@@ -39,11 +39,28 @@ export default function Navbar() {
   const [visible, setVisible] = useState(true);
   const prevScrollY = useRef(0);
   const langRef = useRef<HTMLDivElement>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  function clearCloseTimeout() {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  }
+
+  function scheduleClose() {
+    clearCloseTimeout();
+    closeTimeoutRef.current = setTimeout(() => {
+      setLangOpen(false);
+      closeTimeoutRef.current = null;
+    }, 200);
+  }
 
   useEffect(() => {
     if (!langOpen) return;
     function onClickOutside(e: MouseEvent) {
       if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        clearCloseTimeout();
         setLangOpen(false);
       }
     }
@@ -52,6 +69,24 @@ export default function Navbar() {
       document.removeEventListener('mousedown', onClickOutside);
     };
   }, [langOpen]);
+
+  useEffect(() => {
+    if (!langOpen) return;
+    function onScroll() {
+      clearCloseTimeout();
+      setLangOpen(false);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, [langOpen]);
+
+  useEffect(() => {
+    return () => {
+      clearCloseTimeout();
+    };
+  }, []);
 
   useEffect(() => {
     let rafId = 0;
@@ -77,6 +112,7 @@ export default function Navbar() {
   }, []);
 
   function switchLocale(next: string) {
+    clearCloseTimeout();
     router.replace(pathname, { locale: next });
     setLangOpen(false);
     setMobileOpen(false);
@@ -118,9 +154,19 @@ export default function Navbar() {
             })}
 
             {/* Language switcher */}
-            <div className="relative" ref={langRef}>
+            <div
+              className="relative"
+              ref={langRef}
+              onMouseEnter={clearCloseTimeout}
+              onMouseLeave={() => {
+                if (langOpen) scheduleClose();
+              }}
+            >
               <button
-                onClick={() => setLangOpen((v) => !v)}
+                onClick={() => {
+                  clearCloseTimeout();
+                  setLangOpen((v) => !v);
+                }}
                 className="group flex items-center gap-2 font-sans font-medium text-xs uppercase tracking-widest text-[#d0d0d0] hover:text-white transition-colors outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#86cae7]"
               >
                 <FlagIcon code={locale as FlagCode} />
