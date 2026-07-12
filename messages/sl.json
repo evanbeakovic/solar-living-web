@@ -532,36 +532,36 @@
   },
   "faq": {
     "hero": {
-      "label": "Questions & Answers",
-      "heading": "Everything You Need to Know"
+      "label": "Vprašanja in odgovori",
+      "heading": "Vse, kar morate vedeti"
     },
     "guests": {
-      "label": "For Guests",
-      "q1": "Where are the Solar Living apartments located?",
-      "a1": "Both apartments are located in Umag, a charming coastal town on the northwestern tip of Istria, Croatia. Elaine's View is in Umag Old Town, first row to the sea. Stella's Garden is in a brand new building in a quiet residential area of Umag, 4–5 minutes from the beach.",
-      "q2": "What is included in the apartments?",
-      "a2": "All apartments are fully equipped with air conditioning, Wi-Fi, a fully equipped kitchen, Smart TV, and fresh linen. Elaine's View also includes a washing machine and sea view terrace. Stella's Garden features a private Mediterranean garden and terrace.",
-      "q3": "How do I book an apartment?",
-      "a3": "You can send a booking inquiry directly through our website. Click \"Check Availability & Book\" on any apartment, fill in your details, and send via WhatsApp or email. We confirm availability and handle everything from there — no third-party platform needed.",
-      "q4": "Is there parking available?",
-      "a4": "Yes. Both Elaine's View and Stella's Garden include dedicated parking.",
-      "q5": "What are the guest ratings for Solar Living apartments?",
-      "a5": "Elaine's View holds a 9.9/10 rating on Booking.com and 5.0/5 on Airbnb. Stella's Garden holds a 9.8/10 on Booking.com and 5.0/5 on Airbnb.",
-      "q6": "How far are the apartments from the beach?",
-      "a6": "Elaine's View is first row to the sea — there is a city beach directly in front of the building. Stella's Garden is approximately 4–5 minutes by car from the nearest beach.",
-      "q7": "Can I take day trips from Umag?",
-      "a7": "Absolutely. Umag is ideally located for day trips to Venice (approx. 2 hours), Pula, Rovinj, and the Brijuni Islands. Italy's Aquileia and Trieste are also within easy reach."
+      "label": "Za goste",
+      "q1": "Kje se nahajajo apartmaji Solar Living?",
+      "a1": "Oba apartmaja se nahajata v Umagu, čarobnem obalnem mestu na severozahodni konici Istre na Hrvaškem. Elaine's View se nahaja v Starem mestnem jedru Umag, v prvi liniji do morja. Stella's Garden se nahaja v povsem novi stavbi v mirni stanovanjski četrti Umaga, 4-5 minut od plaže.",
+      "q2": "Kaj je vključeno v apartmajih?",
+      "a2": "Vsi apartmaji ponujajo klimatsko napravo, Wi-Fi, popolnoma opremljeno kuhinjo, Smart TV in svežo posteljnino. Elaine's View vključuje tudi pralni stroj in teraso z razgledom na morje. Stella's Garden ponuja zaseben mediteranski vrt in teraso.",
+      "q3": "Kako lahko rezerviram apartma?",
+      "a3": "Povpraševanje za rezervacijo lahko pošljete neposredno prek naše spletne strani. Kliknite \"Preverite razpoložljivost in rezervirajte\" pri izbranem apartmaju, izpolnite svoje podatke in jih pošljite prek WhatsAppa ali e-pošte. Za preostalo poskrbimo mi, brez potrebe po zunanjih platformah.",
+      "q4": "Ali je na voljo parkirišče?",
+      "a4": "Da. Tako Elaine's View kot Stella's Garden vključujeta namensko parkirno mesto.",
+      "q5": "Kakšne ocene imajo apartmaji Solar Living?",
+      "a5": "Elaine's View ima oceno 9.9/10 na Booking.com in 5.0/5 na Airbnb. Stella's Garden ima oceno 9.8/10 na Booking.com in 5.0/5 na Airbnb.",
+      "q6": "Kako daleč so apartmaji od plaže?",
+      "a6": "Elaine's View je prva linija do morja, tik pred stavbo je mestna plaža. Stella's Garden je približno 4-5 minut z avtom od najbližje plaže.",
+      "q7": "Ali lahko iz Umaga naredim enodnevne izlete?",
+      "a7": "Vsekakor. Umag ima odlično lego za enodnevne izlete v Benetke (pribl. 2 uri), Pulo, Rovinj in na Brionske otoke. Zlahka dosegljiva sta tudi italijanski Oglej in Trst."
     },
     "owners": {
-      "label": "For Property Owners",
-      "q1": "What does Solar Living's property management service include?",
-      "a1": "We offer full-service property management including professional photography, multi-platform listing management (Airbnb, Booking.com, direct), 24/7 guest communication, cleaning and maintenance coordination, dynamic pricing optimization, and monthly performance reporting.",
-      "q2": "Which areas does Solar Living operate in?",
-      "a2": "We currently operate in Umag, Istria, Croatia, and are expanding across the Istrian peninsula.",
-      "q3": "How do I get started with Solar Living as a property owner?",
-      "a3": "Contact us via WhatsApp or email for a free consultation. We'll visit your property, provide recommendations, and agree on terms — with no commitment required.",
-      "q4": "Is Solar Living a licensed property management company?",
-      "a4": "Yes. Solar Living operates under BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković, OIB: 30760238873, registered in Croatia."
+      "label": "Za lastnike nepremičnin",
+      "q1": "Kaj vključuje storitev upravljanja nepremičnin podjetja Solar Living?",
+      "a1": "Ponujamo celovito upravljanje nepremičnin, ki vključuje profesionalno fotografiranje, upravljanje oglasov na več platformah (Airbnb, Booking.com, neposredne rezervacije), 24-urno komunikacijo z gosti, usklajevanje čiščenja in vzdrževanja, optimizacijo dinamičnega oblikovanja cen ter mesečna poročila o uspešnosti.",
+      "q2": "Na katerih območjih deluje Solar Living?",
+      "a2": "Trenutno delujemo v Umagu, v Istri na Hrvaškem, in širimo delovanje po celotnem istrskem polotoku.",
+      "q3": "Kako lahko začnem sodelovati s Solar Living kot lastnik nepremičnine?",
+      "a3": "Kontaktirajte nas prek WhatsAppa ali e-pošte za brezplačno svetovanje. Obiskali bomo vašo nepremičnino, podali priporočila in se dogovorili o pogojih, brez kakršnihkoli obveznosti.",
+      "q4": "Ali je Solar Living licencirano podjetje za upravljanje nepremičnin?",
+      "a4": "Da. Solar Living deluje pod imenom BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković, OIB: 30760238873, registrirano na Hrvaškem."
     }
   },
   "navbar": {

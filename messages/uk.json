@@ -532,36 +532,36 @@
   },
   "faq": {
     "hero": {
-      "label": "Questions & Answers",
-      "heading": "Everything You Need to Know"
+      "label": "Питання та відповіді",
+      "heading": "Все, що потрібно знати"
     },
     "guests": {
-      "label": "For Guests",
-      "q1": "Where are the Solar Living apartments located?",
-      "a1": "Both apartments are located in Umag, a charming coastal town on the northwestern tip of Istria, Croatia. Elaine's View is in Umag Old Town, first row to the sea. Stella's Garden is in a brand new building in a quiet residential area of Umag, 4–5 minutes from the beach.",
-      "q2": "What is included in the apartments?",
-      "a2": "All apartments are fully equipped with air conditioning, Wi-Fi, a fully equipped kitchen, Smart TV, and fresh linen. Elaine's View also includes a washing machine and sea view terrace. Stella's Garden features a private Mediterranean garden and terrace.",
-      "q3": "How do I book an apartment?",
-      "a3": "You can send a booking inquiry directly through our website. Click \"Check Availability & Book\" on any apartment, fill in your details, and send via WhatsApp or email. We confirm availability and handle everything from there — no third-party platform needed.",
-      "q4": "Is there parking available?",
-      "a4": "Yes. Both Elaine's View and Stella's Garden include dedicated parking.",
-      "q5": "What are the guest ratings for Solar Living apartments?",
-      "a5": "Elaine's View holds a 9.9/10 rating on Booking.com and 5.0/5 on Airbnb. Stella's Garden holds a 9.8/10 on Booking.com and 5.0/5 on Airbnb.",
-      "q6": "How far are the apartments from the beach?",
-      "a6": "Elaine's View is first row to the sea — there is a city beach directly in front of the building. Stella's Garden is approximately 4–5 minutes by car from the nearest beach.",
-      "q7": "Can I take day trips from Umag?",
-      "a7": "Absolutely. Umag is ideally located for day trips to Venice (approx. 2 hours), Pula, Rovinj, and the Brijuni Islands. Italy's Aquileia and Trieste are also within easy reach."
+      "label": "Для гостей",
+      "q1": "Де розташовані апартаменти Solar Living?",
+      "a1": "Обидва апартаменти розташовані в Умазі, чарівному прибережному містечку на північно-західній околиці Істрії, Хорватія. Elaine's View розташований у Старому місті Умаг, на першій лінії біля моря. Stella's Garden розташований у абсолютно новому будинку в тихому житловому районі Умага, 4-5 хвилин від пляжу.",
+      "q2": "Що включено в апартаментах?",
+      "a2": "Усі апартаменти мають кондиціонер, Wi-Fi, повністю обладнану кухню, Smart TV та свіжу постільну білизну. Elaine's View також включає пральну машину і терасу з видом на море. Stella's Garden пропонує приватний середземноморський сад і терасу.",
+      "q3": "Як забронювати апартаменти?",
+      "a3": "Запит на бронювання можна надіслати безпосередньо через наш сайт. Натисніть \"Перевірити наявність і забронювати\" на сторінці обраного апартаменту, заповніть свої дані та надішліть їх через WhatsApp або електронну пошту. Далі ми беремо все на себе, без потреби у сторонніх платформах.",
+      "q4": "Чи є паркування?",
+      "a4": "Так. І Elaine's View, і Stella's Garden мають виділене місце для паркування.",
+      "q5": "Які оцінки мають апартаменти Solar Living від гостей?",
+      "a5": "Elaine's View має оцінку 9.9/10 на Booking.com і 5.0/5 на Airbnb. Stella's Garden має оцінку 9.8/10 на Booking.com і 5.0/5 на Airbnb.",
+      "q6": "Як далеко апартаменти розташовані від пляжу?",
+      "a6": "Elaine's View розташований на першій лінії біля моря, прямо перед будинком є міський пляж. Stella's Garden розташований приблизно за 4-5 хвилин їзди на машині від найближчого пляжу.",
+      "q7": "Чи можна поїхати на одноденні екскурсії з Умага?",
+      "a7": "Звичайно. Умаг має чудове розташування для одноденних поїздок до Венеції (прибл. 2 години), Пули, Ровіні та на острови Бріюні. Легко дістатися також до італійських Аквілеї та Трієста."
     },
     "owners": {
-      "label": "For Property Owners",
-      "q1": "What does Solar Living's property management service include?",
-      "a1": "We offer full-service property management including professional photography, multi-platform listing management (Airbnb, Booking.com, direct), 24/7 guest communication, cleaning and maintenance coordination, dynamic pricing optimization, and monthly performance reporting.",
-      "q2": "Which areas does Solar Living operate in?",
-      "a2": "We currently operate in Umag, Istria, Croatia, and are expanding across the Istrian peninsula.",
-      "q3": "How do I get started with Solar Living as a property owner?",
-      "a3": "Contact us via WhatsApp or email for a free consultation. We'll visit your property, provide recommendations, and agree on terms — with no commitment required.",
-      "q4": "Is Solar Living a licensed property management company?",
-      "a4": "Yes. Solar Living operates under BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković, OIB: 30760238873, registered in Croatia."
+      "label": "Власникам нерухомості",
+      "q1": "Що включає послуга управління нерухомістю від Solar Living?",
+      "a1": "Ми пропонуємо повний спектр послуг з управління нерухомістю, включно з професійною фотозйомкою, управлінням оголошеннями на кількох платформах (Airbnb, Booking.com, прямі бронювання), цілодобовим спілкуванням з гостями, координацією прибирання та обслуговування, оптимізацією динамічного ціноутворення та щомісячною звітністю про результати.",
+      "q2": "У яких регіонах працює Solar Living?",
+      "a2": "Наразі ми працюємо в Умазі, Істрія, Хорватія, і розширюємо діяльність на весь Істрійський півострів.",
+      "q3": "Як почати співпрацю з Solar Living як власник нерухомості?",
+      "a3": "Зв'яжіться з нами через WhatsApp або електронну пошту для безкоштовної консультації. Ми відвідаємо Вашу нерухомість, надамо рекомендації та узгодимо умови, без жодних зобов'язань.",
+      "q4": "Чи є Solar Living ліцензованою компанією з управління нерухомістю?",
+      "a4": "Так. Solar Living працює під назвою BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković, OIB: 30760238873, зареєстрованою в Хорватії."
     }
   },
   "navbar": {
