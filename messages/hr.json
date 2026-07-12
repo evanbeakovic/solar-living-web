@@ -124,7 +124,10 @@
     "card": {
       "location": "Umag, Hrvatska",
       "comingSoon": "Uskoro dostupno",
-      "bookButton": "Provjerite dostupnost"
+      "bookButton": "Provjerite dostupnost",
+      "guests": "gostiju",
+      "bedrooms": "spavaće sobe",
+      "studio": "Studio"
     },
     "cta": {
       "heading": "Niste sigurni koji smještaj odabrati?",

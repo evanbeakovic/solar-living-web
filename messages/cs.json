@@ -124,7 +124,10 @@
     "card": {
       "location": "Umag, Chorvatsko",
       "comingSoon": "Již brzy",
-      "bookButton": "Ověřit dostupnost a rezervovat"
+      "bookButton": "Ověřit dostupnost a rezervovat",
+      "guests": "hostů",
+      "bedrooms": "ložnice",
+      "studio": "Studio"
     },
     "cta": {
       "heading": "Nevíte, které ubytování je pro vás to pravé?",

@@ -124,7 +124,10 @@
     "card": {
       "location": "Umag, Horvátország",
       "comingSoon": "Hamarosan",
-      "bookButton": "Szabad időpontok és foglalás"
+      "bookButton": "Szabad időpontok és foglalás",
+      "guests": "fő",
+      "bedrooms": "hálószoba",
+      "studio": "Stúdió"
     },
     "cta": {
       "heading": "Nem tudja, melyik szállás a legjobb Önnek?",

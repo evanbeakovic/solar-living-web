@@ -124,7 +124,10 @@
     "card": {
       "location": "Umag, Croatia",
       "comingSoon": "Coming Soon",
-      "bookButton": "Check Availability & Book"
+      "bookButton": "Check Availability & Book",
+      "guests": "guests",
+      "bedrooms": "bedrooms",
+      "studio": "Studio"
     },
     "cta": {
       "heading": "Not sure which property is right for you?",

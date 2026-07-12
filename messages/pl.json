@@ -124,7 +124,10 @@
     "card": {
       "location": "Umag, Chorwacja",
       "comingSoon": "Wkrótce",
-      "bookButton": "Sprawdź dostępność i zarezerwuj"
+      "bookButton": "Sprawdź dostępność i zarezerwuj",
+      "guests": "gości",
+      "bedrooms": "sypialnie",
+      "studio": "Studio"
     },
     "cta": {
       "heading": "Nie są Państwo pewni, która nieruchomość będzie odpowiednia?",

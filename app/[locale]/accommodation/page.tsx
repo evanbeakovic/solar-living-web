@@ -140,8 +140,8 @@ function ApartmentCard({
 
   const infoLine = apt.available
     ? [
-        `${apt.guests} guests`,
-        apt.bedrooms > 0 ? `${apt.bedrooms} bedrooms` : 'Studio',
+        `${apt.guests} ${t('card.guests')}`,
+        apt.bedrooms > 0 ? `${apt.bedrooms} ${t('card.bedrooms')}` : t('card.studio'),
         apt.location,
       ].join(' · ')
     : null;

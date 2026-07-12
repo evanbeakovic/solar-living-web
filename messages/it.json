@@ -124,7 +124,10 @@
     "card": {
       "location": "Umago, Croazia",
       "comingSoon": "Prossimamente",
-      "bookButton": "Verifica Disponibilità e Prenota"
+      "bookButton": "Verifica Disponibilità e Prenota",
+      "guests": "ospiti",
+      "bedrooms": "camere",
+      "studio": "Monolocale"
     },
     "cta": {
       "heading": "Non sai quale alloggio scegliere?",

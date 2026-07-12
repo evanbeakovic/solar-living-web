@@ -124,7 +124,10 @@
     "card": {
       "location": "Umag, Kroatien",
       "comingSoon": "Demnächst verfügbar",
-      "bookButton": "Verfügbarkeit prüfen & buchen"
+      "bookButton": "Verfügbarkeit prüfen & buchen",
+      "guests": "Gäste",
+      "bedrooms": "Schlafzimmer",
+      "studio": "Studio"
     },
     "cta": {
       "heading": "Nicht sicher, welche Unterkunft die richtige für Sie ist?",
