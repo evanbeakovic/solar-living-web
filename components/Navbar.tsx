@@ -15,6 +15,9 @@ const locales: { code: FlagCode; label: string }[] = [
   { code: 'hu', label: 'HU' },
   { code: 'cs', label: 'CS' },
   { code: 'sk', label: 'SK' },
+  { code: 'pl', label: 'PL' },
+  { code: 'sl', label: 'SL' },
+  { code: 'uk', label: 'UK' },
 ];
 
 const navLinks = [

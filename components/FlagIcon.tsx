@@ -7,7 +7,7 @@ const GOLD = '#b3975f';
 const BLACK = '#2a2a2a';
 const NAVY = '#35455c';
 
-export type FlagCode = 'en' | 'hr' | 'de' | 'it' | 'ru' | 'hu' | 'cs' | 'sk';
+export type FlagCode = 'en' | 'hr' | 'de' | 'it' | 'ru' | 'hu' | 'cs' | 'sk' | 'pl' | 'sl' | 'uk';
 
 function FlagSvg({ children }: { children: React.ReactNode }) {
   return (
@@ -136,6 +136,42 @@ function flagShape(code: FlagCode) {
           <rect x="4.15" y="4.3" width="0.9" height="6.4" fill={WHITE} />
           <rect x="2.6" y="5.6" width="3.8" height="0.9" fill={WHITE} />
           <rect x="2.6" y="7.9" width="3.8" height="0.9" fill={WHITE} />
+        </>
+      );
+    case 'pl':
+      // Horizontal bicolor: white top / red bottom (plain — distinct from CS, which
+      // is the same split but with an added blue hoist triangle)
+      return (
+        <>
+          <rect x="0" y="0" width="20" height="7" fill={WHITE} />
+          <rect x="0" y="7" width="20" height="7" fill={RED} />
+        </>
+      );
+    case 'sl':
+      // Horizontal tricolor: white / blue / red — same order and colors as RU/SK,
+      // so a simplified coat of arms (Triglav mountain + stars) is added on the
+      // upper hoist to keep it visually distinct
+      return (
+        <>
+          <rect x="0" y="0" width="20" height="4.67" fill={WHITE} />
+          <rect x="0" y="4.67" width="20" height="4.66" fill={BLUE} />
+          <rect x="0" y="9.33" width="20" height="4.67" fill={RED} />
+          <rect x="1.6" y="1.8" width="4" height="5.4" fill={BLUE_DARK} stroke={WHITE} strokeWidth="0.3" />
+          <polygon points="3.6,2.4 2.35,4.7 4.85,4.7" fill={WHITE} />
+          <line x1="2.1" y1="5.3" x2="5.1" y2="5.3" stroke={WHITE} strokeWidth="0.4" />
+          <line x1="2.1" y1="6.1" x2="5.1" y2="6.1" stroke={WHITE} strokeWidth="0.4" />
+          <circle cx="4.7" cy="2.3" r="0.35" fill={GOLD} />
+          <circle cx="5.35" cy="2.95" r="0.35" fill={GOLD} />
+          <circle cx="4.7" cy="3.6" r="0.35" fill={GOLD} />
+        </>
+      );
+    case 'uk':
+      // Horizontal bicolor: blue top / yellow bottom — color combination not
+      // otherwise used in this flag set
+      return (
+        <>
+          <rect x="0" y="0" width="20" height="7" fill={BLUE_DARK} />
+          <rect x="0" y="7" width="20" height="7" fill={GOLD} />
         </>
       );
     default:
