@@ -432,55 +432,55 @@
   },
   "about": {
     "hero": {
-      "label": "Our Story",
-      "heading": "More Than Property Management.",
-      "subtextLine1": "We started Solar Living because we believed Istria deserved better.",
-      "subtextLine2": "A boutique approach to hospitality that puts guests and owners first."
+      "label": "Naša zgodba",
+      "heading": "Več kot upravljanje nepremičnin.",
+      "subtextLine1": "Solar Living smo ustanovili, ker smo verjeli, da si Istra zasluži več.",
+      "subtextLine2": "Butičen pristop k gostoljubnosti, pri katerem so na prvem mestu gostje in lastniki."
     },
     "story": {
-      "label": "Who We Are",
-      "headingLine1": "A Boutique Company",
-      "headingLine2": "with High Standards.",
-      "para1": "Solar Living is a boutique property management company based in Umag, on the beautiful northwestern coast of Istria, Croatia. We manage a carefully selected portfolio of premium apartments and villas, properties we personally vet, prepare, and maintain to the highest standard.",
-      "para2": "We are part of the Solar Group, alongside Solar Creative, our marketing agency. This means every property in our portfolio benefits not just from management expertise, but from professional photography, branding, and digital marketing that most property managers simply don't offer.",
-      "para3": "Our mission is simple: exceptional experiences for guests, absolute peace of mind for owners, and properties that consistently earn top-rated reviews."
+      "label": "Kdo smo",
+      "headingLine1": "Butično podjetje",
+      "headingLine2": "z visokimi standardi.",
+      "para1": "Solar Living je butično podjetje za upravljanje nepremičnin s sedežem v Umagu, na čudoviti severozahodni obali Istre na Hrvaškem. Upravljamo skrbno izbran portfelj vrhunskih apartmajev in vil, ki jih osebno pregledamo, pripravimo in vzdržujemo na najvišji ravni.",
+      "para2": "Smo del skupine Solar Group, skupaj z Solar Creative, našo marketinško agencijo. To pomeni, da ima vsaka nepremičnina v našem portfelju koristi ne le od naših izkušenj pri upravljanju, temveč tudi od profesionalne fotografije, blagovne znamke in digitalnega marketinga, ki jih večina upravljavcev nepremičnin preprosto ne ponuja.",
+      "para3": "Naše poslanstvo je preprosto: izjemna doživetja za goste, popolna brezskrbnost za lastnike in nepremičnine, ki dosledno prejemajo najvišje ocene."
     },
     "values": {
-      "label": "What Drives Us",
-      "heading": "Our Values",
+      "label": "Kaj nas žene",
+      "heading": "Naše vrednote",
       "quality": {
-        "title": "Uncompromising Quality",
-        "description": "Every property in our portfolio is handpicked. We say no to properties that don't meet our standards, because our guests deserve the best, every time."
+        "title": "Brezkompromisna kakovost",
+        "description": "Vsaka nepremičnina v našem portfelju je skrbno izbrana. Nepremičnine, ki ne izpolnjujejo naših standardov, zavrnemo, ker si naši gostje vsakič zaslužijo najboljše."
       },
       "hospitality": {
-        "title": "Genuine Hospitality",
-        "descLine1": "We don't just hand over keys. We make",
-        "descLine2": "sure every guest has everything they need",
-        "descLine3": "before they even ask. The little details",
-        "descLine4": "are what make a stay unforgettable."
+        "title": "Pristna gostoljubnost",
+        "descLine1": "Ne gre zgolj za predajo ključev. Poskrbimo,",
+        "descLine2": "da ima vsak gost vse, kar potrebuje,",
+        "descLine3": "še preden za to vpraša. Prav mali detajli",
+        "descLine4": "so tisti, ki naredijo oddih nepozaben."
       },
       "partnership": {
-        "title": "Owner Partnership",
-        "descLine1": "We treat every property as if it",
-        "descLine2": "were our own. Owners trust us",
-        "descLine3": "with something valuable, and we",
-        "descLine4": "take that responsibility seriously."
+        "title": "Partnerstvo z lastniki",
+        "descLine1": "Z vsako nepremičnino ravnamo, kot bi",
+        "descLine2": "bila naša lastna. Lastniki nam zaupajo",
+        "descLine3": "nekaj dragocenega, mi pa to",
+        "descLine4": "odgovornost jemljemo resno."
       }
     },
     "solarGroup": {
-      "label": "Part of Something Bigger",
-      "heading": "The Solar Group",
-      "para": "Solar Living is proud to be part of the Solar Group, a family of companies united by a commitment to quality, creativity, and service. Our sister company, Solar Creative, is a full-service marketing agency that supports our properties with professional photography, social media, and brand strategy.",
-      "link": "Visit Solar Creative →",
-      "stat1Value": "Est. 2024",
-      "stat1Desc": "Solar Living was founded with a vision to bring boutique-level service to Istrian property management.",
-      "stat2Value": "Umag, Istria",
-      "stat2Desc": "Based on the northwestern tip of Istria, steps from the Adriatic Sea."
+      "label": "Del nečesa večjega",
+      "heading": "Solar Group",
+      "para": "Solar Living je ponosen, da je del skupine Solar Group, družine podjetij, ki jih združuje zavezanost kakovosti, ustvarjalnosti in storitvam. Naše sestrsko podjetje, Solar Creative, je marketinška agencija s celovito ponudbo storitev, ki naše nepremičnine podpira s profesionalno fotografijo, družbenimi omrežji in strategijo blagovne znamke.",
+      "link": "Obiščite Solar Creative →",
+      "stat1Value": "Od 2024",
+      "stat1Desc": "Solar Living je bil ustanovljen z vizijo, da v upravljanje nepremičnin v Istri prinese butično raven storitev.",
+      "stat2Value": "Umag, Istra",
+      "stat2Desc": "Na severozahodni konici Istre, le nekaj korakov od Jadranskega morja."
     },
     "cta": {
-      "heading": "Ready to experience Solar Living?",
-      "browseApartments": "Browse Accommodation",
-      "partnerWithUs": "Partner With Us"
+      "heading": "Ste pripravljeni spoznati Solar Living?",
+      "browseApartments": "Oglejte si nastanitve",
+      "partnerWithUs": "Postanite naš partner"
     }
   },
   "contact": {

@@ -432,55 +432,55 @@
   },
   "about": {
     "hero": {
-      "label": "Our Story",
-      "heading": "More Than Property Management.",
-      "subtextLine1": "We started Solar Living because we believed Istria deserved better.",
-      "subtextLine2": "A boutique approach to hospitality that puts guests and owners first."
+      "label": "Nasza historia",
+      "heading": "Więcej niż zarządzanie nieruchomościami.",
+      "subtextLine1": "Solar Living powstało, ponieważ wierzyliśmy, że Istria zasługuje na coś więcej.",
+      "subtextLine2": "Butikowe podejście do gościnności, w którym liczą się przede wszystkim goście i właściciele."
     },
     "story": {
-      "label": "Who We Are",
-      "headingLine1": "A Boutique Company",
-      "headingLine2": "with High Standards.",
-      "para1": "Solar Living is a boutique property management company based in Umag, on the beautiful northwestern coast of Istria, Croatia. We manage a carefully selected portfolio of premium apartments and villas, properties we personally vet, prepare, and maintain to the highest standard.",
-      "para2": "We are part of the Solar Group, alongside Solar Creative, our marketing agency. This means every property in our portfolio benefits not just from management expertise, but from professional photography, branding, and digital marketing that most property managers simply don't offer.",
-      "para3": "Our mission is simple: exceptional experiences for guests, absolute peace of mind for owners, and properties that consistently earn top-rated reviews."
+      "label": "Kim jesteśmy",
+      "headingLine1": "Butikowa firma",
+      "headingLine2": "o wysokich standardach.",
+      "para1": "Solar Living to butikowa firma zarządzania nieruchomościami z siedzibą w Umagu, na przepięknym północno-zachodnim wybrzeżu Istrii w Chorwacji. Zarządzamy starannie dobranym portfolio apartamentów i willi premium. Każdą z tych nieruchomości osobiście sprawdzamy, przygotowujemy i utrzymujemy na najwyższym poziomie.",
+      "para2": "Jesteśmy częścią grupy Solar Group, obok Solar Creative, naszej agencji marketingowej. Oznacza to, że każda nieruchomość w naszym portfolio korzysta nie tylko z naszego doświadczenia w zarządzaniu, ale też z profesjonalnej fotografii, brandingu i marketingu cyfrowego, których większość zarządców nieruchomości po prostu nie oferuje.",
+      "para3": "Nasza misja jest prosta: wyjątkowe doświadczenia dla gości, pełny spokój ducha dla właścicieli oraz nieruchomości, które konsekwentnie zdobywają najwyższe oceny."
     },
     "values": {
-      "label": "What Drives Us",
-      "heading": "Our Values",
+      "label": "Co nami kieruje",
+      "heading": "Nasze wartości",
       "quality": {
-        "title": "Uncompromising Quality",
-        "description": "Every property in our portfolio is handpicked. We say no to properties that don't meet our standards, because our guests deserve the best, every time."
+        "title": "Bezkompromisowa jakość",
+        "description": "Każda nieruchomość w naszym portfolio jest starannie wybrana. Odmawiamy współpracy z nieruchomościami, które nie spełniają naszych standardów, ponieważ nasi goście za każdym razem zasługują na to, co najlepsze."
       },
       "hospitality": {
-        "title": "Genuine Hospitality",
-        "descLine1": "We don't just hand over keys. We make",
-        "descLine2": "sure every guest has everything they need",
-        "descLine3": "before they even ask. The little details",
-        "descLine4": "are what make a stay unforgettable."
+        "title": "Autentyczna gościnność",
+        "descLine1": "To dla nas znacznie więcej niż przekazanie kluczy. Dbamy,",
+        "descLine2": "aby każdy gość miał wszystko, czego potrzebuje,",
+        "descLine3": "zanim jeszcze o to poprosi. To właśnie drobne szczegóły",
+        "descLine4": "sprawiają, że pobyt staje się niezapomniany."
       },
       "partnership": {
-        "title": "Owner Partnership",
-        "descLine1": "We treat every property as if it",
-        "descLine2": "were our own. Owners trust us",
-        "descLine3": "with something valuable, and we",
-        "descLine4": "take that responsibility seriously."
+        "title": "Partnerstwo z właścicielami",
+        "descLine1": "Do każdej nieruchomości podchodzimy tak,",
+        "descLine2": "jakby była nasza własna. Właściciele powierzają",
+        "descLine3": "nam coś cennego, a my traktujemy tę",
+        "descLine4": "odpowiedzialność bardzo poważnie."
       }
     },
     "solarGroup": {
-      "label": "Part of Something Bigger",
-      "heading": "The Solar Group",
-      "para": "Solar Living is proud to be part of the Solar Group, a family of companies united by a commitment to quality, creativity, and service. Our sister company, Solar Creative, is a full-service marketing agency that supports our properties with professional photography, social media, and brand strategy.",
-      "link": "Visit Solar Creative →",
-      "stat1Value": "Est. 2024",
-      "stat1Desc": "Solar Living was founded with a vision to bring boutique-level service to Istrian property management.",
+      "label": "Część czegoś większego",
+      "heading": "Solar Group",
+      "para": "Solar Living z dumą należy do grupy Solar Group, rodziny firm zjednoczonych wspólnym zaangażowaniem w jakość, kreatywność i obsługę. Nasza siostrzana firma, Solar Creative, to agencja marketingowa pełnej obsługi, która wspiera nasze nieruchomości profesjonalną fotografią, mediami społecznościowymi i strategią marki.",
+      "link": "Odwiedź Solar Creative →",
+      "stat1Value": "Od 2024",
+      "stat1Desc": "Solar Living powstało z wizją, by wnieść butikowy poziom obsługi do zarządzania nieruchomościami w Istrii.",
       "stat2Value": "Umag, Istria",
-      "stat2Desc": "Based on the northwestern tip of Istria, steps from the Adriatic Sea."
+      "stat2Desc": "Na północno-zachodnim krańcu Istrii, tuż przy wodach Adriatyku."
     },
     "cta": {
-      "heading": "Ready to experience Solar Living?",
-      "browseApartments": "Browse Accommodation",
-      "partnerWithUs": "Partner With Us"
+      "heading": "Są Państwo gotowi poznać Solar Living?",
+      "browseApartments": "Przeglądaj noclegi",
+      "partnerWithUs": "Zostań naszym partnerem"
     }
   },
   "contact": {

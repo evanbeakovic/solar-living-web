@@ -432,55 +432,55 @@
   },
   "about": {
     "hero": {
-      "label": "Our Story",
-      "heading": "More Than Property Management.",
-      "subtextLine1": "We started Solar Living because we believed Istria deserved better.",
-      "subtextLine2": "A boutique approach to hospitality that puts guests and owners first."
+      "label": "Наша історія",
+      "heading": "Більше, ніж управління нерухомістю.",
+      "subtextLine1": "Ми заснували Solar Living, тому що вірили, що Істрія заслуговує на краще.",
+      "subtextLine2": "Бутиковий підхід до гостинності, у якому на першому місці гості та власники."
     },
     "story": {
-      "label": "Who We Are",
-      "headingLine1": "A Boutique Company",
-      "headingLine2": "with High Standards.",
-      "para1": "Solar Living is a boutique property management company based in Umag, on the beautiful northwestern coast of Istria, Croatia. We manage a carefully selected portfolio of premium apartments and villas, properties we personally vet, prepare, and maintain to the highest standard.",
-      "para2": "We are part of the Solar Group, alongside Solar Creative, our marketing agency. This means every property in our portfolio benefits not just from management expertise, but from professional photography, branding, and digital marketing that most property managers simply don't offer.",
-      "para3": "Our mission is simple: exceptional experiences for guests, absolute peace of mind for owners, and properties that consistently earn top-rated reviews."
+      "label": "Хто ми",
+      "headingLine1": "Бутикова компанія",
+      "headingLine2": "з високими стандартами.",
+      "para1": "Solar Living є бутиковою компанією з управління нерухомістю, розташованою в Умазі, на мальовничому північно-західному узбережжі Істрії в Хорватії. Ми керуємо ретельно підібраним портфелем преміальних апартаментів і вілл, які особисто перевіряємо, готуємо та підтримуємо на найвищому рівні.",
+      "para2": "Ми входимо до складу Solar Group поряд із Solar Creative, нашою маркетинговою агенцією. Це означає, що кожна нерухомість у нашому портфелі отримує переваги не лише від досвіду управління, а й від професійної фотозйомки, брендингу та цифрового маркетингу, які більшість керуючих нерухомістю просто не пропонують.",
+      "para3": "Наша місія проста: неперевершені враження для гостей, цілковита безтурботність для власників і нерухомість, яка незмінно отримує найвищі оцінки."
     },
     "values": {
-      "label": "What Drives Us",
-      "heading": "Our Values",
+      "label": "Що нас надихає",
+      "heading": "Наші цінності",
       "quality": {
-        "title": "Uncompromising Quality",
-        "description": "Every property in our portfolio is handpicked. We say no to properties that don't meet our standards, because our guests deserve the best, every time."
+        "title": "Бездоганна якість",
+        "description": "Кожна нерухомість у нашому портфелі ретельно відібрана. Ми відмовляємося від нерухомості, яка не відповідає нашим стандартам, адже наші гості щоразу заслуговують на найкраще."
       },
       "hospitality": {
-        "title": "Genuine Hospitality",
-        "descLine1": "We don't just hand over keys. We make",
-        "descLine2": "sure every guest has everything they need",
-        "descLine3": "before they even ask. The little details",
-        "descLine4": "are what make a stay unforgettable."
+        "title": "Справжня гостинність",
+        "descLine1": "Ми не просто передаємо ключі. Ми дбаємо,",
+        "descLine2": "щоб кожен гість мав усе необхідне",
+        "descLine3": "ще до того, як попросить. Саме дрібні деталі",
+        "descLine4": "роблять відпочинок незабутнім."
       },
       "partnership": {
-        "title": "Owner Partnership",
-        "descLine1": "We treat every property as if it",
-        "descLine2": "were our own. Owners trust us",
-        "descLine3": "with something valuable, and we",
-        "descLine4": "take that responsibility seriously."
+        "title": "Партнерство з власниками",
+        "descLine1": "Ми ставимося до кожної нерухомості так,",
+        "descLine2": "ніби вона наша власна. Власники довіряють",
+        "descLine3": "нам щось цінне, і ми сприймаємо",
+        "descLine4": "цю відповідальність серйозно."
       }
     },
     "solarGroup": {
-      "label": "Part of Something Bigger",
-      "heading": "The Solar Group",
-      "para": "Solar Living is proud to be part of the Solar Group, a family of companies united by a commitment to quality, creativity, and service. Our sister company, Solar Creative, is a full-service marketing agency that supports our properties with professional photography, social media, and brand strategy.",
-      "link": "Visit Solar Creative →",
-      "stat1Value": "Est. 2024",
-      "stat1Desc": "Solar Living was founded with a vision to bring boutique-level service to Istrian property management.",
-      "stat2Value": "Umag, Istria",
-      "stat2Desc": "Based on the northwestern tip of Istria, steps from the Adriatic Sea."
+      "label": "Частина чогось більшого",
+      "heading": "Solar Group",
+      "para": "Solar Living пишається тим, що є частиною Solar Group, родини компаній, об'єднаних відданістю якості, креативності та сервісу. Наша споріднена компанія, Solar Creative, є маркетинговою агенцією повного циклу, яка підтримує нашу нерухомість професійною фотозйомкою, соціальними мережами та стратегією бренду.",
+      "link": "Відвідати Solar Creative →",
+      "stat1Value": "Від 2024",
+      "stat1Desc": "Solar Living заснували з баченням привнести бутиковий рівень сервісу в управління нерухомістю в Істрії.",
+      "stat2Value": "Умаг, Істрія",
+      "stat2Desc": "На північно-західній околиці Істрії, за кілька кроків від Адріатичного моря."
     },
     "cta": {
-      "heading": "Ready to experience Solar Living?",
-      "browseApartments": "Browse Accommodation",
-      "partnerWithUs": "Partner With Us"
+      "heading": "Готові відчути Solar Living?",
+      "browseApartments": "Переглянути варіанти проживання",
+      "partnerWithUs": "Станьте нашим партнером"
     }
   },
   "contact": {
