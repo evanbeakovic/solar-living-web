@@ -25,7 +25,57 @@
     },
     "reviews": {
       "label": "Recenzie hostí",
-      "heading": "Čo hovoria naši hostia"
+      "heading": "Čo hovoria naši hostia",
+      "prevAriaLabel": "Predchádzajúca",
+      "nextAriaLabel": "Ďalšia",
+      "goToPosition": "Prejsť na pozíciu {position}",
+      "items": [
+        {
+          "apartment": "Elaine's View",
+          "name": "Tania",
+          "country": "Canada",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Umag je skvelým východiskovým bodom na spoznávanie Istrie, vrátane jednodňových výletov do Talianska. Byt bol čistý a útulný, s výhľadom z balkóna na večerné západy slnka nad Jadranom a starým mestom."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Stephan",
+          "country": "Germany",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Privítali nás veľmi srdečne a osobne, počas celého pobytu sme sa cítili vítaní. Bolo tam veľmi pokojne a príjemne, presne to, čo sme potrebovali."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Jana",
+          "country": "Czech Republic",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Veľmi priateľská a profesionálna komunikácia s hostiteľom. Priamo pred budovou sa nachádza mestská pláž. Určite sa vrátime."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Peter",
+          "country": "Slovakia",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Mimoriadne milý hostiteľ, vždy okamžite dostupný a s veľmi rýchlymi odpoveďami na akékoľvek otázky. Všetko bolo dokonale čisté a veľmi moderné."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Jehona",
+          "country": "Slovenia",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Všetko je výborné, lepšie než päťhviezdičkový hotel. Majiteľ bol veľmi milý a všetko nám ukázal. Môžem to len všetkým odporučiť."
+        }
+      ]
     },
     "whyUs": {
       "quote": "Nejde len o odovzdanie kľúčov. Postaráme sa o každý detail, aby ste si mohli svoj pobyt jednoducho užívať.",
@@ -136,6 +186,7 @@
         "name": "Elaine's View",
         "description": "Prvý rad od mora. Panoramatický výhľad na Jadran, západy slnka a staré mesto Umag.",
         "location": "Staré Mesto Umag",
+        "badgeType": "Apartmán",
         "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Klimatizácia",
@@ -170,6 +221,7 @@
         "name": "Stella's Garden",
         "description": "Apartmán na prízemí jednej z najkrajších nových budov v Umagu, so súkromnou stredomorskou záhradou.",
         "location": "Umag",
+        "badgeType": "Apartmán",
         "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Klimatizácia",
@@ -204,6 +256,7 @@
         "name": "Sabbia",
         "description": "Štýlové útočisko v srdci Umagu, len pár krokov od starého mesta, so súkromným balkónom a garážovým státím.",
         "location": "Umag",
+        "badgeType": "Apartmán",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Súkromný balkón",
@@ -217,6 +270,7 @@
         "name": "Villa De La Maria",
         "description": "Súkromná vila v Umagu s bazénom, záhradou a vonkajšou kuchyňou, navrhnutá pre bezstarostné prepojenie interiéru s exteriérom.",
         "location": "Umag",
+        "badgeType": "Vila",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Súkromný bazén",
@@ -236,12 +290,14 @@
       "apt5": {
         "name": "Solar Apartment Umag V",
         "description": "Nádherný nový prírastok do nášho portfólia, podrobnosti už čoskoro. Kontaktujte nás a ako prví sa dozviete, keď bude toto ubytovanie k dispozícii.",
-        "location": "Umag"
+        "location": "Umag",
+        "badgeType": "Apartmán"
       },
       "apt6": {
         "name": "Solar Apartment Umag VI",
         "description": "Výnimočné ubytovanie, ktoré práve pripravujeme pre naše portfólio. Ozvite sa nám a dozviete sa viac.",
-        "location": "Oblasť Umagu"
+        "location": "Oblasť Umagu",
+        "badgeType": "Vila"
       }
     }
   },

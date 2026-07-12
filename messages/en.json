@@ -25,7 +25,57 @@
     },
     "reviews": {
       "label": "Guest Reviews",
-      "heading": "What Our Guests Say"
+      "heading": "What Our Guests Say",
+      "prevAriaLabel": "Previous",
+      "nextAriaLabel": "Next",
+      "goToPosition": "Go to position {position}",
+      "items": [
+        {
+          "apartment": "Elaine's View",
+          "name": "Tania",
+          "country": "Canada",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Umag is a perfect spot to enjoy Istria — including day trips into Italy. The apartment was clean and comfortable with balcony views of evening sunsets over the Adriatic and the old town."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Stephan",
+          "country": "Germany",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "We were received very kindly and personally. Always made to feel welcome. We found it very quiet and relaxing — exactly what we needed."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Jana",
+          "country": "Czech Republic",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Very friendly and professional communication with the host. Right in front of the building is a city beach. We will definitely return."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Peter",
+          "country": "Slovakia",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Extremely friendly host, always immediately available for questions with very quick answers. Everything was sparkling clean and very modern."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Jehona",
+          "country": "Slovenia",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Everything is excellent — better than a 5-star hotel. The owner was very kind and showed us everything. I recommend it to everyone."
+        }
+      ]
     },
     "whyUs": {
       "quote": "We don't just hand you the keys. We make sure every detail is taken care of, so you can simply enjoy.",
@@ -136,6 +186,7 @@
         "name": "Elaine's View",
         "description": "First row to the sea. Panoramic views of the Adriatic, sunsets & Umag Old Town.",
         "location": "Umag Old Town",
+        "badgeType": "Apartment",
         "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Air conditioning",
@@ -170,6 +221,7 @@
         "name": "Stella's Garden",
         "description": "Ground-floor living in Umag's finest new building, with a private Mediterranean garden.",
         "location": "Umag",
+        "badgeType": "Apartment",
         "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Air conditioning",
@@ -204,6 +256,7 @@
         "name": "Sabbia",
         "description": "A stylish retreat in the heart of Umag, just steps from the Old Town, with a private balcony and garage parking.",
         "location": "Umag",
+        "badgeType": "Apartment",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Private balcony",
@@ -217,6 +270,7 @@
         "name": "Villa De La Maria",
         "description": "A private villa in Umag with pool, garden, and outdoor kitchen, designed for effortless indoor-outdoor living.",
         "location": "Umag",
+        "badgeType": "Villa",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Private pool",
@@ -236,12 +290,14 @@
       "apt5": {
         "name": "Solar Apartment Umag V",
         "description": "A stunning new addition to our portfolio — details coming soon. Contact us to be the first to know when this property becomes available.",
-        "location": "Umag"
+        "location": "Umag",
+        "badgeType": "Apartment"
       },
       "apt6": {
         "name": "Solar Apartment Umag VI",
         "description": "An exceptional property currently being prepared for our portfolio. Reach out to learn more.",
-        "location": "Umag area"
+        "location": "Umag area",
+        "badgeType": "Villa"
       }
     }
   },

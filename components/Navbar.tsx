@@ -103,7 +103,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setLangOpen((v) => !v)}
-                className="flex items-center gap-1 font-sans font-medium text-xs uppercase tracking-widest text-[#d0d0d0] hover:text-white transition-colors focus:outline-none"
+                className="flex items-center gap-1 font-sans font-medium text-xs uppercase tracking-widest text-[#d0d0d0] hover:text-white transition-colors outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#86cae7]"
               >
                 {locale.toUpperCase()}
                 <ChevronDown className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
@@ -134,7 +134,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden text-[#d0d0d0] hover:text-white transition-colors focus:outline-none text-xl leading-none font-sans"
+            className="md:hidden text-[#d0d0d0] hover:text-white transition-colors outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-[#86cae7] text-xl leading-none font-sans"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label={t('toggleMenu')}
           >

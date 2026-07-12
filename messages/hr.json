@@ -25,7 +25,57 @@
     },
     "reviews": {
       "label": "Recenzije gostiju",
-      "heading": "Što govore naši gosti"
+      "heading": "Što govore naši gosti",
+      "prevAriaLabel": "Prethodna",
+      "nextAriaLabel": "Sljedeća",
+      "goToPosition": "Idi na poziciju {position}",
+      "items": [
+        {
+          "apartment": "Elaine's View",
+          "name": "Tania",
+          "country": "Canada",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Umag je savršeno mjesto za upoznavanje Istre, uključujući izlete u Italiju. Apartman je bio čist i udoban, s pogledom s balkona na večernje zalaske sunca nad Jadranom i starim gradom."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Stephan",
+          "country": "Germany",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Dočekani smo vrlo ljubazno i osobno. Uvijek smo se osjećali dobrodošlo. Bilo je vrlo mirno i opuštajuće, upravo ono što nam je trebalo."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Jana",
+          "country": "Czech Republic",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Vrlo ljubazna i profesionalna komunikacija s domaćinom. Točno ispred zgrade nalazi se gradska plaža. Sigurno ćemo se vratiti."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Peter",
+          "country": "Slovakia",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Iznimno ljubazan domaćin, uvijek odmah dostupan za pitanja uz vrlo brze odgovore. Sve je bilo besprijekorno čisto i vrlo moderno."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Jehona",
+          "country": "Slovenia",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Sve je izvrsno, bolje od hotela s 5 zvjezdica. Vlasnik je bio vrlo ljubazan i pokazao nam je sve. Svima ga preporučujem."
+        }
+      ]
     },
     "whyUs": {
       "quote": "Ne predajemo vam samo ključeve. Brinemo o svakom detalju i pobrinemo se da se jednostavno možete prepustiti.",
@@ -136,6 +186,7 @@
         "name": "Elaine's View",
         "description": "Prva crta do mora. Panoramski pogled na Jadran, zalasci sunca i Stari grad Umag.",
         "location": "Stari grad Umag",
+        "badgeType": "Apartman",
         "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Klima uređaj",
@@ -170,6 +221,7 @@
         "name": "Stella's Garden",
         "description": "Prizemni apartman u jednoj od najljepših novih zgrada u Umagu — s privatnim mediteranskim vrtom.",
         "location": "Umag",
+        "badgeType": "Apartman",
         "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Klima uređaj",
@@ -204,6 +256,7 @@
         "name": "Sabbia",
         "description": "Elegantno utočište u srcu Umaga, na samo nekoliko koraka od Starog grada, s privatnim balkonom i parkirnim mjestom u garaži.",
         "location": "Umag",
+        "badgeType": "Apartman",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Privatni balkon",
@@ -217,6 +270,7 @@
         "name": "Villa De La Maria",
         "description": "Privatna vila u Umagu s bazenom, vrtom i vanjskom kuhinjom, osmišljena za bezbrižan život između unutarnjeg i vanjskog prostora.",
         "location": "Umag",
+        "badgeType": "Vila",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Privatni bazen",
@@ -236,12 +290,14 @@
       "apt5": {
         "name": "Solar Apartment Umag V",
         "description": "Novi dragulj u našem portfelju. Detalji uskoro. Javite nam se i budite prvi koji saznaju kada ovaj apartman postane dostupan.",
-        "location": "Umag"
+        "location": "Umag",
+        "badgeType": "Apartman"
       },
       "apt6": {
         "name": "Solar Apartment Umag VI",
         "description": "Izniman apartman koji se upravo priprema za naš portfelj. Javite nam se za više informacija.",
-        "location": "Okolica Umaga"
+        "location": "Okolica Umaga",
+        "badgeType": "Vila"
       }
     }
   },
@@ -456,8 +512,8 @@
       "labelPhone": "Telefon",
       "phoneOptional": "(neobavezno)",
       "placeholderPhone": "+385 ...",
-      "labelType": "Kontaktiram kao\u2026",
-      "selectDefault": "Odaberite\u2026",
+      "labelType": "Kontaktiram kao…",
+      "selectDefault": "Odaberite…",
       "optionGuest": "Gost, zanima me rezervacija smještaja",
       "optionOwner": "Vlasnik nekretnine — zanimaju me usluge",
       "optionOther": "Ostalo",

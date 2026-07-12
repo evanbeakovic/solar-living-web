@@ -1,54 +1,17 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
-const reviews = [
-  {
-    apartment: "Elaine's View",
-    name: 'Tania',
-    country: 'Canada',
-    platform: 'Airbnb',
-    stars: 5,
-    rating: null,
-    text: '"Umag is a perfect spot to enjoy Istria — including day trips into Italy. The apartment was clean and comfortable with balcony views of evening sunsets over the Adriatic and the old town."',
-  },
-  {
-    apartment: "Elaine's View",
-    name: 'Stephan',
-    country: 'Germany',
-    platform: 'Airbnb',
-    stars: 5,
-    rating: null,
-    text: '"We were received very kindly and personally. Always made to feel welcome. We found it very quiet and relaxing — exactly what we needed."',
-  },
-  {
-    apartment: "Elaine's View",
-    name: 'Jana',
-    country: 'Czech Republic',
-    platform: 'Booking.com',
-    stars: 5,
-    rating: '10/10',
-    text: '"Very friendly and professional communication with the host. Right in front of the building is a city beach. We will definitely return."',
-  },
-  {
-    apartment: "Stella's Garden",
-    name: 'Peter',
-    country: 'Slovakia',
-    platform: 'Airbnb',
-    stars: 5,
-    rating: null,
-    text: '"Extremely friendly host, always immediately available for questions with very quick answers. Everything was sparkling clean and very modern."',
-  },
-  {
-    apartment: "Stella's Garden",
-    name: 'Jehona',
-    country: 'Slovenia',
-    platform: 'Booking.com',
-    stars: 5,
-    rating: '10/10',
-    text: '"Everything is excellent — better than a 5-star hotel. The owner was very kind and showed us everything. I recommend it to everyone."',
-  },
-];
+type Review = {
+  apartment: string;
+  name: string;
+  country: string;
+  platform: string;
+  stars: number;
+  rating: string | null;
+  text: string;
+};
 
 const arrowBase: React.CSSProperties = {
   width: 40,
@@ -65,6 +28,8 @@ const arrowBase: React.CSSProperties = {
 };
 
 export default function ReviewsCarousel() {
+  const t = useTranslations('home.reviews');
+  const reviews = t.raw('items') as Review[];
   const [offset, setOffset] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -116,7 +81,7 @@ export default function ReviewsCarousel() {
           <button
             onClick={() => navigate(-1)}
             disabled={animating}
-            aria-label="Previous"
+            aria-label={t('prevAriaLabel')}
             className="carousel-arrow"
             style={arrowBase}
           >
@@ -178,7 +143,7 @@ export default function ReviewsCarousel() {
                     {r.rating && <span className="font-sans text-xs ml-1" style={{ color: '#888888' }}>{r.rating}</span>}
                   </p>
                   <p className="font-serif italic text-sm leading-relaxed" style={{ color: '#333333' }}>
-                    {r.text}
+                    &ldquo;{r.text}&rdquo;
                   </p>
                   <p className="font-sans text-xs uppercase tracking-widest mt-auto pt-4" style={{ color: '#888888' }}>
                     {r.platform}
@@ -194,7 +159,7 @@ export default function ReviewsCarousel() {
           <button
             onClick={() => navigate(1)}
             disabled={animating}
-            aria-label="Next"
+            aria-label={t('nextAriaLabel')}
             className="carousel-arrow"
             style={arrowBase}
           >
@@ -212,7 +177,7 @@ export default function ReviewsCarousel() {
           <button
             key={i}
             onClick={() => navigateTo(i)}
-            aria-label={`Go to position ${i + 1}`}
+            aria-label={t('goToPosition', { position: i + 1 })}
             style={{
               padding: 8,
               background: 'transparent',

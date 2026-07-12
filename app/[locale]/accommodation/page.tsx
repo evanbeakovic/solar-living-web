@@ -26,6 +26,7 @@ type Apartment = {
   guests: number;
   bedrooms: number;
   type: string;
+  badgeType: string;
   location: string;
   amenities: string[];
   image: string | null;
@@ -156,7 +157,7 @@ function ApartmentCard({
       {/* Image area */}
       {apt.available ? (
         <div className="h-72 relative overflow-hidden">
-          <Image src={apt.image!} alt={apt.name} fill className="object-cover card-zoom" />
+          <Image src={apt.image!} alt={apt.name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover card-zoom" />
         </div>
       ) : (
         <div className="h-72 flex items-center justify-center overflow-hidden" style={{ background: cardGradient }}>
@@ -227,7 +228,7 @@ function ApartmentCard({
             </span>
           ) : (
             <span className="font-sans text-xs uppercase tracking-widest shrink-0 pt-0.5 text-[#2a2a2a]">
-              {apt.type}
+              {apt.badgeType}
             </span>
           )}
         </div>
@@ -513,6 +514,7 @@ export default function ApartmentsPage() {
       guests: 6,
       bedrooms: 3,
       type: 'Apartment',
+      badgeType: t('data.apt1.badgeType'),
       location: t('data.apt1.location'),
       amenities: t.raw('data.apt1.amenities') as string[],
       image: '/images/umag-1-main.jpg',
@@ -529,6 +531,7 @@ export default function ApartmentsPage() {
       guests: 6,
       bedrooms: 2,
       type: 'Apartment',
+      badgeType: t('data.apt2.badgeType'),
       location: t('data.apt2.location'),
       amenities: t.raw('data.apt2.amenities') as string[],
       image: '/images/umag-2-main.jpg',
@@ -545,6 +548,7 @@ export default function ApartmentsPage() {
       guests: 4,
       bedrooms: 1,
       type: 'Apartment',
+      badgeType: t('data.apt3.badgeType'),
       location: t('data.apt3.location'),
       amenities: t.raw('data.apt3.amenities') as string[],
       image: '/images/sabbia-main.jpg',
@@ -560,6 +564,7 @@ export default function ApartmentsPage() {
       guests: 6,
       bedrooms: 2,
       type: 'Villa',
+      badgeType: t('data.apt4.badgeType'),
       location: t('data.apt4.location'),
       amenities: t.raw('data.apt4.amenities') as string[],
       image: '/images/villa-de-la-maria-main.jpg',
@@ -575,6 +580,7 @@ export default function ApartmentsPage() {
       guests: 4,
       bedrooms: 2,
       type: 'Apartment',
+      badgeType: t('data.apt5.badgeType'),
       location: t('data.apt5.location'),
       amenities: [],
       image: null,
@@ -587,6 +593,7 @@ export default function ApartmentsPage() {
       guests: 6,
       bedrooms: 3,
       type: 'Villa',
+      badgeType: t('data.apt6.badgeType'),
       location: t('data.apt6.location'),
       amenities: [],
       image: null,

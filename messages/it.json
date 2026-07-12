@@ -25,7 +25,57 @@
     },
     "reviews": {
       "label": "Recensioni degli Ospiti",
-      "heading": "Cosa Dicono i Nostri Ospiti"
+      "heading": "Cosa Dicono i Nostri Ospiti",
+      "prevAriaLabel": "Precedente",
+      "nextAriaLabel": "Successiva",
+      "goToPosition": "Vai alla posizione {position}",
+      "items": [
+        {
+          "apartment": "Elaine's View",
+          "name": "Tania",
+          "country": "Canada",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Umago è il posto perfetto per scoprire l'Istria, comprese le gite in Italia. L'appartamento era pulito e confortevole, con vista dal balcone sui tramonti serali sull'Adriatico e sul centro storico."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Stephan",
+          "country": "Germany",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Siamo stati accolti con grande gentilezza e calore, e ci siamo sempre sentiti i benvenuti. Abbiamo trovato tutto molto tranquillo e rilassante, esattamente ciò di cui avevamo bisogno."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Jana",
+          "country": "Czech Republic",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Comunicazione molto cordiale e professionale con l'host. Proprio davanti al palazzo si trova una spiaggia cittadina. Torneremo sicuramente."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Peter",
+          "country": "Slovakia",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Host estremamente gentile, sempre disponibile per qualsiasi domanda e con risposte rapidissime. Tutto era splendente di pulito e molto moderno."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Jehona",
+          "country": "Slovenia",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Tutto è eccellente, meglio di un hotel a 5 stelle. Il proprietario è stato molto gentile e ci ha mostrato ogni cosa. Lo consiglio a tutti."
+        }
+      ]
     },
     "whyUs": {
       "quote": "Non ci limitiamo a consegnarti le chiavi. Ci assicuriamo che ogni dettaglio sia curato, così puoi semplicemente goderti il soggiorno.",
@@ -136,6 +186,7 @@
         "name": "Elaine's View",
         "description": "In prima fila sul mare. Vista panoramica sull'Adriatico, tramonti e Città Vecchia di Umago.",
         "location": "Città Vecchia di Umago",
+        "badgeType": "Appartamento",
         "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Aria condizionata",
@@ -170,6 +221,7 @@
         "name": "Stella's Garden",
         "description": "Appartamento al piano terra nel più pregiato edificio di nuova costruzione a Umago, con giardino mediterraneo privato.",
         "location": "Umago",
+        "badgeType": "Appartamento",
         "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Aria condizionata",
@@ -204,6 +256,7 @@
         "name": "Sabbia",
         "description": "Un rifugio elegante nel cuore di Umago, a due passi dalla Città Vecchia, con balcone privato e parcheggio in garage.",
         "location": "Umago",
+        "badgeType": "Appartamento",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Balcone privato",
@@ -217,6 +270,7 @@
         "name": "Villa De La Maria",
         "description": "Una villa privata a Umago con piscina, giardino e cucina all'aperto, dove interni ed esterni si fondono con naturalezza.",
         "location": "Umago",
+        "badgeType": "Villa",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Piscina privata",
@@ -236,12 +290,14 @@
       "apt5": {
         "name": "Solar Apartment Umago V",
         "description": "Una straordinaria nuova aggiunta al nostro portfolio. Dettagli in arrivo. Contattaci per essere tra i primi a sapere quando questa proprietà sarà disponibile.",
-        "location": "Umago"
+        "location": "Umago",
+        "badgeType": "Appartamento"
       },
       "apt6": {
         "name": "Solar Apartment Umago VI",
         "description": "Una proprietà eccezionale attualmente in preparazione per il nostro portfolio. Contattaci per saperne di più.",
-        "location": "Area di Umago"
+        "location": "Area di Umago",
+        "badgeType": "Villa"
       }
     }
   },
@@ -456,8 +512,8 @@
       "labelPhone": "Telefono",
       "phoneOptional": "(facoltativo)",
       "placeholderPhone": "+385 ...",
-      "labelType": "Sono\u2026",
-      "selectDefault": "Seleziona\u2026",
+      "labelType": "Sono…",
+      "selectDefault": "Seleziona…",
       "optionGuest": "Un ospite che vuole prenotare",
       "optionOwner": "Un proprietario immobiliare",
       "optionOther": "Altro",

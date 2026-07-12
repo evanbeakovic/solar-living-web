@@ -25,7 +25,57 @@
     },
     "reviews": {
       "label": "Vendégvélemények",
-      "heading": "Mit mondanak vendégeink"
+      "heading": "Mit mondanak vendégeink",
+      "prevAriaLabel": "Előző",
+      "nextAriaLabel": "Következő",
+      "goToPosition": "Ugrás a(z) {position}. pozícióra",
+      "items": [
+        {
+          "apartment": "Elaine's View",
+          "name": "Tania",
+          "country": "Canada",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Umag tökéletes kiindulópont Isztria felfedezéséhez, akár egynapos kirándulásokhoz Olaszországba is. A lakás tiszta és kényelmes volt, az erkélyről gyönyörű kilátással az Adriára és az óvárosra naplementekor."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Stephan",
+          "country": "Germany",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Nagyon kedvesen és személyesen fogadtak minket, mindvégig otthon éreztük magunkat. Nagyon nyugodt és pihentető volt, pontosan erre volt szükségünk."
+        },
+        {
+          "apartment": "Elaine's View",
+          "name": "Jana",
+          "country": "Czech Republic",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Nagyon barátságos és profi volt a kommunikáció a házigazdával. Az épület előtt közvetlenül városi strand található. Biztosan visszatérünk."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Peter",
+          "country": "Slovakia",
+          "platform": "Airbnb",
+          "stars": 5,
+          "rating": null,
+          "text": "Rendkívül barátságos házigazda, aki bármilyen kérdésre azonnal és gyorsan válaszolt. Minden ragyogóan tiszta és nagyon modern volt."
+        },
+        {
+          "apartment": "Stella's Garden",
+          "name": "Jehona",
+          "country": "Slovenia",
+          "platform": "Booking.com",
+          "stars": 5,
+          "rating": "10/10",
+          "text": "Minden kiváló, jobb, mint egy 5 csillagos szálloda. A tulajdonos nagyon kedves volt, és mindent megmutatott nekünk. Mindenkinek ajánlom."
+        }
+      ]
     },
     "whyUs": {
       "quote": "Mi nem csupán átadjuk a kulcsokat. Gondoskodunk arról, hogy minden részlet rendben legyen, Ön pedig egyszerűen élvezhesse a nyaralást.",
@@ -136,6 +186,7 @@
         "name": "Elaine's View",
         "description": "Első sor a tengerparton. Panorámás kilátás az Adriára, a napnyugtára és Umag óvárosára.",
         "location": "Umag óvárosa",
+        "badgeType": "Apartman",
         "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Légkondicionáló",
@@ -170,6 +221,7 @@
         "name": "Stella's Garden",
         "description": "Földszinti lakás Umag legjobb új épületében, saját mediterrán kerttel.",
         "location": "Umag",
+        "badgeType": "Apartman",
         "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Légkondicionáló",
@@ -204,6 +256,7 @@
         "name": "Sabbia",
         "description": "Stílusos menedék Umag szívében, néhány lépésre az óvárostól, saját erkéllyel és garázsparkolóval.",
         "location": "Umag",
+        "badgeType": "Apartman",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Saját erkély",
@@ -217,6 +270,7 @@
         "name": "Villa De La Maria",
         "description": "Privát villa Umagban medencével, kerttel és kültéri konyhával, ahol a benti és a kinti terek harmonikus egészet alkotnak.",
         "location": "Umag",
+        "badgeType": "Villa",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
           "Saját medence",
@@ -236,12 +290,14 @@
       "apt5": {
         "name": "Solar Apartment Umag V",
         "description": "Lenyűgöző új kiegészítő portfóliónkhoz. A részletek hamarosan elérhetők. Lépjen velünk kapcsolatba, hogy elsők között értesüljön, amikor ez az ingatlan elérhetővé válik.",
-        "location": "Umag"
+        "location": "Umag",
+        "badgeType": "Apartman"
       },
       "apt6": {
         "name": "Solar Apartment Umag VI",
         "description": "Kivételes ingatlan, amelyet jelenleg készítünk elő portfóliónkba. Keressen minket, ha többet szeretne megtudni.",
-        "location": "Umag környéke"
+        "location": "Umag környéke",
+        "badgeType": "Villa"
       }
     }
   },
@@ -456,8 +512,8 @@
       "labelPhone": "Telefon",
       "phoneOptional": "(nem kötelező)",
       "placeholderPhone": "+385 ...",
-      "labelType": "Érdeklődöm mint\u2026",
-      "selectDefault": "Válasszon\u2026",
+      "labelType": "Érdeklődöm mint…",
+      "selectDefault": "Válasszon…",
       "optionGuest": "Vendég, aki foglalni szeretne",
       "optionOwner": "Ingatlantulajdonos",
       "optionOther": "Egyéb",
