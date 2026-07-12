@@ -111,193 +111,193 @@
   },
   "apartments": {
     "hero": {
-      "label": "Our Properties",
-      "heading": "Find Your Perfect Stay",
-      "subtext": "Select a property, choose your dates, and send us an inquiry.",
-      "subtextLine2": "We'll confirm availability and handle the rest."
+      "label": "Наші помешкання",
+      "heading": "Знайдіть ідеальний відпочинок",
+      "subtext": "Оберіть помешкання, вкажіть дати та надішліть нам запит.",
+      "subtextLine2": "Ми підтвердимо наявність вільних місць і подбаємо про все інше."
     },
     "listings": {
-      "label": "Our Collection",
-      "heading": "All Accommodation",
-      "subtext": "Select a property below and send us your inquiry."
+      "label": "Наша колекція",
+      "heading": "Усі варіанти проживання",
+      "subtext": "Оберіть помешкання нижче та надішліть нам запит."
     },
     "card": {
-      "location": "Umag, Croatia",
-      "comingSoon": "Coming Soon",
-      "bookButton": "Check Availability & Book"
+      "location": "Умаг, Хорватія",
+      "comingSoon": "Незабаром",
+      "bookButton": "Перевірити наявність і забронювати"
     },
     "cta": {
-      "heading": "Not sure which property is right for you?",
-      "body": "Get in touch and we'll help you find the perfect match for your group, dates, and budget.",
-      "button": "Contact Us"
+      "heading": "Не можете визначитися, яке помешкання підійде саме Вам?",
+      "body": "Зв'яжіться з нами, і ми допоможемо Вам знайти ідеальний варіант для Вашої групи, дат і бюджету.",
+      "button": "Зв'яжіться з нами"
     },
     "modal": {
-      "bookHeading": "Book {name}",
-      "subheading": "Fill in your details and we'll get back to you to confirm availability.",
-      "labelName": "Full Name *",
-      "placeholderName": "Jane Smith",
-      "labelEmail": "Email *",
-      "placeholderEmail": "jane@example.com",
-      "labelPhone": "Phone Number *",
-      "placeholderPhone": "+44 7700 900000",
-      "labelCheckin": "Check-in *",
-      "labelCheckout": "Check-out *",
-      "labelGuests": "Guests *",
-      "guestsMax": "(max {max})",
-      "labelMessage": "Message",
-      "messageOptional": "(optional)",
-      "placeholderMessage": "Any special requests or questions?",
-      "sendWhatsApp": "Send via WhatsApp",
-      "sendEmail": "Send via Email",
-      "responseNote": "We typically respond within a few hours.",
-      "ariaClose": "Close"
+      "bookHeading": "Забронювати {name}",
+      "subheading": "Заповніть свої дані, і ми зв'яжемося з Вами, щоб підтвердити наявність вільних місць.",
+      "labelName": "Повне ім'я *",
+      "placeholderName": "Олена Коваленко",
+      "labelEmail": "Електронна пошта *",
+      "placeholderEmail": "olena@pryklad.ua",
+      "labelPhone": "Номер телефону *",
+      "placeholderPhone": "+380 67 123 45 67",
+      "labelCheckin": "Заїзд *",
+      "labelCheckout": "Виїзд *",
+      "labelGuests": "Кількість гостей *",
+      "guestsMax": "(макс. {max})",
+      "labelMessage": "Повідомлення",
+      "messageOptional": "(необов'язково)",
+      "placeholderMessage": "Особливі побажання чи запитання?",
+      "sendWhatsApp": "Надіслати через WhatsApp",
+      "sendEmail": "Надіслати електронною поштою",
+      "responseNote": "Зазвичай ми відповідаємо протягом кількох годин.",
+      "ariaClose": "Закрити"
     },
     "validation": {
-      "nameRequired": "Please enter your full name.",
-      "emailRequired": "Please enter your email address.",
-      "phoneRequired": "Please enter your phone number.",
-      "checkinRequired": "Please select a check-in date.",
-      "checkoutRequired": "Please select a check-out date.",
-      "checkoutAfterCheckin": "Check-out must be after check-in.",
-      "guestsInvalid": "Please enter a valid number of guests.",
-      "guestsExceeded": "This property fits a maximum of {max} guests."
+      "nameRequired": "Будь ласка, вкажіть Ваше повне ім'я.",
+      "emailRequired": "Будь ласка, вкажіть Вашу електронну пошту.",
+      "phoneRequired": "Будь ласка, вкажіть Ваш номер телефону.",
+      "checkinRequired": "Будь ласка, оберіть дату заїзду.",
+      "checkoutRequired": "Будь ласка, оберіть дату виїзду.",
+      "checkoutAfterCheckin": "Дата виїзду має бути пізніше дати заїзду.",
+      "guestsInvalid": "Будь ласка, вкажіть коректну кількість гостей.",
+      "guestsExceeded": "Це помешкання розраховане максимум на {max} гостей."
     },
     "whatsapp": {
-      "greeting": "Hi! I'd like to book {name}",
-      "checkin": "Check-in: {date}",
-      "checkout": "Check-out: {date}",
-      "guests": "Guests: {count}",
-      "name": "Name: {name}",
-      "phone": "Phone: {phone}",
-      "email": "Email: {email}",
-      "message": "Message: {text}"
+      "greeting": "Вітаю! Мене цікавить бронювання {name}.",
+      "checkin": "Заїзд: {date}",
+      "checkout": "Виїзд: {date}",
+      "guests": "Кількість гостей: {count}",
+      "name": "Ім'я: {name}",
+      "phone": "Телефон: {phone}",
+      "email": "Електронна пошта: {email}",
+      "message": "Повідомлення: {text}"
     },
     "email": {
-      "subject": "Booking Inquiry – {name}",
-      "body": "Hi Solar Living team,\n\nI'd like to inquire about booking {name}.\n\nCheck-in: {checkin}\nCheck-out: {checkout}\nGuests: {guests}\nName: {guestName}\nPhone: {phone}\nEmail: {email}\n\nMessage: {message}"
+      "subject": "Запит на бронювання – {name}",
+      "body": "Доброго дня,\n\nМене цікавить бронювання {name}.\n\nЗаїзд: {checkin}\nВиїзд: {checkout}\nКількість гостей: {guests}\nІм'я: {guestName}\nТелефон: {phone}\nЕлектронна пошта: {email}\n\nПовідомлення: {message}"
     },
     "reviewsModal": {
       "scoreApt1": "★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
       "scoreApt2": "★ 9.8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
-      "ariaClose": "Close"
+      "ariaClose": "Закрити"
     },
     "data": {
       "apt1": {
         "name": "Elaine's View",
-        "description": "First row to the sea. Panoramic views of the Adriatic, sunsets & Umag Old Town.",
-        "location": "Umag Old Town",
-        "badgeType": "Apartment",
+        "description": "Перша лінія біля моря. Панорамний вид на Адріатику, заходи сонця та старе місто Умаг.",
+        "location": "Старе місто Умаг",
+        "badgeType": "Апартаменти",
         "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
-          "Air conditioning",
+          "Кондиціонер",
           "Wi-Fi",
-          "Fully equipped kitchen",
+          "Повністю обладнана кухня",
           "Smart TV",
-          "Washing machine",
-          "Sea view"
+          "Пральна машина",
+          "Вид на море"
         ],
         "reviews": [
           {
             "name": "Tania",
             "country": "Canada",
             "platform": "Airbnb",
-            "text": "The apartment was clean and comfortable with balcony views of evening sunsets over the Adriatic and the old town of Umag. Umag is a perfect spot to enjoy Istria — including day trips into Italy. Weather was perfect, interesting history and gorgeous scenery."
+            "text": "Квартира була чистою та затишною, а з балкона було чудово видно вечірні заходи сонця над Адріатикою та старим містом Умаг. Умаг чудова відправна точка для знайомства з Істрією, включно з одноденними поїздками до Італії. Погода була чудовою, історія цікавою, а краєвиди приголомшливими."
           },
           {
             "name": "Stephan",
             "country": "Germany",
             "platform": "Airbnb",
-            "text": "We were received very kindly and personally. A big, well laid out apartment overlooking the sea. There is a balcony to the sea side, but also to the side — very practical. We found it very quiet."
+            "text": "Нас прийняли дуже тепло та по-домашньому. Велика, добре спланована квартира з видом на море. Є балкон з боку моря, а також збоку, що дуже зручно. Було дуже тихо."
           },
           {
             "name": "Jana",
             "country": "Czech Republic",
             "platform": "Booking.com",
-            "text": "Perfect accommodation. A premium apartment with a stunning sea view. Right in front of the building is a city beach with easy sea access and very few people. Very friendly and professional communication with the host. We will definitely return."
+            "text": "Ідеальне помешкання. Апартаменти преміумкласу з приголомшливим видом на море. Прямо перед будинком є міський пляж із зручним виходом до моря і майже без людей. Дуже дружнє та професійне спілкування з господарем. Обов'язково повернемося."
           }
         ]
       },
       "apt2": {
         "name": "Stella's Garden",
-        "description": "Ground-floor living in Umag's finest new building, with a private Mediterranean garden.",
-        "location": "Umag",
-        "badgeType": "Apartment",
+        "description": "Проживання на першому поверсі в одній з найкращих нових будівель Умага, з приватним середземноморським садом.",
+        "location": "Умаг",
+        "badgeType": "Апартаменти",
         "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
-          "Air conditioning",
+          "Кондиціонер",
           "Wi-Fi",
-          "Fully equipped kitchen",
+          "Повністю обладнана кухня",
           "Smart TV",
-          "Private terrace",
-          "Garden"
+          "Приватна тераса",
+          "Сад"
         ],
         "reviews": [
           {
             "name": "Peter",
             "country": "Slovakia",
             "platform": "Airbnb",
-            "text": "Everything was sparkling clean and very modern — you almost felt like we were the first guests. Extremely friendly host, always immediately available for questions with very quick answers."
+            "text": "Все було бездоганно чистим і дуже сучасним, ми відчували себе майже першими гостями. Надзвичайно привітний господар, завжди одразу на зв'язку, з дуже швидкими відповідями на запитання."
           },
           {
             "name": "Jehona",
             "country": "Slovenia",
             "platform": "Booking.com",
-            "text": "Everything is excellent — better than a 5-star hotel. I recommend it to everyone. I have never seen something like this. The owner was very kind and showed us everything."
+            "text": "Все просто чудово, краще за п'ятизірковий готель. Рекомендую всім. Ніколи не бачила нічого подібного. Власник був дуже люб'язний і все нам показав."
           },
           {
             "name": "Maciej",
             "country": "Poland",
             "platform": "Booking.com",
-            "text": "Highly recommended. Spacious ground-floor apartment with comfortable beds, a well-equipped kitchen, air conditioning, and two bathrooms. Large terrace with assigned parking. 2 minutes by car to shopping centers, 4-5 minutes to the nearest beach."
+            "text": "Дуже рекомендую. Просторі апартаменти на першому поверсі з зручними ліжками, добре обладнаною кухнею, кондиціонером і двома ванними кімнатами. Велика тераса з виділеним паркомісцем. 2 хвилини на машині до торгових центрів, 4-5 хвилин до найближчого пляжу."
           }
         ]
       },
       "apt3": {
         "name": "Sabbia",
-        "description": "A stylish retreat in the heart of Umag, just steps from the Old Town, with a private balcony and garage parking.",
-        "location": "Umag",
-        "badgeType": "Apartment",
+        "description": "Стильний притулок у самому серці Умага, за кілька кроків від старого міста, з приватним балконом і місцем у гаражі.",
+        "location": "Умаг",
+        "badgeType": "Апартаменти",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
-          "Private balcony",
-          "Garage parking",
-          "Air conditioning",
-          "Fully equipped kitchen",
+          "Приватний балкон",
+          "Місце у гаражі",
+          "Кондиціонер",
+          "Повністю обладнана кухня",
           "Smart TV"
         ]
       },
       "apt4": {
         "name": "Villa De La Maria",
-        "description": "A private villa in Umag with pool, garden, and outdoor kitchen, designed for effortless indoor-outdoor living.",
-        "location": "Umag",
-        "badgeType": "Villa",
+        "description": "Приватна вілла в Умазі з басейном, садом і літньою кухнею, створена для невимушеного поєднання затишку в приміщенні та на свіжому повітрі.",
+        "location": "Умаг",
+        "badgeType": "Вілла",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
-          "Private pool",
-          "Balcony",
-          "Terrace",
-          "Garden",
-          "Outdoor kitchen with grill",
-          "Lounge area",
-          "Outdoor dining area",
-          "Parking",
-          "Air conditioning",
-          "Fully equipped kitchen",
+          "Приватний басейн",
+          "Балкон",
+          "Тераса",
+          "Сад",
+          "Літня кухня з грилем",
+          "Зона відпочинку",
+          "Зона для трапези на свіжому повітрі",
+          "Паркування",
+          "Кондиціонер",
+          "Повністю обладнана кухня",
           "Smart TV",
-          "Smart home system"
+          "Система розумного дому"
         ]
       },
       "apt5": {
         "name": "Solar Apartment Umag V",
-        "description": "A stunning new addition to our portfolio — details coming soon. Contact us to be the first to know when this property becomes available.",
-        "location": "Umag",
-        "badgeType": "Apartment"
+        "description": "Чудове нове поповнення нашої колекції, подробиці незабаром. Зв'яжіться з нами, щоб одними з перших дізнатися, коли це помешкання стане доступним.",
+        "location": "Умаг",
+        "badgeType": "Апартаменти"
       },
       "apt6": {
         "name": "Solar Apartment Umag VI",
-        "description": "An exceptional property currently being prepared for our portfolio. Reach out to learn more.",
-        "location": "Umag area",
-        "badgeType": "Villa"
+        "description": "Виняткове помешкання, яке ми зараз готуємо для нашої колекції. Зв'яжіться з нами, щоб дізнатися більше.",
+        "location": "Околиці Умага",
+        "badgeType": "Вілла"
       }
     }
   },
