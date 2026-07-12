@@ -61,187 +61,187 @@
   },
   "apartments": {
     "hero": {
-      "label": "Our Properties",
-      "heading": "Find Your Perfect Stay",
-      "subtext": "Select a property, choose your dates, and send us an inquiry.",
-      "subtextLine2": "We'll confirm availability and handle the rest."
+      "label": "Naše ubytovanie",
+      "heading": "Nájdite svoj dokonalý pobyt",
+      "subtext": "Vyberte ubytovanie, zvoľte termín a pošlite nám dopyt.",
+      "subtextLine2": "Potvrdíme dostupnosť a postaráme sa o zvyšok."
     },
     "listings": {
-      "label": "Our Collection",
-      "heading": "All Accommodation",
-      "subtext": "Select a property below and send us your inquiry."
+      "label": "Náš výber",
+      "heading": "Ponuka ubytovania",
+      "subtext": "Vyberte ubytovanie nižšie a pošlite nám dopyt."
     },
     "card": {
-      "location": "Umag, Croatia",
-      "comingSoon": "Coming Soon",
-      "bookButton": "Check Availability & Book"
+      "location": "Umag, Chorvátsko",
+      "comingSoon": "Už čoskoro",
+      "bookButton": "Overiť dostupnosť a rezervovať"
     },
     "cta": {
-      "heading": "Not sure which property is right for you?",
-      "body": "Get in touch and we'll help you find the perfect match for your group, dates, and budget.",
-      "button": "Contact Us"
+      "heading": "Neviete, ktoré ubytovanie je pre vás to pravé?",
+      "body": "Ozvite sa nám a pomôžeme vám nájsť dokonalé ubytovanie pre vašu skupinu, termín a rozpočet.",
+      "button": "Kontaktujte nás"
     },
     "modal": {
-      "bookHeading": "Book {name}",
-      "subheading": "Fill in your details and we'll get back to you to confirm availability.",
-      "labelName": "Full Name *",
-      "placeholderName": "Jane Smith",
-      "labelEmail": "Email *",
-      "placeholderEmail": "jane@example.com",
-      "labelPhone": "Phone Number *",
-      "placeholderPhone": "+44 7700 900000",
-      "labelCheckin": "Check-in *",
-      "labelCheckout": "Check-out *",
-      "labelGuests": "Guests *",
-      "guestsMax": "(max {max})",
-      "labelMessage": "Message",
-      "messageOptional": "(optional)",
-      "placeholderMessage": "Any special requests or questions?",
-      "sendWhatsApp": "Send via WhatsApp",
-      "sendEmail": "Send via Email",
-      "responseNote": "We typically respond within a few hours.",
-      "ariaClose": "Close"
+      "bookHeading": "Rezervovať {name}",
+      "subheading": "Vyplňte svoje údaje a ozveme sa vám s potvrdením dostupnosti.",
+      "labelName": "Celé meno *",
+      "placeholderName": "Zuzana Kováčová",
+      "labelEmail": "E-mail *",
+      "placeholderEmail": "zuzana@priklad.sk",
+      "labelPhone": "Telefónne číslo *",
+      "placeholderPhone": "+421 901 234 567",
+      "labelCheckin": "Príchod *",
+      "labelCheckout": "Odchod *",
+      "labelGuests": "Počet hostí *",
+      "guestsMax": "(max. {max})",
+      "labelMessage": "Správa",
+      "messageOptional": "(nepovinné)",
+      "placeholderMessage": "Máte nejaké špeciálne požiadavky alebo otázky?",
+      "sendWhatsApp": "Odoslať cez WhatsApp",
+      "sendEmail": "Odoslať e-mailom",
+      "responseNote": "Zvyčajne odpovedáme do niekoľkých hodín.",
+      "ariaClose": "Zavrieť"
     },
     "validation": {
-      "nameRequired": "Please enter your full name.",
-      "emailRequired": "Please enter your email address.",
-      "phoneRequired": "Please enter your phone number.",
-      "checkinRequired": "Please select a check-in date.",
-      "checkoutRequired": "Please select a check-out date.",
-      "checkoutAfterCheckin": "Check-out must be after check-in.",
-      "guestsInvalid": "Please enter a valid number of guests.",
-      "guestsExceeded": "This property fits a maximum of {max} guests."
+      "nameRequired": "Zadajte prosím svoje celé meno.",
+      "emailRequired": "Zadajte prosím svoju e-mailovú adresu.",
+      "phoneRequired": "Zadajte prosím svoje telefónne číslo.",
+      "checkinRequired": "Vyberte prosím dátum príchodu.",
+      "checkoutRequired": "Vyberte prosím dátum odchodu.",
+      "checkoutAfterCheckin": "Dátum odchodu musí byť neskôr ako dátum príchodu.",
+      "guestsInvalid": "Zadajte prosím platný počet hostí.",
+      "guestsExceeded": "Toto ubytovanie pojme maximálne {max} hostí."
     },
     "whatsapp": {
-      "greeting": "Hi! I'd like to book {name}",
-      "checkin": "Check-in: {date}",
-      "checkout": "Check-out: {date}",
-      "guests": "Guests: {count}",
-      "name": "Name: {name}",
-      "phone": "Phone: {phone}",
-      "email": "Email: {email}",
-      "message": "Message: {text}"
+      "greeting": "Dobrý deň, mám záujem o rezerváciu {name}.",
+      "checkin": "Príchod: {date}",
+      "checkout": "Odchod: {date}",
+      "guests": "Počet hostí: {count}",
+      "name": "Meno: {name}",
+      "phone": "Telefón: {phone}",
+      "email": "E-mail: {email}",
+      "message": "Správa: {text}"
     },
     "email": {
-      "subject": "Booking Inquiry – {name}",
-      "body": "Hi Solar Living team,\n\nI'd like to inquire about booking {name}.\n\nCheck-in: {checkin}\nCheck-out: {checkout}\nGuests: {guests}\nName: {guestName}\nPhone: {phone}\nEmail: {email}\n\nMessage: {message}"
+      "subject": "Dopyt na rezerváciu – {name}",
+      "body": "Dobrý deň, Solar Living,\n\nMám záujem o rezerváciu {name}.\n\nPríchod: {checkin}\nOdchod: {checkout}\nPočet hostí: {guests}\nMeno: {guestName}\nTelefón: {phone}\nE-mail: {email}\n\nSpráva: {message}"
     },
     "reviewsModal": {
       "scoreApt1": "★ 9.9 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
       "scoreApt2": "★ 9.8 / 10 · Booking.com  |  ★ 5 / 5 · Airbnb",
-      "ariaClose": "Close"
+      "ariaClose": "Zavrieť"
     },
     "data": {
       "apt1": {
         "name": "Elaine's View",
-        "description": "First row to the sea. Panoramic views of the Adriatic, sunsets & Umag Old Town.",
-        "location": "Umag Old Town",
+        "description": "Prvý rad od mora. Panoramatický výhľad na Jadran, západy slnka a staré mesto Umag.",
+        "location": "Staré Mesto Umag",
         "badge": "9.9 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
-          "Air conditioning",
+          "Klimatizácia",
           "Wi-Fi",
-          "Fully equipped kitchen",
+          "Plne vybavená kuchyňa",
           "Smart TV",
-          "Washing machine",
-          "Sea view"
+          "Práčka",
+          "Výhľad na more"
         ],
         "reviews": [
           {
             "name": "Tania",
             "country": "Canada",
             "platform": "Airbnb",
-            "text": "The apartment was clean and comfortable with balcony views of evening sunsets over the Adriatic and the old town of Umag. Umag is a perfect spot to enjoy Istria — including day trips into Italy. Weather was perfect, interesting history and gorgeous scenery."
+            "text": "Apartmán bol čistý a útulný, s výhľadom z balkóna na večerné západy slnka nad Jadranom a starým mestom Umag. Umag je ideálnym východiskovým bodom na spoznávanie Istrie, vrátane výletov do Talianska. Počasie bolo skvelé, história zaujímavá a scenéria nádherná."
           },
           {
             "name": "Stephan",
             "country": "Germany",
             "platform": "Airbnb",
-            "text": "We were received very kindly and personally. A big, well laid out apartment overlooking the sea. There is a balcony to the sea side, but also to the side — very practical. We found it very quiet."
+            "text": "Privítali nás veľmi láskavo a osobne. Veľký, dobre usporiadaný apartmán s výhľadom na more. Balkón smeruje k moru, ale je tu aj bočný balkón, čo je veľmi praktické. Bolo tam veľmi ticho."
           },
           {
             "name": "Jana",
             "country": "Czech Republic",
             "platform": "Booking.com",
-            "text": "Perfect accommodation. A premium apartment with a stunning sea view. Right in front of the building is a city beach with easy sea access and very few people. Very friendly and professional communication with the host. We will definitely return."
+            "text": "Dokonalé ubytovanie. Prémiový apartmán s úchvatným výhľadom na more. Priamo pred budovou je mestská pláž s ľahkým prístupom k moru a s málo ľuďmi. Veľmi priateľská a profesionálna komunikácia s hostiteľom. Určite sa vrátime."
           }
         ]
       },
       "apt2": {
         "name": "Stella's Garden",
-        "description": "Ground-floor living in Umag's finest new building, with a private Mediterranean garden.",
+        "description": "Apartmán na prízemí jednej z najkrajších nových budov v Umagu, so súkromnou stredomorskou záhradou.",
         "location": "Umag",
         "badge": "9.8 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
-          "Air conditioning",
+          "Klimatizácia",
           "Wi-Fi",
-          "Fully equipped kitchen",
+          "Plne vybavená kuchyňa",
           "Smart TV",
-          "Private terrace",
-          "Garden"
+          "Súkromná terasa",
+          "Záhrada"
         ],
         "reviews": [
           {
             "name": "Peter",
             "country": "Slovakia",
             "platform": "Airbnb",
-            "text": "Everything was sparkling clean and very modern — you almost felt like we were the first guests. Extremely friendly host, always immediately available for questions with very quick answers."
+            "text": "Všetko bolo dokonale čisté a veľmi moderné, mali sme pocit, že sme takmer prví hostia. Mimoriadne priateľský hostiteľ, vždy okamžite k dispozícii s veľmi rýchlymi odpoveďami na otázky."
           },
           {
             "name": "Jehona",
             "country": "Slovenia",
             "platform": "Booking.com",
-            "text": "Everything is excellent — better than a 5-star hotel. I recommend it to everyone. I have never seen something like this. The owner was very kind and showed us everything."
+            "text": "Všetko je vynikajúce, lepšie ako päťhviezdičkový hotel. Odporúčam všetkým. Niečo také som ešte nevidela. Majiteľ bol veľmi milý a všetko nám ukázal."
           },
           {
             "name": "Maciej",
             "country": "Poland",
             "platform": "Booking.com",
-            "text": "Highly recommended. Spacious ground-floor apartment with comfortable beds, a well-equipped kitchen, air conditioning, and two bathrooms. Large terrace with assigned parking. 2 minutes by car to shopping centers, 4-5 minutes to the nearest beach."
+            "text": "Vrelo odporúčam. Priestranný prízemný apartmán s pohodlnými posteľami, dobre vybavenou kuchyňou, klimatizáciou a dvoma kúpeľňami. Veľká terasa s vyhradeným parkovaním. 2 minúty autom do nákupných centier, 4 až 5 minút na najbližšiu pláž."
           }
         ]
       },
       "apt3": {
         "name": "Sabbia",
-        "description": "A stylish retreat in the heart of Umag, just steps from the Old Town, with a private balcony and garage parking.",
+        "description": "Štýlové útočisko v srdci Umagu, len pár krokov od starého mesta, so súkromným balkónom a garážovým státím.",
         "location": "Umag",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
-          "Private balcony",
-          "Garage parking",
-          "Air conditioning",
-          "Fully equipped kitchen",
+          "Súkromný balkón",
+          "Garážové státie",
+          "Klimatizácia",
+          "Plne vybavená kuchyňa",
           "Smart TV"
         ]
       },
       "apt4": {
         "name": "Villa De La Maria",
-        "description": "A private villa in Umag with pool, garden, and outdoor kitchen, designed for effortless indoor-outdoor living.",
+        "description": "Súkromná vila v Umagu s bazénom, záhradou a vonkajšou kuchyňou, navrhnutá pre bezstarostné prepojenie interiéru s exteriérom.",
         "location": "Umag",
         "badge": "10.0 · Booking.com  |  5.0 · Airbnb",
         "amenities": [
-          "Private pool",
-          "Balcony",
-          "Terrace",
-          "Garden",
-          "Outdoor kitchen with grill",
-          "Lounge area",
-          "Outdoor dining area",
-          "Parking",
-          "Air conditioning",
-          "Fully equipped kitchen",
+          "Súkromný bazén",
+          "Balkón",
+          "Terasa",
+          "Záhrada",
+          "Vonkajšia kuchyňa s grilom",
+          "Oddychová zóna",
+          "Vonkajší jedálenský priestor",
+          "Parkovanie",
+          "Klimatizácia",
+          "Plne vybavená kuchyňa",
           "Smart TV",
-          "Smart home system"
+          "Systém inteligentnej domácnosti"
         ]
       },
       "apt5": {
         "name": "Solar Apartment Umag V",
-        "description": "A stunning new addition to our portfolio — details coming soon. Contact us to be the first to know when this property becomes available.",
+        "description": "Nádherný nový prírastok do nášho portfólia, podrobnosti už čoskoro. Kontaktujte nás a ako prví sa dozviete, keď bude toto ubytovanie k dispozícii.",
         "location": "Umag"
       },
       "apt6": {
         "name": "Solar Apartment Umag VI",
-        "description": "An exceptional property currently being prepared for our portfolio. Reach out to learn more.",
-        "location": "Umag area"
+        "description": "Výnimočné ubytovanie, ktoré práve pripravujeme pre naše portfólio. Ozvite sa nám a dozviete sa viac.",
+        "location": "Oblasť Umagu"
       }
     }
   },
