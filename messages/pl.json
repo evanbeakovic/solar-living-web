@@ -303,131 +303,131 @@
   },
   "owners": {
     "hero": {
-      "label": "For Property Owners",
-      "heading": "Let Us Take Care of Everything.",
-      "subtextLine1": "Solar Living handles every aspect of your property,",
-      "subtextLine2": "so you earn more, stress less, and never worry about a thing.",
-      "cta": "Get a Free Consultation",
-      "note": "We'll get back to you within 24 hours."
+      "label": "Dla właścicieli nieruchomości",
+      "heading": "Zajmiemy się wszystkim.",
+      "subtextLine1": "Solar Living zajmuje się każdym aspektem Państwa nieruchomości,",
+      "subtextLine2": "dzięki czemu zarabiają Państwo więcej, martwią się mniej i mogą o wszystkim zapomnieć.",
+      "cta": "Umów bezpłatną konsultację",
+      "note": "Odpowiemy w ciągu 24 godzin."
     },
     "offer": {
-      "label": "What We Offer",
-      "heading": "Full Management. Zero Headaches."
+      "label": "Co oferujemy",
+      "heading": "Pełna obsługa. Zero zmartwień."
     },
     "features": {
       "photography": {
-        "title": "Professional Photography",
-        "descLine1": "We photograph your property to the",
-        "descLine2": "highest standard to attract premium guests."
+        "title": "Profesjonalna fotografia",
+        "descLine1": "Fotografujemy Państwa nieruchomość w najwyższej",
+        "descLine2": "jakości, aby przyciągnąć najlepszych gości."
       },
       "listing": {
-        "title": "Listing Management",
-        "descLine1": "We manage your listings across all major platforms",
-        "descLine2": "including Airbnb, Booking.com, and direct bookings."
+        "title": "Zarządzanie ofertami",
+        "descLine1": "Zarządzamy Państwa ofertami na wszystkich najważniejszych platformach,",
+        "descLine2": "w tym Airbnb, Booking.com i rezerwacjach bezpośrednich."
       },
       "communication": {
-        "title": "Guest Communication",
-        "descLine1": "We handle all guest inquiries, check-ins,",
-        "descLine2": "check-outs, and support 24/7."
+        "title": "Komunikacja z gośćmi",
+        "descLine1": "Zajmujemy się wszystkimi zapytaniami gości, zameldowaniem,",
+        "descLine2": "wymeldowaniem i wsparciem 24/7."
       },
       "cleaning": {
-        "title": "Cleaning & Maintenance",
-        "descLine1": "Professional cleaning after every stay,",
-        "descLine2": "regular inspections and prompt maintenance."
+        "title": "Sprzątanie i konserwacja",
+        "descLine1": "Profesjonalne sprzątanie po każdym pobycie,",
+        "descLine2": "regularne przeglądy i szybka konserwacja."
       },
       "pricing": {
-        "title": "Dynamic Pricing",
-        "descLine1": "We optimize your nightly rates to maximize",
-        "descLine2": "occupancy and revenue year-round."
+        "title": "Dynamiczne ustalanie cen",
+        "descLine1": "Optymalizujemy Państwa stawki za noc, aby przez cały rok",
+        "descLine2": "maksymalizować obłożenie i przychody."
       },
       "reporting": {
-        "title": "Monthly Reporting",
-        "descLine1": "Transparent monthly reports so you always",
-        "descLine2": "know how your property is performing."
+        "title": "Miesięczne raporty",
+        "descLine1": "Przejrzyste miesięczne raporty, w których zawsze",
+        "descLine2": "widać, jak radzi sobie Państwa nieruchomość."
       }
     },
     "promise": {
-      "quote": "We treat every property as if it were our own — with the same care, attention, and pride.",
-      "attribution": "Ana & Evan, Founders"
+      "quote": "Do każdej nieruchomości podchodzimy tak, jakby była nasza własna, z taką samą troską, uwagą i dumą.",
+      "attribution": "Ana i Evan, założyciele"
     },
     "process": {
-      "label": "The Process",
-      "heading": "Getting Started is Simple."
+      "label": "Jak to działa",
+      "heading": "Rozpoczęcie współpracy jest proste."
     },
     "steps": {
       "step1": {
         "number": "01",
-        "title": "Free Consultation",
-        "descLine1": "We meet to understand",
-        "descLine2": "your property, goals, and",
-        "descLine3": "answer any questions."
+        "title": "Bezpłatna konsultacja",
+        "descLine1": "Spotykamy się, aby poznać",
+        "descLine2": "Państwa nieruchomość i cele oraz",
+        "descLine3": "odpowiedzieć na wszelkie pytania."
       },
       "step2": {
         "number": "02",
-        "title": "Property Assessment",
-        "descLine1": "We assess your property,",
-        "descLine2": "provide recommendations,",
-        "descLine3": "and agree on terms."
+        "title": "Ocena nieruchomości",
+        "descLine1": "Oceniamy Państwa nieruchomość,",
+        "descLine2": "przedstawiamy rekomendacje",
+        "descLine3": "i ustalamy warunki."
       },
       "step3": {
         "number": "03",
-        "title": "We Handle Everything",
-        "descLine1": "Photography, listings,",
-        "descLine2": "guest management,",
-        "descLine3": "cleaning, all taken care of."
+        "title": "Zajmujemy się wszystkim",
+        "descLine1": "Fotografie, oferty,",
+        "descLine2": "obsługa gości,",
+        "descLine3": "sprzątanie, wszystko mamy pod kontrolą."
       },
       "step4": {
         "number": "04",
-        "title": "You Earn & Relax",
-        "desc": "Receive monthly payments and transparent reports. That's it."
+        "title": "Zarabiają Państwo i odpoczywają",
+        "desc": "Otrzymują Państwo miesięczne płatności i przejrzyste raporty. To wszystko."
       }
     },
     "contact": {
-      "label": "Get in Touch",
-      "heading": "Ready to Partner With Us?",
-      "bodyLine1": "Fill in the form and we'll be in touch within 24 hours.",
-      "bodyLine2": "Reach us directly:",
+      "label": "Skontaktuj się z nami",
+      "heading": "Są Państwo gotowi na współpracę z nami?",
+      "bodyLine1": "Wypełnij formularz, a skontaktujemy się z Państwem w ciągu 24 godzin.",
+      "bodyLine2": "Lub skontaktuj się z nami bezpośrednio:",
       "whatsappLink": "WhatsApp: +385 91 548 3354",
       "emailLink": "solarliving.info@gmail.com",
-      "labelName": "Full Name",
-      "labelEmail": "Email",
-      "labelPhone": "Phone",
-      "labelAddress": "Property Address / Location",
-      "labelType": "Property Type",
-      "labelMessage": "Message",
-      "messageOptional": "(optional)",
-      "placeholderName": "Your full name",
-      "placeholderEmail": "your@email.com",
+      "labelName": "Imię i nazwisko",
+      "labelEmail": "E-mail",
+      "labelPhone": "Telefon",
+      "labelAddress": "Adres / lokalizacja nieruchomości",
+      "labelType": "Typ nieruchomości",
+      "labelMessage": "Wiadomość",
+      "messageOptional": "(opcjonalnie)",
+      "placeholderName": "Państwa imię i nazwisko",
+      "placeholderEmail": "twoj@email.pl",
       "placeholderPhone": "+385 ...",
-      "placeholderAddress": "Street, city, or area",
-      "selectDefault": "Select type…",
-      "optionApartment": "Apartment",
+      "placeholderAddress": "Ulica, miasto lub okolica",
+      "selectDefault": "Wybierz typ…",
+      "optionApartment": "Apartament",
       "optionStudio": "Studio",
-      "optionVilla": "Villa",
-      "optionHouse": "House",
-      "optionOther": "Other",
-      "placeholderMessage": "Tell us about your property and what you're looking for.",
-      "sendWhatsApp": "Send via WhatsApp",
-      "sendEmail": "Send via Email"
+      "optionVilla": "Willa",
+      "optionHouse": "Dom",
+      "optionOther": "Inne",
+      "placeholderMessage": "Państwa nieruchomość i oczekiwania",
+      "sendWhatsApp": "Wyślij przez WhatsApp",
+      "sendEmail": "Wyślij e-mailem"
     },
     "whatsapp": {
-      "greeting": "Hi! I'd like to discuss property management.",
-      "name": "Name: {name}",
-      "property": "Property: {address}",
-      "type": "Type: {type}",
-      "email": "Email: {email}",
-      "phone": "Phone: {phone}",
-      "message": "Message: {message}"
+      "greeting": "Dzień dobry! Interesuje mnie zarządzanie nieruchomością.",
+      "name": "Imię i nazwisko: {name}",
+      "property": "Nieruchomość: {address}",
+      "type": "Typ: {type}",
+      "email": "E-mail: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Wiadomość: {message}"
     },
     "email": {
-      "subject": "Property Management Inquiry",
-      "greeting": "Hi Solar Living,",
-      "name": "Name: {name}",
-      "property": "Property: {address}",
-      "type": "Type: {type}",
-      "email": "Email: {email}",
-      "phone": "Phone: {phone}",
-      "message": "Message: {message}"
+      "subject": "Zapytanie o zarządzanie nieruchomością",
+      "greeting": "Szanowni Państwo,",
+      "name": "Imię i nazwisko: {name}",
+      "property": "Nieruchomość: {address}",
+      "type": "Typ: {type}",
+      "email": "E-mail: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Wiadomość: {message}"
     }
   },
   "about": {

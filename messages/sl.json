@@ -303,131 +303,131 @@
   },
   "owners": {
     "hero": {
-      "label": "For Property Owners",
-      "heading": "Let Us Take Care of Everything.",
-      "subtextLine1": "Solar Living handles every aspect of your property,",
-      "subtextLine2": "so you earn more, stress less, and never worry about a thing.",
-      "cta": "Get a Free Consultation",
-      "note": "We'll get back to you within 24 hours."
+      "label": "Za lastnike nepremičnin",
+      "heading": "Mi poskrbimo za vse.",
+      "subtextLine1": "Solar Living skrbi za vsak vidik vaše nepremičnine,",
+      "subtextLine2": "da lahko zaslužite več, imate manj skrbi in pozabite na vse ostalo.",
+      "cta": "Naročite brezplačno svetovanje",
+      "note": "Oglasili se vam bomo v 24 urah."
     },
     "offer": {
-      "label": "What We Offer",
-      "heading": "Full Management. Zero Headaches."
+      "label": "Kaj ponujamo",
+      "heading": "Popolno upravljanje. Nič skrbi."
     },
     "features": {
       "photography": {
-        "title": "Professional Photography",
-        "descLine1": "We photograph your property to the",
-        "descLine2": "highest standard to attract premium guests."
+        "title": "Profesionalno fotografiranje",
+        "descLine1": "Vašo nepremičnino fotografiramo v najvišji",
+        "descLine2": "kvaliteti, da privabimo najboljše goste."
       },
       "listing": {
-        "title": "Listing Management",
-        "descLine1": "We manage your listings across all major platforms",
-        "descLine2": "including Airbnb, Booking.com, and direct bookings."
+        "title": "Upravljanje oglasov",
+        "descLine1": "Upravljamo vaše oglase na vseh večjih platformah,",
+        "descLine2": "vključno z Airbnb, Booking.com in neposrednimi rezervacijami."
       },
       "communication": {
-        "title": "Guest Communication",
-        "descLine1": "We handle all guest inquiries, check-ins,",
-        "descLine2": "check-outs, and support 24/7."
+        "title": "Komunikacija z gosti",
+        "descLine1": "Poskrbimo za vsa vprašanja gostov, prijave,",
+        "descLine2": "odjave in podporo 24/7."
       },
       "cleaning": {
-        "title": "Cleaning & Maintenance",
-        "descLine1": "Professional cleaning after every stay,",
-        "descLine2": "regular inspections and prompt maintenance."
+        "title": "Čiščenje in vzdrževanje",
+        "descLine1": "Profesionalno čiščenje po vsakem bivanju,",
+        "descLine2": "redni pregledi in hitro vzdrževanje."
       },
       "pricing": {
-        "title": "Dynamic Pricing",
-        "descLine1": "We optimize your nightly rates to maximize",
-        "descLine2": "occupancy and revenue year-round."
+        "title": "Dinamično oblikovanje cen",
+        "descLine1": "Optimiziramo vaše nočne cene, da čez vse leto",
+        "descLine2": "maksimiramo zasedenost in prihodke."
       },
       "reporting": {
-        "title": "Monthly Reporting",
-        "descLine1": "Transparent monthly reports so you always",
-        "descLine2": "know how your property is performing."
+        "title": "Mesečna poročila",
+        "descLine1": "Pregledna mesečna poročila, s katerimi vedno",
+        "descLine2": "veste, kako uspešna je vaša nepremičnina."
       }
     },
     "promise": {
-      "quote": "We treat every property as if it were our own — with the same care, attention, and pride.",
-      "attribution": "Ana & Evan, Founders"
+      "quote": "Z vsako nepremičnino ravnamo, kot bi bila naša lastna, z enako skrbjo, pozornostjo in ponosom.",
+      "attribution": "Ana in Evan, ustanovitelja"
     },
     "process": {
-      "label": "The Process",
-      "heading": "Getting Started is Simple."
+      "label": "Kako poteka",
+      "heading": "Začetek je preprost."
     },
     "steps": {
       "step1": {
         "number": "01",
-        "title": "Free Consultation",
-        "descLine1": "We meet to understand",
-        "descLine2": "your property, goals, and",
-        "descLine3": "answer any questions."
+        "title": "Brezplačno svetovanje",
+        "descLine1": "Spoznamo se, da razumemo",
+        "descLine2": "vašo nepremičnino in cilje ter",
+        "descLine3": "odgovorimo na vsa vprašanja."
       },
       "step2": {
         "number": "02",
-        "title": "Property Assessment",
-        "descLine1": "We assess your property,",
-        "descLine2": "provide recommendations,",
-        "descLine3": "and agree on terms."
+        "title": "Ocena nepremičnine",
+        "descLine1": "Ocenimo vašo nepremičnino,",
+        "descLine2": "podamo priporočila",
+        "descLine3": "in se dogovorimo o pogojih."
       },
       "step3": {
         "number": "03",
-        "title": "We Handle Everything",
-        "descLine1": "Photography, listings,",
-        "descLine2": "guest management,",
-        "descLine3": "cleaning, all taken care of."
+        "title": "Poskrbimo za vse",
+        "descLine1": "Fotografije, oglasi,",
+        "descLine2": "upravljanje gostov,",
+        "descLine3": "čiščenje, vse imamo pod nadzorom."
       },
       "step4": {
         "number": "04",
-        "title": "You Earn & Relax",
-        "desc": "Receive monthly payments and transparent reports. That's it."
+        "title": "Zaslužite in se sprostite",
+        "desc": "Prejemate mesečna plačila in pregledna poročila. To je vse."
       }
     },
     "contact": {
-      "label": "Get in Touch",
-      "heading": "Ready to Partner With Us?",
-      "bodyLine1": "Fill in the form and we'll be in touch within 24 hours.",
-      "bodyLine2": "Reach us directly:",
+      "label": "Kontaktirajte nas",
+      "heading": "Ste pripravljeni na sodelovanje z nami?",
+      "bodyLine1": "Izpolnite obrazec in oglasili se vam bomo v 24 urah.",
+      "bodyLine2": "Ali nas kontaktirajte neposredno:",
       "whatsappLink": "WhatsApp: +385 91 548 3354",
       "emailLink": "solarliving.info@gmail.com",
-      "labelName": "Full Name",
-      "labelEmail": "Email",
-      "labelPhone": "Phone",
-      "labelAddress": "Property Address / Location",
-      "labelType": "Property Type",
-      "labelMessage": "Message",
-      "messageOptional": "(optional)",
-      "placeholderName": "Your full name",
-      "placeholderEmail": "your@email.com",
+      "labelName": "Ime in priimek",
+      "labelEmail": "E-naslov",
+      "labelPhone": "Telefon",
+      "labelAddress": "Naslov / lokacija nepremičnine",
+      "labelType": "Vrsta nepremičnine",
+      "labelMessage": "Sporočilo",
+      "messageOptional": "(neobvezno)",
+      "placeholderName": "Vaše ime in priimek",
+      "placeholderEmail": "vas@email.si",
       "placeholderPhone": "+385 ...",
-      "placeholderAddress": "Street, city, or area",
-      "selectDefault": "Select type…",
-      "optionApartment": "Apartment",
+      "placeholderAddress": "Ulica, mesto ali območje",
+      "selectDefault": "Izberite vrsto…",
+      "optionApartment": "Apartma",
       "optionStudio": "Studio",
-      "optionVilla": "Villa",
-      "optionHouse": "House",
-      "optionOther": "Other",
-      "placeholderMessage": "Tell us about your property and what you're looking for.",
-      "sendWhatsApp": "Send via WhatsApp",
-      "sendEmail": "Send via Email"
+      "optionVilla": "Vila",
+      "optionHouse": "Hiša",
+      "optionOther": "Drugo",
+      "placeholderMessage": "Vaša nepremičnina in pričakovanja",
+      "sendWhatsApp": "Pošljite prek WhatsAppa",
+      "sendEmail": "Pošljite po e-pošti"
     },
     "whatsapp": {
-      "greeting": "Hi! I'd like to discuss property management.",
-      "name": "Name: {name}",
-      "property": "Property: {address}",
-      "type": "Type: {type}",
-      "email": "Email: {email}",
-      "phone": "Phone: {phone}",
-      "message": "Message: {message}"
+      "greeting": "Pozdravljeni! Zanima me upravljanje nepremičnine.",
+      "name": "Ime in priimek: {name}",
+      "property": "Nepremičnina: {address}",
+      "type": "Vrsta: {type}",
+      "email": "E-naslov: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Sporočilo: {message}"
     },
     "email": {
-      "subject": "Property Management Inquiry",
-      "greeting": "Hi Solar Living,",
-      "name": "Name: {name}",
-      "property": "Property: {address}",
-      "type": "Type: {type}",
-      "email": "Email: {email}",
-      "phone": "Phone: {phone}",
-      "message": "Message: {message}"
+      "subject": "Povpraševanje za upravljanje nepremičnine",
+      "greeting": "Pozdravljeni, ekipa Solar Living,",
+      "name": "Ime in priimek: {name}",
+      "property": "Nepremičnina: {address}",
+      "type": "Vrsta: {type}",
+      "email": "E-naslov: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Sporočilo: {message}"
     }
   },
   "about": {

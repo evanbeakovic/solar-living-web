@@ -303,131 +303,131 @@
   },
   "owners": {
     "hero": {
-      "label": "For Property Owners",
-      "heading": "Let Us Take Care of Everything.",
-      "subtextLine1": "Solar Living handles every aspect of your property,",
-      "subtextLine2": "so you earn more, stress less, and never worry about a thing.",
-      "cta": "Get a Free Consultation",
-      "note": "We'll get back to you within 24 hours."
+      "label": "Власникам нерухомості",
+      "heading": "Ми подбаємо про все.",
+      "subtextLine1": "Solar Living управляє кожним аспектом Вашої нерухомості,",
+      "subtextLine2": "щоб Ви заробляли більше, менше хвилювалися і забули про будь-які клопоти.",
+      "cta": "Отримати безкоштовну консультацію",
+      "note": "Ми зв'яжемося з Вами протягом 24 годин."
     },
     "offer": {
-      "label": "What We Offer",
-      "heading": "Full Management. Zero Headaches."
+      "label": "Що ми пропонуємо",
+      "heading": "Повне управління. Жодних турбот."
     },
     "features": {
       "photography": {
-        "title": "Professional Photography",
-        "descLine1": "We photograph your property to the",
-        "descLine2": "highest standard to attract premium guests."
+        "title": "Професійна фотозйомка",
+        "descLine1": "Ми фотографуємо Вашу нерухомість на найвищому",
+        "descLine2": "рівні, щоб залучити найкращих гостей."
       },
       "listing": {
-        "title": "Listing Management",
-        "descLine1": "We manage your listings across all major platforms",
-        "descLine2": "including Airbnb, Booking.com, and direct bookings."
+        "title": "Управління оголошеннями",
+        "descLine1": "Ми керуємо Вашими оголошеннями на всіх основних",
+        "descLine2": "платформах, включно з Airbnb, Booking.com і прямими бронюваннями."
       },
       "communication": {
-        "title": "Guest Communication",
-        "descLine1": "We handle all guest inquiries, check-ins,",
-        "descLine2": "check-outs, and support 24/7."
+        "title": "Спілкування з гостями",
+        "descLine1": "Ми беремо на себе всі запити гостей, заїзди,",
+        "descLine2": "виїзди та підтримку 24/7."
       },
       "cleaning": {
-        "title": "Cleaning & Maintenance",
-        "descLine1": "Professional cleaning after every stay,",
-        "descLine2": "regular inspections and prompt maintenance."
+        "title": "Прибирання та обслуговування",
+        "descLine1": "Професійне прибирання після кожного проживання,",
+        "descLine2": "регулярні перевірки та оперативне обслуговування."
       },
       "pricing": {
-        "title": "Dynamic Pricing",
-        "descLine1": "We optimize your nightly rates to maximize",
-        "descLine2": "occupancy and revenue year-round."
+        "title": "Динамічне ціноутворення",
+        "descLine1": "Ми оптимізуємо Ваші тарифи за ніч, щоб цілий рік",
+        "descLine2": "максимізувати заповнюваність і дохід."
       },
       "reporting": {
-        "title": "Monthly Reporting",
-        "descLine1": "Transparent monthly reports so you always",
-        "descLine2": "know how your property is performing."
+        "title": "Щомісячна звітність",
+        "descLine1": "Прозорі щомісячні звіти, завдяки яким Ви завжди",
+        "descLine2": "знаєте, наскільки успішно працює Ваша нерухомість."
       }
     },
     "promise": {
-      "quote": "We treat every property as if it were our own — with the same care, attention, and pride.",
-      "attribution": "Ana & Evan, Founders"
+      "quote": "Ми ставимося до кожної нерухомості так, ніби вона наша власна, з такою самою турботою, увагою і гордістю.",
+      "attribution": "Ana та Evan, засновники"
     },
     "process": {
-      "label": "The Process",
-      "heading": "Getting Started is Simple."
+      "label": "Як це працює",
+      "heading": "Розпочати просто."
     },
     "steps": {
       "step1": {
         "number": "01",
-        "title": "Free Consultation",
-        "descLine1": "We meet to understand",
-        "descLine2": "your property, goals, and",
-        "descLine3": "answer any questions."
+        "title": "Безкоштовна консультація",
+        "descLine1": "Ми зустрічаємося, щоб зрозуміти",
+        "descLine2": "Вашу нерухомість і цілі та",
+        "descLine3": "відповісти на будь-які запитання."
       },
       "step2": {
         "number": "02",
-        "title": "Property Assessment",
-        "descLine1": "We assess your property,",
-        "descLine2": "provide recommendations,",
-        "descLine3": "and agree on terms."
+        "title": "Оцінка нерухомості",
+        "descLine1": "Ми оцінюємо Вашу нерухомість,",
+        "descLine2": "надаємо рекомендації",
+        "descLine3": "та узгоджуємо умови."
       },
       "step3": {
         "number": "03",
-        "title": "We Handle Everything",
-        "descLine1": "Photography, listings,",
-        "descLine2": "guest management,",
-        "descLine3": "cleaning, all taken care of."
+        "title": "Ми беремо все на себе",
+        "descLine1": "Фотозйомка, оголошення,",
+        "descLine2": "робота з гостями,",
+        "descLine3": "прибирання, все під контролем."
       },
       "step4": {
         "number": "04",
-        "title": "You Earn & Relax",
-        "desc": "Receive monthly payments and transparent reports. That's it."
+        "title": "Ви заробляєте і відпочиваєте",
+        "desc": "Отримуєте щомісячні виплати та прозорі звіти. Ось і все."
       }
     },
     "contact": {
-      "label": "Get in Touch",
-      "heading": "Ready to Partner With Us?",
-      "bodyLine1": "Fill in the form and we'll be in touch within 24 hours.",
-      "bodyLine2": "Reach us directly:",
+      "label": "Зв'яжіться з нами",
+      "heading": "Готові співпрацювати з нами?",
+      "bodyLine1": "Заповніть форму, і ми зв'яжемося з Вами протягом 24 годин.",
+      "bodyLine2": "Або зв'яжіться з нами напряму:",
       "whatsappLink": "WhatsApp: +385 91 548 3354",
       "emailLink": "solarliving.info@gmail.com",
-      "labelName": "Full Name",
-      "labelEmail": "Email",
-      "labelPhone": "Phone",
-      "labelAddress": "Property Address / Location",
-      "labelType": "Property Type",
-      "labelMessage": "Message",
-      "messageOptional": "(optional)",
-      "placeholderName": "Your full name",
-      "placeholderEmail": "your@email.com",
+      "labelName": "Повне ім'я",
+      "labelEmail": "Електронна пошта",
+      "labelPhone": "Телефон",
+      "labelAddress": "Адреса / розташування нерухомості",
+      "labelType": "Тип нерухомості",
+      "labelMessage": "Повідомлення",
+      "messageOptional": "(необов'язково)",
+      "placeholderName": "Ваше повне ім'я",
+      "placeholderEmail": "vash@email.ua",
       "placeholderPhone": "+385 ...",
-      "placeholderAddress": "Street, city, or area",
-      "selectDefault": "Select type…",
-      "optionApartment": "Apartment",
-      "optionStudio": "Studio",
-      "optionVilla": "Villa",
-      "optionHouse": "House",
-      "optionOther": "Other",
-      "placeholderMessage": "Tell us about your property and what you're looking for.",
-      "sendWhatsApp": "Send via WhatsApp",
-      "sendEmail": "Send via Email"
+      "placeholderAddress": "Вулиця, місто або район",
+      "selectDefault": "Оберіть тип…",
+      "optionApartment": "Апартаменти",
+      "optionStudio": "Студія",
+      "optionVilla": "Вілла",
+      "optionHouse": "Будинок",
+      "optionOther": "Інше",
+      "placeholderMessage": "Ваша нерухомість і побажання",
+      "sendWhatsApp": "Надіслати через WhatsApp",
+      "sendEmail": "Надіслати електронною поштою"
     },
     "whatsapp": {
-      "greeting": "Hi! I'd like to discuss property management.",
-      "name": "Name: {name}",
-      "property": "Property: {address}",
-      "type": "Type: {type}",
-      "email": "Email: {email}",
-      "phone": "Phone: {phone}",
-      "message": "Message: {message}"
+      "greeting": "Вітаю! Мене цікавить управління нерухомістю.",
+      "name": "Ім'я: {name}",
+      "property": "Нерухомість: {address}",
+      "type": "Тип: {type}",
+      "email": "Електронна пошта: {email}",
+      "phone": "Телефон: {phone}",
+      "message": "Повідомлення: {message}"
     },
     "email": {
-      "subject": "Property Management Inquiry",
-      "greeting": "Hi Solar Living,",
-      "name": "Name: {name}",
-      "property": "Property: {address}",
-      "type": "Type: {type}",
-      "email": "Email: {email}",
-      "phone": "Phone: {phone}",
-      "message": "Message: {message}"
+      "subject": "Запит на управління нерухомістю",
+      "greeting": "Доброго дня,",
+      "name": "Ім'я: {name}",
+      "property": "Нерухомість: {address}",
+      "type": "Тип: {type}",
+      "email": "Електронна пошта: {email}",
+      "phone": "Телефон: {phone}",
+      "message": "Повідомлення: {message}"
     }
   },
   "about": {
