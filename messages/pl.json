@@ -565,23 +565,23 @@
     }
   },
   "navbar": {
-    "home": "Home",
-    "apartments": "Accommodation",
-    "owners": "Owners",
-    "about": "About",
-    "contact": "Contact",
-    "toggleMenu": "Toggle menu"
+    "home": "Główna",
+    "apartments": "Noclegi",
+    "owners": "Dla właścicieli",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "toggleMenu": "Otwórz/zamknij menu"
   },
   "footer": {
-    "quickLinksHeading": "Quick Links",
-    "contactHeading": "Contact",
-    "linkHome": "Home",
-    "linkApartments": "Accommodation",
-    "linkOwners": "Owners",
-    "linkAbout": "About",
-    "linkContact": "Contact",
+    "quickLinksHeading": "Przydatne linki",
+    "contactHeading": "Kontakt",
+    "linkHome": "Główna",
+    "linkApartments": "Noclegi",
+    "linkOwners": "Dla właścicieli",
+    "linkAbout": "O nas",
+    "linkContact": "Kontakt",
     "linkFaq": "FAQ",
-    "linkPrivacyPolicy": "Privacy Policy",
-    "copyright": "© 2026 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | All rights reserved"
+    "linkPrivacyPolicy": "Polityka prywatności",
+    "copyright": "© 2026 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | Wszelkie prawa zastrzeżone"
   }
 }

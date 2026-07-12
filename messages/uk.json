@@ -565,23 +565,23 @@
     }
   },
   "navbar": {
-    "home": "Home",
-    "apartments": "Accommodation",
-    "owners": "Owners",
-    "about": "About",
-    "contact": "Contact",
-    "toggleMenu": "Toggle menu"
+    "home": "Головна",
+    "apartments": "Розміщення",
+    "owners": "Власникам",
+    "about": "Про нас",
+    "contact": "Контакти",
+    "toggleMenu": "Відкрити/закрити меню"
   },
   "footer": {
-    "quickLinksHeading": "Quick Links",
-    "contactHeading": "Contact",
-    "linkHome": "Home",
-    "linkApartments": "Accommodation",
-    "linkOwners": "Owners",
-    "linkAbout": "About",
-    "linkContact": "Contact",
+    "quickLinksHeading": "Швидкі посилання",
+    "contactHeading": "Контакти",
+    "linkHome": "Головна",
+    "linkApartments": "Розміщення",
+    "linkOwners": "Власникам",
+    "linkAbout": "Про нас",
+    "linkContact": "Контакти",
     "linkFaq": "FAQ",
-    "linkPrivacyPolicy": "Privacy Policy",
-    "copyright": "© 2026 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | All rights reserved"
+    "linkPrivacyPolicy": "Політика конфіденційності",
+    "copyright": "© 2026 BE CAPITAL, obrt za poslovanje nekretninama, vl. Evan Beaković | OIB: 30760238873 | Усі права захищені"
   }
 }
