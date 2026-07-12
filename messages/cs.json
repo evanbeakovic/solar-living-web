@@ -247,131 +247,131 @@
   },
   "owners": {
     "hero": {
-      "label": "For Property Owners",
-      "heading": "Let Us Take Care of Everything.",
-      "subtextLine1": "Solar Living handles every aspect of your property,",
-      "subtextLine2": "so you earn more, stress less, and never worry about a thing.",
-      "cta": "Get a Free Consultation",
-      "note": "We'll get back to you within 24 hours."
+      "label": "Pro majitele nemovitostí",
+      "heading": "Nechte starosti na nás.",
+      "subtextLine1": "Solar Living se stará o každý aspekt vaší nemovitosti,",
+      "subtextLine2": "abyste vydělávali víc, měli méně starostí a nikdy se o nic nemuseli bát.",
+      "cta": "Domluvte si bezplatnou konzultaci",
+      "note": "Ozveme se vám do 24 hodin."
     },
     "offer": {
-      "label": "What We Offer",
-      "heading": "Full Management. Zero Headaches."
+      "label": "Co nabízíme",
+      "heading": "Kompletní správa. Žádné starosti."
     },
     "features": {
       "photography": {
-        "title": "Professional Photography",
-        "descLine1": "We photograph your property to the",
-        "descLine2": "highest standard to attract premium guests."
+        "title": "Profesionální fotografie",
+        "descLine1": "Vaši nemovitost vyfotíme v nejvyšší",
+        "descLine2": "kvalitě, abychom přilákali ty nejlepší hosty."
       },
       "listing": {
-        "title": "Listing Management",
-        "descLine1": "We manage your listings across all major platforms",
-        "descLine2": "including Airbnb, Booking.com, and direct bookings."
+        "title": "Správa nabídek",
+        "descLine1": "Spravujeme vaše nabídky na všech hlavních platformách,",
+        "descLine2": "včetně Airbnb, Booking.com a přímých rezervací."
       },
       "communication": {
-        "title": "Guest Communication",
-        "descLine1": "We handle all guest inquiries, check-ins,",
-        "descLine2": "check-outs, and support 24/7."
+        "title": "Komunikace s hosty",
+        "descLine1": "Staráme se o veškeré dotazy hostů, check-in,",
+        "descLine2": "check-out a podporu 24/7."
       },
       "cleaning": {
-        "title": "Cleaning & Maintenance",
-        "descLine1": "Professional cleaning after every stay,",
-        "descLine2": "regular inspections and prompt maintenance."
+        "title": "Úklid a údržba",
+        "descLine1": "Profesionální úklid po každém pobytu,",
+        "descLine2": "pravidelné kontroly a rychlá údržba."
       },
       "pricing": {
-        "title": "Dynamic Pricing",
-        "descLine1": "We optimize your nightly rates to maximize",
-        "descLine2": "occupancy and revenue year-round."
+        "title": "Dynamická tvorba cen",
+        "descLine1": "Optimalizujeme vaše noční sazby, abychom",
+        "descLine2": "po celý rok maximalizovali obsazenost a výnosy."
       },
       "reporting": {
-        "title": "Monthly Reporting",
-        "descLine1": "Transparent monthly reports so you always",
-        "descLine2": "know how your property is performing."
+        "title": "Měsíční reporty",
+        "descLine1": "Transparentní měsíční reporty, díky kterým vždy",
+        "descLine2": "víte, jak si vaše nemovitost vede."
       }
     },
     "promise": {
-      "quote": "We treat every property as if it were our own — with the same care, attention, and pride.",
-      "attribution": "Ana & Evan, Founders"
+      "quote": "Ke každé nemovitosti přistupujeme, jako by byla naše vlastní, se stejnou péčí, pozorností a hrdostí.",
+      "attribution": "Ana a Evan, zakladatelé"
     },
     "process": {
-      "label": "The Process",
-      "heading": "Getting Started is Simple."
+      "label": "Jak to funguje",
+      "heading": "Začít je jednoduché."
     },
     "steps": {
       "step1": {
         "number": "01",
-        "title": "Free Consultation",
-        "descLine1": "We meet to understand",
-        "descLine2": "your property, goals, and",
-        "descLine3": "answer any questions."
+        "title": "Bezplatná konzultace",
+        "descLine1": "Setkáme se, probereme vaši",
+        "descLine2": "nemovitost a vaše cíle a",
+        "descLine3": "zodpovíme všechny otázky."
       },
       "step2": {
         "number": "02",
-        "title": "Property Assessment",
-        "descLine1": "We assess your property,",
-        "descLine2": "provide recommendations,",
-        "descLine3": "and agree on terms."
+        "title": "Posouzení nemovitosti",
+        "descLine1": "Posoudíme vaši nemovitost,",
+        "descLine2": "navrhneme doporučení",
+        "descLine3": "a dohodneme podmínky."
       },
       "step3": {
         "number": "03",
-        "title": "We Handle Everything",
-        "descLine1": "Photography, listings,",
-        "descLine2": "guest management,",
-        "descLine3": "cleaning, all taken care of."
+        "title": "Postaráme se o všechno",
+        "descLine1": "Fotografie, nabídky,",
+        "descLine2": "správa hostů,",
+        "descLine3": "úklid, o to vše se postaráme."
       },
       "step4": {
         "number": "04",
-        "title": "You Earn & Relax",
-        "desc": "Receive monthly payments and transparent reports. That's it."
+        "title": "Vy vyděláváte a odpočíváte",
+        "desc": "Dostáváte měsíční platby a transparentní reporty. To je vše."
       }
     },
     "contact": {
-      "label": "Get in Touch",
-      "heading": "Ready to Partner With Us?",
-      "bodyLine1": "Fill in the form and we'll be in touch within 24 hours.",
-      "bodyLine2": "Reach us directly:",
+      "label": "Kontaktujte nás",
+      "heading": "Připraveni spolupracovat s námi?",
+      "bodyLine1": "Vyplňte formulář a ozveme se vám do 24 hodin.",
+      "bodyLine2": "Nebo nás kontaktujte přímo:",
       "whatsappLink": "WhatsApp: +385 91 548 3354",
       "emailLink": "solarliving.info@gmail.com",
-      "labelName": "Full Name",
-      "labelEmail": "Email",
-      "labelPhone": "Phone",
-      "labelAddress": "Property Address / Location",
-      "labelType": "Property Type",
-      "labelMessage": "Message",
-      "messageOptional": "(optional)",
-      "placeholderName": "Your full name",
-      "placeholderEmail": "your@email.com",
+      "labelName": "Celé jméno",
+      "labelEmail": "E-mail",
+      "labelPhone": "Telefon",
+      "labelAddress": "Adresa / lokalita nemovitosti",
+      "labelType": "Typ nemovitosti",
+      "labelMessage": "Zpráva",
+      "messageOptional": "(nepovinné)",
+      "placeholderName": "Vaše celé jméno",
+      "placeholderEmail": "vase@email.cz",
       "placeholderPhone": "+385 ...",
-      "placeholderAddress": "Street, city, or area",
-      "selectDefault": "Select type…",
-      "optionApartment": "Apartment",
+      "placeholderAddress": "Ulice, město nebo oblast",
+      "selectDefault": "Vyberte typ…",
+      "optionApartment": "Apartmán",
       "optionStudio": "Studio",
-      "optionVilla": "Villa",
-      "optionHouse": "House",
-      "optionOther": "Other",
-      "placeholderMessage": "Tell us about your property and what you're looking for.",
-      "sendWhatsApp": "Send via WhatsApp",
-      "sendEmail": "Send via Email"
+      "optionVilla": "Vila",
+      "optionHouse": "Dům",
+      "optionOther": "Jiné",
+      "placeholderMessage": "Řekněte nám o své nemovitosti a co hledáte.",
+      "sendWhatsApp": "Odeslat přes WhatsApp",
+      "sendEmail": "Odeslat e-mailem"
     },
     "whatsapp": {
-      "greeting": "Hi! I'd like to discuss property management.",
-      "name": "Name: {name}",
-      "property": "Property: {address}",
-      "type": "Type: {type}",
-      "email": "Email: {email}",
-      "phone": "Phone: {phone}",
-      "message": "Message: {message}"
+      "greeting": "Dobrý den, zajímá mě správa nemovitosti.",
+      "name": "Jméno: {name}",
+      "property": "Nemovitost: {address}",
+      "type": "Typ: {type}",
+      "email": "E-mail: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Zpráva: {message}"
     },
     "email": {
-      "subject": "Property Management Inquiry",
-      "greeting": "Hi Solar Living,",
-      "name": "Name: {name}",
-      "property": "Property: {address}",
-      "type": "Type: {type}",
-      "email": "Email: {email}",
-      "phone": "Phone: {phone}",
-      "message": "Message: {message}"
+      "subject": "Poptávka na správu nemovitosti",
+      "greeting": "Dobrý den, Solar Living,",
+      "name": "Jméno: {name}",
+      "property": "Nemovitost: {address}",
+      "type": "Typ: {type}",
+      "email": "E-mail: {email}",
+      "phone": "Telefon: {phone}",
+      "message": "Zpráva: {message}"
     }
   },
   "about": {
