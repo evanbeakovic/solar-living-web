@@ -376,55 +376,55 @@
   },
   "about": {
     "hero": {
-      "label": "Our Story",
-      "heading": "More Than Property Management.",
-      "subtextLine1": "We started Solar Living because we believed Istria deserved better.",
-      "subtextLine2": "A boutique approach to hospitality that puts guests and owners first."
+      "label": "Náš příběh",
+      "heading": "Více než správa nemovitostí.",
+      "subtextLine1": "Solar Living jsme založili, protože jsme věřili, že si Istrie zaslouží něco lepšího.",
+      "subtextLine2": "Butikový přístup k pohostinství, který na první místo staví hosty i majitele."
     },
     "story": {
-      "label": "Who We Are",
-      "headingLine1": "A Boutique Company",
-      "headingLine2": "with High Standards.",
-      "para1": "Solar Living is a boutique property management company based in Umag, on the beautiful northwestern coast of Istria, Croatia. We manage a carefully selected portfolio of premium apartments and villas, properties we personally vet, prepare, and maintain to the highest standard.",
-      "para2": "We are part of the Solar Group, alongside Solar Creative, our marketing agency. This means every property in our portfolio benefits not just from management expertise, but from professional photography, branding, and digital marketing that most property managers simply don't offer.",
-      "para3": "Our mission is simple: exceptional experiences for guests, absolute peace of mind for owners, and properties that consistently earn top-rated reviews."
+      "label": "Kdo jsme",
+      "headingLine1": "Butiková společnost",
+      "headingLine2": "s vysokými standardy.",
+      "para1": "Solar Living je butiková společnost pro správu nemovitostí se sídlem v Umagu, na nádherném severozápadním pobřeží Istrie v Chorvatsku. Spravujeme pečlivě vybrané portfolio prémiových apartmánů a vil. Tyto nemovitosti osobně vybíráme, připravujeme a udržujeme na nejvyšší úrovni.",
+      "para2": "Jsme součástí skupiny Solar Group, spolu s Solar Creative, naší marketingovou agenturou. To znamená, že každá nemovitost v našem portfoliu těží nejen ze zkušeností se správou, ale i z profesionální fotografie, brandingu a digitálního marketingu, které většina správců nemovitostí prostě nenabízí.",
+      "para3": "Naše poslání je jednoduché: výjimečné zážitky pro hosty, naprostý klid pro majitele, a nemovitosti, které si trvale udržují nejlépe hodnocené recenze."
     },
     "values": {
-      "label": "What Drives Us",
-      "heading": "Our Values",
+      "label": "Co nás pohání",
+      "heading": "Naše hodnoty",
       "quality": {
-        "title": "Uncompromising Quality",
-        "description": "Every property in our portfolio is handpicked. We say no to properties that don't meet our standards, because our guests deserve the best, every time."
+        "title": "Nekompromisní kvalita",
+        "description": "Každou nemovitost v našem portfoliu pečlivě vybíráme. Nemovitosti, které nesplňují naše standardy, odmítáme, protože si naši hosté zaslouží vždy jen to nejlepší."
       },
       "hospitality": {
-        "title": "Genuine Hospitality",
-        "descLine1": "We don't just hand over keys. We make",
-        "descLine2": "sure every guest has everything they need",
-        "descLine3": "before they even ask. The little details",
-        "descLine4": "are what make a stay unforgettable."
+        "title": "Opravdová pohostinnost",
+        "descLine1": "Nejde jen o předání klíčů. Zajistíme,",
+        "descLine2": "aby měl každý host vše, co potřebuje,",
+        "descLine3": "ještě dřív, než si o to řekne. Právě detaily",
+        "descLine4": "dělají pobyt nezapomenutelným."
       },
       "partnership": {
-        "title": "Owner Partnership",
-        "descLine1": "We treat every property as if it",
-        "descLine2": "were our own. Owners trust us",
-        "descLine3": "with something valuable, and we",
-        "descLine4": "take that responsibility seriously."
+        "title": "Partnerství s majiteli",
+        "descLine1": "Ke každé nemovitosti přistupujeme,",
+        "descLine2": "jako by byla naše vlastní. Majitelé",
+        "descLine3": "nám svěřují něco cenného a my",
+        "descLine4": "tuto odpovědnost bereme vážně."
       }
     },
     "solarGroup": {
-      "label": "Part of Something Bigger",
-      "heading": "The Solar Group",
-      "para": "Solar Living is proud to be part of the Solar Group, a family of companies united by a commitment to quality, creativity, and service. Our sister company, Solar Creative, is a full-service marketing agency that supports our properties with professional photography, social media, and brand strategy.",
-      "link": "Visit Solar Creative →",
-      "stat1Value": "Est. 2024",
-      "stat1Desc": "Solar Living was founded with a vision to bring boutique-level service to Istrian property management.",
-      "stat2Value": "Umag, Istria",
-      "stat2Desc": "Based on the northwestern tip of Istria, steps from the Adriatic Sea."
+      "label": "Součást něčeho většího",
+      "heading": "Solar Group",
+      "para": "Solar Living je hrdě součástí skupiny Solar Group, rodiny společností spojených závazkem ke kvalitě, kreativitě a servisu. Naše sesterská společnost, Solar Creative, je marketingová agentura s komplexními službami, která podporuje naše nemovitosti profesionální fotografií, sociálními sítěmi a značkovou strategií.",
+      "link": "Navštívit Solar Creative →",
+      "stat1Value": "Založeno 2024",
+      "stat1Desc": "Solar Living vzniklo s vizí přinést butikovou úroveň služeb do správy nemovitostí v Istrii.",
+      "stat2Value": "Umag, Istrie",
+      "stat2Desc": "Sídlíme na severozápadním výběžku Istrie, jen pár kroků od Jadranského moře."
     },
     "cta": {
-      "heading": "Ready to experience Solar Living?",
-      "browseApartments": "Browse Accommodation",
-      "partnerWithUs": "Partner With Us"
+      "heading": "Připraveni zažít Solar Living?",
+      "browseApartments": "Zobrazit ubytování",
+      "partnerWithUs": "Staňte se naším partnerem"
     }
   },
   "contact": {

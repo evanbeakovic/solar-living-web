@@ -376,55 +376,55 @@
   },
   "about": {
     "hero": {
-      "label": "Our Story",
-      "heading": "More Than Property Management.",
-      "subtextLine1": "We started Solar Living because we believed Istria deserved better.",
-      "subtextLine2": "A boutique approach to hospitality that puts guests and owners first."
+      "label": "Náš príbeh",
+      "heading": "Viac než správa nehnuteľností.",
+      "subtextLine1": "Solar Living sme založili, pretože sme verili, že si Istria zaslúži niečo lepšie.",
+      "subtextLine2": "Butikový prístup k pohostinnosti, ktorý na prvé miesto stavia hostí aj majiteľov."
     },
     "story": {
-      "label": "Who We Are",
-      "headingLine1": "A Boutique Company",
-      "headingLine2": "with High Standards.",
-      "para1": "Solar Living is a boutique property management company based in Umag, on the beautiful northwestern coast of Istria, Croatia. We manage a carefully selected portfolio of premium apartments and villas, properties we personally vet, prepare, and maintain to the highest standard.",
-      "para2": "We are part of the Solar Group, alongside Solar Creative, our marketing agency. This means every property in our portfolio benefits not just from management expertise, but from professional photography, branding, and digital marketing that most property managers simply don't offer.",
-      "para3": "Our mission is simple: exceptional experiences for guests, absolute peace of mind for owners, and properties that consistently earn top-rated reviews."
+      "label": "Kto sme",
+      "headingLine1": "Butiková spoločnosť",
+      "headingLine2": "s vysokými štandardmi.",
+      "para1": "Solar Living je butiková spoločnosť pre správu nehnuteľností so sídlom v Umagu, na nádhernom severozápadnom pobreží Istrie v Chorvátsku. Spravujeme starostlivo vybrané portfólio prémiových apartmánov a víl. Tieto nehnuteľnosti osobne vyberáme, pripravujeme a udržiavame na najvyššej úrovni.",
+      "para2": "Sme súčasťou skupiny Solar Group, spolu s Solar Creative, našou marketingovou agentúrou. To znamená, že každá nehnuteľnosť v našom portfóliu ťaží nielen zo skúseností so správou, ale aj z profesionálnej fotografie, brandingu a digitálneho marketingu, ktoré väčšina správcov nehnuteľností proste neponúka.",
+      "para3": "Naše poslanie je jednoduché: výnimočné zážitky pre hostí, úplný pokoj pre majiteľov, a nehnuteľnosti, ktoré si trvalo udržiavajú najlepšie hodnotené recenzie."
     },
     "values": {
-      "label": "What Drives Us",
-      "heading": "Our Values",
+      "label": "Čo nás poháňa",
+      "heading": "Naše hodnoty",
       "quality": {
-        "title": "Uncompromising Quality",
-        "description": "Every property in our portfolio is handpicked. We say no to properties that don't meet our standards, because our guests deserve the best, every time."
+        "title": "Nekompromisná kvalita",
+        "description": "Každú nehnuteľnosť v našom portfóliu starostlivo vyberáme. Nehnuteľnosti, ktoré nespĺňajú naše štandardy, odmietame, pretože si naši hostia zaslúžia vždy len to najlepšie."
       },
       "hospitality": {
-        "title": "Genuine Hospitality",
-        "descLine1": "We don't just hand over keys. We make",
-        "descLine2": "sure every guest has everything they need",
-        "descLine3": "before they even ask. The little details",
-        "descLine4": "are what make a stay unforgettable."
+        "title": "Skutočná pohostinnosť",
+        "descLine1": "Nejde len o odovzdanie kľúčov. Postaráme sa,",
+        "descLine2": "aby mal každý hosť všetko, čo potrebuje,",
+        "descLine3": "ešte skôr, než si o to povie. Práve detaily",
+        "descLine4": "robia pobyt nezabudnuteľným."
       },
       "partnership": {
-        "title": "Owner Partnership",
-        "descLine1": "We treat every property as if it",
-        "descLine2": "were our own. Owners trust us",
-        "descLine3": "with something valuable, and we",
-        "descLine4": "take that responsibility seriously."
+        "title": "Partnerstvo s majiteľmi",
+        "descLine1": "Ku každej nehnuteľnosti pristupujeme,",
+        "descLine2": "akoby bola naša vlastná. Majitelia",
+        "descLine3": "nám zverujú niečo cenné a my",
+        "descLine4": "túto zodpovednosť berieme vážne."
       }
     },
     "solarGroup": {
-      "label": "Part of Something Bigger",
-      "heading": "The Solar Group",
-      "para": "Solar Living is proud to be part of the Solar Group, a family of companies united by a commitment to quality, creativity, and service. Our sister company, Solar Creative, is a full-service marketing agency that supports our properties with professional photography, social media, and brand strategy.",
-      "link": "Visit Solar Creative →",
-      "stat1Value": "Est. 2024",
-      "stat1Desc": "Solar Living was founded with a vision to bring boutique-level service to Istrian property management.",
+      "label": "Súčasť niečoho väčšieho",
+      "heading": "Solar Group",
+      "para": "Solar Living je hrdo súčasťou skupiny Solar Group, rodiny spoločností spojených záväzkom ku kvalite, kreativite a servisu. Naša sesterská spoločnosť, Solar Creative, je marketingová agentúra s komplexnými službami, ktorá podporuje naše nehnuteľnosti profesionálnou fotografiou, sociálnymi sieťami a značkovou stratégiou.",
+      "link": "Navštíviť Solar Creative →",
+      "stat1Value": "Založené 2024",
+      "stat1Desc": "Solar Living vzniklo s víziou priniesť butikovú úroveň služieb do správy nehnuteľností v Istrii.",
       "stat2Value": "Umag, Istria",
-      "stat2Desc": "Based on the northwestern tip of Istria, steps from the Adriatic Sea."
+      "stat2Desc": "Sídlime na severozápadnom výbežku Istrie, len pár krokov od Jadranského mora."
     },
     "cta": {
-      "heading": "Ready to experience Solar Living?",
-      "browseApartments": "Browse Accommodation",
-      "partnerWithUs": "Partner With Us"
+      "heading": "Pripravení zažiť Solar Living?",
+      "browseApartments": "Zobraziť ubytovanie",
+      "partnerWithUs": "Staňte sa naším partnerom"
     }
   },
   "contact": {
