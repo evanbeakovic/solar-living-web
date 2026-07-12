@@ -1,62 +1,62 @@
 {
   "home": {
     "hero": {
-      "locationLabel": "Umag, Croatia",
-      "headingStart": "Your",
-      "headingAccent": "Perfect",
-      "headingEnd": "Stay in Istria",
-      "subheading": "Handpicked stays. Exceptional service. Unforgettable memories.",
-      "ctaBrowse": "Browse Accommodation",
-      "ctaOwners": "For Property Owners"
+      "locationLabel": "Umag, Chorvátsko",
+      "headingStart": "Váš",
+      "headingAccent": "Dokonalý",
+      "headingEnd": "Pobyt v Istrii",
+      "subheading": "Starostlivo vybrané pobyty. Výnimočný servis. Nezabudnuteľné zážitky.",
+      "ctaBrowse": "Zobraziť ubytovanie",
+      "ctaOwners": "Pre majiteľov nehnuteľností"
     },
     "apartments": {
-      "label": "Our Collection",
-      "heading": "Accommodation",
-      "subtext": "Every property is personally selected and meticulously maintained.",
-      "card1Location": "Umag, Croatia",
+      "label": "Náš výber",
+      "heading": "Ubytovanie",
+      "subtext": "Každý apartmán je osobne vybraný a starostlivo udržiavaný.",
+      "card1Location": "Umag, Chorvátsko",
       "card1Name": "Elaine's View",
-      "card1Details": "6 guests · 3 bedrooms · Terrace & balcony",
-      "card1Cta": "View & Book",
-      "card2Location": "Umag, Croatia",
+      "card1Details": "6 hostí · 3 spálne · Terasa a balkón",
+      "card1Cta": "Zobraziť a rezervovať",
+      "card2Location": "Umag, Chorvátsko",
       "card2Name": "Stella's Garden",
-      "card2Details": "6 guests · 2 bedrooms · Private terrace & garden",
-      "card2Cta": "View & Book",
-      "viewAll": "View All Accommodation →"
+      "card2Details": "6 hostí · 2 spálne · Súkromná terasa a záhrada",
+      "card2Cta": "Zobraziť a rezervovať",
+      "viewAll": "Zobraziť celú ponuku ubytovania →"
     },
     "reviews": {
-      "label": "Guest Reviews",
-      "heading": "What Our Guests Say"
+      "label": "Recenzie hostí",
+      "heading": "Čo hovoria naši hostia"
     },
     "whyUs": {
-      "quote": "We don't just hand you the keys. We make sure every detail is taken care of, so you can simply enjoy.",
-      "attribution": "Solar Living Team",
-      "feature1Title": "Curated Properties",
-      "feature1Body": "Every apartment is handpicked and held to the highest standard.",
-      "feature2Title": "5-Star Service",
-      "feature2Body": "From check-in to check-out, we're always here for you.",
-      "feature3Title": "Fully Equipped",
-      "feature3Body": "Everything you need for a perfect stay, already there waiting.",
-      "feature4Title": "Top-Rated",
-      "feature4Body": "Our guests consistently leave 5-star reviews across all platforms."
+      "quote": "Nejde len o odovzdanie kľúčov. Postaráme sa o každý detail, aby ste si mohli svoj pobyt jednoducho užívať.",
+      "attribution": "Tím Solar Living",
+      "feature1Title": "Starostlivo vybrané apartmány",
+      "feature1Body": "Každý apartmán je ručne vybraný a spĺňa najvyššie štandardy.",
+      "feature2Title": "5-hviezdičkový servis",
+      "feature2Body": "Od check-inu až po check-out sme vám vždy k dispozícii.",
+      "feature3Title": "Kompletné vybavenie",
+      "feature3Body": "Všetko, čo potrebujete na dokonalý pobyt, na vás už čaká.",
+      "feature4Title": "Najlepšie hodnotenia",
+      "feature4Body": "Naši hostia nám pravidelne nechávajú 5-hviezdičkové recenzie na všetkých platformách."
     },
     "whoWeAre": {
-      "label": "Who We Are",
-      "heading": "Boutique Property Management Agency",
-      "para1": "Solar Living is a boutique property management agency in Umag, Istria, on Croatia's Adriatic coast, managing a curated portfolio of premium apartments and villas for guests and property owners alike.",
-      "para2": "For guests, we offer a hand-picked selection of apartments and villas across Umag, each maintained to the same standard of comfort, cleanliness, and attentive service. Guest satisfaction is consistently reflected in our reviews across Booking.com and Airbnb.",
-      "para3": "For property owners in Umag and across Istria, Solar Living provides full-service management: professional photography, listing management across all major platforms, 24/7 guest communication, cleaning coordination, dynamic pricing, and monthly performance reporting, all built around maximizing returns and owner peace of mind.",
-      "para4": "Solar Living is part of Solar Group, alongside <link>Solar Creative</link>, a marketing agency based in Dubai."
+      "label": "Kto sme",
+      "heading": "Butiková agentúra pre správu nehnuteľností",
+      "para1": "Solar Living je butiková agentúra pre správu nehnuteľností v Umagu, v Istrii, na chorvátskom pobreží Jadranu, ktorá spravuje starostlivo vybrané portfólio prémiových apartmánov a víl pre hostí aj majiteľov nehnuteľností.",
+      "para2": "Hosťom ponúkame starostlivo vybrané apartmány a vily po celom Umagu, z ktorých každý je udržiavaný na rovnakej úrovni komfortu, čistoty a starostlivosti o hostí. Spokojnosť hostí sa pravidelne odráža v našich recenziách na Booking.com a Airbnb.",
+      "para3": "Majiteľom nehnuteľností v Umagu aj po celej Istrii Solar Living poskytuje kompletnú správu: profesionálne fotografovanie, správu ponúk na všetkých hlavných platformách, komunikáciu s hosťami 24 hodín denne, koordináciu upratovania, dynamickú tvorbu cien a mesačné reporty o výkonnosti, to všetko s cieľom maximalizovať výnosy a pokoj majiteľov.",
+      "para4": "Solar Living je súčasťou skupiny Solar Group, spolu s <link>Solar Creative</link>, marketingovou agentúrou so sídlom v Dubaji."
     },
     "ownersCta": {
-      "label": "Property Owners",
-      "heading": "Own a Property in Istria?",
-      "body": "Join our portfolio and enjoy full management, guaranteed care, and outstanding results. We handle everything.",
-      "cta": "Get in Touch"
+      "label": "Majitelia nehnuteľností",
+      "heading": "Vlastníte nehnuteľnosť v Istrii?",
+      "body": "Pripojte sa k nášmu portfóliu a získajte kompletnú správu, garantovanú starostlivosť a vynikajúce výsledky. O všetko sa postaráme my.",
+      "cta": "Kontaktujte nás"
     },
     "location": {
-      "label": "Where We Are",
+      "label": "Kde nás nájdete",
       "heading": "Umag, Istria",
-      "body": "Nestled on the northwestern tip of Istria, Umag is a charming medieval town with crystal-clear Adriatic waters, world-class gastronomy, and a laid-back Mediterranean atmosphere. The perfect destination for a truly restorative holiday."
+      "body": "Umag, ktorý leží na severozápadnom výbežku Istrie, je pôvabné stredoveké mesto s krištáľovo čistými vodami Jadranu, vynikajúcou gastronómiou a uvoľnenou stredomorskou atmosférou. Ideálna destinácia pre skutočne regeneračnú dovolenku."
     }
   },
   "apartments": {
@@ -456,8 +456,8 @@
       "labelPhone": "Phone",
       "phoneOptional": "(optional)",
       "placeholderPhone": "+385 ...",
-      "labelType": "I am a\u2026",
-      "selectDefault": "Select\u2026",
+      "labelType": "I am a…",
+      "selectDefault": "Select…",
       "optionGuest": "Guest looking to book",
       "optionOwner": "Property owner",
       "optionOther": "Other",
