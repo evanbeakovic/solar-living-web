@@ -1,12 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import Reveal from '@/components/Reveal';
+import ScrollFrameBackground from '@/components/ScrollFrameBackground';
+import { ACCOMMODATION_OVERLAY_BG } from '@/lib/scrollFrameTheme';
 
 // ─── Data ──────────────────────────────────────────────────────────────────
 
@@ -505,6 +507,13 @@ export default function ApartmentsPage() {
   const t = useTranslations('apartments');
   const [selected, setSelected] = useState<Apartment | null>(null);
   const [reviewsApt, setReviewsApt] = useState<Apartment | null>(null);
+  // Tracks the combined height of the hero + "Our Collection" sections —
+  // ScrollFrameBackground scopes both its scrub progress and its
+  // visibility to this element, so the video background lives only behind
+  // those two sections and hides (display:none) before the bottom CTA
+  // ("Not sure which property...") or Footer, which keep their normal
+  // solid backgrounds untouched.
+  const videoRangeRef = useRef<HTMLDivElement>(null);
 
   const apartments: Apartment[] = [
     {
@@ -603,56 +612,71 @@ export default function ApartmentsPage() {
 
   return (
     <>
-      {/* ── SECTION 1: PAGE HERO ────────────────────────────────────────── */}
-      <section className="section-fade-exit hero-stagger py-32 px-6 text-center" style={{ backgroundColor: '#474748' }}>
-        <p className="font-sans text-xs uppercase tracking-widest mb-5 text-[#86cae7]">
-          {t('hero.label')}
-        </p>
-        <h1 className="font-serif text-5xl md:text-6xl mb-6 leading-tight text-white">
-          {t('hero.heading')}
-        </h1>
-        <p className="font-sans text-base max-w-xl mx-auto leading-relaxed tracking-wide text-[#c8c8c8]">
-          {t('hero.subtext')}<br />{t('hero.subtextLine2')}
-        </p>
-      </section>
+      <ScrollFrameBackground
+        basePath="/accommodation-frames"
+        desktopFrameCount={188}
+        mobileFrameCount={188}
+        overlayColor={ACCOMMODATION_OVERLAY_BG}
+        scrollRangeRef={videoRangeRef}
+      />
 
-      {/* ── SECTION 2: APARTMENT LISTINGS ───────────────────────────────── */}
-      <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: '#474748' }}>
-        <div className="max-w-5xl mx-auto">
-          {/* Left-aligned header row */}
-          <Reveal group className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
-            <div>
-              <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
-                {t('listings.label')}
+      {/* Hero + "Our Collection" share the scroll-scrubbed video background
+          above — both go fully transparent so the canvas shows through.
+          The bottom CTA and Footer are deliberately outside this wrapper:
+          they keep their normal solid backgrounds, and ScrollFrameBackground
+          hides itself (display:none) before they ever come into view. */}
+      <div ref={videoRangeRef}>
+        {/* ── SECTION 1: PAGE HERO ────────────────────────────────────── */}
+        <section className="section-fade-exit hero-stagger py-32 px-6 text-center" style={{ backgroundColor: 'transparent' }}>
+          <p className="font-sans text-xs uppercase tracking-widest mb-5 text-[#86cae7]">
+            {t('hero.label')}
+          </p>
+          <h1 className="font-serif text-5xl md:text-6xl mb-6 leading-tight text-white">
+            {t('hero.heading')}
+          </h1>
+          <p className="font-sans text-base max-w-xl mx-auto leading-relaxed tracking-wide text-[#c8c8c8]">
+            {t('hero.subtext')}<br />{t('hero.subtextLine2')}
+          </p>
+        </section>
+
+        {/* ── SECTION 2: APARTMENT LISTINGS ("Our Collection") ────────── */}
+        <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: 'transparent' }}>
+          <div className="max-w-5xl mx-auto">
+            {/* Left-aligned header row */}
+            <Reveal group className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
+              <div>
+                <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
+                  {t('listings.label')}
+                </p>
+                <h2 className="font-serif text-4xl md:text-5xl text-white">
+                  {t('listings.heading')}
+                </h2>
+              </div>
+              <p className="font-sans text-sm text-[#c8c8c8] md:text-right">
+                {t('listings.subtext')}
               </p>
-              <h2 className="font-serif text-4xl md:text-5xl text-white">
-                {t('listings.heading')}
-              </h2>
-            </div>
-            <p className="font-sans text-sm text-[#c8c8c8] md:text-right">
-              {t('listings.subtext')}
-            </p>
-          </Reveal>
+            </Reveal>
 
-          {/* Available apartments */}
-          <Reveal group className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {apartments.filter((a) => a.available).map((apt) => (
-              <ApartmentCard key={apt.id} apt={apt} onBook={setSelected} onShowReviews={setReviewsApt} />
-            ))}
-          </Reveal>
-        </div>
-      </section>
+            {/* Available apartments */}
+            <Reveal group className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {apartments.filter((a) => a.available).map((apt) => (
+                <ApartmentCard key={apt.id} apt={apt} onBook={setSelected} onShowReviews={setReviewsApt} />
+              ))}
+            </Reveal>
+          </div>
+        </section>
 
-      {/* ── COMING SOON APARTMENTS ──────────────────────────────────────── */}
-      <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: '#474748' }}>
-        <div className="max-w-5xl mx-auto">
-          <Reveal group className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {apartments.filter((a) => !a.available).map((apt) => (
-              <ApartmentCard key={apt.id} apt={apt} onBook={setSelected} onShowReviews={setReviewsApt} />
-            ))}
-          </Reveal>
-        </div>
-      </section>
+        {/* ── COMING SOON APARTMENTS (still part of "Our Collection") ─── */}
+        <section className="section-fade-exit py-24 px-6" style={{ backgroundColor: 'transparent' }}>
+          <div className="max-w-5xl mx-auto">
+            <Reveal group className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {apartments.filter((a) => !a.available).map((apt) => (
+                <ApartmentCard key={apt.id} apt={apt} onBook={setSelected} onShowReviews={setReviewsApt} />
+              ))}
+            </Reveal>
+          </div>
+        </section>
+      </div>
 
       {/* ── SECTION 3: BOTTOM CTA ───────────────────────────────────────── */}
       <section className="section-fade-exit py-24 px-6 text-center" style={{ backgroundColor: '#525253' }}>

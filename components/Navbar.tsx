@@ -34,6 +34,9 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const isHome = pathname === '/';
+  const isOwnersHero = pathname === '/owners';
+  const isAccommodation = pathname === '/accommodation';
+  const isTransparent = isHome || isOwnersHero || isAccommodation;
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
@@ -122,7 +125,7 @@ export default function Navbar() {
   return (
     <nav
       className={`nav-enter fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}
-      style={{ backgroundColor: isHome ? 'transparent' : '#474748' }}
+      style={{ backgroundColor: isTransparent ? 'transparent' : '#474748' }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between py-4">
@@ -208,7 +211,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div
           className="md:hidden px-6 pb-6 pt-3 space-y-4"
-          style={{ backgroundColor: isHome ? 'transparent' : '#474748', borderTop: '1px solid rgba(255,255,255,0.08)' }}
+          style={{ backgroundColor: isTransparent ? 'transparent' : '#474748', borderTop: '1px solid rgba(255,255,255,0.08)' }}
         >
           {navLinks.map((link) => {
             const isActive =

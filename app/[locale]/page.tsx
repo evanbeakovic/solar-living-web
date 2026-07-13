@@ -7,6 +7,7 @@ import ReviewsCarousel from '@/components/ReviewsCarousel';
 import ParallaxHero from '@/components/ParallaxHero';
 import ScrollFrameBackground from '@/components/ScrollFrameBackground';
 import Reveal from '@/components/Reveal';
+import { HOME_OVERLAY_BG } from '@/lib/scrollFrameTheme';
 
 export const metadata: Metadata = {
   title: 'Solar Living | Premium Accommodation in Umag, Istria',
@@ -71,7 +72,13 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <ParallaxHero />
-      <ScrollFrameBackground />
+      <ScrollFrameBackground
+        basePath="/hero-frames"
+        desktopFrameCount={314}
+        mobileFrameCount={314}
+        overlayColor={HOME_OVERLAY_BG}
+        mobileHorizontalAnchor={0.62}
+      />
       {/* ─── SECTION 1: HERO ─────────────────────────────────────────────── */}
       <section
         className="relative h-screen flex flex-col items-center justify-center text-center px-6"

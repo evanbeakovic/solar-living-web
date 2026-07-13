@@ -2,20 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { HOME_OVERLAY_BG } from '@/lib/homeTheme';
 
-const DESKTOP_FRAME_COUNT = 314;
-const MOBILE_FRAME_COUNT = 314;
 const MD_BREAKPOINT = 768;
 const MAX_DPR = 2;
-
-// The source footage's sun sits at ~68% across the frame, not centered. On
-// mobile's tall/narrow cover-fit crop only a ~26%-wide vertical slice of the
-// frame's width is ever visible, so a centered (0.5) crop clips it. 0.5 =
-// center (desktop's unchanged behavior), 1 = fully right-anchored. 0.75
-// overshot it to dead center; 0.62 keeps the sun visible but offset toward
-// the right, not centered — matching its off-center position on desktop.
-const MOBILE_HORIZONTAL_ANCHOR = 0.62;
 
 // Extra height (px) added to the canvas/overlay beyond the visible
 // viewport, split evenly above and below, so an iOS Safari toolbar show/
@@ -24,11 +13,36 @@ const MOBILE_HORIZONTAL_ANCHOR = 0.62;
 // iPhones (URL bar + bottom tab bar), which can exceed 100px on its own.
 const VERTICAL_OVERSCAN_PX = 180;
 
-function frameSrc(index: number, isMobile: boolean) {
+export type ScrollFrameBackgroundProps = {
+  /** Frames live at `${basePath}/desktop/frame-XXX.jpg` and `${basePath}/mobile/frame-mobile-XXX.jpg`, 1-indexed, zero-padded to 3 digits. */
+  basePath: string;
+  desktopFrameCount: number;
+  mobileFrameCount: number;
+  /** Full CSS color for the flat tint painted over the frames, e.g. 'rgba(71, 71, 72, 0.7)'. */
+  overlayColor: string;
+  /**
+   * 0.5 = centered crop (default). Bias mobile's horizontal anchor toward
+   * an off-center subject that a centered cover-fit crop would clip — see
+   * Home's 0.62 (its footage's sun sits at ~68% across the frame).
+   */
+  mobileHorizontalAnchor?: number;
+  /**
+   * Scopes scrub progress AND visibility to this element's own rendered
+   * height instead of the whole document: progress reaches 1 — and the
+   * canvas/overlay hide entirely via display:none, stopping all further
+   * updates — once the element's bottom edge has scrolled entirely past
+   * the viewport's top (i.e. none of the tracked element is on screen any
+   * more). Whatever comes after it in the DOM then renders with zero
+   * interference, on its own unchanged background.
+   * Omit for the original whole-document behavior (background spans every
+   * section of the page, as on Home).
+   */
+  scrollRangeRef?: React.RefObject<HTMLElement>;
+};
+
+function frameSrc(basePath: string, index: number, isMobile: boolean) {
   const n = String(index).padStart(3, '0');
-  return isMobile
-    ? `/hero-frames/mobile/frame-mobile-${n}.jpg`
-    : `/hero-frames/desktop/frame-${n}.jpg`;
+  return isMobile ? `${basePath}/mobile/frame-mobile-${n}.jpg` : `${basePath}/desktop/frame-${n}.jpg`;
 }
 
 // iOS Safari's layout viewport (window.innerWidth/innerHeight) is pinned
@@ -59,23 +73,32 @@ function getViewportMetrics() {
 
 /**
  * Fixed, full-viewport <canvas> that scrubs through a pre-rendered frame
- * sequence in sync with Home page scroll progress (Apple product-page
- * style), plus the single flat-gray tint overlay that sits above it. Home-
- * only — mounted directly by the Home page, unmounts on route change like
- * everything else in app/[locale]/template.tsx.
+ * sequence in sync with page scroll progress (Apple product-page style),
+ * plus a single flat-gray tint overlay that sits above it. Shared by Home
+ * (whole-document progress, no scrollRangeRef, always visible) and the
+ * Accommodation hero/collection (progress + visibility scoped to
+ * scrollRangeRef's own height, hidden entirely once scrolled past it).
  *
  * Both elements are portaled to <body>: position: fixed here would
  * otherwise resolve against the .page-enter route wrapper (see
  * template.tsx) during its ~350ms enter transform, instead of the viewport
- * — same reason the booking modal in accommodation/page.tsx is portaled.
+ * — same reason modals in this codebase are portaled.
  * Painted behind normal content via negative z-index rather than DOM
  * order, since the portal appends after Navbar/main/Footer in the tree —
  * the overlay sits between the canvas (z: -10) and normal content (z:
- * auto) at z: -5. Every Home-page section/Navbar/Footer background is
- * fully transparent, so this is the only gray layer that ever paints —
- * no compounding opacity stacks.
+ * auto) at z: -5. Every section this background is meant to show behind
+ * must have a fully transparent background of its own, or its opaque box
+ * will simply paint over this — see the neutralized <body> background
+ * below for why that's true even of ordinary non-positioned boxes.
  */
-export default function ScrollFrameBackground() {
+export default function ScrollFrameBackground({
+  basePath,
+  desktopFrameCount,
+  mobileFrameCount,
+  overlayColor,
+  mobileHorizontalAnchor = 0.5,
+  scrollRangeRef,
+}: ScrollFrameBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
@@ -100,9 +123,12 @@ export default function ScrollFrameBackground() {
     // their stacking context's in-flow non-positioned descendants — and
     // since <body> doesn't establish its own stacking context, its own
     // background box is exactly such a descendant. So it paints over the
-    // canvas regardless of DOM nesting. Neutralized here (Home-only, since
-    // this component is Home-only) and restored on unmount, same pattern as
-    // ParallaxHero's imperative style overrides on #hero-parallax-content.
+    // canvas regardless of DOM nesting. Neutralized while this component is
+    // mounted and restored on unmount, same pattern as ParallaxHero's
+    // imperative style overrides on #hero-parallax-content. Safe to share
+    // across pages: only one instance of this component is ever mounted at
+    // a time (each page mounts its own on route change), and every page
+    // that uses it keeps its own sections transparent for the same reason.
     const prevBodyBg = document.body.style.backgroundColor;
     document.body.style.backgroundColor = 'transparent';
 
@@ -118,6 +144,7 @@ export default function ScrollFrameBackground() {
     let lastDrawnA = -1;
     let lastDrawnB = -1;
     let lastDrawnWeight = -1;
+    let hidden = false;
     let scrollRafId = 0;
     let resizeRafId = 0;
     let generation = 0; // bumped on breakpoint change / unmount to invalidate in-flight onload callbacks
@@ -145,6 +172,55 @@ export default function ScrollFrameBackground() {
       overlay!.style.left = `${leftOffset}px`;
       overlay!.style.width = `${width}px`;
       overlay!.style.height = `${displayHeight}px`;
+    }
+
+    function setHidden(next: boolean) {
+      if (next === hidden) return;
+      hidden = next;
+      canvas!.style.display = next ? 'none' : '';
+      overlay!.style.display = next ? 'none' : '';
+    }
+
+    // Scoped mode only: the scrollY at which scrollRangeRef's own bottom
+    // edge has scrolled entirely past the viewport's TOP — i.e. the exact
+    // point where none of the tracked element is on screen any more.
+    // Progress reaches 1 here, and scrolling any further hides the canvas/
+    // overlay entirely — everything after them in the DOM renders on its
+    // own unchanged background from that point on.
+    //
+    // This must NOT subtract viewport height (an earlier version did,
+    // computing "the tracked element's bottom reaches the viewport's own
+    // bottom edge" instead). That formula only matches "fully scrolled
+    // past" when the tracked element is roughly one viewport tall. Here it
+    // spans hero + the entire "Our Collection" grid — many viewport
+    // heights — so subtracting viewport height hid the background a full
+    // viewport-height early: right as the last two "Coming Soon" cards
+    // filled the whole screen, confirmed by screenshot during debugging.
+    // The fix is simply the element's raw document-space bottom edge, no
+    // viewport-height adjustment.
+    //
+    // Recomputed on every scroll/resize (not cached) since it depends on
+    // both the tracked element's layout height and the current viewport
+    // height, either of which can change independently — a ResizeObserver
+    // on the tracked element (attached below) additionally catches height
+    // changes that happen without any scroll or window-resize event at all
+    // (e.g. content changing after mount for reasons other than a
+    // breakpoint change).
+    //
+    // Clamped to the page's own natural max scroll (documentHeight -
+    // viewportHeight): if whatever comes after the tracked element (here,
+    // the CTA + Footer) is itself shorter than one viewport, the page
+    // simply can't be scrolled far enough for "bottom" to ever be reached
+    // — the browser stops scrolling before the tracked element's bottom
+    // edge clears the viewport's top, which would otherwise mean the
+    // background never hides at all. Clamping guarantees it's gone by the
+    // time the user reaches the true end of the page either way.
+    function scopedMaxScroll(): number | null {
+      if (!scrollRangeRef?.current) return null;
+      const rect = scrollRangeRef.current.getBoundingClientRect();
+      const bottom = rect.bottom + window.scrollY;
+      const pageMaxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      return Math.max(0, Math.min(bottom, pageMaxScroll));
     }
 
     // Nearest already-loaded frame to `target` (checked outward in both
@@ -175,9 +251,9 @@ export default function ScrollFrameBackground() {
       const scale = Math.max(cw / iw, ch / ih);
       const dw = iw * scale;
       const dh = ih * scale;
-      // 0.5 (desktop, unchanged) centers the crop; mobile biases it right
-      // so the off-center sun stays in frame — see MOBILE_HORIZONTAL_ANCHOR.
-      const horizontalAnchor = isMobile ? MOBILE_HORIZONTAL_ANCHOR : 0.5;
+      // 0.5 (default) centers the crop; mobileHorizontalAnchor biases it
+      // for footage with an off-center subject a centered crop would clip.
+      const horizontalAnchor = isMobile ? mobileHorizontalAnchor : 0.5;
       const dx = (cw - dw) * horizontalAnchor;
       const dy = (ch - dh) / 2;
       ctx!.globalAlpha = alpha;
@@ -225,14 +301,35 @@ export default function ScrollFrameBackground() {
       if (canvas!.style.backgroundColor) canvas!.style.backgroundColor = '';
     }
 
-    function onScroll() {
-      cancelAnimationFrame(scrollRafId);
-      scrollRafId = requestAnimationFrame(() => {
-        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = scrollable > 0 ? Math.min(Math.max(window.scrollY / scrollable, 0), 1) : 0;
+    // Single source of truth for "where is scroll progress right now,
+    // should we even be visible" — run from both the scroll and resize
+    // paths so a resize that shifts the scoped boundary (viewport height
+    // change, or the tracked element re-laying-out) re-evaluates hidden
+    // state immediately rather than waiting for the next scroll event.
+    function update() {
+      const maxScroll = scopedMaxScroll();
+      if (maxScroll !== null) {
+        if (maxScroll <= 0 || window.scrollY >= maxScroll) {
+          setHidden(true);
+          return;
+        }
+        setHidden(false);
+        const progress = Math.min(Math.max(window.scrollY / maxScroll, 0), 1);
         currentTarget = Math.min(frameCount, Math.max(1, progress * (frameCount - 1) + 1));
         draw(currentTarget);
-      });
+        return;
+      }
+
+      // Unscoped (Home): whole-document progress, always visible.
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollable > 0 ? Math.min(Math.max(window.scrollY / scrollable, 0), 1) : 0;
+      currentTarget = Math.min(frameCount, Math.max(1, progress * (frameCount - 1) + 1));
+      draw(currentTarget);
+    }
+
+    function onScroll() {
+      cancelAnimationFrame(scrollRafId);
+      scrollRafId = requestAnimationFrame(update);
     }
 
     function onResize() {
@@ -242,7 +339,7 @@ export default function ScrollFrameBackground() {
         lastDrawnA = -1; // dimensions changed — force a redraw at the new size
         lastDrawnB = -1;
         lastDrawnWeight = -1;
-        draw(currentTarget);
+        update();
       });
     }
 
@@ -257,7 +354,7 @@ export default function ScrollFrameBackground() {
 
       if (reducedMotion) {
         // Single static midpoint frame — no scrubbing, no preloading the rest.
-        const fullCount = isMobile ? MOBILE_FRAME_COUNT : DESKTOP_FRAME_COUNT;
+        const fullCount = isMobile ? mobileFrameCount : desktopFrameCount;
         const staticIndex = Math.ceil(fullCount / 2);
         frameCount = 1;
         images = [];
@@ -269,12 +366,17 @@ export default function ScrollFrameBackground() {
           loaded[1] = true;
           draw(1);
         };
-        img.src = frameSrc(staticIndex, isMobile);
+        img.src = frameSrc(basePath, staticIndex, isMobile);
         images[1] = img;
+        // Scoped mode still needs an initial (and ongoing, via the scroll
+        // listener attached below) visibility check even with no scrubbing
+        // — e.g. a reload that restores a scroll position already past the
+        // tracked range must hide immediately, not show a frozen frame.
+        update();
         return;
       }
 
-      frameCount = isMobile ? MOBILE_FRAME_COUNT : DESKTOP_FRAME_COUNT;
+      frameCount = isMobile ? mobileFrameCount : desktopFrameCount;
       images = new Array(frameCount + 1);
       loaded = new Array(frameCount + 1).fill(false);
 
@@ -294,11 +396,11 @@ export default function ScrollFrameBackground() {
           const ceilTarget = Math.min(frameCount, flooredTarget + 1);
           if (lastDrawnA === -1 || i === flooredTarget || i === ceilTarget) draw(currentTarget);
         };
-        img.src = frameSrc(i, isMobile);
+        img.src = frameSrc(basePath, i, isMobile);
         images[i] = img;
       }
 
-      onScroll();
+      update();
     }
 
     setup();
@@ -309,11 +411,28 @@ export default function ScrollFrameBackground() {
     // the latter for every toolbar state change.
     window.visualViewport?.addEventListener('resize', onResize);
     window.visualViewport?.addEventListener('scroll', onResize);
-    if (!reducedMotion) window.addEventListener('scroll', onScroll, { passive: true });
+    // Scoped mode needs the scroll listener even under reduced motion —
+    // there's no frame scrubbing to do, but visibility still has to track
+    // scroll position so the tracked range hides on schedule. Unscoped
+    // (Home) keeps the original behavior: no listener at all when reduced
+    // motion means nothing will ever change.
+    if (!reducedMotion || scrollRangeRef) window.addEventListener('scroll', onScroll, { passive: true });
     mdQuery.addEventListener('change', setup);
+
+    // Scoped mode only: catches the tracked element's own height changing
+    // for reasons that fire neither a window 'resize' nor a 'scroll' event
+    // (content changing after mount/hydration without a matching viewport
+    // change) — window resize/visualViewport listeners above only cover
+    // the viewport side of the scopedMaxScroll calculation, not this side.
+    let resizeObserver: ResizeObserver | null = null;
+    if (scrollRangeRef?.current) {
+      resizeObserver = new ResizeObserver(onResize);
+      resizeObserver.observe(scrollRangeRef.current);
+    }
 
     return () => {
       generation++;
+      resizeObserver?.disconnect();
       window.removeEventListener('resize', onResize);
       window.visualViewport?.removeEventListener('resize', onResize);
       window.visualViewport?.removeEventListener('scroll', onResize);
@@ -323,7 +442,7 @@ export default function ScrollFrameBackground() {
       cancelAnimationFrame(resizeRafId);
       document.body.style.backgroundColor = prevBodyBg;
     };
-  }, [mounted]);
+  }, [mounted, basePath, desktopFrameCount, mobileFrameCount, mobileHorizontalAnchor, scrollRangeRef]);
 
   if (!mounted) return null;
 
@@ -339,7 +458,7 @@ export default function ScrollFrameBackground() {
         ref={overlayRef}
         aria-hidden="true"
         className="scroll-frame-viewport-fallback fixed w-full pointer-events-none"
-        style={{ top: 0, left: 0, zIndex: -5, backgroundColor: HOME_OVERLAY_BG }}
+        style={{ top: 0, left: 0, zIndex: -5, backgroundColor: overlayColor }}
       />
     </>,
     document.body

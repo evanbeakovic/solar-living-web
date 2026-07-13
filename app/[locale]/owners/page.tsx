@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import Reveal from '@/components/Reveal';
+import OwnersHeroParallax from '@/components/OwnersHeroParallax';
 
 export default function OwnersPage() {
   const t = useTranslations('owners');
@@ -108,41 +110,92 @@ export default function OwnersPage() {
   return (
     <>
       {/* ─── SECTION 1: HERO ─────────────────────────────────────────────── */}
+      {/* Layered "text behind subject" effect: a plain sky-gradient at the back
+          (no house/pool/trees — the earlier full photo caused a "double
+          house" glitch during parallax, since it and the cutout both drew
+          the house at slightly different scroll-driven offsets), the
+          eyebrow/heading/subtext in the middle so the sky shows through them
+          and the cutout progressively covers them as the user scrolls, then
+          the sky-cutout photo (house/pool/palm only, transparent sky) on top
+          of that text, and finally the CTA/disclaimer above everything so
+          they stay legible regardless of where the cutout falls. */}
+      <OwnersHeroParallax />
       <section
-        className="section-fade-exit hero-stagger relative min-h-screen flex flex-col items-center justify-center text-center px-6"
+        className="section-fade-exit hero-stagger relative -mt-16 min-h-[110vh] flex flex-col items-center justify-start text-center px-6 overflow-hidden"
         style={{ backgroundColor: '#474748' }}
       >
-        <p className="font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
-          {t('hero.label')}
-        </p>
-        <h1 className="font-serif text-4xl md:text-5xl leading-tight mb-7 max-w-3xl text-white">
-          {t('hero.heading')}
-        </h1>
-        <p className="font-sans text-base md:text-lg mb-10 max-w-xl tracking-wide text-[#c8c8c8]">
-          {t('hero.subtextLine1')}<br />{t('hero.subtextLine2')}
-        </p>
-        <a
-          href="#contact"
-          onClick={(e) => {
-            const target = document.getElementById('contact');
-            if (!target) return; // fall through to default hash navigation
-            e.preventDefault();
-            target.scrollIntoView({
-              behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-                ? 'auto'
-                : 'smooth',
-            });
-          }}
-          className="btn-solid font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 mb-4"
-          style={{ backgroundColor: '#edd98f', color: '#474748' }}
-        >
-          {t('hero.cta')}
-        </a>
-        <p className="font-sans text-xs text-[#888888]">
-          {t('hero.note')}
-        </p>
+        <Image
+          id="owners-hero-sky"
+          src="/images/owners-hero-sky.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hero-no-enter absolute inset-0 object-cover z-0"
+        />
 
-        <div className="hero-no-enter absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-px" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
+        {/* No parallax target here — it scrolls at plain document speed (the
+            desired "no artificial lag" baseline the cutout is meant to
+            outrun), so it just takes the normal hero-stagger entrance rise
+            like any other child, no id needed. */}
+        <div className="relative z-10 flex flex-col items-center pt-[calc(9vh+4rem)] md:pt-[calc(11vh+4rem)]">
+          <p className="hero-photo-legible font-sans text-xs uppercase tracking-widest mb-6 text-[#86cae7]">
+            {t('hero.label')}
+          </p>
+          <h1 className="hero-extruded font-serif text-4xl md:text-5xl leading-tight mb-7 max-w-3xl text-white">
+            {t('hero.heading')}
+          </h1>
+          <p className="hero-photo-legible font-sans text-base md:text-lg mb-10 max-w-xl tracking-wide text-[#c8c8c8]">
+            {t('hero.subtextLine1')}<br />{t('hero.subtextLine2')}
+          </p>
+        </div>
+
+        {/* Rendered a bit taller than the section itself (150vh vs. the
+            section's 110vh) so the cutout structurally cannot run out of
+            image while OwnersHeroParallax pushes it up faster than normal
+            scroll — covers the base rest-shift plus the capped parallax
+            offset with real photo content the whole way, instead of
+            patching an exposed gap with a filler color after the fact.
+            Kept close to 150vh (not much taller) deliberately: object-cover
+            zoom scales with this height, and a much taller box (e.g. the
+            250vh used previously) reads as visibly over-zoomed compared to
+            the source photo's natural framing. See OwnersHeroParallax.tsx
+            for how this height was derived alongside BASE_SHIFT/the cap. */}
+        <div id="owners-hero-cutout" className="hero-no-enter absolute inset-x-0 top-0 h-[150vh] z-20 pointer-events-none select-none">
+          <Image
+            src="/images/owners-hero-cutout.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-top"
+          />
+        </div>
+
+        <div className="relative z-30 flex flex-col items-center">
+          <a
+            href="#contact"
+            onClick={(e) => {
+              const target = document.getElementById('contact');
+              if (!target) return; // fall through to default hash navigation
+              e.preventDefault();
+              target.scrollIntoView({
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                  ? 'auto'
+                  : 'smooth',
+              });
+            }}
+            className="btn-solid font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 mb-4"
+            style={{ backgroundColor: '#edd98f', color: '#474748' }}
+          >
+            {t('hero.cta')}
+          </a>
+          <p className="hero-photo-legible font-sans text-xs text-[#888888]">
+            {t('hero.note')}
+          </p>
+        </div>
+
+        <div className="hero-no-enter absolute bottom-10 left-1/2 -translate-x-1/2 w-20 h-px z-30" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
       </section>
 
       {/* ─── SECTION 2: WHAT WE OFFER ────────────────────────────────────── */}

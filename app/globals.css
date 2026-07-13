@@ -240,6 +240,23 @@ body {
   animation: none;
 }
 
+/* ─── Owners hero: extruded heading ──────────────────────────────────────────
+   A tight, low-opacity offset — just enough to lift the heading off the sky/
+   house photo behind it. A previous version stacked several fully-opaque
+   1px-4px layers, which read as a bold outline/ring rather than depth. */
+.hero-extruded {
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Keeps the smaller hero copy (eyebrow/subtext/note) readable once it sits
+   directly on the photo instead of the old solid charcoal background —
+   those colors were tuned for contrast against #474748, not sky blue. */
+.hero-photo-legible {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
 /* Home hero scroll indicator: draws in from 0 width after the content lands,
    then pulses gently. translateX(-50%) is repeated in the keyframes because
    the animation's transform replaces the Tailwind centering transform. */
