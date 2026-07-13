@@ -1,5 +1,7 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
-import { Link } from '@/navigation';
+import { Link, usePathname } from '@/navigation';
 import Image from 'next/image';
 
 const quickLinks = [
@@ -14,10 +16,11 @@ const quickLinks = [
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const isHome = usePathname() === '/';
   return (
     <footer
       className="text-white"
-      style={{ backgroundColor: '#3e3e3f', borderTop: '1px solid rgba(255,255,255,0.08)' }}
+      style={{ backgroundColor: isHome ? 'transparent' : '#3e3e3f', borderTop: '1px solid rgba(255,255,255,0.08)' }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

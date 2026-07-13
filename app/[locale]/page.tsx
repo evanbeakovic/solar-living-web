@@ -5,6 +5,7 @@ import { MapPin } from 'lucide-react';
 import { Link } from '@/navigation';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
 import ParallaxHero from '@/components/ParallaxHero';
+import ScrollFrameBackground from '@/components/ScrollFrameBackground';
 import Reveal from '@/components/Reveal';
 
 export const metadata: Metadata = {
@@ -70,13 +71,12 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
       <ParallaxHero />
+      <ScrollFrameBackground />
       {/* ─── SECTION 1: HERO ─────────────────────────────────────────────── */}
       <section
         className="relative h-screen flex flex-col items-center justify-center text-center px-6"
-        style={{ backgroundColor: '#474748' }}
+        style={{ backgroundColor: 'transparent' }}
       >
-        {/* TODO: replace background with hero photo */}
-
         {/* Content wrapper — targeted by ParallaxHero for translateY effect */}
         <div
           id="hero-parallax-content"
@@ -122,7 +122,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── SECTION 2: FEATURED APARTMENTS ─────────────────────────────── */}
-      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: 'transparent' }}>
         <div className="max-w-5xl mx-auto">
           {/* Left-aligned header row */}
           <Reveal group className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-4">
@@ -254,7 +254,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── SECTION 2B: GUEST REVIEWS ───────────────────────────────────── */}
-      <section className="section-fade-exit py-24 md:py-32 px-6 overflow-hidden" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6 overflow-hidden" style={{ backgroundColor: 'transparent' }}>
         <div className="max-w-4xl mx-auto">
           <Reveal group className="mb-16">
             <p className="font-sans text-xs uppercase tracking-widest text-[#86cae7] mb-4">
@@ -272,7 +272,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── SECTION 3: WHY SOLAR LIVING ─────────────────────────────────── */}
-      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#525253' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: 'transparent' }}>
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 md:gap-14 items-start">
           {/* Left — quote */}
           <Reveal className="md:w-1/2">
@@ -306,7 +306,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── SECTION 3B: AEO — WHO WE ARE ───────────────────────────────── */}
-      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#474748' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: 'transparent' }}>
         <Reveal group className="max-w-3xl mx-auto">
           <p className="font-sans text-xs uppercase tracking-widest mb-6" style={{ color: '#86cae7' }}>
             {t('whoWeAre.label')}
@@ -343,7 +343,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── SECTION 4: OWNERS CTA BANNER ────────────────────────────────── */}
-      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: '#525253' }}>
+      <section className="section-fade-exit py-24 md:py-32 px-6" style={{ backgroundColor: 'transparent' }}>
         <Reveal group className="max-w-3xl mx-auto text-center space-y-8">
           <p className="font-sans text-xs uppercase tracking-widest text-[#edd98f]">
             {t('ownersCta.label')}
@@ -368,7 +368,7 @@ export default function HomePage() {
       <section
         className="section-fade-exit py-24 md:py-32 px-6"
         style={{
-          backgroundColor: '#474748',
+          backgroundColor: 'transparent',
           borderTop: '1px solid rgba(255,255,255,0.08)',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
         }}
