@@ -28,6 +28,18 @@ body {
   }
 }
 
+/* ─── Home scroll-frame background viewport fallback ───────────────────────
+   CSS-only sizing for ScrollFrameBackground's canvas/overlay before its JS
+   (visualViewport-based) sizing takes over on mount, and for browsers where
+   dvh isn't supported. The two height declarations aren't redundant: a
+   browser that doesn't understand `dvh` discards that whole declaration
+   and keeps the `vh` one above it — it does NOT reset to auto — so this is
+   the standard progressive-enhancement pattern, not dead code. */
+.scroll-frame-viewport-fallback {
+  height: 100vh;
+  height: 100dvh;
+}
+
 /* ─── Scroll reveals ─────────────────────────────────────────────────────────
    The hidden state lives on .reveal-init, which is only ever added by the
    <Reveal> client component after hydration — server HTML carries just

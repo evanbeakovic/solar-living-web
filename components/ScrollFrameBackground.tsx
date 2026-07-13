@@ -12,16 +12,17 @@ const MAX_DPR = 2;
 // The source footage's sun sits at ~68% across the frame, not centered. On
 // mobile's tall/narrow cover-fit crop only a ~26%-wide vertical slice of the
 // frame's width is ever visible, so a centered (0.5) crop clips it. 0.5 =
-// center (desktop's unchanged behavior), 1 = fully right-anchored — 0.75
-// keeps the same slice of the frame (sun visible, not centered, not at the
-// clipped edge) that desktop shows across its whole width.
-const MOBILE_HORIZONTAL_ANCHOR = 0.75;
+// center (desktop's unchanged behavior), 1 = fully right-anchored. 0.75
+// overshot it to dead center; 0.62 keeps the sun visible but offset toward
+// the right, not centered — matching its off-center position on desktop.
+const MOBILE_HORIZONTAL_ANCHOR = 0.62;
 
-// Extra height (px) added to the canvas/overlay beyond the reported visible
-// viewport, split evenly above and below, so a momentary iOS Safari
-// toolbar show/hide transition never reveals a gray gap before the next
-// resize event catches up.
-const VERTICAL_OVERSCAN_PX = 80;
+// Extra height (px) added to the canvas/overlay beyond the visible
+// viewport, split evenly above and below, so an iOS Safari toolbar show/
+// hide transition never reveals a gray gap before the next resize event
+// catches up. 180 covers the combined top+bottom chrome delta on current
+// iPhones (URL bar + bottom tab bar), which can exceed 100px on its own.
+const VERTICAL_OVERSCAN_PX = 180;
 
 function frameSrc(index: number, isMobile: boolean) {
   const n = String(index).padStart(3, '0');
@@ -30,14 +31,29 @@ function frameSrc(index: number, isMobile: boolean) {
     : `/hero-frames/desktop/frame-${n}.jpg`;
 }
 
-// Prefer the actual visible viewport (window.visualViewport) over
-// window.innerWidth/innerHeight — iOS Safari's dynamic toolbar changes the
-// visual viewport without reliably firing a window 'resize' at every step.
-function getViewportSize() {
+// iOS Safari's layout viewport (window.innerWidth/innerHeight) is pinned
+// near the toolbar-COLLAPSED size and stays stable across toolbar
+// transitions; window.visualViewport reports the smaller, currently-VISIBLE
+// area, which shrinks whenever the toolbar expands. Sizing our coverage to
+// the visualViewport (the smaller value) is backwards — it guarantees a gap
+// the moment the toolbar collapses and reveals more of the page than we
+// sized for. Taking the max of both gives an element that's always at
+// least as large as the true maximum visible area.
+//
+// visualViewport.offsetTop/offsetLeft report how far the visual viewport's
+// origin has scrolled away from the layout viewport's origin (relevant
+// during toolbar animation, not just pinch-zoom/keyboard) — position: fixed
+// is supposed to stay anchored to the layout viewport regardless, but iOS
+// Safari has a documented history of drifting from that during toolbar
+// transitions, so we fold the offset into our own positioning rather than
+// trust a bare `top: 0` to track it.
+function getViewportMetrics() {
   const vv = window.visualViewport;
   return {
-    width: vv ? vv.width : window.innerWidth,
-    height: vv ? vv.height : window.innerHeight,
+    width: Math.max(window.innerWidth, vv ? vv.width : 0),
+    height: Math.max(window.innerHeight, vv ? vv.height : 0),
+    offsetTop: vv ? vv.offsetTop : 0,
+    offsetLeft: vv ? vv.offsetLeft : 0,
   };
 }
 
@@ -107,22 +123,26 @@ export default function ScrollFrameBackground() {
     let generation = 0; // bumped on breakpoint change / unmount to invalidate in-flight onload callbacks
 
     // Sizes the canvas's CSS box, its drawing buffer, and the overlay div
-    // all together from the true visible viewport, with a vertical overscan
-    // buffer so neither ever falls short during a toolbar transition.
+    // all together from the true maximum viewport extent, with a vertical
+    // overscan buffer and an offsetTop/offsetLeft correction so neither ever
+    // falls short or drifts out of alignment during a toolbar transition.
     // Assigning canvas .width/.height clears its drawing buffer even to the
     // same value, so every call needs a redraw — callers reset lastDrawn*.
     function syncSizes() {
-      const { width, height } = getViewportSize();
+      const { width, height, offsetTop, offsetLeft } = getViewportMetrics();
       const displayHeight = height + VERTICAL_OVERSCAN_PX;
-      const topOffset = -VERTICAL_OVERSCAN_PX / 2;
+      const topOffset = offsetTop - VERTICAL_OVERSCAN_PX / 2;
+      const leftOffset = offsetLeft;
 
       canvas!.style.top = `${topOffset}px`;
+      canvas!.style.left = `${leftOffset}px`;
       canvas!.style.width = `${width}px`;
       canvas!.style.height = `${displayHeight}px`;
       canvas!.width = Math.round(width * dpr);
       canvas!.height = Math.round(displayHeight * dpr);
 
       overlay!.style.top = `${topOffset}px`;
+      overlay!.style.left = `${leftOffset}px`;
       overlay!.style.width = `${width}px`;
       overlay!.style.height = `${displayHeight}px`;
     }
@@ -312,14 +332,14 @@ export default function ScrollFrameBackground() {
       <canvas
         ref={canvasRef}
         aria-hidden="true"
-        className="fixed left-0 w-full h-[100dvh] pointer-events-none"
-        style={{ top: 0, zIndex: -10, backgroundColor: '#474748' }}
+        className="scroll-frame-viewport-fallback fixed w-full pointer-events-none"
+        style={{ top: 0, left: 0, zIndex: -10, backgroundColor: '#474748' }}
       />
       <div
         ref={overlayRef}
         aria-hidden="true"
-        className="fixed left-0 w-full h-[100dvh] pointer-events-none"
-        style={{ top: 0, zIndex: -5, backgroundColor: HOME_OVERLAY_BG }}
+        className="scroll-frame-viewport-fallback fixed w-full pointer-events-none"
+        style={{ top: 0, left: 0, zIndex: -5, backgroundColor: HOME_OVERLAY_BG }}
       />
     </>,
     document.body
