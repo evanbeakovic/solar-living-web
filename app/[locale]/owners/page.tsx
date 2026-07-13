@@ -131,6 +131,7 @@ export default function OwnersPage() {
           alt=""
           fill
           priority
+          quality={90}
           sizes="100vw"
           className="hero-no-enter absolute inset-0 object-cover z-0"
         />
@@ -169,7 +170,7 @@ export default function OwnersPage() {
             fill
             priority
             placeholder="blur"
-            quality={68}
+            quality={85}
             sizes="100vw"
             className="object-cover object-top"
           />
