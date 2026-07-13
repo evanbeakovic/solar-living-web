@@ -163,7 +163,7 @@ export default function OwnersPage() {
             for how this height was derived alongside BASE_SHIFT/the cap. */}
         <div id="owners-hero-cutout" className="hero-no-enter absolute inset-x-0 top-0 h-[150vh] z-20 pointer-events-none select-none">
           <Image
-            src="/images/owners-hero-cutout.png"
+            src="/images/owners-hero-cutout.webp"
             alt=""
             fill
             priority

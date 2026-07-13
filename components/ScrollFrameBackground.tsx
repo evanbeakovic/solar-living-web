@@ -14,7 +14,7 @@ const MAX_DPR = 2;
 const VERTICAL_OVERSCAN_PX = 180;
 
 export type ScrollFrameBackgroundProps = {
-  /** Frames live at `${basePath}/desktop/frame-XXX.jpg` and `${basePath}/mobile/frame-mobile-XXX.jpg`, 1-indexed, zero-padded to 3 digits. */
+  /** Frames live at `${basePath}/desktop/frame-XXX.webp` and `${basePath}/mobile/frame-mobile-XXX.webp`, 1-indexed, zero-padded to 3 digits. */
   basePath: string;
   desktopFrameCount: number;
   mobileFrameCount: number;
@@ -42,7 +42,7 @@ export type ScrollFrameBackgroundProps = {
 
 function frameSrc(basePath: string, index: number, isMobile: boolean) {
   const n = String(index).padStart(3, '0');
-  return isMobile ? `${basePath}/mobile/frame-mobile-${n}.jpg` : `${basePath}/desktop/frame-${n}.jpg`;
+  return isMobile ? `${basePath}/mobile/frame-mobile-${n}.webp` : `${basePath}/desktop/frame-${n}.webp`;
 }
 
 // iOS Safari's layout viewport (window.innerWidth/innerHeight) is pinned
