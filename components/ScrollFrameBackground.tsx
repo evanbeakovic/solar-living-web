@@ -9,11 +9,36 @@ const MOBILE_FRAME_COUNT = 314;
 const MD_BREAKPOINT = 768;
 const MAX_DPR = 2;
 
+// The source footage's sun sits at ~68% across the frame, not centered. On
+// mobile's tall/narrow cover-fit crop only a ~26%-wide vertical slice of the
+// frame's width is ever visible, so a centered (0.5) crop clips it. 0.5 =
+// center (desktop's unchanged behavior), 1 = fully right-anchored — 0.75
+// keeps the same slice of the frame (sun visible, not centered, not at the
+// clipped edge) that desktop shows across its whole width.
+const MOBILE_HORIZONTAL_ANCHOR = 0.75;
+
+// Extra height (px) added to the canvas/overlay beyond the reported visible
+// viewport, split evenly above and below, so a momentary iOS Safari
+// toolbar show/hide transition never reveals a gray gap before the next
+// resize event catches up.
+const VERTICAL_OVERSCAN_PX = 80;
+
 function frameSrc(index: number, isMobile: boolean) {
   const n = String(index).padStart(3, '0');
   return isMobile
     ? `/hero-frames/mobile/frame-mobile-${n}.jpg`
     : `/hero-frames/desktop/frame-${n}.jpg`;
+}
+
+// Prefer the actual visible viewport (window.visualViewport) over
+// window.innerWidth/innerHeight — iOS Safari's dynamic toolbar changes the
+// visual viewport without reliably firing a window 'resize' at every step.
+function getViewportSize() {
+  const vv = window.visualViewport;
+  return {
+    width: vv ? vv.width : window.innerWidth,
+    height: vv ? vv.height : window.innerHeight,
+  };
 }
 
 /**
@@ -36,18 +61,20 @@ function frameSrc(index: number, isMobile: boolean) {
  */
 export default function ScrollFrameBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    // Runs only once `mounted` flips true and the portaled <canvas> has
-    // actually rendered — on the initial pass canvasRef.current is still
-    // null (this effect fires in the same commit that returned null), and
-    // with an empty deps array it would never get a second chance to attach.
+    // Runs only once `mounted` flips true and the portaled elements have
+    // actually rendered — on the initial pass the refs are still null
+    // (this effect fires in the same commit that returned null), and with
+    // an empty deps array it would never get a second chance to attach.
     if (!mounted) return;
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    const overlay = overlayRef.current;
+    if (!canvas || !overlay) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -70,6 +97,7 @@ export default function ScrollFrameBackground() {
     let images: HTMLImageElement[] = [];
     let loaded: boolean[] = [];
     let frameCount = 0;
+    let isMobile = false;
     let currentTarget = 1; // float scroll-progress position in frame space [1, frameCount]
     let lastDrawnA = -1;
     let lastDrawnB = -1;
@@ -78,11 +106,25 @@ export default function ScrollFrameBackground() {
     let resizeRafId = 0;
     let generation = 0; // bumped on breakpoint change / unmount to invalidate in-flight onload callbacks
 
-    function resizeCanvas() {
-      // Assigning .width/.height clears the drawing buffer even to the same
-      // value, so every resize needs a redraw — callers reset lastDrawn*.
-      canvas!.width = Math.round(window.innerWidth * dpr);
-      canvas!.height = Math.round(window.innerHeight * dpr);
+    // Sizes the canvas's CSS box, its drawing buffer, and the overlay div
+    // all together from the true visible viewport, with a vertical overscan
+    // buffer so neither ever falls short during a toolbar transition.
+    // Assigning canvas .width/.height clears its drawing buffer even to the
+    // same value, so every call needs a redraw — callers reset lastDrawn*.
+    function syncSizes() {
+      const { width, height } = getViewportSize();
+      const displayHeight = height + VERTICAL_OVERSCAN_PX;
+      const topOffset = -VERTICAL_OVERSCAN_PX / 2;
+
+      canvas!.style.top = `${topOffset}px`;
+      canvas!.style.width = `${width}px`;
+      canvas!.style.height = `${displayHeight}px`;
+      canvas!.width = Math.round(width * dpr);
+      canvas!.height = Math.round(displayHeight * dpr);
+
+      overlay!.style.top = `${topOffset}px`;
+      overlay!.style.width = `${width}px`;
+      overlay!.style.height = `${displayHeight}px`;
     }
 
     // Nearest already-loaded frame to `target` (checked outward in both
@@ -113,7 +155,10 @@ export default function ScrollFrameBackground() {
       const scale = Math.max(cw / iw, ch / ih);
       const dw = iw * scale;
       const dh = ih * scale;
-      const dx = (cw - dw) / 2;
+      // 0.5 (desktop, unchanged) centers the crop; mobile biases it right
+      // so the off-center sun stays in frame — see MOBILE_HORIZONTAL_ANCHOR.
+      const horizontalAnchor = isMobile ? MOBILE_HORIZONTAL_ANCHOR : 0.5;
+      const dx = (cw - dw) * horizontalAnchor;
       const dy = (ch - dh) / 2;
       ctx!.globalAlpha = alpha;
       ctx!.drawImage(img, dx, dy, dw, dh);
@@ -173,7 +218,7 @@ export default function ScrollFrameBackground() {
     function onResize() {
       cancelAnimationFrame(resizeRafId);
       resizeRafId = requestAnimationFrame(() => {
-        resizeCanvas();
+        syncSizes();
         lastDrawnA = -1; // dimensions changed — force a redraw at the new size
         lastDrawnB = -1;
         lastDrawnWeight = -1;
@@ -183,8 +228,8 @@ export default function ScrollFrameBackground() {
 
     function setup() {
       const gen = ++generation;
-      const isMobile = !mdQuery.matches;
-      resizeCanvas();
+      isMobile = !mdQuery.matches;
+      syncSizes();
       lastDrawnA = -1;
       lastDrawnB = -1;
       lastDrawnWeight = -1;
@@ -238,12 +283,20 @@ export default function ScrollFrameBackground() {
 
     setup();
     window.addEventListener('resize', onResize, { passive: true });
+    // visualViewport fires its own 'resize' (toolbar show/hide, pinch-zoom)
+    // and 'scroll' (viewport offset changes, e.g. mid-toolbar-transition)
+    // independently of window's 'resize' — iOS Safari doesn't reliably fire
+    // the latter for every toolbar state change.
+    window.visualViewport?.addEventListener('resize', onResize);
+    window.visualViewport?.addEventListener('scroll', onResize);
     if (!reducedMotion) window.addEventListener('scroll', onScroll, { passive: true });
     mdQuery.addEventListener('change', setup);
 
     return () => {
       generation++;
       window.removeEventListener('resize', onResize);
+      window.visualViewport?.removeEventListener('resize', onResize);
+      window.visualViewport?.removeEventListener('scroll', onResize);
       window.removeEventListener('scroll', onScroll);
       mdQuery.removeEventListener('change', setup);
       cancelAnimationFrame(scrollRafId);
@@ -259,13 +312,14 @@ export default function ScrollFrameBackground() {
       <canvas
         ref={canvasRef}
         aria-hidden="true"
-        className="fixed inset-0 h-screen w-screen pointer-events-none"
-        style={{ zIndex: -10, backgroundColor: '#474748' }}
+        className="fixed left-0 w-full h-[100dvh] pointer-events-none"
+        style={{ top: 0, zIndex: -10, backgroundColor: '#474748' }}
       />
       <div
+        ref={overlayRef}
         aria-hidden="true"
-        className="fixed inset-0 h-screen w-screen pointer-events-none"
-        style={{ zIndex: -5, backgroundColor: HOME_OVERLAY_BG }}
+        className="fixed left-0 w-full h-[100dvh] pointer-events-none"
+        style={{ top: 0, zIndex: -5, backgroundColor: HOME_OVERLAY_BG }}
       />
     </>,
     document.body
