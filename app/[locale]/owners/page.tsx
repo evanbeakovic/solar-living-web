@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Reveal from '@/components/Reveal';
 import OwnersHeroParallax from '@/components/OwnersHeroParallax';
+import ownersHeroCutout from '@/assets/images/owners-hero-cutout.webp';
 
 export default function OwnersPage() {
   const t = useTranslations('owners');
@@ -163,10 +164,12 @@ export default function OwnersPage() {
             for how this height was derived alongside BASE_SHIFT/the cap. */}
         <div id="owners-hero-cutout" className="hero-no-enter absolute inset-x-0 top-0 h-[150vh] z-20 pointer-events-none select-none">
           <Image
-            src="/images/owners-hero-cutout.webp"
+            src={ownersHeroCutout}
             alt=""
             fill
             priority
+            placeholder="blur"
+            quality={68}
             sizes="100vw"
             className="object-cover object-top"
           />
